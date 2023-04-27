@@ -1,0 +1,58 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Noun - atim - ok : # -m animate noun
+     atim+N+AN+Sg: atim # asdf
+     atim+N+AN+Pl: atimwak #test
+     atim+N+AN+Sg+Obv: atimwa
+     atim+N+AN+Loc: atimohk # really rare form
+     atim+N+AN+Der/Dim+N+AN+Sg: acimosis
+     atim+N+AN+Der/Dim+N+AN+Pl: acimosisak
+     
+     atim+N+AN+Sg+Px1Sg: nitêm
+     atim+N+AN+Sg+Px2Sg: kitêm
+     atim+N+AN+Sg+Px3Sg+Obv: otêma
+     atim+N+AN+Sg+Px4Sg+Obv: otêmiyiwa
+     atim+N+AN+Sg+Px1Pl: nitêminân
+     atim+N+AN+Sg+Px12Pl: kitêminaw
+     atim+N+AN+Sg+Px2Pl: kitêmiwâw
+     atim+N+AN+Sg+Px3Pl+Obv: otêmiwâwa
+     atim+N+AN+Sg+Px4Pl+Obv: otêmiyiwa
+     
+     atim+N+AN+Pl+Px1Sg: nitêmak
+     atim+N+AN+Pl+Px2Sg: kitêmak
+     atim+N+AN+Pl+Px3Sg+Obv: otêma
+     atim+N+AN+Pl+Px4Sg+Obv: otêmiyiwa
+     atim+N+AN+Pl+Px1Pl: nitêminânak
+     atim+N+AN+Pl+Px12Pl: kitêminawak
+     atim+N+AN+Pl+Px2Pl: kitêmiwâwak
+     atim+N+AN+Pl+Px3Pl+Obv: otêmiwâwa
+     atim+N+AN+Pl+Px4Pl+Obv: otêmiyiwa
+     
+     atim+N+AN+Der/Dim+N+AN+Sg+Px1Sg: nicêmisis
+     atim+N+AN+Der/Dim+N+AN+Sg+Px2Sg: kicêmisis
+     atim+N+AN+Der/Dim+N+AN+Sg+Px3Sg+Obv: ocêmisisa
+     atim+N+AN+Der/Dim+N+AN+Sg+Px4Sg+Obv: ocêmisisiyiwa
+     atim+N+AN+Der/Dim+N+AN+Sg+Px1Pl: nicêmisisinân
+     atim+N+AN+Der/Dim+N+AN+Sg+Px12Pl: kicêmisisinaw
+     atim+N+AN+Der/Dim+N+AN+Sg+Px2Pl: kicêmisisiwâw
+     atim+N+AN+Der/Dim+N+AN+Sg+Px3Pl+Obv: ocêmisisiwâwa
+     
+     atim+N+AN+Der/Dim+N+AN+Pl+Px1Sg: nicêmisisak
+     atim+N+AN+Der/Dim+N+AN+Pl+Px2Sg: kicêmisisak
+     atim+N+AN+Der/Dim+N+AN+Pl+Px3Sg+Obv: ocêmisisa
+     atim+N+AN+Der/Dim+N+AN+Pl+Px4Sg+Obv: ocêmisisiyiwa
+     atim+N+AN+Der/Dim+N+AN+Pl+Px1Pl: nicêmisisinânak
+     atim+N+AN+Der/Dim+N+AN+Pl+Px12Pl: kicêmisisinawak
+     atim+N+AN+Der/Dim+N+AN+Pl+Px2Pl: kicêmisisiwâwak
+     atim+N+AN+Der/Dim+N+AN+Pl+Px3Pl+Obv: ocêmisisiwâwa
+     atim+N+AN+Der/Dim+N+AN+Pl+Px4Pl+Obv: ocêmisisiyiwa
+          

@@ -1,0 +1,68 @@
+Authors of gtlangs-crk package
+aka Finite-state transducer-based computational models of Plains Cree morphology
+
+The following people and the Alberta Language Technology Lab (ALTLab)
+have legal copyright to files and software in this directory and its
+subdirectories:
+
+Antti Arppe
+Atticus Harrigan
+Katherine Schmirler
+Arok Wolvengrey
+Lene Antonsen
+Trond Trosterud
+Sjur Moshagen
+Miikka Silfverberg
+Conor Snoek
+Jordan Lachler
+Eddie Antonio Santos
+Dorothy Thunder
+Jean Okimāsis
+
+
+Standard references for referring to and describing this finite-state model:
+
+All authors (above). Finite-state transducer-based computational models of Plains Cree
+morphology (2014-present). URL: https://github.com/giellalt/lang-crk/
+
+Harrigan, Atticus, Katherine Schmirler, Antti Arppe, Lene Antonsen, Sjur N. Moshagen,
+Trond Trosterud & Arok Wolvengrey (2017). Learning from the Computational Modeling of
+Plains Cree Verbs. Morphology, 27(4), 565–598. https://doi.org/10.1007/s11525-017-9315-x
+
+Snoek, Conor, Dorothy Thunder, Kaidi Lõo, Antti Arppe, Jordan Lachler, Sjur Moshagen &
+Trond Trosterud (2014). Modeling the Noun Morphology of Plains Cree. In J. Good,
+J. Hirschberg, O. Rambow (Eds): ComputEL: Workshop on the use of computational methods
+in the study of endangered languages, 52nd Annual Meeting of the Association for
+Computational Linguistics, 34-42. Baltimore, Maryland: Association for Computational
+Linguistics. Retrieved from http://acl2014.org/acl2014/W14-22/pdf/W14-2205.pdf
+
+
+Original dictionary/lexical sources (All rights reserved, unless
+otherwise indicated):
+
+Wolvengrey, Arok (2001). nēhiyawēwin : itwēwina / Cree : Words.
+Canadian Plains Research Center, Regina, Saskatchewan. (All rights
+reserved).
+
+Maskwachees Cultural College (1998/2009). Nehiyaw Pîkiskwewinisa
+[Maskwacîs Cree Dictionary]. Maskwachees Cultural College, Maskwacîs,
+Alberta, 1998/2009.  (All rights reserved).
+
+Hunter, E. (n.d). Introductory Cree Part I [Course book]. Faculty of
+Native Studies, University of Alberta. (All rights reserved).
+
+Okimāsis, Jean L. (1999). Cree, Language of the Plains / nēhiyawēwin -
+paskwāwi-pīkiskwēwin. University of Regina Publications,
+Regina. Saskatchewan. (All rights reserved).
+
+
+Spoken data components (All rights reserved):
+
+Native Cree speakers in Maskwacîs
+URL: http://altlab.ualberta.ca/maskwacis/Speakers/speakers.html.
+
+Miyo Wahkohowin Education / Maskwacîs Education and Schools Commission
+URL: https://www.maskwacised.ca/
+
+Alberta Language Technology Lab, University of Alberta
+URL: http://altlab.artsrn.ualberta.ca

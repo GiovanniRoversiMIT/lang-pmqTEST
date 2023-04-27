@@ -1,0 +1,46 @@
+Condfig:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Verb - nipâw - help : # Wolvengrey VAIv
+
+     nipâw+V+AI+Ind+Prs+1Sg: ninipân
+     nipâw+V+AI+Ind+Prs+2Sg: kinipân
+     nipâw+V+AI+Ind+Prs+1Pl: ninipânân
+     nipâw+V+AI+Ind+Prs+12Pl: [kinipânaw, kinipânânaw]
+     nipâw+V+AI+Ind+Prs+2Pl: kinipânâwâw
+     nipâw+V+AI+Ind+Prs+3Sg: nipâw
+     nipâw+V+AI+Ind+Prs+3Pl: nipâwak
+     nipâw+V+AI+Ind+Prs+4Sg/Pl: nipâyiwa
+     
+     PV/e+nipâw+V+AI+Cnj+Prs+1Sg: [ê-nipâyân, ênipâyân]
+     PV/e+nipâw+V+AI+Cnj+Prs+2Sg: [ê-nipâyan, ênipâyan]
+     PV/e+nipâw+V+AI+Cnj+Prs+1Pl: [ê-nipâyâhk, ênipâyâhk]
+     PV/e+nipâw+V+AI+Cnj+Prs+12Pl: [ê-nipâyahk, ênipâyahk]
+     PV/e+nipâw+V+AI+Cnj+Prs+2Pl: [ê-nipâyêk, ênipâyêk]
+     PV/e+nipâw+V+AI+Cnj+Prs+3Sg: [ê-nipât, ênipât]
+     PV/e+nipâw+V+AI+Cnj+Prs+3Pl: [ê-nipâcik, ênipâcik]
+     PV/e+nipâw+V+AI+Cnj+Prs+4Sg/Pl: [ê-nipâyit, ênipâyit]
+     
+     nipâw+V+AI+Fut+Cond+1Sg: nipâyâni
+     nipâw+V+AI+Fut+Cond+2Sg: nipâyani
+     nipâw+V+AI+Fut+Cond+1Pl: nipâyâhki
+     nipâw+V+AI+Fut+Cond+12Pl: [nipâyahko, nipâyahki]
+     nipâw+V+AI+Fut+Cond+2Pl: nipâyêko
+     nipâw+V+AI+Fut+Cond+3Sg: nipâci
+     nipâw+V+AI+Fut+Cond+3Pl: nipâtwâwi
+     nipâw+V+AI+Fut+Cond+4Sg/Pl: nipâyici
+     
+     nipâw+V+AI+Imp+Imm+2Sg: nipâ
+     nipâw+V+AI+Imp+Imm+2Pl: nipâk
+     nipâw+V+AI+Imp+Imm+12Pl: nipâtân
+     nipâw+V+AI+Imp+Del+2Sg: nipâhkan
+     nipâw+V+AI+Imp+Del+2Pl: nipâhkêk
+     nipâw+V+AI+Imp+Del+12Pl: nipâhkahk

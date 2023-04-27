@@ -1,0 +1,135 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Verb - kâtâw - asfd : # Wolvengrey VTI2 verb; Wolvengrey p. 400; Fut+Def from Okimāsis pp. 73-74 
+
+
+     kâtâw+V+TI+Ind+Prs+1Sg: nikâtân
+     kâtâw+V+TI+Ind+Prs+2Sg: kikâtân
+     kâtâw+V+TI+Ind+Prs+3Sg: kâtâw
+     kâtâw+V+TI+Ind+Prs+4Sg/Pl: kâtâyiwa
+     kâtâw+V+TI+Ind+Prs+1Pl: nikâtânân
+     kâtâw+V+TI+Ind+Prs+12Pl: [kikâtânaw, kikâtânânaw]
+     kâtâw+V+TI+Ind+Prs+2Pl: kikâtânâwâw
+     kâtâw+V+TI+Ind+Prs+3Pl: kâtâwak
+
+     kâtâw+V+TI+Ind+Prt+1Sg: [nikî-kâtân, nikîkâtân]
+     kâtâw+V+TI+Ind+Prt+2Sg: [kikî-kâtân, kikîkâtân]
+     kâtâw+V+TI+Ind+Prt+3Sg: [kî-kâtâw, kîkâtâw]
+     kâtâw+V+TI+Ind+Prt+4Sg/Pl: [kî-kâtâyiwa, kîkâtâyiwa]
+     kâtâw+V+TI+Ind+Prt+1Pl: [nikî-kâtânân, nikîkâtânân]
+     kâtâw+V+TI+Ind+Prt+12Pl: [kikî-kâtânaw, kikîkâtânaw, kikî-kâtânânaw, kikîkâtânânaw]
+     kâtâw+V+TI+Ind+Prt+2Pl: [kikî-kâtânâwâw, kikîkâtânâwâw]
+     kâtâw+V+TI+Ind+Prt+3Pl: [kî-kâtâwak, kîkâtâwak]
+     
+     kâtâw+V+TI+Ind+Fut+Def+1Sg: [nika-kâtân, nikakâtân]
+     kâtâw+V+TI+Ind+Fut+Def+2Sg: [kika-kâtân, kikakâtân]
+     kâtâw+V+TI+Ind+Fut+Def+3Sg: [ka-kâtâw, kakâtâw]
+     kâtâw+V+TI+Ind+Fut+Def+4Sg/Pl: [ka-kâtâyiwa, kakâtâyiwa]
+     kâtâw+V+TI+Ind+Fut+Def+1Pl: [nika-kâtânân, nikakâtânân]
+     kâtâw+V+TI+Ind+Fut+Def+12Pl: [kika-kâtânaw, kikakâtânaw, kikakâtânânaw, kika-kâtânânaw]
+     kâtâw+V+TI+Ind+Fut+Def+2Pl: [kika-kâtânâwâw, kikakâtânâwâw]
+     kâtâw+V+TI+Ind+Fut+Def+3Pl: [ka-kâtâwak, kakâtâwak]
+     
+     kâtâw+V+TI+Ind+Fut+Int+1Sg: [niwî-kâtân, niwîkâtân]
+     kâtâw+V+TI+Ind+Fut+Int+2Sg: [kiwî-kâtân, kiwîkâtân]
+     kâtâw+V+TI+Ind+Fut+Int+3Sg: [wî-kâtâw, wîkâtâw]
+     kâtâw+V+TI+Ind+Fut+Int+4Sg/Pl: [wî-kâtâyiwa, wîkâtâyiwa]
+     kâtâw+V+TI+Ind+Fut+Int+1Pl: [niwî-kâtânân, niwîkâtânân]
+     kâtâw+V+TI+Ind+Fut+Int+12Pl: [kiwî-kâtânaw, kiwîkâtânaw, kiwî-kâtânânaw, kiwîkâtânânaw]
+     kâtâw+V+TI+Ind+Fut+Int+2Pl: [kiwî-kâtânâwâw, kiwîkâtânâwâw]
+     kâtâw+V+TI+Ind+Fut+Int+3Pl: [wî-kâtâwak, wîkâtâwak]
+     
+     PV/e+kâtâw+V+TI+Cnj+Prs+1Sg: [ê-kâtâyân, êkâtâyân]
+     PV/e+kâtâw+V+TI+Cnj+Prs+2Sg: [ê-kâtâyan, êkâtâyan]
+     PV/e+kâtâw+V+TI+Cnj+Prs+3Sg: [ê-kâtât, êkâtât]
+     PV/e+kâtâw+V+TI+Cnj+Prs+4Sg/Pl: [ê-kâtâyit, êkâtâyit]
+     PV/e+kâtâw+V+TI+Cnj+Prs+1Pl: [ê-kâtâyâhk, êkâtâyâhk]
+     PV/e+kâtâw+V+TI+Cnj+Prs+12Pl: [ê-kâtâyahk, êkâtâyahk]
+     PV/e+kâtâw+V+TI+Cnj+Prs+2Pl: [ê-kâtâyêk, êkâtâyêk]
+     PV/e+kâtâw+V+TI+Cnj+Prs+3Pl: [ê-kâtâcik, êkâtâcik]
+     
+     PV/e+kâtâw+V+TI+Cnj+Prs+1Sg: [ê-kâtâyân, êkâtâyân]
+     PV/e+kâtâw+V+TI+Cnj+Prs+2Sg: [ê-kâtâyan, êkâtâyan]
+     PV/e+kâtâw+V+TI+Cnj+Prs+3Sg: [ê-kâtât, êkâtât]
+     PV/e+kâtâw+V+TI+Cnj+Prs+4Sg/Pl: [ê-kâtâyit, êkâtâyit]
+     PV/e+kâtâw+V+TI+Cnj+Prs+1Pl: [ê-kâtâyâhk, êkâtâyâhk]
+     PV/e+kâtâw+V+TI+Cnj+Prs+12Pl: [ê-kâtâyahk, êkâtâyahk]
+     PV/e+kâtâw+V+TI+Cnj+Prs+2Pl: [ê-kâtâyêk, êkâtâyêk]
+     PV/e+kâtâw+V+TI+Cnj+Prs+3Pl: [ê-kâtâcik, êkâtâcik]
+         
+     PV/e+kâtâw+V+TI+Cnj+Prt+1Sg: [ê-kî-kâtâyân, êkîkâtâyân]
+     PV/e+kâtâw+V+TI+Cnj+Prt+2Sg: [ê-kî-kâtâyan, êkîkâtâyan]
+     PV/e+kâtâw+V+TI+Cnj+Prt+3Sg: [ê-kî-kâtât, êkîkâtât]
+     PV/e+kâtâw+V+TI+Cnj+Prt+4Sg/Pl: [ê-kî-kâtâyit, êkîkâtâyit]
+     PV/e+kâtâw+V+TI+Cnj+Prt+1Pl: [ê-kî-kâtâyâhk, êkîkâtâyâhk]
+     PV/e+kâtâw+V+TI+Cnj+Prt+12Pl: [ê-kî-kâtâyahk, êkîkâtâyahk]
+     PV/e+kâtâw+V+TI+Cnj+Prt+2Pl: [ê-kî-kâtâyêk, êkîkâtâyêk]
+     PV/e+kâtâw+V+TI+Cnj+Prt+3Pl: [ê-kî-kâtâcik, êkîkâtâcik]
+     
+     PV/e+kâtâw+V+TI+Cnj+Fut+Int+1Sg: [ê-wî-kâtâyân, êwîkâtâyân]
+     PV/e+kâtâw+V+TI+Cnj+Fut+Int+2Sg: [ê-wî-kâtâyan, êwîkâtâyan]
+     PV/e+kâtâw+V+TI+Cnj+Fut+Int+3Sg: [ê-wî-kâtât, êwîkâtât]
+     PV/e+kâtâw+V+TI+Cnj+Fut+Int+4Sg/Pl: [ê-wî-kâtâyit, êwîkâtâyit]
+     PV/e+kâtâw+V+TI+Cnj+Fut+Int+1Pl: [ê-wî-kâtâyâhk, êwîkâtâyâhk]
+     PV/e+kâtâw+V+TI+Cnj+Fut+Int+12Pl: [ê-wî-kâtâyahk, êwîkâtâyahk]
+     PV/e+kâtâw+V+TI+Cnj+Fut+Int+2Pl: [ê-wî-kâtâyêk, êwîkâtâyêk]
+     PV/e+kâtâw+V+TI+Cnj+Fut+Int+3Pl: [ê-wî-kâtâcik, êwîkâtâcik]
+    
+    
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+1Sg+3SgO: [niwîwîcikâtâmâw, niwî-wîci-kâtâmâw] # COMM SET I
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+2Sg+3SgO: [kiwîwîcikâtâmâw, kiwî-wîci-kâtâmâw]
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+1Pl+3SgO: [niwîwîcikâtâmânân, niwî-wîci-kâtâmânân]
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+12Pl+3SgO: [kiwîwîcikâtâmânân, kiwî-wîci-kâtâmânân]
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+2Pl+3SgO: [niwîwîcikâtâmâwâw niwî-wîci-kâtâmâwâw]
+     
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+1Sg+3PlO: [niwîwîcikâtâmâwak, niwî-wîci-kâtâmâwak] # COMM SET I-Pl
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+2Sg+3PlO: [kiwîwîcikâtâmâwak, kiwî-wîci-kâtâmâwak]
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+1Pl+3PlO: [niwîwîcikâtâmânânak, niwî-wîci-kâtâmânânak]
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+12Pl+3PlO: [kiwîwîcikâtâmânawak, kiwî-wîci-kâtâmânawak]
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+2Pl+3PlO: [kiwîwîcikâtâmâwâwak, kiwî-wîci-kâtâmâwâwak]
+
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+2Sg+1SgO: [kiwîwîcikâtâmin, kiwî-wîci-kâtâmin] # COMM SET II
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+2Sg/Pl+1PlO: [kiwîwîcikâtâminân, kiwî-wîci-kâtâminân]
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+2Pl+1SgO: [kiwîwîcikâtâminâwâw, kiwî-wîci-kâtâminâwâw]
+
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+3Sg+4Sg/PlO: [wîwîcikâtâmêw, wîci-kâtâmêw] # COMM SET III
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+3Pl+4Sg/PlO: [wîwîcikâtâmêwak, wîci-kâtâmêwak]
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+4Sg/Pl+5Sg/PlO: [wîwîcikâtâmêyiwa, wîci-kâtâmêyiwa]
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+3Sg+5Sg/PlO: [wîwîcikâtâmimêw, wîci-kâtâmimêw] # From Wolvengrey P.C. 27/6/15 (See /doc/)
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+3Pl+5Sg/PlO: [wîwîcikâtâmimêwak, wîci-kâtâmimêwak] # From Wolvengrey P.C. 27/6/15 (See /doc/)
+
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+1Sg+4Sg/PlO: [niwîwîcikâtâmimâwa, niwî-wîci-kâtâmimâwa] # COMM SET IV
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+2Sg+4Sg/PlO: [kiwîwîcikâtâmimâwa, kiwî-wîci-kâtâmimâwa]
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+1Pl+4Sg/PlO: [niwîwîcikâtâmimânâna, niwî-wîci-kâtâmimânâna]
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+12Pl+4Sg/PlO: [kiwîwîcikâtâmimânawa, kiwî-wîci-kâtâmimânawa]
+     kâtâw+V+TI+Der/Comm+V+TA+Ind+Fut+Int+2Pl+4Sg/PlO: [kiwîwîcikâtâmimâwâwa, kiwî-wîci-kâtâmimâwâwa]
+    
+     
+     kâtâw+V+TI+Fut+Cond+1Sg: kâtâyâni
+     kâtâw+V+TI+Fut+Cond+2Sg: kâtâyani
+     kâtâw+V+TI+Fut+Cond+3Sg: kâtâci
+     kâtâw+V+TI+Fut+Cond+4Sg/Pl: kâtâyici
+     kâtâw+V+TI+Fut+Cond+1Pl: kâtâyâhki
+     kâtâw+V+TI+Fut+Cond+12Pl: [kâtâyahko, kâtâyahki]
+     kâtâw+V+TI+Fut+Cond+2Pl: kâtâyêko
+     kâtâw+V+TI+Fut+Cond+3Pl: kâtâtwâwi
+     
+     
+
+
+     kâtâw+V+TI+Imp+Imm+2Sg: kâtâ
+     kâtâw+V+TI+Imp+Imm+12Pl: kâtâtân
+     kâtâw+V+TI+Imp+Imm+2Pl: kâtâk
+     
+     kâtâw+V+TI+Imp+Del+2Sg: kâtâhkan
+     kâtâw+V+TI+Imp+Del+12Pl: kâtâhkahk
+     kâtâw+V+TI+Imp+Del+2Pl: kâtâhkêk

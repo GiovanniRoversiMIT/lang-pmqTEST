@@ -1,0 +1,46 @@
+Condfig:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Verb - mîciw - help : # Wolvengrey VTI 3
+
+     mîciw+V+TI+Ind+Prs+1Sg: nimîcin
+     mîciw+V+TI+Ind+Prs+2Sg: kimîcin
+     mîciw+V+TI+Ind+Prs+1Pl: nimîcinân
+     mîciw+V+TI+Ind+Prs+12Pl: [kimîcinânaw, kimîcinaw]
+     mîciw+V+TI+Ind+Prs+2Pl: kimîcinâwâw
+     mîciw+V+TI+Ind+Prs+3Sg: mîciw
+     mîciw+V+TI+Ind+Prs+3Pl: mîciwak
+     mîciw+V+TI+Ind+Prs+4Sg/Pl: mîciyiwa
+     
+     PV/e+mîciw+V+TI+Cnj+Prs+1Sg: [ê-mîciyân, êmîciyân]
+     PV/e+mîciw+V+TI+Cnj+Prs+2Sg: [ê-mîciyan, êmîciyan]
+     PV/e+mîciw+V+TI+Cnj+Prs+1Pl: [ê-mîciyâhk, êmîciyâhk]
+     PV/e+mîciw+V+TI+Cnj+Prs+12Pl: [ê-mîciyahk, êmîciyahk]
+     PV/e+mîciw+V+TI+Cnj+Prs+2Pl: [ê-mîciyêk, êmîciyêk]
+     PV/e+mîciw+V+TI+Cnj+Prs+3Sg: [ê-mîcit, êmîcit]
+     PV/e+mîciw+V+TI+Cnj+Prs+3Pl: [ê-mîcicik, êmîcicik]
+     PV/e+mîciw+V+TI+Cnj+Prs+4Sg/Pl: [ê-mîciyit, êmîciyit]
+     
+     mîciw+V+TI+Fut+Cond+1Sg: mîciyâni
+     mîciw+V+TI+Fut+Cond+2Sg: mîciyani
+     mîciw+V+TI+Fut+Cond+1Pl: mîciyâhki
+     mîciw+V+TI+Fut+Cond+12Pl: [mîciyahko, mîciyahki]
+     mîciw+V+TI+Fut+Cond+2Pl: mîciyêko
+     mîciw+V+TI+Fut+Cond+3Sg: mîcici
+     mîciw+V+TI+Fut+Cond+3Pl: mîcitwâwi
+     mîciw+V+TI+Fut+Cond+4Sg/Pl: mîciyici
+     
+     mîciw+V+TI+Imp+Imm+2Sg: mîci
+     mîciw+V+TI+Imp+Imm+2Pl: mîcik
+     mîciw+V+TI+Imp+Imm+12Pl: mîcitân
+     mîciw+V+TI+Imp+Del+2Sg: mîcihkan
+     mîciw+V+TI+Imp+Del+2Pl: mîcihkêk
+     mîciw+V+TI+Imp+Del+12Pl: mîcihkahk

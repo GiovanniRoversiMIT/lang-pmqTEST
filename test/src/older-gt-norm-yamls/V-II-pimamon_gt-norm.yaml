@@ -1,0 +1,47 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Verb - pimamon - adsf : #  VII2on acc. Wolvengrey p. 394
+  
+     pimamon+V+II+Ind+Prs+3Sg: pimamon
+     pimamon+V+II+Ind+Prs+3Pl: pimamonwa
+     pimamon+V+II+Ind+Prs+4Sg: pimamoniyiw
+     pimamon+V+II+Ind+Prs+4Pl: pimamoniyiwa
+
+     pimamon+V+II+Ind+Prt+3Sg: [kî-pimamon, kîpimamon]
+     pimamon+V+II+Ind+Prt+3Pl: [kî-pimamonwa, kîpimamonwa]
+     pimamon+V+II+Ind+Prt+4Sg: [kî-pimamoniyiw, kîpimamoniyiw]
+     pimamon+V+II+Ind+Prt+4Pl: [kî-pimamoniyiwa, kîpimamoniyiwa]
+     
+     pimamon+V+II+Fut+Def+3Sg: [ka-pimamon, kapimamon]
+     pimamon+V+II+Fut+Def+3Pl: [ka-pimamonwa, kapimamonwa]
+     pimamon+V+II+Fut+Def+4Sg: [ka-pimamoniyiw, kapimamoniyiw]
+     pimamon+V+II+Fut+Def+4Pl: [ka-pimamoniyiwa, kapimamoniyiwa]
+     
+     pimamon+V+II+Fut+Int+3Sg: [wî-pimamon, wîpimamon]
+     pimamon+V+II+Fut+Int+3Pl: [wî-pimamonwa, wîpimamonwa]
+     pimamon+V+II+Fut+Int+4Sg: [wî-pimamoniyiw, wîpimamoniyiw]
+     pimamon+V+II+Fut+Int+4Pl: [wî-pimamoniyiwa, wîpimamoniyiwa]
+
+     pimamon+V+II+Cnj+Prs+3Sg: [ê-pimamok, êpimamok]
+     pimamon+V+II+Cnj+Prs+3Pl: [ê-pimamoki, êpimamoki]
+     pimamon+V+II+Cnj+Prs+4Sg: [ê-pimamoniyik, êpimamoniyik]
+     pimamon+V+II+Cnj+Prs+4Pl: [ê-pimamoniyiki, êpimamoniyiki]
+
+     pimamon+V+II+Cnj+Prt+3Sg: [ê-kî-pimamok, êkîpimamok]
+     pimamon+V+II+Cnj+Prt+3Pl: [ê-kî-pimamoki, êkîpimamoki]
+     pimamon+V+II+Cnj+Prt+4Sg: [ê-kî-pimamoniyik, êkîpimamoniyik]
+     pimamon+V+II+Cnj+Prt+4Pl: [ê-kî-pimamoniyiki, êkîpimamoniyiki]
+
+     pimamon+V+II+Fut+Cond+3Sg: pimamoki
+     pimamon+V+II+Fut+Cond+3Pl: pimamokwawi
+     pimamon+V+II+Fut+Cond+4Sg: pimamoniyiki
+     pimamon+V+II+Fut+Cond+4Pl: pimamoniyikwâwi

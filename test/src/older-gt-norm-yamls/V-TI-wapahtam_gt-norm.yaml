@@ -1,0 +1,134 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+
+  Verb - wâpahta -  : # Ordinary TI verb - Wolvengrey p. 398; Fut+Def from Okimāsis pp. 70 
+  
+     wâpahtam+V+TI+Ind+Prs+1Sg: niwâpahtên
+     wâpahtam+V+TI+Ind+Prs+2Sg: kiwâpahtên
+     wâpahtam+V+TI+Ind+Prs+3Sg: wâpahtam
+     wâpahtam+V+TI+Ind+Prs+4Sg/Pl: wâpahtayiwa
+     wâpahtam+V+TI+Ind+Prs+1Pl: niwâpahtênân
+     wâpahtam+V+TI+Ind+Prs+12Pl: [kiwâpahtênaw, kiwâpahtênânaw]
+     wâpahtam+V+TI+Ind+Prs+2Pl: kiwâpahtênâwâw
+     wâpahtam+V+TI+Ind+Prs+3Pl: wâpahtamak
+
+     wâpahtam+V+TI+Ind+Prt+1Sg: [nikî-wâpahtên, nikîwâpahtên]
+     wâpahtam+V+TI+Ind+Prt+2Sg: [kikî-wâpahtên, kikîwâpahtên]
+     wâpahtam+V+TI+Ind+Prt+3Sg: [kî-wâpahtam, kîwâpahtam]
+     wâpahtam+V+TI+Ind+Prt+4Sg/Pl: [kî-wâpahtayiwa, kîwâpahtayiwa]
+     wâpahtam+V+TI+Ind+Prt+1Pl: [nikî-wâpahtênân, nikîwâpahtênân]
+     wâpahtam+V+TI+Ind+Prt+12Pl: [kikî-wâpahtênaw, kikîwâpahtênaw, kikî-wâpahtênânaw, kikîwâpahtênânaw]
+     wâpahtam+V+TI+Ind+Prt+2Pl: [kikî-wâpahtênâwâw, kikîwâpahtênâwâw]
+     wâpahtam+V+TI+Ind+Prt+3Pl: [kî-wâpahtamak, kîwâpahtamak]
+     
+     wâpahtam+V+TI+Ind+Fut+Def+1Sg: [nika-wâpahtên, nikawâpahtên]
+     wâpahtam+V+TI+Ind+Fut+Def+2Sg: [kika-wâpahtên, kikawâpahtên]
+     wâpahtam+V+TI+Ind+Fut+Def+3Sg: [ka-wâpahtam, kawâpahtam]
+     wâpahtam+V+TI+Ind+Fut+Def+4Sg/Pl: [ka-wâpahtayiwa, kawâpahtayiwa]
+     wâpahtam+V+TI+Ind+Fut+Def+1Pl: [nika-wâpahtênân, nikawâpahtênân]
+     wâpahtam+V+TI+Ind+Fut+Def+12Pl: [kika-wâpahtênaw, kikawâpahtênaw, kikawâpahtênânaw, kika-wâpahtênânaw]
+     wâpahtam+V+TI+Ind+Fut+Def+2Pl: [kika-wâpahtênâwâw, kikawâpahtênâwâw]
+     wâpahtam+V+TI+Ind+Fut+Def+3Pl: [ka-wâpahtamak, kawâpahtamak]
+     
+     wâpahtam+V+TI+Ind+Fut+Int+1Sg: [niwî-wâpahtên, niwîwâpahtên]
+     wâpahtam+V+TI+Ind+Fut+Int+2Sg: [kiwî-wâpahtên, kiwîwâpahtên]
+     wâpahtam+V+TI+Ind+Fut+Int+3Sg: [wî-wâpahtam, wîwâpahtam]
+     wâpahtam+V+TI+Ind+Fut+Int+4Sg/Pl: [wî-wâpahtayiwa, wîwâpahtayiwa]
+     wâpahtam+V+TI+Ind+Fut+Int+1Pl: [niwî-wâpahtênân, niwîwâpahtênân]
+     wâpahtam+V+TI+Ind+Fut+Int+12Pl: [kiwî-wâpahtênaw, kiwîwâpahtênaw, kiwî-wâpahtênânaw, kiwîwâpahtênânaw]
+     wâpahtam+V+TI+Ind+Fut+Int+2Pl: [kiwî-wâpahtênâwâw, kiwîwâpahtênâwâw]
+     wâpahtam+V+TI+Ind+Fut+Int+3Pl: [wî-wâpahtamak, wîwâpahtamak]
+     
+     PV/e+wâpahtam+V+TI+Cnj+Prs+1Sg: [ê-wâpahtayân, êwâpahtayân]
+     PV/e+wâpahtam+V+TI+Cnj+Prs+2Sg: [ê-wâpahtayan, êwâpahtayan]
+     PV/e+wâpahtam+V+TI+Cnj+Prs+3Sg: [ê-wâpahtat, êwâpahtat]
+     PV/e+wâpahtam+V+TI+Cnj+Prs+4Sg/Pl: [ê-wâpahtayit, êwâpahtayit]
+     PV/e+wâpahtam+V+TI+Cnj+Prs+1Pl: [ê-wâpahtayâhk, êwâpahtayâhk]
+     PV/e+wâpahtam+V+TI+Cnj+Prs+12Pl: [ê-wâpahtayahk, êwâpahtayahk]
+     PV/e+wâpahtam+V+TI+Cnj+Prs+2Pl: [ê-wâpahtayêk, êwâpahtayêk]
+     PV/e+wâpahtam+V+TI+Cnj+Prs+3Pl: [ê-wâpahtacik, êwâpahtacik]
+     
+     PV/e+wâpahtam+V+TI+Cnj+Prs+1Sg: [ê-wâpahtayân, êwâpahtayân]
+     PV/e+wâpahtam+V+TI+Cnj+Prs+2Sg: [ê-wâpahtayan, êwâpahtayan]
+     PV/e+wâpahtam+V+TI+Cnj+Prs+3Sg: [ê-wâpahtat, êwâpahtat]
+     PV/e+wâpahtam+V+TI+Cnj+Prs+4Sg/Pl: [ê-wâpahtayit, êwâpahtayit]
+     PV/e+wâpahtam+V+TI+Cnj+Prs+1Pl: [ê-wâpahtayâhk, êwâpahtayâhk]
+     PV/e+wâpahtam+V+TI+Cnj+Prs+12Pl: [ê-wâpahtayahk, êwâpahtayahk]
+     PV/e+wâpahtam+V+TI+Cnj+Prs+2Pl: [ê-wâpahtayêk, êwâpahtayêk]
+     PV/e+wâpahtam+V+TI+Cnj+Prs+3Pl: [ê-wâpahtacik, êwâpahtacik]
+         
+     PV/e+wâpahtam+V+TI+Cnj+Prt+1Sg: [ê-kî-wâpahtayân, êkîwâpahtayân]
+     PV/e+wâpahtam+V+TI+Cnj+Prt+2Sg: [ê-kî-wâpahtayan, êkîwâpahtayan]
+     PV/e+wâpahtam+V+TI+Cnj+Prt+3Sg: [ê-kî-wâpahtat, êkîwâpahtat]
+     PV/e+wâpahtam+V+TI+Cnj+Prt+4Sg/Pl: [ê-kî-wâpahtayit, êkîwâpahtayit]
+     PV/e+wâpahtam+V+TI+Cnj+Prt+1Pl: [ê-kî-wâpahtayâhk, êkîwâpahtayâhk]
+     PV/e+wâpahtam+V+TI+Cnj+Prt+12Pl: [ê-kî-wâpahtayahk, êkîwâpahtayahk]
+     PV/e+wâpahtam+V+TI+Cnj+Prt+2Pl: [ê-kî-wâpahtayêk, êkîwâpahtayêk]
+     PV/e+wâpahtam+V+TI+Cnj+Prt+3Pl: [ê-kî-wâpahtacik, êkîwâpahtacik]
+     
+     PV/e+wâpahtam+V+TI+Cnj+Fut+Int+1Sg: [ê-wî-wâpahtayân, êwîwâpahtayân]
+     PV/e+wâpahtam+V+TI+Cnj+Fut+Int+2Sg: [ê-wî-wâpahtayan, êwîwâpahtayan]
+     PV/e+wâpahtam+V+TI+Cnj+Fut+Int+3Sg: [ê-wî-wâpahtat, êwîwâpahtat]
+     PV/e+wâpahtam+V+TI+Cnj+Fut+Int+4Sg/Pl: [ê-wî-wâpahtayit, êwîwâpahtayit]
+     PV/e+wâpahtam+V+TI+Cnj+Fut+Int+1Pl: [ê-wî-wâpahtayâhk, êwîwâpahtayâhk]
+     PV/e+wâpahtam+V+TI+Cnj+Fut+Int+12Pl: [ê-wî-wâpahtayahk, êwîwâpahtayahk]
+     PV/e+wâpahtam+V+TI+Cnj+Fut+Int+2Pl: [ê-wî-wâpahtayêk, êwîwâpahtayêk]
+     PV/e+wâpahtam+V+TI+Cnj+Fut+Int+3Pl: [ê-wî-wâpahtacik, êwîwâpahtacik]
+    
+    
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+1Sg+3SgO: [niwîwîciwâpahtamâw, niwî-wîci-wâpahtamâw] # COMM SET I
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+2Sg+3SgO: [kiwîwîciwâpahtamâw, kiwî-wîci-wâpahtamâw]
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+1Pl+3SgO: [niwîwîciwâpahtamânân, niwî-wîci-wâpahtamânân]
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+12Pl+3SgO: [kiwîwîciwâpahtamânân, kiwî-wîci-wâpahtamânân]
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+2Pl+3SgO: [niwîwîciwâpahtamâwâw niwî-wîci-wâpahtamâwâw]
+     
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+1Sg+3PlO: [niwîwîciwâpahtamâwak, niwî-wîci-wâpahtamâwak] # COMM SET I-Pl
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+2Sg+3PlO: [kiwîwîciwâpahtamâwak, kiwî-wîci-wâpahtamâwak]
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+1Pl+3PlO: [niwîwîciwâpahtamânânak, niwî-wîci-wâpahtamânânak]
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+12Pl+3PlO: [kiwîwîciwâpahtamânawak, kiwî-wîci-wâpahtamânawak]
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+2Pl+3PlO: [kiwîwîciwâpahtamâwâwak, kiwî-wîci-wâpahtamâwâwak]
+
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+2Sg+1SgO: [kiwîwîciwâpahtamin, kiwî-wîci-wâpahtamin] # COMM SET II
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+2Sg/Pl+1PlO: [kiwîwîciwâpahtaminân, kiwî-wîci-wâpahtaminân]
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+2Pl+1SgO: [kiwîwîciwâpahtaminâwâw, kiwî-wîci-wâpahtaminâwâw]
+
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+3Sg+4Sg/PlO: [wîwîciwâpahtamêw, wîci-wâpahtamêw] # COMM SET III
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+3Pl+4Sg/PlO: [wîwîciwâpahtamêwak, wîci-wâpahtamêwak]
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+4Sg/Pl+5Sg/PlO: [wîwîciwâpahtamêyiwa, wîci-wâpahtamêyiwa]
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+3Sg+5Sg/PlO: [wîwîciwâpahtamimêw, wîci-wâpahtamimêw] # From Wolvengrey P.C. 27/6/15 (See /doc/)
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+3Pl+5Sg/PlO: [wîwîciwâpahtamimêwak, wîci-wâpahtamimêwak] # From Wolvengrey P.C. 27/6/15 (See /doc/)
+
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+1Sg+4Sg/PlO: [niwîwîciwâpahtamimâwa, niwî-wîci-wâpahtamimâwa] # COMM SET IV
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+2Sg+4Sg/PlO: [kiwîwîciwâpahtamimâwa, kiwî-wîci-wâpahtamimâwa]
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+1Pl+4Sg/PlO: [niwîwîciwâpahtamimânâna, niwî-wîci-wâpahtamimânâna]
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+12Pl+4Sg/PlO: [kiwîwîciwâpahtamimânawa, kiwî-wîci-wâpahtamimânawa]
+     wâpahtam+V+TI+Der/Comm+V+TA+Ind+Fut+Int+2Pl+4Sg/PlO: [kiwîwîciwâpahtamimâwâwa, kiwî-wîci-wâpahtamimâwâwa]
+    
+     
+     wâpahtam+V+TI+Fut+Cond+1Sg: wâpahtayâni
+     wâpahtam+V+TI+Fut+Cond+2Sg: wâpahtayani
+     wâpahtam+V+TI+Fut+Cond+3Sg: wâpahtaci
+     wâpahtam+V+TI+Fut+Cond+4Sg/Pl: wâpahtayici
+     wâpahtam+V+TI+Fut+Cond+1Pl: wâpahtayâhki
+     wâpahtam+V+TI+Fut+Cond+12Pl: [wâpahtayahko, wâpahtayahki]
+     wâpahtam+V+TI+Fut+Cond+2Pl: wâpahtayêko
+     wâpahtam+V+TI+Fut+Cond+3Pl: wâpahtatwâwi
+     
+     
+
+
+     wâpahtam+V+TI+Imp+Imm+2Sg: wâpahta
+     wâpahtam+V+TI+Imp+Imm+12Pl: wâpahtatân
+     wâpahtam+V+TI+Imp+Imm+2Pl: wâpahtak
+     
+     wâpahtam+V+TI+Imp+Del+2Sg: wâpahtahkan
+     wâpahtam+V+TI+Imp+Del+12Pl: wâpahtahkahk
+     wâpahtam+V+TI+Imp+Del+2Pl: wâpahtahkêk

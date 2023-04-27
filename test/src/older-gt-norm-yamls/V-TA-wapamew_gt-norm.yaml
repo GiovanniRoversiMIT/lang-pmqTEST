@@ -1,0 +1,356 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Verb - wâpamêw - see him/her : # Wolvengrey VTA1 verb -  Wolvengrey p. 401; Fut+Cond from Okimāsis pp. 79, 103
+
+     wâpamêw+V+TA+Ind+Prs+1Sg+3SgO: niwâpamâw
+     wâpamêw+V+TA+Ind+Prs+2Sg+3SgO: kiwâpamâw
+     wâpamêw+V+TA+Ind+Prs+1Pl+3SgO: niwâpamânân
+     wâpamêw+V+TA+Ind+Prs+12Pl+3SgO: kiwâpamânaw
+     wâpamêw+V+TA+Ind+Prs+2Pl+3SgO: kiwâpamâwâw
+     
+     wâpamêw+V+TA+Ind+Prs+1Sg+3PlO: niwâpamâwak
+     wâpamêw+V+TA+Ind+Prs+2Sg+3PlO: kiwâpamâwak
+     wâpamêw+V+TA+Ind+Prs+1Pl+3PlO: niwâpamânânak
+     wâpamêw+V+TA+Ind+Prs+12Pl+3PlO: kiwâpamânawak
+     wâpamêw+V+TA+Ind+Prs+2Pl+3PlO: kiwâpamâwâwak
+     
+     wâpamêw+V+TA+Ind+Prs+2Sg+1SgO: kiwâpamin
+     wâpamêw+V+TA+Ind+Prs+2Sg/Pl+1PlO: kiwâpaminân
+     wâpamêw+V+TA+Ind+Prs+2Pl+1SgO: kiwâpaminâwâw
+     
+     wâpamêw+V+TA+Ind+Prs+3Sg+4Sg/PlO: wâpamêw
+     wâpamêw+V+TA+Ind+Prs+3Pl+4Sg/PlO: wâpamêwak
+     wâpamêw+V+TA+Ind+Prs+4Sg/Pl+5Sg/PlO: wâpamêyiwa
+     wâpamêw+V+TA+Ind+Prs+3Sg+5Sg/PlO: wâpamimêw
+     wâpamêw+V+TA+Ind+Prs+3Pl+5Sg/PlO: wâpamimêwak
+
+     wâpamêw+V+TA+Ind+Prs+1Sg+4Sg/PlO: niwâpamimâwa
+     wâpamêw+V+TA+Ind+Prs+2Sg+4Sg/PlO: kiwâpamimâwa
+     wâpamêw+V+TA+Ind+Prs+1Pl+4Sg/PlO: niwâpamimânâna
+     wâpamêw+V+TA+Ind+Prs+12Pl+4Sg/PlO: kiwâpamimânawa
+     wâpamêw+V+TA+Ind+Prs+2Pl+4Sg/PlO: kiwâpamimâwâwa
+     
+     
+     
+     
+     
+     wâpamêw+V+TA+Ind+Prt+1Sg+3SgO: [nikî-wâpamâw, nikîwâpamâw]
+     wâpamêw+V+TA+Ind+Prt+2Sg+3SgO: [kikî-wâpamâw, kikîwâpamâw]
+     wâpamêw+V+TA+Ind+Prt+1Pl+3SgO: [nikî-wâpamânân, nikîwâpamânân]
+     wâpamêw+V+TA+Ind+Prt+12Pl+3SgO: [kikî-wâpamânaw, kikîwâpamânaw]
+     wâpamêw+V+TA+Ind+Prt+2Pl+3SgO: [kikî-wâpamâwâw, kikîwâpamâwâw]
+     
+     wâpamêw+V+TA+Ind+Prt+1Sg+3PlO: [nikî-wâpamâwak, nikîwâpamâwak]
+     wâpamêw+V+TA+Ind+Prt+2Sg+3PlO: [kikî-wâpamâwak, kikîwâpamâwak]
+     wâpamêw+V+TA+Ind+Prt+1Pl+3PlO: [nikî-wâpamânânak, nikîwâpamânânak]
+     wâpamêw+V+TA+Ind+Prt+12Pl+3PlO: [kikî-wâpamânawak, kikîwâpamânawak]
+     wâpamêw+V+TA+Ind+Prt+2Pl+3PlO: [kikî-wâpamâwâwak, kikîwâpamâwâwak]
+     
+     wâpamêw+V+TA+Ind+Prt+2Sg+1SgO: [kikî-wâpamin, kikîwâpamin]
+     wâpamêw+V+TA+Ind+Prt+2Sg/Pl+1PlO: [kikî-wâpaminân, kikîwâpaminân]
+     wâpamêw+V+TA+Ind+Prt+2Pl+1SgO: [kikî-wâpaminâwâw, kikîwâpaminâwâw]
+     
+     wâpamêw+V+TA+Ind+Prt+3Sg+4Sg/PlO: [kî-wâpamêw, kîwâpamêw]
+     wâpamêw+V+TA+Ind+Prt+3Pl+4Sg/PlO: [kî-wâpamêwak, kîwâpamêwak]
+     wâpamêw+V+TA+Ind+Prt+4Sg/Pl+5Sg/PlO: [kî-wâpamêyiwa, kîwâpamêyiwa]
+     wâpamêw+V+TA+Ind+Prt+3Sg+5Sg/PlO: [kî-wâpamimêw, kîwâpamimêw]
+     wâpamêw+V+TA+Ind+Prt+3Pl+5Sg/PlO: [kî-wâpamimêwak, kîwâpamimêwak]
+
+     wâpamêw+V+TA+Ind+Prt+1Sg+4Sg/PlO: [nikî-wâpamimâwa, nikîwâpamimâwa]
+     wâpamêw+V+TA+Ind+Prt+2Sg+4Sg/PlO: [kikî-wâpamimâwa, kikîwâpamimâwa]
+     wâpamêw+V+TA+Ind+Prt+1Pl+4Sg/PlO: [nikî-wâpamimânâna, nikîwâpamimânâna]
+     wâpamêw+V+TA+Ind+Prt+12Pl+4Sg/PlO: [kikî-wâpamimânawa, kikîwâpamimânawa]
+     wâpamêw+V+TA+Ind+Prt+2Pl+4Sg/PlO: [kikî-wâpamimâwâwa, kikîwâpamimâwâwa]
+     
+     
+     
+     
+     
+     wâpamêw+V+TA+Ind+Fut+Def+1Sg+3SgO: [nika-wâpamâw, nikawâpamâw]
+     wâpamêw+V+TA+Ind+Fut+Def+2Sg+3SgO: [kika-wâpamâw, kikawâpamâw]
+     wâpamêw+V+TA+Ind+Fut+Def+1Pl+3SgO: [nika-wâpamânân, nikawâpamânân]
+     wâpamêw+V+TA+Ind+Fut+Def+12Pl+3SgO: [kika-wâpamânaw, kikawâpamânaw]
+     wâpamêw+V+TA+Ind+Fut+Def+2Pl+3SgO: [kika-wâpamâwâw, kikawâpamâwâw]
+     
+     wâpamêw+V+TA+Ind+Fut+Def+1Sg+3PlO: [nika-wâpamâwak, nikawâpamâwak]
+     wâpamêw+V+TA+Ind+Fut+Def+2Sg+3PlO: [kika-wâpamâwak, kikawâpamâwak]
+     wâpamêw+V+TA+Ind+Fut+Def+1Pl+3PlO: [nika-wâpamânânak, nikawâpamânânak]
+     wâpamêw+V+TA+Ind+Fut+Def+12Pl+3PlO: [kika-wâpamânawak, kikawâpamânawak]
+     wâpamêw+V+TA+Ind+Fut+Def+2Pl+3PlO: [kika-wâpamâwâwak, kikawâpamâwâwak]
+     
+     wâpamêw+V+TA+Ind+Fut+Def+2Sg+1SgO: [kika-wâpamin, kikawâpamin]
+     wâpamêw+V+TA+Ind+Fut+Def+2Sg/Pl+1PlO: [kika-wâpaminân, kikawâpaminân]
+     wâpamêw+V+TA+Ind+Fut+Def+2Pl+1SgO: [kika-wâpaminâwâw, kikawâpaminâwâw]
+     
+     wâpamêw+V+TA+Ind+Fut+Def+3Sg+4Sg/PlO: [ka-wâpamêw, kawâpamêw]
+     wâpamêw+V+TA+Ind+Fut+Def+3Pl+4Sg/PlO: [ka-wâpamêwak, kawâpamêwak]
+     wâpamêw+V+TA+Ind+Fut+Def+4Sg/Pl+5Sg/PlO: [ka-wâpamêyiwa, kawâpamêyiwa]
+     wâpamêw+V+TA+Ind+Fut+Def+3Sg+5Sg/PlO: [ka-wâpamimêw, kawâpamimêw]
+     wâpamêw+V+TA+Ind+Fut+Def+3Pl+5Sg/PlO: [ka-wâpamimêwak, kawâpamimêwak]
+     
+     wâpamêw+V+TA+Ind+Fut+Def+1Sg+4Sg/PlO: [nika-wâpamimâwa, nikawâpamimâwa]
+     wâpamêw+V+TA+Ind+Fut+Def+2Sg+4Sg/PlO: [kika-wâpamimâwa, kikawâpamimâwa]
+     wâpamêw+V+TA+Ind+Fut+Def+1Pl+4Sg/PlO: [nika-wâpamimânâna, nikawâpamimânâna]
+     wâpamêw+V+TA+Ind+Fut+Def+12Pl+4Sg/PlO: [kika-wâpamimânawa, kikawâpamimânawa]
+     wâpamêw+V+TA+Ind+Fut+Def+2Pl+4Sg/PlO: [kika-wâpamimâwâwa, kikawâpamimâwâwa]
+     
+     
+     
+     
+     wâpamêw+V+TA+Ind+Fut+Int+1Sg+3SgO: [niwî-wâpamâw, niwîwâpamâw]
+     wâpamêw+V+TA+Ind+Fut+Int+2Sg+3SgO: [kiwî-wâpamâw, kiwîwâpamâw]
+     wâpamêw+V+TA+Ind+Fut+Int+1Pl+3SgO: [niwî-wâpamânân, niwîwâpamânân]
+     wâpamêw+V+TA+Ind+Fut+Int+12Pl+3SgO: [kiwî-wâpamânaw, kiwîwâpamânaw]
+     wâpamêw+V+TA+Ind+Fut+Int+2Pl+3SgO: [kiwî-wâpamâwâw, kiwîwâpamâwâw]
+     
+     wâpamêw+V+TA+Ind+Fut+Int+1Sg+3PlO: [niwî-wâpamâwak, niwîwâpamâwak]
+     wâpamêw+V+TA+Ind+Fut+Int+2Sg+3PlO: [kiwî-wâpamâwak, kiwîwâpamâwak]
+     wâpamêw+V+TA+Ind+Fut+Int+1Pl+3PlO: [niwî-wâpamânânak, niwîwâpamânânak]
+     wâpamêw+V+TA+Ind+Fut+Int+12Pl+3PlO: [kiwî-wâpamânawak, kiwîwâpamânawak]
+     wâpamêw+V+TA+Ind+Fut+Int+2Pl+3PlO: [kiwî-wâpamâwâwak, kiwîwâpamâwâwak]
+     
+     wâpamêw+V+TA+Ind+Fut+Int+2Sg+1SgO: [kiwî-wâpamin, kiwîwâpamin]
+     wâpamêw+V+TA+Ind+Fut+Int+2Sg/Pl+1PlO: [kiwî-wâpaminân, kiwîwâpaminân]
+     wâpamêw+V+TA+Ind+Fut+Int+2Pl+1SgO: [kiwî-wâpaminâwâw, kiwîwâpaminâwâw]
+     
+     wâpamêw+V+TA+Ind+Fut+Int+3Sg+4Sg/PlO: [wî-wâpamêw, wîwâpamêw]
+     wâpamêw+V+TA+Ind+Fut+Int+3Pl+4Sg/PlO: [wî-wâpamêwak, wîwâpamêwak]
+     wâpamêw+V+TA+Ind+Fut+Int+4Sg/Pl+5Sg/PlO: [wî-wâpamêyiwa, wîwâpamêyiwa]
+     wâpamêw+V+TA+Ind+Fut+Int+3Sg+5Sg/PlO: [wî-wâpamimêw, wîwâpamimêw]
+     wâpamêw+V+TA+Ind+Fut+Int+3Pl+5Sg/PlO: [wî-wâpamimêwak, wîwâpamimêwak]
+     
+     wâpamêw+V+TA+Ind+Fut+Int+1Sg+4Sg/PlO: [niwî-wâpamimâwa, niwîwâpamimâwa]
+     wâpamêw+V+TA+Ind+Fut+Int+2Sg+4Sg/PlO: [kiwî-wâpamimâwa, kiwîwâpamimâwa]
+     wâpamêw+V+TA+Ind+Fut+Int+1Pl+4Sg/PlO: [niwî-wâpamimânâna, niwîwâpamimânâna]
+     wâpamêw+V+TA+Ind+Fut+Int+12Pl+4Sg/PlO: [kiwî-wâpamimânawa, kiwîwâpamimânawa]
+     wâpamêw+V+TA+Ind+Fut+Int+2Pl+4Sg/PlO: [kiwî-wâpamimâwâwa, kiwîwâpamimâwâwa]
+
+     
+     
+     
+
+
+     wâpamêw+V+TA+Ind+Prs+3Sg+1SgO: niwâpamik
+     wâpamêw+V+TA+Ind+Prs+3Sg+2SgO: kiwâpamik
+     wâpamêw+V+TA+Ind+Prs+3Sg+1PlO: niwâpamikonân
+     wâpamêw+V+TA+Ind+Prs+3Sg+12PlO: kiwâpamikonaw
+     wâpamêw+V+TA+Ind+Prs+3Sg+2PlO: kiwâpamikowâw
+     
+     wâpamêw+V+TA+Ind+Prs+3Pl+1SgO: niwâpamikwak
+     wâpamêw+V+TA+Ind+Prs+3Pl+2SgO: kiwâpamikwak
+     wâpamêw+V+TA+Ind+Prs+3Pl+1PlO: niwâpamikonânak
+     wâpamêw+V+TA+Ind+Prs+3Pl+12PlO: kiwâpamikonawak
+     wâpamêw+V+TA+Ind+Prs+3Pl+2PlO: kiwâpamikowâwak
+     
+     wâpamêw+V+TA+Ind+Prs+1Sg+2SgO: kiwâpamitin 
+     wâpamêw+V+TA+Ind+Prs+1Pl+2Sg/PlO: kiwâpamitinân
+     wâpamêw+V+TA+Ind+Prs+1Sg+2PlO: kiwâpamitinâwâw
+     
+     wâpamêw+V+TA+Ind+Prs+4Sg/Pl+3SgO: wâpamik
+     wâpamêw+V+TA+Ind+Prs+4Sg/Pl+3PlO: wâpamikwak
+     wâpamêw+V+TA+Ind+Prs+5Sg/Pl+4Sg/PlO: wâpamikoyiwa
+          
+     wâpamêw+V+TA+Ind+Prs+4Sg/Pl+1SgO: niwâpamikoyiwa
+     wâpamêw+V+TA+Ind+Prs+4Sg/Pl+2SgO: kiwâpamikoyiwa
+     wâpamêw+V+TA+Ind+Prs+4Sg/Pl+1PlO: niwâpamikonâna
+     wâpamêw+V+TA+Ind+Prs+4Sg/Pl+12PlO: kiwâpamikonawa
+     wâpamêw+V+TA+Ind+Prs+4Sg/Pl+2PlO: kiwâpamikowâwa
+     
+     
+     
+     PV/e+wâpamêw+V+TA+Cnj+Prs+1Sg+3SgO: [ê-wâpamak, êwâpamak]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+2Sg+3SgO: [ê-wâpamat, êwâpamat]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+1Pl+3SgO: [ê-wâpamâyâhk, êwâpamâyâhk]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+12Pl+3SgO: [ê-wâpamâyahk, êwâpamâyahk]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+2Pl+3SgO: [ê-wâpamâyêk, êwâpamâyêk]
+ 
+     PV/e+wâpamêw+V+TA+Cnj+Prs+1Sg+3PlO: [ê-wâpamakik, êwâpamakik]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+2Sg+3PlO: [ê-wâpamacik, êwâpamacik]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+1Pl+3PlO: [ê-wâpamâyâhkik, êwâpamâyâhkik]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+12Pl+3PlO: [ê-wâpamâyahkok, êwâpamâyahkok]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+2Pl+3PlO: [ê-wâpamâyêkok, êwâpamâyêkok] 
+     
+     PV/e+wâpamêw+V+TA+Cnj+Prs+2Sg+1SgO: [ê-wâpamiyan, êwâpamiyan]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+2Sg/Pl+1PlO: [ê-wâpamiyâhk, êwâpamiyâhk]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+2Pl+1SgO: [ê-wâpamiyêk, êwâpamiyêk]    
+     
+     PV/e+wâpamêw+V+TA+Cnj+Prs+3Sg+4Sg/PlO: [ê-wâpamât, êwâpamât]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+3Pl+4Sg/PlO: [ê-wâpamâcik, êwâpamâcik]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+3Sg+5Sg/PlO: [ê-wâpamimât, êwâpamimât]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+3Pl+5Sg/PlO: [ê-wâpamimâcik, êwâpamimâcik]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+4Sg/Pl+5Sg/PlO: [ê-wâpamâyit, êwâpamâyit]
+     
+     PV/e+wâpamêw+V+TA+Cnj+Prs+1Sg+4Sg/PlO: [ê-wâpamimak, êwâpamimak]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+2Sg+4Sg/PlO: [ê-wâpamimat, êwâpamimat]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+1Pl+4Sg/PlO: [ê-wâpamimâyâhk, êwâpamimâyâhk]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+12Pl+4Sg/PlO: [ê-wâpamimâyahk, êwâpamimâyahk]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+2Pl+4Sg/PlO: [ê-wâpamimâyêk, êwâpamimâyêk]
+   
+   
+   
+   
+   
+     PV/e+wâpamêw+V+TA+Cnj+Prs+3Sg+1SgO: [ê-wâpamit, êwâpamit]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+3Sg+2SgO: [ê-wâpamisk, êwâpamisk]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+3Sg+1PlO: [ê-wâpamikoyâhk, êwâpamikoyâhk]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+3Sg+12PlO: [ê-wâpamikoyahk, êwâpamikoyahk]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+3Sg+2PlO: [ê-wâpamikoyek, êwâpamikoyek]
+ 
+     PV/e+wâpamêw+V+TA+Cnj+Prs+3Pl+1SgO: [ê-wâpamicik, êwâpamicik]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+3Pl+2SgO: [ê-wâpamiskik, êwâpamiskik]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+3Pl+1PlO: [ê-wâpamikoyâhkik, êwâpamikoyâhkik]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+3Pl+12PlO: [ê-wâpamikoyahkok, êwâpamikoyahkok]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+3Pl+2PlO: [ê-wâpamikoyêkok, êwâpamikoyêkok]
+ 
+     PV/e+wâpamêw+V+TA+Cnj+Prs+1Sg+2SgO: [ê-wâpamitân, êwâpamitân]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+1Pl+2Sg/PlO: [ê-wâpamitâhk, êwâpamitâhk]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+1Sg+2PlO: [ê-wâpamitakok, êwâpamitakok]
+ 
+     PV/e+wâpamêw+V+TA+Cnj+Prs+4Sg/Pl+3SgO: [ê-wâpamikot, êwâpamikot]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+4Sg/Pl+3PlO: [ê-wâpamikocik, êwâpamikocik]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+5Sg/Pl+4Sg/PlO: [ê-wâpamikoyit, êwâpamikoyit]
+          
+     PV/e+wâpamêw+V+TA+Cnj+Prs+4Sg/Pl+1SgO: [ê-wâpamimit, êwâpamimit]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+4Sg/Pl+2SgO: [ê-wâpamimisk, êwâpamimisk]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+4Sg/Pl+1PlO: [ê-wâpamikoyâhk, êwâpamikoyâhk, ê-wâpamikowâyâhk, êwâpamikowâyâhk]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+4Sg/Pl+2PlO: [ê-wâpamikoyêk, êwâpamikoyêk, ê-wâpamikowâyêk, êwâpamikowâyêk]
+     PV/e+wâpamêw+V+TA+Cnj+Prs+4Sg/Pl+12PlO: [ê-wâpamikoyahk, êwâpamikoyahk, ê-wâpamikowâyahk, êwâpamikowâyahk]
+     
+
+
+
+
+     wâpamêw+V+TA+Cnj+Prs+1Sg+3SgO: wâpamak
+     wâpamêw+V+TA+Cnj+Prs+2Sg+3SgO: wâpamat
+     wâpamêw+V+TA+Cnj+Prs+1Pl+3SgO: wâpamâyâhk
+     wâpamêw+V+TA+Cnj+Prs+12Pl+3SgO: wâpamâyahk
+     wâpamêw+V+TA+Cnj+Prs+2Pl+3SgO: wâpamâyêk
+
+     wâpamêw+V+TA+Cnj+Prs+1Sg+3PlO: wâpamakik
+     wâpamêw+V+TA+Cnj+Prs+2Sg+3PlO: wâpamacik
+     wâpamêw+V+TA+Cnj+Prs+1Pl+3PlO: wâpamâyâhkik
+     wâpamêw+V+TA+Cnj+Prs+12Pl+3PlO: wâpamâyahkok
+     wâpamêw+V+TA+Cnj+Prs+2Pl+3PlO: wâpamâyêkok 
+     
+     wâpamêw+V+TA+Cnj+Prs+2Sg+1SgO: wâpamiyan
+     wâpamêw+V+TA+Cnj+Prs+2Sg/Pl+1PlO: wâpamiyâhk
+     wâpamêw+V+TA+Cnj+Prs+2Pl+1SgO: wâpamiyêk    
+     
+     wâpamêw+V+TA+Cnj+Prs+3Sg+4Sg/PlO: wâpamât
+     wâpamêw+V+TA+Cnj+Prs+3Pl+4Sg/PlO: wâpamâcik
+     wâpamêw+V+TA+Cnj+Prs+3Sg+5Sg/PlO: wâpamimât
+     wâpamêw+V+TA+Cnj+Prs+3Pl+5Sg/PlO: wâpamimâcik
+     wâpamêw+V+TA+Cnj+Prs+4Sg/Pl+5Sg/PlO: wâpamâyit
+     
+     wâpamêw+V+TA+Cnj+Prs+1Sg+4Sg/PlO: wâpamimak
+     wâpamêw+V+TA+Cnj+Prs+2Sg+4Sg/PlO: wâpamimat
+     wâpamêw+V+TA+Cnj+Prs+1Pl+4Sg/PlO: wâpamimâyâhk
+     wâpamêw+V+TA+Cnj+Prs+12Pl+4Sg/PlO: wâpamimâyahk
+     wâpamêw+V+TA+Cnj+Prs+2Pl+4Sg/PlO: wâpamimâyêk
+     
+     
+     
+     
+     
+     wâpamêw+V+TA+Cnj+Prs+3Sg+1SgO: wâpamit
+     wâpamêw+V+TA+Cnj+Prs+3Sg+2SgO: wâpamisk
+     wâpamêw+V+TA+Cnj+Prs+3Sg+1PlO: wâpamikoyâhk
+     wâpamêw+V+TA+Cnj+Prs+3Sg+12PlO: wâpamikoyahk
+     wâpamêw+V+TA+Cnj+Prs+3Sg+2PlO: wâpamikoyêk
+
+     wâpamêw+V+TA+Cnj+Prs+3Pl+1SgO: wâpamicik
+     wâpamêw+V+TA+Cnj+Prs+3Pl+2SgO: wâpamiskik
+     wâpamêw+V+TA+Cnj+Prs+3Pl+1PlO: wâpamikoyâhkik
+     wâpamêw+V+TA+Cnj+Prs+3Pl+12PlO: wâpamikoyahkok
+     wâpamêw+V+TA+Cnj+Prs+3Pl+2PlO: wâpamikoyêkok
+
+     wâpamêw+V+TA+Cnj+Prs+1Sg+2SgO: wâpamitân
+     wâpamêw+V+TA+Cnj+Prs+1Pl+2Sg/PlO: wâpamitâhk
+     wâpamêw+V+TA+Cnj+Prs+1Sg+2PlO: wâpamitakok
+
+     wâpamêw+V+TA+Cnj+Prs+4Sg/Pl+3SgO: wâpamikot
+     wâpamêw+V+TA+Cnj+Prs+4Sg/Pl+3PlO: wâpamikocik
+     wâpamêw+V+TA+Cnj+Prs+5Sg/Pl+4Sg/PlO: wâpamikoyit
+          
+     wâpamêw+V+TA+Cnj+Prs+4Sg/Pl+1SgO: wâpamimit
+     wâpamêw+V+TA+Cnj+Prs+4Sg/Pl+2SgO: wâpamimisk
+     wâpamêw+V+TA+Cnj+Prs+4Sg/Pl+1PlO: [wâpamikoyâhk, wâpamikowâyâhk]
+     wâpamêw+V+TA+Cnj+Prs+4Sg/Pl+2PlO: [wâpamikoyêk, wâpamikowâyêk]
+     wâpamêw+V+TA+Cnj+Prs+4Sg/Pl+12PlO: [wâpamikoyahk, wâpamikowâyahk]
+     
+
+
+
+
+     wâpamêw+V+TA+Imp+Imm+2Sg+3SgO: wâpam
+     wâpamêw+V+TA+Imp+Imm+12Pl+3SgO: wâpamâtân
+     wâpamêw+V+TA+Imp+Imm+2Pl+3SgO: wâpamihk
+     wâpamêw+V+TA+Imp+Imm+2Sg+3PlO: wâpamik
+     wâpamêw+V+TA+Imp+Imm+12Pl+3PlO: wâpamâtânik
+     wâpamêw+V+TA+Imp+Imm+2Pl+3PlO: wâpamihkik
+
+     wâpamêw+V+TA+Imp+Del+2Sg+3SgO: wâpamâhkan
+     wâpamêw+V+TA+Imp+Del+12Pl+3SgO: wâpamâhkahk
+     wâpamêw+V+TA+Imp+Del+2Pl+3SgO: wâpamâhkêk
+     wâpamêw+V+TA+Imp+Del+2Sg+3PlO: wâpamâhkanik
+     wâpamêw+V+TA+Imp+Del+12Pl+3PlO: wâpamâhkahkok
+     wâpamêw+V+TA+Imp+Del+2Pl+3PlO: wâpamâhkêkok
+
+     wâpamêw+V+TA+Imp+Imm+2Sg+1SgO: wâpamin
+     wâpamêw+V+TA+Imp+Imm+2Sg/Pl+1PlO: wâpaminân
+     wâpamêw+V+TA+Imp+Imm+2Pl+1SgO: wâpamik
+     wâpamêw+V+TA+Imp+Del+2Sg+1SgO: wâpamîhkan
+     wâpamêw+V+TA+Imp+Del+2Sg/Pl+1PlO: wâpamîhkâhk
+     wâpamêw+V+TA+Imp+Del+2Pl+1SgO: wâpamîhkêk
+     
+     
+     
+
+     wâpamêw+V+TA+Fut+Cond+1Sg+3SgO: wâpamaki
+     wâpamêw+V+TA+Fut+Cond+2Sg+3SgO: wâpamaci
+     wâpamêw+V+TA+Fut+Cond+1Pl+3SgO: wâpamâyâhki
+     wâpamêw+V+TA+Fut+Cond+12Pl+3SgO: [wâpamâyahko, wâpamâyahki]
+     wâpamêw+V+TA+Fut+Cond+2Pl+3SgO: wâpamâyêko
+
+     wâpamêw+V+TA+Fut+Cond+3Sg+4Sg/PlO: wâpamâci
+     wâpamêw+V+TA+Fut+Cond+3Pl+4Sg/PlO: wâpamâtwâwi
+     wâpamêw+V+TA+Fut+Cond+4Sg/Pl+5Sg/PlO: wâpamâyici
+     
+     wâpamêw+V+TA+Fut+Cond+1Sg+3PlO: wâpamakwâwi
+     wâpamêw+V+TA+Fut+Cond+2Sg+3PlO: wâpamatwâwi
+     wâpamêw+V+TA+Fut+Cond+1Pl+3PlO: wâpamâyâhkwâwi
+     wâpamêw+V+TA+Fut+Cond+12Pl+3PlO: wâpamâyahkwâwi
+     wâpamêw+V+TA+Fut+Cond+2Pl+3PlO: wâpamâyêkwâwi
+
+     wâpamêw+V+TA+Fut+Cond+3Sg+1SgO: wâpamici
+     wâpamêw+V+TA+Fut+Cond+3Sg+2SgO: wâpamiski
+     wâpamêw+V+TA+Fut+Cond+3Sg+1PlO: wâpamikoyâhki
+     wâpamêw+V+TA+Fut+Cond+3Sg+12PlO: [wâpamikoyahko, wâpamikoyahki]
+     wâpamêw+V+TA+Fut+Cond+3Sg+2PlO: wâpamikoyêko
+     
+     wâpamêw+V+TA+Fut+Cond+4Sg/Pl+3SgO: wâpamikoci
+     wâpamêw+V+TA+Fut+Cond+4Sg/Pl+3PlO: wâpamikotwâwi
+     wâpamêw+V+TA+Fut+Cond+5Sg/Pl+4Sg/PlO: wâpamikoyici
+     
+     wâpamêw+V+TA+Fut+Cond+3Pl+1SgO: wâpamitwâwi
+     wâpamêw+V+TA+Fut+Cond+3Pl+2SgO: wâpamiskwâwi
+     wâpamêw+V+TA+Fut+Cond+3Pl+1PlO: wâpamikoyâhkwâwi
+     wâpamêw+V+TA+Fut+Cond+3Pl+12PlO: wâpamikoyahkwâwi
+     wâpamêw+V+TA+Fut+Cond+3Pl+2PlO: wâpamikoyêkwâwi
+     
+     wâpamêw+V+TA+Fut+Cond+2Sg+1SgO: wâpamiyani
+     wâpamêw+V+TA+Fut+Cond+2Pl+1SgO: wâpamiyêko
+     wâpamêw+V+TA+Fut+Cond+2Sg/Pl+1PlO: wâpamiyâhki
+     
+     wâpamêw+V+TA+Fut+Cond+1Sg+2SgO: wâpamitâni
+     wâpamêw+V+TA+Fut+Cond+1Sg+2PlO: wâpamitako
+     wâpamêw+V+TA+Fut+Cond+1Pl+2Sg/PlO: wâpamitâhki

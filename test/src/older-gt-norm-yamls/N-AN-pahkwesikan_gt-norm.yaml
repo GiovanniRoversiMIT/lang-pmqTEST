@@ -1,0 +1,60 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Noun - pahkwêsikan - ok : # -m animate noun, bannock, Grammar guide p. 27
+     
+     pahkwêsikan+N+AN+Sg: pahkwêsikan
+     pahkwêsikan+N+AN+Pl: pahkwêsikanak
+     pahkwêsikan+N+AN+Loc: pahkwêsikanihk
+     pahkwêsikan+N+AN+Sg+Obv: pahkwêsikana
+     pahkwêsikan+N+AN+Der/Dim+N+AN+Sg: [pahkwêsikanis, pahkwêsikanisis]
+     pahkwêsikan+N+AN+Der/Dim+N+AN+Pl: [pahkwêsikanisak, pahkwêsikanisisak]
+
+     pahkwêsikan+N+AN+Sg+Px1Sg: nipahkwêsikanim
+     pahkwêsikan+N+AN+Sg+Px2Sg: kipahkwêsikanim
+     pahkwêsikan+N+AN+Sg+Px3Sg+Obv: opahkwêsikanima
+     pahkwêsikan+N+AN+Sg+Px4Sg+Obv: opahkwêsikanimiyiwa
+     pahkwêsikan+N+AN+Sg+Px1Pl: nipahkwêsikaniminân
+     pahkwêsikan+N+AN+Sg+Px12Pl: kipahkwêsikaniminaw
+     pahkwêsikan+N+AN+Sg+Px2Pl: kipahkwêsikanimiwâw
+     pahkwêsikan+N+AN+Sg+Px3Pl+Obv: opahkwêsikanimiwâwa
+     pahkwêsikan+N+AN+Sg+Px4Pl+Obv: opahkwêsikanimiyiwa
+
+     pahkwêsikan+N+AN+Pl+Px1Sg: nipahkwêsikanimak
+     pahkwêsikan+N+AN+Pl+Px2Sg: kipahkwêsikanimak
+     pahkwêsikan+N+AN+Pl+Px3Sg+Obv: opahkwêsikanima
+     pahkwêsikan+N+AN+Pl+Px4Sg+Obv: opahkwêsikanimiyiwa
+     pahkwêsikan+N+AN+Pl+Px1Pl: nipahkwêsikaniminânak
+     pahkwêsikan+N+AN+Pl+Px12Pl: kipahkwêsikaniminawak
+     pahkwêsikan+N+AN+Pl+Px2Pl: kipahkwêsikanimiwâwak
+     pahkwêsikan+N+AN+Pl+Px3Pl+Obv: opahkwêsikanimiwâwa
+     pahkwêsikan+N+AN+Pl+Px4Pl+Obv: opahkwêsikanimiyiwa
+
+     pahkwêsikan+N+AN+Der/Dim+N+AN+Sg+Px1Sg: nipahkwêsikanimis
+     pahkwêsikan+N+AN+Der/Dim+N+AN+Sg+Px2Sg: kipahkwêsikanimis
+     pahkwêsikan+N+AN+Der/Dim+N+AN+Sg+Px3Sg+Obv: opahkwêsikanimisa
+     pahkwêsikan+N+AN+Der/Dim+N+AN+Sg+Px4Sg+Obv: opahkwêsikanimisiyiwa
+     pahkwêsikan+N+AN+Der/Dim+N+AN+Sg+Px1Pl: nipahkwêsikanimisinân
+     pahkwêsikan+N+AN+Der/Dim+N+AN+Sg+Px12Pl: kipahkwêsikanimisinaw
+     pahkwêsikan+N+AN+Der/Dim+N+AN+Sg+Px2Pl: kipahkwêsikanimisiwâw
+     pahkwêsikan+N+AN+Der/Dim+N+AN+Sg+Px3Pl+Obv: opahkwêsikanimisiwâwa
+     pahkwêsikan+N+AN+Der/Dim+N+AN+Sg+Px4Pl+Obv: opahkwêsikanimisiyiwa
+
+     pahkwêsikan+N+AN+Der/Dim+N+AN+Pl+Px1Sg: nipahkwêsikanimisak
+     pahkwêsikan+N+AN+Der/Dim+N+AN+Pl+Px2Sg: kipahkwêsikanimisak
+     pahkwêsikan+N+AN+Der/Dim+N+AN+Pl+Px3Sg+Obv: opahkwêsikanimisa
+     pahkwêsikan+N+AN+Der/Dim+N+AN+Pl+Px4Sg+Obv: opahkwêsikanimisiyiwa
+     pahkwêsikan+N+AN+Der/Dim+N+AN+Pl+Px1Pl: nipahkwêsikanimisinânak
+     pahkwêsikan+N+AN+Der/Dim+N+AN+Pl+Px12Pl: kipahkwêsikanimisinawak
+     pahkwêsikan+N+AN+Der/Dim+N+AN+Pl+Px2Pl: kipahkwêsikanimisiwâwak
+     pahkwêsikan+N+AN+Der/Dim+N+AN+Pl+Px3Pl+Obv: opahkwêsikanimisiwâwa
+     pahkwêsikan+N+AN+Der/Dim+N+AN+Pl+Px4Pl+Obv: opahkwêsikanimisiyiwa
+

@@ -1,0 +1,192 @@
+! Copyright © 2015–2023 Alberta Language Technology Lab (ALTLab)
+! http://altlab.ualberta.ca/
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU Affero General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version.
+!
+! This program is distributed in the hope that it will be useful,
+! but WITHOUT ANY WARRANTY; without even the implied warranty of
+! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+! GNU Affero General Public License for more details.
+!
+! You should have received a copy of the GNU Affero General Public License
+! along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+! ========================================================================== !
+!! # Plains Cree numerals                           
+! ========================================================================== !
+
+!! ## The file for numerals
+
+LEXICON Numerals !!= * @CODE@
+pêyak% kihci% mitâtahtomtanaw THOUSAND ;
+pêyak% kihci% mitâtahtomitanaw THOUSAND ;
+UNDERTHOUSAND ;		! 100-999
+TENS ;			! 20-99
+TEENS ;			! 10-19
+ONES ;			! 1-9
+NEARLY ;			! 29-99
+ARABIC          ; ! for the arabic numerals !
+ROMAN           ; ! for the roman numerals  !
+NUM-PREFIXES    ; ! for §34 etc.            !
+ISOLATED-NUMEXP ; ! for ½ etc.                      !
+
+
+
+LEXICON THOUSAND
+% ayiwâk%  UNDERTHOUSAND ;	   ! 1100-1999
+% ayiwâk%  TENS ;	   ! 1020-1099
+% ayiwâk%  TEENS ;	   ! 1010-1019
+% ayiwâk%  ONES ;	   ! 1001-1009
+ NUM ;	   ! 1000
+
+
+!===========================
+!! ## Here start the 999 numbers
+!===========================
+
+LEXICON UNDERTHOUSAND !!= * @CODE@
+HUNDREDS ;
+mitâtahtomitanaw  HUNDRED ;
+mitâtahtomtanaw  HUNDRED ;
+
+LEXICON HUNDREDS !!= * @CODE@
+nîso%    CUODI ;
+nisto%     CUODI ;
+nêwo%  CUODI ;
+niyânano%    CUODI ;  !OBS
+nikotwâsiko%    CUODI ;
+têpakohpo%  CUODI ;
+ayinânêwo%  CUODI ;
+kêkâmitâtahto%    CUODI ;
+
+LEXICON CUODI !!= * @CODE@
+mitâtahtomitanaw    HUNDRED ;
+mitâtahtomtanaw   HUNDRED ;
+ 
+LEXICON HUNDRED !!= * @CODE@
+% ayiwâk%   TENS ;
+% ayiwâk%   TEENS ;
+% ayiwâk%    ONES ;
+ NUM ;
+
+
+
+LEXICON TENS !!= * @CODE@
+mitâtaht NUM ;
+nîs TEN ;
+nîsomi TEN;
+nîsi TEN ;
+nistomi TEN ;
+nêmi TEN ;
+niyânanomi TEN ;
+nikotwâsomi TEN ;
+têpakohpimi TEN ;
+têpakohpomi TEN ;
+ayinânêwomi TEN ;
+kêkâ-mitâtahtomi TEN ;
+kêkâmitâtahtomi TEN ;
+
+LEXICON TEN !!= * @CODE@
+tanaw%  ONESTONEXT ;
+tanaw  NUM ;
+
+LEXICON NEARLY
+kêkâc% nistom NEARLY-TEN ;
+kêkâc% nistomi NEARLY-TEN ;
+kêkâc% nêwom NEARLY-TEN ;
+kêkâc% nêmi NEARLY-TEN ;
+kêkâc% nêwomi NEARLY-TEN ;
+kêkâc% nîyânom NEARLY-TEN ;
+kêkâc% nîyânomi NEARLY-TEN ;
+kêkâc% nikotwâsom NEARLY-TEN ;
+kêkâc% têpakohpim NEARLY-TEN ;
+kêkâc% ayinânêwom NEARLY-TEN ;
+kêkâc% kêkâ% mitâtahtomi NEARLY-TEN ;
+kêkâc% kêkâ% mitâtahtom NEARLY-TEN ;
+kêkâ% mitâtahtom NEARLY-TEN ;
+kêkâ% mitâtahtomi NEARLY-TEN ;
+kêkâ% mitatahtomitanaw% ayiwâk% kêkâ% mitâtaht NUM ;
+kêkâc-nistomi NEARLY-TEN ;
+kêkâ-nistomi NEARLY-TEN ;
+kêkâc-nêmi NEARLY-TEN ;
+kêkâc-nêwomi NEARLY-TEN ;
+kêkâ-nêmi NEARLY-TEN ;
+kêkâc-niyânanomi NEARLY-TEN ;
+kêkâ-niyânanomi NEARLY-TEN ;
+kêkâc-nikotwâsomi NEARLY-TEN ;
+kêkâ-nikotwâsomi NEARLY-TEN ;
+kêkâc-têpakohpimi NEARLY-TEN ;
+kêkâc-têpakohpomi NEARLY-TEN ;
+kêkâ-têpakohpimi NEARLY-TEN ;
+kêkâ-têpakohpomi NEARLY-TEN ;
+kêkâc-ayinânêwomi NEARLY-TEN ;
+kêkâ-ayinânêwomi NEARLY-TEN ;
+kêkâc-kêkâ-mitâtahtomi NEARLY-TEN ;
+kêkâ-mitâtahtomi NEARLY-TEN ;
+kêkâ-mitâtahtomitanaw% kêkâ-mitâtaht NUM ;
+
+LEXICON NEARLY-TEN
+tanaw NUM ;
+
+
+LEXICON ONESTONEXT !!= * @CODE@
+pêyakosâp NUM ;
+nîsosâp NUM ;
+nistosâp NUM ;
+nêwosâp NUM ;
+niyânanosâp NUM ;
+nikotwâsosâp NUM ;
+têpakohposâp NUM ;
+ayinânêwosâp NUM ;
+kêkâ-mitâtahtosâp NUM ;
+kêkâmitâtahtosâp NUM ;
+pêyako-sâp NUM ;
+nîso-sâp NUM ;
+nisto-sâp NUM ;
+nêwo-sâp NUM ;
+niyânano-sâp NUM ;
+nikotwâso-sâp NUM ;
+têpakohp-sâp NUM ;
+ayinânêwo-sâp NUM ;
+!kêkâc% nîsitanaw NUM ; ! only for 19 (almost 20)
+ayiwâk%  CARDINAL ;
+
+
+
+LEXICON TEENS !!= * @CODE@
+pêyakosâp NUM ;
+nîsosâp NUM ;
+nistosâp NUM ;
+nêwosâp NUM ;
+niyânanosâp NUM ;
+nikotwâsosâp NUM ;
+nikotwâsikosâp NUM ;
+têpakohposâp NUM ;
+ayinânêwosâp NUM ;
+kêkâ-mitâtahtosâp NUM ;
+kêkâmitâtahtosâp NUM ;
+kêkâc% nîsitanaw NUM ;
+kêkâ-nîsitanaw NUM ;
+
+LEXICON ONES !!= * @CODE@
+CARDINAL ;
+!ORDINAL ;
+
+LEXICON CARDINAL !!= * @CODE@
+pêyak NUM ;
+nîso NUM ;
+nisto NUM ;
+nêwo NUM ;
+niyânan NUM ;
+nikotwâsik NUM ;
+têpakohp NUM ;
+ayinânêw NUM ;
+kêkâ-mitâtaht NUM ;
+kêkâmitâtaht NUM ;
+kêkâ% mitâtaht NUM ;
+
+LEXICON NUM !!= * @CODE@ adds +Num+Ipc
++Num+Ipc: # ;

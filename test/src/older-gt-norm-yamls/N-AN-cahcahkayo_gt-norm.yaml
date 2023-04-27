@@ -1,0 +1,58 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/aANlyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/aANlyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Noun - cahcahkayo - ok : # -m animate noun, blackbird
+     cahcahkâyow+N+AN+Sg: cahcahkâyow
+     cahcahkâyow+N+AN+Pl: cahcahkâyowak
+     cahcahkâyow+N+AN+Loc: cahcahkâyôhk 
+     cahcahkâyow+N+AN+Der/Dim+N+AN+Sg: cahcahkâyôsis
+     cahcahkâyow+N+AN+Der/Dim+N+AN+Pl: cahcahkâyôsisak
+
+     cahcahkâyow+N+AN+Sg+Px1Sg: nicahcahkâyôm
+     cahcahkâyow+N+AN+Sg+Px2Sg: kicahcahkâyôm
+     cahcahkâyow+N+AN+Sg+Px3Sg+Obv: ocahcahkâyôma
+     cahcahkâyow+N+AN+Sg+Px4Sg+Obv: ocahcahkâyômiyiwa
+     cahcahkâyow+N+AN+Sg+Px1Pl: nicahcahkâyôminân
+     cahcahkâyow+N+AN+Sg+Px12Pl: kicahcahkâyôminaw
+     cahcahkâyow+N+AN+Sg+Px2Pl: kicahcahkâyômiwâw
+     cahcahkâyow+N+AN+Sg+Px3Pl+Obv: ocahcahkâyômiwâwa
+     cahcahkâyow+N+AN+Sg+Px4Pl+Obv: ocahcahkâyômiyiwa
+
+     cahcahkâyow+N+AN+Pl+Px1Sg: nicahcahkâyômak
+     cahcahkâyow+N+AN+Pl+Px2Sg: kicahcahkâyômak
+     cahcahkâyow+N+AN+Pl+Px3Sg+Obv: ocahcahkâyôma
+     cahcahkâyow+N+AN+Pl+Px4Sg+Obv: ocahcahkâyômiyiwa
+     cahcahkâyow+N+AN+Pl+Px1Pl: nicahcahkâyôminânak
+     cahcahkâyow+N+AN+Pl+Px12Pl: kicahcahkâyôminawak
+     cahcahkâyow+N+AN+Pl+Px2Pl: kicahcahkâyômiwâwak
+     cahcahkâyow+N+AN+Pl+Px3Pl+Obv: ocahcahkâyômiwâwa
+     cahcahkâyow+N+AN+Pl+Px4Pl+Obv: ocahcahkâyômiyiwa
+
+     cahcahkâyow+N+AN+Der/Dim+N+AN+Sg+Px1Sg: nicahcahkâyômisis
+     cahcahkâyow+N+AN+Der/Dim+N+AN+Sg+Px2Sg: kicahcahkâyômisis
+     cahcahkâyow+N+AN+Der/Dim+N+AN+Sg+Px3Sg+Obv: ocahcahkâyômisisa
+     cahcahkâyow+N+AN+Der/Dim+N+AN+Sg+Px4Sg+Obv: ocahcahkâyômisisiyiwa
+     cahcahkâyow+N+AN+Der/Dim+N+AN+Sg+Px1Pl: nicahcahkâyômisisinân
+     cahcahkâyow+N+AN+Der/Dim+N+AN+Sg+Px12Pl: kicahcahkâyômisisinaw
+     cahcahkâyow+N+AN+Der/Dim+N+AN+Sg+Px2Pl: kicahcahkâyômisisiwâw
+     cahcahkâyow+N+AN+Der/Dim+N+AN+Sg+Px3Pl+Obv: ocahcahkâyômisisiwâwa
+     cahcahkâyow+N+AN+Der/Dim+N+AN+Sg+Px4Pl+Obv: ocahcahkâyômisisiyiwa
+
+     cahcahkâyow+N+AN+Der/Dim+N+AN+Pl+Px1Sg: nicahcahkâyômisisak
+     cahcahkâyow+N+AN+Der/Dim+N+AN+Pl+Px2Sg: kicahcahkâyômisisak
+     cahcahkâyow+N+AN+Der/Dim+N+AN+Pl+Px3Sg+Obv: ocahcahkâyômisisa
+     cahcahkâyow+N+AN+Der/Dim+N+AN+Pl+Px4Sg+Obv: ocahcahkâyômisisiyiwa
+     cahcahkâyow+N+AN+Der/Dim+N+AN+Pl+Px1Pl: nicahcahkâyômisisinânak
+     cahcahkâyow+N+AN+Der/Dim+N+AN+Pl+Px12Pl: kicahcahkâyômisisinawak
+     cahcahkâyow+N+AN+Der/Dim+N+AN+Pl+Px2Pl: kicahcahkâyômisisiwâwak
+     cahcahkâyow+N+AN+Der/Dim+N+AN+Pl+Px3Pl+Obv: ocahcahkâyômisisiwâwa
+     cahcahkâyow+N+AN+Der/Dim+N+AN+Pl+Px4Pl+Obv: ocahcahkâyômisisiyiwa
+

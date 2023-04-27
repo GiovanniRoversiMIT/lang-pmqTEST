@@ -1,0 +1,1526 @@
+# -*- cg-pre-:pipe => "$GTHOME/giella-core/scripts/preprocess --abbr=$GTHOME/langs/crk/tools/preprocess/abbr.txt | hfst-optimised-lookup  $GTHOME/langs/crk/src/analyser-disamb-gt-desc.hfstol | $GTHOME/giella-core/scripts/lookup2cg" -*-
+
+
+#   ============================ #
+#!! # Plains Cree disambiguator 
+#   ============================ #
+
+
+# ========== #
+# Delimiters #
+# ========== #
+
+
+DELIMITERS = "<.>" "<!>" "<?>" "<¶>";
+
+
+
+# ============= #
+# Tags and sets #
+# ============= #
+
+
+# ========
+   SETS
+# ========
+
+LIST BOS = (>>>) (<s>) (<*>); 
+LIST EOS = (<<<) (</s>); # vislcg and CG-2 together.
+LIST SqBL = "<[>" ;
+LIST SqBR = "<]>" ;
+
+LIST N = N ;
+LIST V = V ;
+
+LIST Ipc = Ipc ;
+LIST Iph = Iph ;
+LIST Ipl = Ipl ;
+LIST Ipt = Ipt ;
+LIST Ipn = Ipn ;
+LIST Quant = Quant ;
+LIST Interj = Interj ;
+LIST InLoc = InLoc ; 
+
+LIST Adv = Adv ;
+LIST CC = CC ;
+LIST CS = CS ;
+
+LIST A = A ;
+LIST I = I ;
+LIST Prop = Prop ;
+LIST D = D ;
+
+LIST AI = AI ;
+LIST II = II ;
+LIST TA = TA ;
+LIST TI = TI ;
+
+LIST Cnj = Cnj ;
+LIST ConNeg = ConNeg ;
+LIST Cond = Cond ;
+LIST Def = Def ;
+LIST Del = Del ;
+LIST Dem = Dem ;
+LIST Dim = Dim ;
+LIST Dim/Der = Dim/Der ;
+LIST Dist = Dist ;
+LIST Fut = Fut ;
+LIST Imm = Imm ;
+LIST Imp = Imp ;
+LIST Incl = Incl ;
+LIST Ind = Ind ;
+LIST Inf = Inf ;
+LIST Int = Int ;
+LIST Interr = Interr ;
+LIST Loc = Loc ;
+LIST Med = Med ;
+LIST Neg = Neg ;
+LIST Num = Num ;
+LIST Obv =  Obv ;
+LIST Pos = Pos ;
+LIST Prf = Prf ;
+LIST Pron = Pron ;
+LIST Prox = Prox ;
+LIST Prs = Prs ;
+LIST Prt = Prt ;
+LIST Qst = Qst ;
+LIST Sbj = Sbj ;
+LIST Pers = Pers ;
+
+LIST SgO = SgO ;
+LIST 2PlO = 2PlO ;
+LIST Pl = Pl ;
+LIST PlO = PlO ;
+LIST 12Pl = 12Pl ;
+LIST 12PlO = 12PlO ;
+LIST 1Pl = 1Pl ;
+LIST 1PlO = 1PlO ;
+LIST Sg = Sg ;
+LIST 1Sg = 1Sg ;
+LIST 1SgO = 1SgO ;
+LIST 2Pl = 2Pl ;
+LIST 2Sg = 2Sg ;
+LIST 2SgO = 2SgO ;
+LIST 3Pl = 3Pl ;
+LIST 3PlO = 3PlO ;
+LIST 3Sg = 3Sg ;
+LIST 3SgO = 3SgO ;
+LIST 4Pl = 4Pl ;
+LIST 4PlO = 4PlO ;
+LIST 4Sg = 4Sg ;
+LIST 4SgO = 4SgO ;
+LIST 5Sg = 5Sg ;
+LIST 4Sg/Pl = 4Sg/Pl ;
+LIST 5Sg/Pl = 5Sg/Pl ;
+LIST 4Sg/PlO = 4Sg/PlO ;
+LIST 5Sg/PlO = 5Sg/PlO ;
+LIST 2Sg/PlO = 2Sg/PlO ;
+LIST X = X ;
+
+LIST PLURALARG = 1Pl 1PlO 2Pl 2PlO 12Pl 12PlO 3Pl 3PlO 4Pl 4PlO ;
+
+LIST Px12Pl = Px12Pl ;
+LIST Px1Pl = Px1Pl ;
+LIST Px1Sg = Px1Sg ;
+LIST Px2Pl = Px2Pl ;
+LIST Px2Sg = Px2Sg ;
+LIST Px3Pl = Px3Pl ;
+LIST Px3Sg = Px3Sg ;
+LIST Px4Pl = Px4Pl ;
+LIST Px4Sg = Px4Sg ;
+LIST Px4Sg/Pl = Px4Sg/Pl ;
+
+LIST POSS = Px12Pl Px1Pl Px1Sg Px2Pl Px2Sg Px3Pl Px3Sg Px4Pl Px4Sg Px4Sg/Pl ;
+
+LIST Der/Dim = Der/Dim ;
+
+LIST CLB = CLB ;
+LIST Err/Orth = Err/Orth ;
+LIST Eng = Eng ;
+
+LIST Quot = Quot ;
+
+LIST PV/kah = "PV/kah" PV/kah ;
+LIST RdplS = "RdplS" RdplS ;
+LIST RdplW = "RdplW" RdplW ;
+
+LIST RdplS = RdplS "RdplS" ;
+LIST RdplW = RdplW "RdplW" ;
+LIST PV/e = PV/e "PV/e" ;
+LIST PV/ka = PV/ka "PV/ka" ;
+LIST PV/kaa = PV/kaa "PV/kaa" ;
+LIST PV/kaa_ki = PV/kaa_ki "PV/kaa_ki" ;
+LIST PV/acici = PV/acici "PV/acici" ;
+LIST PV/ahcahkowi = PV/ahcahkowi "PV/ahcahkowi" ;
+LIST PV/akawaci = PV/akawaci "PV/akawaci" ;
+LIST PV/ako = PV/ako "PV/ako" ;
+LIST PV/akoci = PV/akoci "PV/akoci" ;
+LIST PV/apihci = PV/apihci "PV/apihci" ;
+LIST PV/apisci = PV/apisci "PV/apisci" ;
+LIST PV/apisi = PV/apisi "PV/apisi" ;
+LIST PV/apisisi = PV/apisisi "PV/apisisi" ;
+LIST PV/ase = PV/ase "PV/ase" ;
+LIST PV/aseya = PV/aseya "PV/aseya" ;
+LIST PV/ati = PV/ati "PV/ati" ;
+LIST PV/atimi = PV/atimi "PV/atimi" ;
+LIST PV/ayamihawi = PV/ayamihawi "PV/ayamihawi" ;
+LIST PV/ayamihewi = PV/ayamihewi "PV/ayamihewi" ;
+LIST PV/ayaso = PV/ayaso "PV/ayaso" ;
+LIST PV/ayi = PV/ayi "PV/ayi" ;
+LIST PV/ahci = PV/ahci "PV/ahci" ;
+LIST PV/ahkami = PV/ahkami "PV/ahkami" ;
+LIST PV/ako = PV/ako "PV/ako" ;
+LIST PV/akwa = PV/akwa "PV/akwa" ;
+LIST PV/ami = PV/ami "PV/ami" ;
+LIST PV/aniski = PV/aniski "PV/aniski" ;
+LIST PV/apihci = PV/apihci "PV/apihci" ;
+LIST PV/apihtawi = PV/apihtawi "PV/apihtawi" ;
+LIST PV/apihta = PV/apihta "PV/apihta" ;
+LIST PV/apihta_kisikawi = PV/apihta_kisikawi "PV/apihta_kisikawi" ;
+LIST PV/asawi = PV/asawi "PV/asawi" ;
+LIST PV/ase = PV/ase "PV/ase" ;
+LIST PV/asowi = PV/asowi "PV/asowi" ;
+LIST PV/aste = PV/aste "PV/aste" ;
+LIST PV/ata = PV/ata "PV/ata" ;
+LIST PV/ayici = PV/ayici "PV/ayici" ;
+LIST PV/cipehtako = PV/cipehtako "PV/cipehtako" ;
+LIST PV/isi = PV/isi "PV/isi" ;
+LIST PV/isko = PV/isko "PV/isko" ;
+LIST PV/ispi = PV/ispi "PV/ispi" ;
+LIST PV/ispihci = PV/ispihci "PV/ispihci" ;
+LIST PV/itahto = PV/itahto "PV/itahto" ;
+LIST PV/ikate = PV/ikate "PV/ikate" ;
+LIST PV/ka_ki = PV/ka_ki "PV/ka_ki" ;
+LIST PV/ka_ki = PV/ka_ki "PV/ka_ki" ;
+LIST PV/kakepaci = PV/kakepaci "PV/kakepaci" ;
+LIST PV/kakwahyaki = PV/kakwahyaki "PV/kakwahyaki" ;
+LIST PV/kakwayaki = PV/kakwayaki "PV/kakwayaki" ;
+LIST PV/kakwe = PV/kakwe "PV/kakwe" ;
+LIST PV/kakweci = PV/kakweci "PV/kakweci" ;
+LIST PV/kanaci = PV/kanaci "PV/kanaci" ;
+LIST PV/kape = PV/kape "PV/kape" ;
+LIST PV/kaski = PV/kaski "PV/kaski" ;
+LIST PV/kaskitewi = PV/kaskitewi "PV/kaskitewi" ;
+LIST PV/kayasi = PV/kayasi "PV/kayasi" ;
+LIST PV/kah = PV/kah "PV/kah" ;
+LIST PV/kah-kape = PV/kah-kape "PV/kah-kape" ;
+LIST PV/kah-kape = PV/kah-kape "PV/kah-kape" ;
+LIST PV/kamwaci = PV/kamwaci "PV/kamwaci" ;
+LIST PV/kaspi = PV/kaspi "PV/kaspi" ;
+LIST PV/kawi = PV/kawi "PV/kawi" ;
+LIST PV/ke = PV/ke "PV/ke" ;
+LIST PV/kekaci = PV/kekaci "PV/kekaci" ;
+LIST PV/ket = PV/ket "PV/ket" ;
+LIST PV/ketiski = PV/ketiski "PV/ketiski" ;
+LIST PV/kici = PV/kici "PV/kici" ;
+LIST PV/kihci = PV/kihci "PV/kihci" ;
+LIST PV/kika = PV/kika "PV/kika" ;
+LIST PV/kipi = PV/kipi "PV/kipi" ;
+LIST PV/kisci = PV/kisci "PV/kisci" ;
+LIST PV/kise = PV/kise "PV/kise" ;
+LIST PV/kisipi = PV/kisipi "PV/kisipi" ;
+LIST PV/kisiska = PV/kisiska "PV/kisiska" ;
+LIST PV/kisiwi = PV/kisiwi "PV/kisiwi" ;
+LIST PV/kisiwi = PV/kisiwi "PV/kisiwi" ;
+LIST PV/kita = PV/kita "PV/kita" ;
+LIST PV/kita_ki = PV/kita_ki "PV/kita_ki" ;
+LIST PV/kita_ki = PV/kita_ki "PV/kita_ki" ;
+LIST PV/kitimaki = PV/kitimaki "PV/kitimaki" ;
+LIST PV/kiye = PV/kiye "PV/kiye" ;
+LIST PV/kiyi = PV/kiyi "PV/kiyi" ;
+LIST PV/kimoci = PV/kimoci "PV/kimoci" ;
+LIST PV/kipi = PV/kipi "PV/kipi" ;
+LIST PV/kisi = PV/kisi "PV/kisi" ;
+LIST PV/kiski = PV/kiski "PV/kiski" ;
+LIST PV/kisopwe = PV/kisopwe "PV/kisopwe" ;
+LIST PV/kiwaci = PV/kiwaci "PV/kiwaci" ;
+LIST PV/kiwe = PV/kiwe "PV/kiwe" ;
+LIST PV/koci = PV/koci "PV/koci" ;
+LIST PV/kota = PV/kota "PV/kota" ;
+LIST PV/kotate = PV/kotate "PV/kotate" ;
+LIST PV/kwataki = PV/kwataki "PV/kwataki" ;
+LIST PV/kwayako = PV/kwayako "PV/kwayako" ;
+LIST PV/kwayaski = PV/kwayaski "PV/kwayaski" ;
+LIST PV/kwayasko = PV/kwayasko "PV/kwayasko" ;
+LIST PV/kwayaci = PV/kwayaci "PV/kwayaci" ;
+LIST PV/kwahci = PV/kwahci "PV/kwahci" ;
+LIST PV/kwaskwe = PV/kwaskwe "PV/kwaskwe" ;
+LIST PV/kwataki = PV/kwataki "PV/kwataki" ;
+LIST PV/kweski = PV/kweski "PV/kweski" ;
+LIST PV/kwetawi = PV/kwetawi "PV/kwetawi" ;
+LIST PV/kwitawi = PV/kwitawi "PV/kwitawi" ;
+LIST PV/maci = PV/maci "PV/maci" ;
+LIST PV/maci_manitowi = PV/maci_manitowi "PV/maci_manitowi" ;
+LIST PV/mahti = PV/mahti "PV/mahti" ;
+LIST PV/mana = PV/mana "PV/mana" ;
+LIST PV/mani = PV/mani "PV/mani" ;
+LIST PV/masta = PV/masta "PV/masta" ;
+LIST PV/matwe = PV/matwe "PV/matwe" ;
+LIST PV/maaci = PV/maaci "PV/maaci" ;
+LIST PV/mahi = PV/mahi "PV/mahi" ;
+LIST PV/mamawi = PV/mamawi "PV/mamawi" ;
+LIST PV/maninakisko = PV/maninakisko "PV/maninakisko" ;
+LIST PV/maski = PV/maski "PV/maski" ;
+LIST PV/mayaci = PV/mayaci "PV/mayaci" ;
+LIST PV/mayi = PV/mayi "PV/mayi" ;
+LIST PV/mecimwaci = PV/mecimwaci "PV/mecimwaci" ;
+LIST PV/mêkwa = PV/mêkwa "PV/mêkwa" ;
+LIST PV/mesci = PV/mesci "PV/mesci" ;
+LIST PV/mesti = PV/mesti "PV/mesti" ;
+LIST PV/mihko = PV/mihko "PV/mihko" ;
+LIST PV/mihyawe = PV/mihyawe "PV/mihyawe" ;
+LIST PV/misakame = PV/misakame "PV/misakame" ;
+LIST PV/misi = PV/misi "PV/misi" ;
+LIST PV/mistiko = PV/mistiko "PV/mistiko" ;
+LIST PV/miyo = PV/miyo "PV/miyo" ;
+LIST PV/mosci = PV/mosci "PV/mosci" ;
+LIST PV/mohco = PV/mohco "PV/mohco" ;
+LIST PV/mwayi = PV/mwayi "PV/mwayi" ;
+LIST PV/nahi = PV/nahi "PV/nahi" ;
+LIST PV/nahta = PV/nahta "PV/nahta" ;
+LIST PV/naki = PV/naki "PV/naki" ;
+LIST PV/napaki = PV/napaki "PV/napaki" ;
+LIST PV/naspaci = PV/naspaci "PV/naspaci" ;
+LIST PV/natawi = PV/natawi "PV/natawi" ;
+LIST PV/nawaci = PV/nawaci "PV/nawaci" ;
+LIST PV/naci = PV/naci "PV/naci" ;
+LIST PV/nanitaw = PV/nanitaw "PV/nanitaw" ;
+LIST PV/natakasi = PV/natakasi "PV/natakasi" ;
+LIST PV/nawayawi = PV/nawayawi "PV/nawayawi" ;
+LIST PV/nehiyawi = PV/nehiyawi "PV/nehiyawi" ;
+LIST PV/nihta = PV/nihta "PV/nihta" ;
+LIST PV/nipahi = PV/nipahi "PV/nipahi" ;
+LIST PV/nisihkaci = PV/nisihkaci "PV/nisihkaci" ;
+LIST PV/nitawi = PV/nitawi "PV/nitawi" ;
+LIST PV/nihci = PV/nihci "PV/nihci" ;
+LIST PV/nihtaciwe = PV/nihtaciwe "PV/nihtaciwe" ;
+LIST PV/nikani = PV/nikani "PV/nikani" ;
+LIST PV/nimi = PV/nimi "PV/nimi" ;
+LIST PV/nipa = PV/nipa "PV/nipa" ;
+LIST PV/niso = PV/niso "PV/niso" ;
+LIST PV/nohte = PV/nohte "PV/nohte" ;
+LIST PV/ocihci = PV/ocihci "PV/ocihci" ;
+LIST PV/ohci = PV/ohci "PV/ohci" ;
+LIST PV/ohtiskawi = PV/ohtiskawi "PV/ohtiskawi" ;
+LIST PV/osami = PV/osami "PV/osami" ;
+LIST PV/osawaski = PV/osawaski "PV/osawaski" ;
+LIST PV/osawi = PV/osawi "PV/osawi" ;
+LIST PV/oski = PV/oski "PV/oski" ;
+LIST PV/otami = PV/otami "PV/otami" ;
+LIST PV/o = PV/o "PV/o" ;
+LIST PV/oh = PV/oh "PV/oh" ;
+LIST PV/paci = PV/paci "PV/paci" ;
+LIST PV/pahki = PV/pahki "PV/pahki" ;
+LIST PV/pakwano = PV/pakwano "PV/pakwano" ;
+LIST PV/papa = PV/papa "PV/papa" ;
+LIST PV/papami = PV/papami "PV/papami" ;
+LIST PV/papasi = PV/papasi "PV/papasi" ;
+LIST PV/pasiko = PV/pasiko "PV/pasiko" ;
+LIST PV/paspi = PV/paspi "PV/paspi" ;
+LIST PV/pahkaci = PV/pahkaci "PV/pahkaci" ;
+LIST PV/pahko = PV/pahko "PV/pahko" ;
+LIST PV/pasci = PV/pasci "PV/pasci" ;
+LIST PV/pasici = PV/pasici "PV/pasici" ;
+LIST PV/pe = PV/pe "PV/pe" ;
+LIST PV/peyako = PV/peyako "PV/peyako" ;
+LIST PV/pimi = PV/pimi "PV/pimi" ;
+LIST PV/pimici = PV/pimici "PV/pimici" ;
+LIST PV/pimipahci = PV/pimipahci "PV/pimipahci" ;
+LIST PV/pisci = PV/pisci "PV/pisci" ;
+LIST PV/pihci = PV/pihci "PV/pihci" ;
+LIST PV/pihtawe = PV/pihtawe "PV/pihtawe" ;
+LIST PV/pihtoke = PV/pihtoke "PV/pihtoke" ;
+LIST PV/pikiskaci = PV/pikiskaci "PV/pikiskaci" ;
+LIST PV/pimi = PV/pimi "PV/pimi" ;
+LIST PV/pitosi = PV/pitosi "PV/pitosi" ;
+LIST PV/piwi = PV/piwi "PV/piwi" ;
+LIST PV/poni = PV/poni "PV/poni" ;
+LIST PV/posko = PV/posko "PV/posko" ;
+LIST PV/pwana = PV/pwana "PV/pwana" ;
+LIST PV/pwatawi = PV/pwatawi "PV/pwatawi" ;
+LIST PV/saskaci = PV/saskaci "PV/saskaci" ;
+LIST PV/sakewe = PV/sakewe "PV/sakewe" ;
+LIST PV/sapo = PV/sapo "PV/sapo" ;
+LIST PV/saposci = PV/saposci "PV/saposci" ;
+LIST PV/sasakici = PV/sasakici "PV/sasakici" ;
+LIST PV/sehke = PV/sehke "PV/sehke" ;
+LIST PV/sesawi = PV/sesawi "PV/sesawi" ;
+LIST PV/sikaci = PV/sikaci "PV/sikaci" ;
+LIST PV/simaci = PV/simaci "PV/simaci" ;
+LIST PV/sipwe = PV/sipwe "PV/sipwe" ;
+LIST PV/sisikoci = PV/sisikoci "PV/sisikoci" ;
+LIST PV/sisiwe = PV/sisiwe "PV/sisiwe" ;
+LIST PV/sikawi = PV/sikawi "PV/sikawi" ;
+LIST PV/sohkahat = PV/sohkahat "PV/sohkahat" ;
+LIST PV/sohki = PV/sohki "PV/sohki" ;
+LIST PV/soniyawi = PV/soniyawi "PV/soniyawi" ;
+LIST PV/ta = PV/ta "PV/ta" ;
+LIST PV/ta_ki = PV/ta_ki "PV/ta_ki" ;
+LIST PV/tahci = PV/tahci "PV/tahci" ;
+LIST PV/tahki = PV/tahki "PV/tahki" ;
+LIST PV/tahkohci = PV/tahkohci "PV/tahkohci" ;
+LIST PV/tahto = PV/tahto "PV/tahto" ;
+LIST PV/takahki = PV/takahki "PV/takahki" ;
+LIST PV/tako = PV/tako "PV/tako" ;
+LIST PV/tasi = PV/tasi "PV/tasi" ;
+LIST PV/tah = PV/tah "PV/tah" ;
+LIST PV/tahci = PV/tahci "PV/tahci" ;
+LIST PV/tapi = PV/tapi "PV/tapi" ;
+LIST PV/tapisi = PV/tapisi "PV/tapisi" ;
+LIST PV/tehci = PV/tehci "PV/tehci" ;
+LIST PV/tepi = PV/tepi "PV/tepi" ;
+LIST PV/tewi = PV/tewi "PV/tewi" ;
+LIST PV/teyi = PV/teyi "PV/teyi" ;
+LIST PV/tipi = PV/tipi "PV/tipi" ;
+LIST PV/tita = PV/tita "PV/tita" ;
+LIST PV/tomi = PV/tomi "PV/tomi" ;
+LIST PV/wahke = PV/wahke "PV/wahke" ;
+LIST PV/wani = PV/wani "PV/wani" ;
+LIST PV/wayawi = PV/wayawi "PV/wayawi" ;
+LIST PV/wayesi = PV/wayesi "PV/wayesi" ;
+LIST PV/wa = PV/wa "PV/wa" ;
+LIST PV/wah = PV/wah "PV/wah" ;
+LIST PV/waki = PV/waki "PV/waki" ;
+LIST PV/wapani = PV/wapani "PV/wapani" ;
+LIST PV/wapohki = PV/wapohki "PV/wapohki" ;
+LIST PV/wasa = PV/wasa "PV/wasa" ;
+LIST PV/wase = PV/wase "PV/wase" ;
+LIST PV/wawiye = PV/wawiye "PV/wawiye" ;
+LIST PV/wehci = PV/wehci "PV/wehci" ;
+LIST PV/wiyipi = PV/wiyipi "PV/wiyipi" ;
+LIST PV/wihpi = PV/wihpi "PV/wihpi" ;
+LIST PV/wini = PV/wini "PV/wini" ;
+LIST PV/wipi = PV/wipi "PV/wipi" ;
+LIST PV/wipo = PV/wipo "PV/wipo" ;
+LIST PV/wisaki = PV/wisaki "PV/wisaki" ;
+LIST PV/wito = PV/wito "PV/wito" ;
+LIST PV/yahki = PV/yahki "PV/yahki" ;
+LIST PV/yikate = PV/yikate "PV/yikate" ;
+LIST PV/yipe = PV/yipe "PV/yipe" ;
+LIST PV/yoski = PV/yoski "PV/yoski" ;
+
+LIST PREVERB = RdplS RdplW PV/e PV/ka PV/kaa PV/kaa_ki PV/acici PV/ahcahkowi PV/akawaci PV/ako PV/akoci PV/apihci PV/apisci PV/apisi PV/apisisi PV/ase PV/aseya PV/ati PV/atimi PV/ayamihawi PV/ayamihewi PV/ayaso PV/ayi PV/ahci PV/ahkami PV/ako PV/akwa PV/ami PV/aniski PV/apihci PV/apihtawi PV/apihta PV/apihta_kisikawi PV/asawi PV/ase PV/asowi PV/aste PV/ata PV/ayici PV/cipehtako PV/isi PV/isko PV/ispi PV/ispihci PV/itahto PV/ikate PV/ka_ki PV/ka_ki PV/kakepaci PV/kakwahyaki PV/kakwayaki PV/kakwe PV/kakweci PV/kanaci PV/kape PV/kaski PV/kaskitewi PV/kayasi PV/kah PV/kah-kape PV/kah-kape PV/kamwaci PV/kaspi PV/kawi PV/ke PV/kekaci PV/ket PV/ketiski PV/kici PV/kihci PV/kika PV/kipi PV/kisci PV/kise PV/kisipi PV/kisiska PV/kisiwi PV/kisiwi PV/kita PV/kita_ki PV/kita_ki PV/kitimaki PV/kiye PV/kiyi PV/kimoci PV/kipi PV/kisi PV/kiski PV/kisopwe PV/kiwaci PV/kiwe PV/koci PV/kota PV/kotate PV/kwataki PV/kwayako PV/kwayaski PV/kwayasko PV/kwayaci PV/kwahci PV/kwaskwe PV/kwataki PV/kweski PV/kwetawi PV/kwitawi PV/maci PV/maci_manitowi PV/mahti PV/mana PV/mani PV/masta PV/matwe PV/maaci PV/mahi PV/mamawi PV/maninakisko PV/maski PV/mayaci PV/mayi PV/mecimwaci PV/mêkwa PV/mesci PV/mesti PV/mihko PV/mihyawe PV/misakame PV/misi PV/mistiko PV/miyo PV/mosci PV/mohco PV/mwayi PV/nahi PV/nahta PV/naki PV/napaki PV/naspaci PV/natawi PV/nawaci PV/naci PV/nanitaw PV/natakasi PV/nawayawi PV/nehiyawi PV/nihta PV/nipahi PV/nisihkaci PV/nitawi PV/nihci PV/nihtaciwe PV/nikani PV/nimi PV/nipa PV/niso PV/nohte PV/ocihci PV/ohci PV/ohtiskawi PV/osami PV/osawaski PV/osawi PV/oski PV/otami PV/o PV/oh PV/paci PV/pahki PV/pakwano PV/papa PV/papami PV/papasi PV/pasiko PV/paspi PV/pahkaci PV/pahko PV/pasci PV/pasici PV/pe PV/peyako PV/pimi PV/pimici PV/pimipahci PV/pisci PV/pihci PV/pihtawe PV/pihtoke PV/pikiskaci PV/pimi PV/pitosi PV/piwi PV/poni PV/posko PV/pwana PV/pwatawi PV/saskaci PV/sakewe PV/sapo PV/saposci PV/sasakici PV/sehke PV/sesawi PV/sikaci PV/simaci PV/sipwe PV/sisikoci PV/sisiwe PV/sikawi PV/sohkahat PV/sohki PV/soniyawi PV/ta PV/ta_ki PV/tahci PV/tahki PV/tahkohci PV/tahto PV/takahki PV/tako PV/tasi PV/tah PV/tahci PV/tapi PV/tapisi PV/tehci PV/tepi PV/tewi PV/teyi PV/tipi PV/tita PV/tomi PV/wahke PV/wani PV/wayawi PV/wayesi PV/wa PV/wah PV/waki PV/wapani PV/wapohki PV/wasa PV/wase PV/wawiye PV/wehci PV/wiyipi PV/wihpi PV/wini PV/wipi PV/wipo PV/wisaki PV/wito PV/yahki PV/yikate PV/yipe PV/yoski ;
+
+LIST REDUPL = RdplW RdlpS ;
+
+LIST IIZ = IIZ ; 
+
+LIST ZERO = "apwêyâw" "askihtakoskâw" "askîwan" "askîwiw" "atihkamêkoskâw" "atihtêminiskâw" "atoskêwi-kîsikâw" "ayamihâwi-kîsikâw" "ayamihêwi-kîsikâw" "ayapâhtikoskâw" "ayapâskwêyâw" "ayapîhkêsîskâw" "ayiwâkipêw" "ayôskanâhtikoskâw" "âhkikoskâw" "âhkwâstêw" "âkawâstêw" "âkôsipêyâw" "âkwâ-kîsikâw" "âkwâ-tipiskâw" "âkwâyâw" "âmôskâw" "âniskowaskâw" "âniskowaskoskâw" "âpihtâ-kîsikâw" "âpihtâ-nîpin" "âpihtâ-pipon" "âpihtâ-tipiskâw" "âpihtâwi-kîsikâw" "âpihtâwitâkosiw" "âpisisino-kîsikâw" "âpocêyâw" "âsokâmatin" "âstê-kimiwan" "âstê-kîsikâw" "cahcahkâyôskâw" "cîpayi-kîsikâw" "cîpayi-tipiskâw" "cîpêhtakwâpikwanîskâw" "cîwêyâw" "êyikoskâw" "isi-kîsikâw" "iyiniminiskâw" "kamâmakoskâw" "kaskamotâpahtêw" "kaski-tipiskâw" "kâh-kimiwan" "kêposkâw" "kihci-âpihtâwâni-kîsikâw" "kimiwan" "kimiwasin" "kimiwaskin" "kinêpikoskâw" "kinosêskâw" "kipwatâmâpahtêw" "kipwâpahtêw" "kisin" "kisinâsin" "kisinâw" "kisipâskwêyâw" "kisipi-kîsikâw" "kisipistikwêyâw" "kîkisêpâw" "kîkisêpâyâw" "kîsapwênâyâw" "kîsapwêw" "kîsapwêyâw" "kîsi-tipiskâw" "kîsikâsiw" "kîsikâstêw" "kîsikâw" "kîsikâyâpan" "kîsikâyâstêw" "kîsopwêni-pipon" "kîsopwêw" "kîsopwêyâw" "kîsowâyâw" "kîwêhtin" "koskowâtan" "kostâmikwan" "kôniwan" "kwêskiyowêw" "kwêskosîyowêw" "maci-kîsikâw" "macipakoskâw" "mahkêsîskâw" "mamahkâskâw" "mamênaskwâw" "manicôsiskâw" "manitowi-kîsikâw" "maskosîskâw" "maskoskâw" "mâtinawê-kîsikâsin" "mâtinawê-kîsikâw" "mâtinawi-kîsikâw" "mâyi-kîsikâw" "mâyi-pipon" "mêkwâ-kîsikâw" "mêkwâ-tipiskâw" "mihkwaskâw" "mihtiskâw" "mikiskon" "minahikoskâw" "misi-yôtin" "mispon" "misposin" "misposkin" "mistikoskâw" "miyo-kîsikâw" "miyo-tipiskâw" "miyoskamin" "miyoskamiw" "miyotâkosin" "mînisiskâw" "mîtosiskâw" "mohtêwiskâw" "môsoskâw" "môswaskâw" "nakahpêhan" "namêkosiskâw" "nanêhtahkâw" "nêwo-kîsikâw" "nêwo-tipiskâw" "nikotwâsiko-kîsikâw" "nikotwâso-kîsikâw" "nipahi-yôtin" "nipîskâw" "niskiskâw" "nisto-kîsikâw" "niyânano-kîsikâw" "nîpâyâstêw" "nîpin" "nîpîskâw" "nîskâyâw" "nîso-kîsikâw" "nîso-tipiskâw" "ńôtin" "ocêhtowi-kîsikâw" "ocicâhkoskâw" "ohtin" "okâminakasîskâw" "onimiskîskâw" "osâwipêskwan" "oskâhtakoskâw" "oskâhtikosiskâw" "otâkosin" "pahkwâcîsiskâw" "pahkwêsikani-kîsikâw" "pêtâpan" "pêyako-kîsikâw" "pihêskâw" "pihkosiskâw" "pimiciyowêw" "pipon" "piyêsîsiskâw" "pîhciyowêw" "pîkisêmahan" "pîkisêyâw" "pîsawâcâsin" "pîsimowan" "pîsimowâyâw" "pîsimowiw" "pîwan" "pîwani-yôtin" "pîwêsipon" "pôn-âpihtâ-kîsikâw"	"pôn-âpihtâwi-kîsikâw" "pôn-âpihtâ-tipiskâw" "pôn-âyamihêwi-kîsikâw" "pôni-kimiwan" "pôni-mispon" "sakimêskâw" "saskan" "saskaniyowêw" "sâkaskâw" "sâkâstêw" "sâposci-kimiwan" "sâpoyowêw" "sâpôminiskâw" "sâwani-yôtin" "sîkipêstâw" "sîkwan" "sîsîkan" "sîsîpiskâw" "sôhkiyowêw" "sôniyâskâw" "sôniyâw-kîsikâw" "tahkâyâsin" "tahkâyâw" "tahkipêyâw" "tahkiyowêw" "takwâkin" "timaskâw" "timikonêw" "timikoniw" "tipiskâsin" "tipiskâw" "wacîskâw" "wanitipiskâsin" "wanitipiskâw" "waskowan" "wâkinâkaniskâw" "wâpan" "wâpaniyowêw" "wâpososkâw" "wîpâci-kîsikâw" "yîkopîwan" "yîkopîwiw" "yîkowan" "yîkwaskwan" "yîkwawan" "yôcisin" "yôtin" ;
+
+LIST PREPOSITION = "asicâyihk" "askîhk" "atâmihk" "atâmipîhk" "capasis" "capasîs" "cîki" "câh-cîki" "iskwêyânihk" "ispimihk" "kicîniskêhk" "kihciwâk" "kisipanohk" "mohcihk" "namahcihk" "nihcâyihk" "nohcimihk" "nâsipîtimihk" "pihcâyihk" "pihtokamihk" "sisonê" "sâyihk" "sîpâ" "sîpâyihk" "tahkohc" "tastawâyihk" "tâwâyihk" "wahyaw" "wayawîtimihk" "wayawîtimiskwaht" "wâhyawês" "wâsakâm" "âkawâstêhk" "âpihtawâyihk" "âstamâstihk" "âyêtawâyihk" "akâmâyihk" "akâmihk" "asicâyi" "awasâyihk" "ayîtawâyihk" "âkawâyihk" "âstamihk" "kihcîniskêhk" "kospâyihk" "namahcîhk" "namahtinihk" "nîhc-âyihk" "nihc-âyihk" "nôhcimihk" "ohtâyihk" "okihciniskihk" "pimic-âyihk" "pîhc-âyihk" "sîpâhk" "tahkohc-âyihk" "tawâyihk" "êkota" "êkotê" "ôtê" "itê" "anita" "ita" "nêtê" "ôta" "awasitê" "âstamitê" "nanânis" "misiwê" "ohpimê" ; 
+
+LIST POSTPOSITION = "isi" "ohci" ;
+
+LIST NEG = "namôya" "namôy" "môya" "môy" "êkâwiya" "kâwiya" "êkâya" "êkây" "kâya" "êkâ" "êkamâ" "nama" "namôy-âhpô" "namwâc" "mwâc"; 
+
+LIST TEMP = "ispî" "êkospî" "tânispî" "ispîhk" "êkospîhk" "tânispîhk" "kayâs" "anohc" "mêkwâc" "kêtahtawê" "kîtahtawê" "anohcihkê" "ispîhci" "sâsay" "âsay" "êkwayâk" "pitamâ" "itâp" "mwêhci" "pâtimâ" "pêci-nâway" "êkwêyâk" "aspin" "kayâsês" "okâsikâk" "wêskacês" "aciyaw" "iskwêyâc" "kinwês" "kinwêsk" "kinwêsis" "kisik" "kâh-kinwês" "kâkikê" "kîhtwâm" "mayaw" "mâmâwaci-kayâs" "mâtayak" "nici" "nistam" "nôhtaw" "pêskis" "pêyakwâw" "tahtwâw" "tahtwayak" "tânitahtwâw" "âstamispîhk" "êkwêyâc" "awasi-otâkosîhk" "awasi-tipiskohk" "kihci-awasi-otâkosîhk" "awasi-piponohk" "kayâhtê" "maywês" "maywêsk" "mwayês" "mâmwayês" "nîstamik" "awasi-tipiskâki" "awasi-wâpahki" "tipiskohk" "otâkosîhk" "tipiskâki" "wâpahki" "mwêstas" "nîpâ-tipisk" "pôsko-kisik" "pôsko-pîsim" "kâpê-tipisk" "pêyak-tipiskâw" "pêyako-tipiskâw" "tahto-tipiskâw" "tipisk" "têpiskâk" "kâpê-kisik" "tahto-kîsikâw" "otâkosiki" "otâkosî" "kisêpâyâki" "kêkisêp" "kîkisêp" "kîkisêpâ" "kîkisêpâki" "pâmwayês" "piyis" "piyisk" "miyâskam" "miyoskamikohk" "miyoskamiki" "miyoskamîhk" "sîkwanohk" "takwâkiki" "takwâkohk" "kapê-pipon" "mêsakwanipipon" "pipohki" "piponohk" "awasi-nîpinohk" "kapê-nîpin" "nîpihki" "nîpinohk" "awasitê" "âstamitê" "wîpac" "wîpat" "kîpa" "pwâstâw" "pâtos" "wîhkâcîs" "ici" "kîkisêpâyâyiki" "nîsw-âskiy" "nistw-âskiy" ;
+
+LIST QUANT = "mihcêtwâw" "mihcêti" "âtiht" "mâwaci" "mâh-mâwaci" "mâmâwaci" "mowac" "iyikohk" "mihcêt" "mihcêcis" "mistahi" "okistakêwi" "tahto" "êko-tahto" "tânitahto" "tânimatahto" "mwêhci" "tahtw-âya" "êkwayikohk" "nahiyikohk" "êkoyikohk" "tâniyikohk" "tânimayikohk" "kahkiyaw" "mitoni" "mêtoni" "pikoyikohk" "nanâtohk" "namôya-kakêtihk" "misahkamik" "apisîs" "namôy-apisîs" ;
+
+LIST INTER = "tânisi" "tânispîhk" "tâniyikohk" "tânitahto" "tânitahtwâw" "tânitowahk" "tânitê" "tânêhki" "awîna" "awîniki" "awînihi" ;
+
+LIST SPEAK = "itwêw" "ay-itwêw" "itam" "itêw" "ay-itêw" ;
+
+# Sets
+# ====
+
+#LIST WORD = N V Ipc Interj Pron ;
+
+
+#SET NOT-VERB = WORD - V ;
+#SET NOT-NOUN = WORD - N ;
+
+LIST NUMBER = Sg Pl ;
+LIST GENDER = A I ;
+SET NUMBERGENDER = (A Sg) OR (A Pl) OR (I Sg) OR (I Pl) OR (A Obv) ;
+
+LIST LONGVERBEND = ("<.*âhk>"r) ("<.*âhkik>"r) ("<.*ân>"r) ("<.*âhki>"r) ;
+LIST SHORTVERBEND = ("<.*ahk>"r) ("<.*ahkik>"r) ("<.*an>"r) ("<.*ahki>"r) ;
+
+#cnj lists incomplete
+LIST CNJPV = PV/kaa PV/ka PV/ta PV/ka_ki PV/kika PV/kita PV/e ;
+LIST CNJ1Sg = ("<.*yân>"r) ("<.*mân>"r) ;
+LIST CNJ2Sg = ("<.*yan>"r) ("<.*man>"r) ;
+LIST CNJ1Pl = ("<.*yâhk>"r) ("<.*mâhk>"r) ;
+LIST CNJ12Pl = ("<.*yahk>"r) ("<.*mahk>"r) ;
+LIST CNJ3Sg = ("<.*ahk>"r) ;
+LIST CNJ3Pl = ("<.*ahkik>"r) ;
+
+
+LIST KIKWAY = (".?kîkway"r) ;
+
+# LIST SIERRA-GUOVLU = (".*guovlu"r) "suomabealli" "norggabealli" "riddu" "ruoŧabealli" # "ruoššabealli" ;
+
+# Noun sets
+
+LIST HUMAN = "awâsis" "okimâw" "iyiniw" "iskwêw" ;
+
+# Boundary sets
+
+# Complementary set
+
+# Case sets
+
+# Some case, but not...
+
+LIST COMMA = (",") ;
+SET MARK =  COMMA | ("\\") | ("\;") ; #"
+
+LIST PUNCT-LEFT = (PUNCT LEFT) ;
+LIST PUNCT-RIGHT = (PUNCT RIGHT) ;
+SET PRE-APP   = COMMA OR PUNCT-LEFT ;
+
+# Here come the rules #
+
+BEFORE-SECTIONS 
+
+REMOVE:ayawTI TI IF (0 ("ayâw"r) + AI)(NOT 0 AI + TI) ;
+ADD:ayawAITI TI TARGET ("ayâw"r) + AI ;
+
+ADD:VIIZ IIZ TARGET II + ZERO ;
+SET VII = II - IIZ ;
+
+REMOVE:PlIIZ PLURALARG IF (0 IIZ) ;
+
+
+#REMOVE:PxObvPl Pl IF (0 POSS + A + Obv + Sg) ;
+#ADD:PxObvSgPl Pl TARGET POSS + A + Obv + Sg ;
+
+REMOVE:TA2SgPlO 2PlO IF (0 TA + 1Pl + 2SgO) ;
+SUBSTITUTE:TA2SgPlO 2SgO 2Sg/PlO TARGET TA + 1Pl + 2SgO ;
+
+SELECT:Num Num IF (0 Ipc) ; 
+
+ADD:INTER Qst TARGET INTER ; 
+ADD:SPEAK Quot TARGET SPEAK ;
+
+#MERGECOHORTS ("<$1\\]>"v "$2"v *) ("<(.+\\[a)>"r) WITH (1 SqBR) ;
+REMCOHORT ("<]>") (-1 ("<(.+\\[a)>"r)) ;
+REMCOHORT ("<]>") (-1 ("<(.+\\[i)>"r)) ;
+REMCOHORT ("<]>") (-1 ("<(.+\\[o)>"r)) ;
+REMCOHORT ("<]>") (-1 ("<(.+\\[â)>"r)) ;
+REMCOHORT ("<]>") (-1 ("<(.+\\[ê)>"r)) ;
+REMCOHORT ("<]>") (-1 ("<(.+\\[î)>"r)) ;
+REMCOHORT ("<]>") (-1 ("<(.+\\[ô)>"r)) ;
+
+SUBSTITUTE ("<ahpô>" "ahpô" Ipc) ("<ahpô_cî>" "ahpô_cî" Iph) TARGET ("<ahpô>" Ipc) IF (1 ("<cî>" Ipc)) ;
+REMCOHORT ("<cî>") (-1 ("<ahpô_cî>" Iph)) ;
+
+SUBSTITUTE ("ahpô" Ipc) ("<ahpô_êtikwê>" "ahpô_êtikwê" Iph) TARGET ("ahpô" Ipc) IF (1 ("êtikwê" Ipc)) ;
+REMCOHORT ("êtikwê") (-1 ("<ahpô_êtikwê>" Iph)) ;
+
+SUBSTITUTE ("<ahpô>" "ahpô" Ipc) ("<ahpô_piko>" "ahpô_piko" Iph) TARGET ("<ahpô>" Ipc) IF (1 ("<piko>" Ipc)) ;
+REMCOHORT ("<piko>") (-1 ("<ahpô_piko>" Iph)) ;
+
+SUBSTITUTE ("<anohc>" "anohc" Ipc) ("<anohc_kâ-ispayik>" "anohc_kâ-ispayik" Iph) TARGET ("<anohc>" Ipc) IF (1 ("<kâ-ispayik>" Ipc)) ;
+REMCOHORT ("<kâ-ispayik>") (-1 ("<anohc_kâ-ispayik>" Iph)) ;
+
+SUBSTITUTE ("<anohc>" "anohc" Ipc) ("<anohc_kâ-kîsikâk>" "anohc_kâ-kîsikâk" Iph) TARGET ("<anohc>" Ipc) IF (1 ("<kâ-kîsikâk>" Ipc)) ;
+REMCOHORT ("<kâ-kîsikâk>") (-1 ("<anohc_kâ-kîsikâk>" Iph)) ;
+
+SUBSTITUTE ("awasi" Ipc) ("<awasi_ispî>" "awasi_ispî" Iph Ipt) TARGET ("awasi" Ipc) IF (1 ("ispî" Ipc)) ;
+REMCOHORT ("ispî") (-1 ("<awasi_ispî>" Iph)) ;
+
+SUBSTITUTE ("<awêkâ>" "awêkâ" Ipc) ("<awêkâ_cî>" "awêkâ_cî" Iph) TARGET ("<awêkâ>" Ipc) IF (1 ("<cî>" Ipc)) ;
+REMCOHORT ("<cî>") (-1 ("<awêkâ_cî>" Iph)) ;
+
+SUBSTITUTE ("awîna" Ipc) ("<awîna_êtikwê>" "awîna_êtikwê" Iph) TARGET ("awîna" Ipc) IF (1 ("êtikwê" Ipc)) ;
+REMCOHORT ("êtikwê") (-1 ("<awîna_êtikwê>" Iph)) ;
+
+SUBSTITUTE ("<ayiwâk>" "ayiwâk" Ipc) ("<ayiwâk_ôma>" "ayiwâk_ôma" Iph) TARGET ("<ayiwâk>" Ipc) IF (1 ("<ôma>" Ipc)) ;
+REMCOHORT ("<ôma>") (-1 ("<ayiwâk_ôma>" Iph)) ;
+
+SUBSTITUTE ("<âhci>" "âhci" Ipc) ("<âhci_piko>" "âhci_piko" Iph) TARGET ("<âhci>" Ipc) IF (1 ("<piko>" Ipc)) ;
+REMCOHORT ("<piko>") (-1 ("<âhci_piko>" Iph)) ;
+
+SUBSTITUTE ("<âsay>" "âsay" Ipc) ("<âsay_cî>" "âsay_cî" Iph) TARGET ("<âsay>" Ipc) IF (1 ("<cî>" Ipc)) ;
+REMCOHORT ("<cî>") (-1 ("<âsay_cî>" Iph)) ;
+
+SUBSTITUTE ("<âsay>" "âsay" Ipc) ("<âsay_mîna>" "âsay_mîna" Iph Ipt) TARGET ("<âsay>" Ipc) IF (1 ("<mîna>" Ipc)) ;
+REMCOHORT ("<mîna>") (-1 ("<âsay_mîna>" Iph)) ;
+
+SUBSTITUTE ("âstamitê" Ipc) ("<âstamitê_isi>" "âstamitê_isi" Iph) TARGET ("âstamitê" Ipc) IF (1 ("isi" Ipc)) ;
+REMCOHORT ("isi") (-1 ("<âstamitê_isi>" Iph)) ;
+
+SUBSTITUTE ("<âta>" "âta" Ipc) ("<âta_wiya>" "âta_wiya" Iph) TARGET ("<âta>" Ipc) IF (1 ("<wiya>" Ipc)) ;
+REMCOHORT ("<wiya>") (-1 ("<âta_wiya>" Iph)) ;
+
+SUBSTITUTE ("<âw>" "âw" Ipc) ("<âw_mâka>" "âw_mâka" Iph) TARGET ("<âw>" Ipc) IF (1 ("<mâka>" Ipc)) ;
+REMCOHORT ("<mâka>") (-1 ("<âw_mâka>" Iph)) ;
+
+SUBSTITUTE ("<cêskwa>" "cêskwa" Ipc) ("<cêskwa_pitamâ>" "cêskwa_pitamâ" Iph) TARGET ("<cêskwa>" Ipc) IF (1 ("<pitamâ>" Ipc)) ;
+REMCOHORT ("<pitamâ>") (-1 ("<cêskwa_pitamâ>" Iph)) ;
+
+SUBSTITUTE ("<cikêmâ>" "cikêmâ" Ipc) ("<cikêmâ_anima>" "cikêmâ_anima" Iph) TARGET ("<cikêmâ>" Ipc) IF (1 ("<anima>" Ipc)) ;
+REMCOHORT ("<anima>") (-1 ("<cikêmâ_anima>" Iph)) ;
+
+SUBSTITUTE ("êcika" Ipc) ("<êcika_ana>" "êcika_ana" Iph) TARGET ("êcika" Ipc) IF (1 ("ana" Ipc)) ;
+REMCOHORT ("ana") (-1 ("<êcika_ana>" Iph)) ;
+
+SUBSTITUTE ("êcika" Ipc) ("<êcika_ani>" "êcika_ani" Iph) TARGET ("êcika" Ipc) IF (1 ("ani" Ipc)) ;
+REMCOHORT ("ani") (-1 ("<êcika_ani>" Iph)) ;
+
+SUBSTITUTE ("êcika" Ipc) ("<êcika_anima>" "êcika_anima" Iph) TARGET ("êcika" Ipc) IF (1 ("<anima>" Ipc)) ;
+REMCOHORT ("anima") (-1 ("<êcika_anima>" Iph)) ;
+
+SUBSTITUTE ("êcika" Ipc) ("<êcika_ôma>" "êcika_ôma" Iph) TARGET ("êcika" Ipc) IF (1 ("ôma" Ipc)) ;
+REMCOHORT ("ôma") (-1 ("<êcika_ôma>" Iph)) ;
+
+SUBSTITUTE ("êkâ" Ipc) ("<êkâ_êsa>" "êkâ_êsa" Iph) TARGET ("êkâ" Ipc) IF (1 ("êsa" Ipc)) ;
+REMCOHORT ("êsa") (-1 ("<êkâ_êsa>" Iph)) ;
+
+SUBSTITUTE ("<êkâ>" "êkâ" Ipc) ("<êkâ_kîkway>" "êkâ_kîkway" Ipn Neg) TARGET ("<êkâ>" Ipc) IF (1 ("<kîkway>" N)) ;
+REMCOHORT ("<kîkway>") (-1 ("<êkâ_kîkway>" Ipn)) ;
+
+SUBSTITUTE ("<êkâ>" "êkâ" Ipc) ("<êkâ_kêkway>" "êkâ_kêkway" Ipn Neg) TARGET ("<êkâ>" Ipc) IF (1 ("<kêkway>" N)) ;
+REMCOHORT ("<kêkway>") (-1 ("<êkâ_kêkway>" Ipn)) ;
+
+SUBSTITUTE ("<êkây>" "êkây" Ipc) ("<êkây_kîkway>" "êkây_kîkway" Ipn Neg) TARGET ("<êkây>" Ipc) IF (1 ("<kîkway>" N)) ;
+REMCOHORT ("<kîkway>") (-1 ("<êkây_kîkway>" Ipn)) ;
+
+SUBSTITUTE ("<êkâya>" "êkâya" Ipc) ("<êkâya_kîkway>" "êkâya_kîkway" Ipn Neg) TARGET ("<êkâya>" Ipc) IF (1 ("<kîkway>" N)) ;
+REMCOHORT ("<kîkway>") (-1 ("<êkâya_kîkway>" Ipn)) ;
+
+SUBSTITUTE ("<êkây>" "êkây" Ipc) ("<êkây_kêkway>" "êkây_kêkway" Ipn Neg) TARGET ("<êkây>" Ipc) IF (1 ("<kêkway>" N)) ;
+REMCOHORT ("<kêkway>") (-1 ("<êkây_kêkway>" Iph)) ;
+
+SUBSTITUTE ("<êkâ>" "êkâ" Ipc) ("<êkâ_nânitaw>" "êkâ_nânitaw" Iph Neg) TARGET ("<êkâ>" Ipc) IF (1 ("<nânitaw>" Ipc)) ;
+REMCOHORT ("<nânitaw>") (-1 ("<êkâ_nânitaw>" Iph)) ;
+
+SUBSTITUTE ("<êkâ>" "êkâ" Ipc) ("<êkâ_wîhkâc>" "êkâ_wîhkâc" Iph Neg) TARGET ("<êkâ>" Ipc) IF (1 ("<wîhkâc>" Ipc)) ;
+REMCOHORT ("<wîhkâc>") (-1 ("<êkâ_wîhkâc>" Iph)) ;
+
+SUBSTITUTE ("<êkâ>" "êkâ" Ipc) ("<êkâ_wîhkât>" "êkâ_wîhkât" Iph Neg) TARGET ("<êkâ>" Ipc) IF (1 ("<wîhkât>" Ipc)) ;
+REMCOHORT ("<wîhkât>") (-1 ("<êkâ_wîhkât>" Iph)) ;
+
+SUBSTITUTE ("<êkây>" "êkây" Ipc) ("<êkây_wîhkâc>" "êkây_wîhkâc" Iph Neg) TARGET ("<êkây>" Ipc) IF (1 ("<wîhkâc>" Ipc)) ;
+REMCOHORT ("<wîhkâc>") (-1 ("<êkây_wîhkâc>" Iph)) ;
+
+SUBSTITUTE ("<êkây>" "êkây" Ipc) ("<êkây_wîhkât>" "êkây_wîhkât" Iph Neg) TARGET ("<êkây>" Ipc) IF (1 ("<wîhkât>" Ipc)) ;
+REMCOHORT ("<wîhkât>") (-1 ("<êkây_wîhkât>" Iph)) ;
+
+SUBSTITUTE ("<êkâya>" "êkâya" Ipc) ("<êkâya_wîhkâc>" "êkâya_wîhkâc" Iph Neg) TARGET ("<êkâya>" Ipc) IF (1 ("<wîhkâc>" Ipc)) ;
+REMCOHORT ("<wîhkâc>") (-1 ("<êkâya_wîhkâc>" Iph)) ;
+
+SUBSTITUTE ("<êkâya>" "êkâya" Ipc) ("<êkâya_wîhkât>" "êkâya_wîhkât" Iph Neg) TARGET ("<êkâya>" Ipc) IF (1 ("<wîhkât>" Ipc)) ;
+REMCOHORT ("<wîhkât>") (-1 ("<êkâya_wîhkât>" Iph)) ;
+
+SUBSTITUTE ("<êkosi>" "êkosi" Ipc) ("<êkosi_ani>" "êkosi_ani" Iph) TARGET ("<êkosi>" Ipc) IF (1 ("<ani>" Ipc)) ;
+REMCOHORT ("<ani>") (-1 ("<êkosi_ani>" Iph)) ;
+
+SUBSTITUTE ("<êkosi>" "êkosi" Ipc) ("<êkosi_ani>" "êkosi_ani" Iph) TARGET ("<êkosi>" Ipc) IF (1 ("<ani>" Ipc)) ;
+REMCOHORT ("<ani>") (-1 ("<êkosi_ani>" Iph)) ;
+
+SUBSTITUTE ("êkosi" Ipc) ("<êkosi_isi>" "êkosi_isi" Iph) TARGET ("êkosi" Ipc) IF (1 ("isi" Ipc)) ;
+REMCOHORT ("isi") (-1 ("<êkosi_isi>" Iph)) ;
+
+SUBSTITUTE ("<êkosi>" "êkosi" Ipc) ("<êkosi_mâka>" "êkosi_mâka" Iph) TARGET ("<êkosi>" Ipc) IF (1 ("<mâka>" Ipc)) ;
+REMCOHORT ("<mâka>") (-1 ("<êkosi_mâka>" Iph)) ;
+
+SUBSTITUTE ("<êkosi>" "êkosi" Ipc) ("<êkosi_mîna>" "êkosi_mîna" Iph) TARGET ("<êkosi>" Ipc) IF (1 ("<mîna>" Ipc)) ;
+REMCOHORT ("<mîna>") (-1 ("<êkosi_mîna>" Iph)) ;
+
+SUBSTITUTE ("<êkosi>" "êkosi" Ipc) ("<êkosi_nawac>" "êkosi_nawac" Iph) TARGET ("<êkosi>" Ipc) IF (1 ("<nawac>" Ipc)) ;
+REMCOHORT ("<nawac>") (-1 ("<êkosi_nawac>" Iph)) ;
+
+SUBSTITUTE ("<êkosi>" "êkosi" Ipc) ("<êkosi_pita>" "êkosi_pita" Iph Ipt) TARGET ("<êkosi>" Ipc) IF (1 ("<pita>" Ipc)) ;
+REMCOHORT ("<pita>") (-1 ("<êkosi_pita>" Iph)) ;
+
+SUBSTITUTE ("<êkosi>" "êkosi" Ipc) ("<êkosi_pitamâ>" "êkosi_pitamâ" Iph Ipt) TARGET ("<êkosi>" Ipc) IF (1 ("<pitamâ>" Ipc)) ;
+REMCOHORT ("<pitamâ>") (-1 ("<êkosi_pitamâ>" Iph)) ;
+
+SUBSTITUTE ("<êkota>" "êkota" Ipc) ("<êkota_mwêhci>" "êkota_mwêhci" Iph) TARGET ("<êkota>" Ipc) IF (1 ("<mwêhci>" Ipc)) ;
+REMCOHORT ("<mwêhci>") (-1 ("<êkota_mwêhci>" Iph)) ;
+
+SUBSTITUTE ("êkwa" Ipc) ("<êkwa_ani>" "êkwa_ani" Iph) TARGET ("êkwa" Ipc) IF (1 ("ani" Ipc)) ;
+REMCOHORT ("ani") (-1 ("<êkwa_ani>" Iph)) ;
+
+SUBSTITUTE ("<êkwa>" "êkwa" Ipc) ("<êkwa_mîna>" "êkwa_mîna" Iph) TARGET ("<êkwa>" Ipc) IF (1 ("<mîna>" Ipc)) ;
+REMCOHORT ("<mîna>") (-1 ("<êkwa_mîna>" Iph)) ;
+
+SUBSTITUTE ("<êkwa>" "êkwa" Ipc) ("<êkwa_wiya>" "êkwa_wiya" Iph) TARGET ("<êkwa>" Ipc) IF (1 ("<wiya>" Ipc)) ;
+REMCOHORT ("<wiya>") (-1 ("<êkwa_wiya>" Iph)) ;
+
+SUBSTITUTE ("êsa" Ipc) ("<êsa_anima>" "êsa_anima" Iph) TARGET ("êsa" Ipc) IF (1 ("anima" Ipc)) ;
+REMCOHORT ("anima") (-1 ("<êsa_anima>" Iph)) ;
+
+SUBSTITUTE ("êsa" Ipc) ("<êsa_ôma>" "êsa_ôma" Iph) TARGET ("êsa" Ipc) IF (1 ("ôma" Ipc)) ;
+REMCOHORT ("ôma") (-1 ("<êsa_ôma>" Iph)) ;
+
+SUBSTITUTE ("êwako" Ipc) ("<êwako_ani>" "êwako_ani" Iph) TARGET ("êwako" Ipc) IF (1 ("ani" Ipc)) ;
+REMCOHORT ("ani") (-1 ("<êwako_ani>" Iph)) ;
+
+SUBSTITUTE ("êwako" Ipc) ("<êwako_ohci>" "êwako_ohci" Iph) TARGET ("êwako" Ipc) IF (1 ("ohci" Ipc)) ;
+REMCOHORT ("ohci") (-1 ("<êwako_ohci>" Iph)) ;
+
+SUBSTITUTE ("êwako" Ipc) ("<êwako_ohci>" "êwako_ohci" Iph) TARGET ("êwako" Ipc) IF (1 ("<ohci>" Ipc)) ;
+REMCOHORT ("<ohci>") (-1 ("<êwako_ohci>" Iph)) ;
+
+SUBSTITUTE ("<ispîhci>" "ispîhci" Ipc) ("<ispîhci_wiya>" "ispîhci_wiya" Iph) TARGET ("<ispîhci>" Ipc) IF (1 ("<wiya>" Ipc)) ;
+REMCOHORT ("<wiya>") (-1 ("<ispîhci_wiya>" Iph)) ;
+
+SUBSTITUTE ("itêhkê" Ipc) ("<itêhkê_isi>" "itêhkê_isi" Iph) TARGET ("itêhkê" Ipc) IF (1 ("isi" Ipc)) ;
+REMCOHORT ("isi") (-1 ("<itêhkê_isi>" Iph)) ;
+
+SUBSTITUTE ("<kayâs>" "kayâs" Ipc) ("<kayâs_êkwa>" "kayâs_êkwa" Iph Ipt) TARGET ("<kayâs>" Ipc) IF (1 ("<êkwa>" Ipc)) ;
+REMCOHORT ("êkwa") (-1 ("<kayâs_êkwa>" Iph)) ;
+
+SUBSTITUTE ("<kayâs>" "kayâs" Ipc) ("<kayâs_mâskôc>" "kayâs_mâskôc" Iph Ipt) TARGET ("<kayâs>" Ipc) IF (1 ("<mâskôc>" Ipc)) ;
+REMCOHORT ("<mâskôc>") (-1 ("<kayâs_êkwa>" Iph)) ;
+
+SUBSTITUTE ("<kâya>" "kâya" Ipc) ("<kâya_kîkway>" "kâya_kîkway" Iph) TARGET ("<kâya>" Ipc) IF (1 ("<kîkway>" N)) ;
+REMCOHORT ("<kîkway>") (-1 ("<kâya_kîkway>" Iph)) ;
+
+SUBSTITUTE ("<kâya>" "kâya" Ipc) ("<kâya_kêkway>" "kâya_kêkway" Iph) TARGET ("<kâya>" Ipc) IF (1 ("<kêkway>" N)) ;
+REMCOHORT ("<kêkway>") (-1 ("<kâya_kêkway>" Iph)) ;
+
+SUBSTITUTE ("<kiya>" "kiya" Ipc) ("<kiya_mâka>" "kiya_mâka" Iph) TARGET ("<kiya>" Ipc) IF (1 ("<mâka>" Ipc)) ;
+REMCOHORT ("<mâka>") (-1 ("<kiya_mâka>" Iph)) ;
+
+SUBSTITUTE ("<kiyâm>" "kiyâm" Ipc) ("<kiyâm_âta>" "kiyâm_âta" Iph) TARGET ("<kiyâm>" Ipc) IF (1 ("<âta>" Ipc)) ;
+REMCOHORT ("<âta>") (-1 ("<kiyâm_âta>" Iph)) ;
+
+SUBSTITUTE ("<kîhtwâm>" "kîhtwâm" Ipc) ("<kîhtwâm_ka-wâpamitin>" "kîhtwâm_ka-wâpamitin" Iph) TARGET ("<kîhtwâm>" Ipc) IF (1 ("<ka-wâpamitin>" Ipc)) ;
+REMCOHORT ("<ka-wâpamitin>") (-1 ("<kîhtwâm_ka-wâpamitin>" Iph)) ;
+
+SUBSTITUTE ("<kîko>" "kîko" Ipc) ("<kîko_pîsim>" "kîko_pîsim" Iph) TARGET ("<kîko>" Ipc) IF (1 ("<pîsim>" Ipc)) ;
+REMCOHORT ("<pîsim>") (-1 ("<kîko_pîsim>" Iph)) ;
+
+SUBSTITUTE ("<kîkway>" "kîkway" N) ("<kîkway_piko>" "kîkway_piko" Iph) TARGET ("<kîkway>" N) IF (1 ("<piko>" Ipc)) ;
+REMCOHORT ("<piko>") (-1 ("<kîkway_piko>" Iph)) ;
+
+SUBSTITUTE ("<kêkway>" "kêkway" N) ("<kêkway_piko>" "kêkway_piko" Iph) TARGET ("<kêkway>" Ipc) IF (1 ("<piko>" Ipc)) ;
+REMCOHORT ("<piko>") (-1 ("<kêkway_piko>" Iph)) ;
+
+SUBSTITUTE ("<kîkwây>" "kîkwây" Ipc) ("<kîkwây_êtikwê>" "kîkwây_êtikwê" Iph) TARGET ("<kîkwây>" Ipc) IF (1 ("<êtikwê>" Ipc)) ;
+REMCOHORT ("<êtikwê>") (-1 ("<kîkwây_êtikwê>" Iph)) ;
+
+SUBSTITUTE ("<kîkwây>" "kîkwây" Ipc) ("<kîkwây_kani>" "kîkwây_kani" Iph) TARGET ("<kîkwây>" Ipc) IF (1 ("<kani>" Ipc)) ;
+REMCOHORT ("<kani>") (-1 ("<kîkwây_kani>" Iph)) ;
+
+SUBSTITUTE ("<kîkwây>" "kîkwây" Ipc) ("<kîkwây_ôma>" "kîkwây_ôma" Iph) TARGET ("<kîkwây>" Ipc) IF (1 ("<ôma>" Ipc)) ;
+REMCOHORT ("<ôma>") (-1 ("<kîkwây_ôma>" Iph)) ;
+
+SUBSTITUTE ("<kîspin>" "kîspin" Ipc) ("<kîspin_êkâ>" "kîspin_êkâ" Iph) TARGET ("<kîspin>" Ipc) IF (1 ("<êkâ>" Ipc)) ;
+REMCOHORT ("<êkâ>") (-1 ("<kîspin_êkâ>" Iph)) ;
+
+SUBSTITUTE ("<kîspin>" "kîspin" Ipc) ("<kîspin_êsa>" "kîspin_êsa" Iph) TARGET ("<kîspin>" Ipc) IF (1 ("<êsa>" Ipc)) ;
+REMCOHORT ("<êsa>") (-1 ("<kîspin_êsa>" Iph)) ;
+
+SUBSTITUTE ("<kîwêtinohk>" "kîwêtinohk" Ipc) ("<kîwêtinohk_isi>" "kîwêtinohk_isi" Iph) TARGET ("<kîwêtinohk>" Ipc) IF (1 ("<isi>" Ipc)) ;
+REMCOHORT ("<isi>") (-1 ("<kîwêtinohk_isi>" Iph)) ;
+
+SUBSTITUTE ("<kîwêtinohk>" "kîwêtinohk" Ipc) ("<kîwêtinohk_ohci>" "kîwêtinohk_ohci" Iph) TARGET ("<kîwêtinohk>" Ipc) IF (1 ("<ohci>" Ipc)) ;
+REMCOHORT ("<ohci>") (-1 ("<kîwêtinohk_ohci>" Iph)) ;
+
+SUBSTITUTE ("<kotak>" "kotak" Ipc) ("<kotak_ispayiki>" "kotak_ispayiki" Iph) TARGET ("<kotak>" Ipc) IF (1 ("<ispayiki>" Ipc)) ;
+REMCOHORT ("<ispayiki>") (-1 ("<kotak_ispayiki>" Iph)) ;
+
+SUBSTITUTE ("<kotak>" "kotak" Ipc) ("<kotak_mîna>" "kotak_mîna" Iph) TARGET ("<kotak>" Ipc) IF (1 ("<mîna>" Ipc)) ;
+REMCOHORT ("<mîna>") (-1 ("<kotak_mîna>" Iph)) ;
+
+SUBSTITUTE ("<kotak>" "kotak" Ipc) ("<kotak_pîsim>" "kotak_pîsim" Iph) TARGET ("<kotak>" Ipc) IF (1 ("<pîsim>" Ipc)) ;
+REMCOHORT ("<pîsim>") (-1 ("<kotak_pîsim>" Iph)) ;
+
+SUBSTITUTE ("<kwayask>" "kwayask" Ipc) ("<kwayask_êwako>" "kwayask_êwako" Iph) TARGET ("<kwayask>" Ipc) IF (1 ("<êwako>" Ipc)) ;
+REMCOHORT ("<êwako>") (-1 ("<kwayask_êwako>" Iph)) ;
+
+SUBSTITUTE ("<ma>" "ma" Ipc) ("<ma_cî>" "ma_cî" Iph) TARGET ("<ma>" Ipc) IF (1 ("<cî>" Ipc)) ;
+REMCOHORT ("<cî>") (-1 ("<ma_cî>" Iph)) ;
+
+SUBSTITUTE ("<ma>" "ma" Ipc) ("<ma_nâ>" "ma_nâ" Iph) TARGET ("<ma>" Ipc) IF (1 ("<nâ>" Ipc)) ;
+REMCOHORT ("<nâ>") (-1 ("<ma_nâ>" Iph)) ;
+
+SUBSTITUTE ("mahti" Ipc) ("<mahti_êsa>" "mahti_êsa" Iph) TARGET ("mahti" Ipc) IF (1 ("êsa" Ipc)) ;
+REMCOHORT ("êsa") (-1 ("<mahti_êsa>" Iph)) ;
+
+SUBSTITUTE ("<mahti>" "mahti" Ipc) ("<mahti_mâka>" "mahti_mâka" Iph) TARGET ("<mahti>" Ipc) IF (1 ("<mâka>" Ipc)) ;
+REMCOHORT ("<mâka>") (-1 ("<mahti_mâka>" Iph)) ;
+
+SUBSTITUTE ("<matwân>" "matwân" Ipc) ("<matwân_cî>" "matwân_cî" Iph) TARGET ("<matwân>" Ipc) IF (1 ("<cî>" Ipc)) ;
+REMCOHORT ("<cî>") (-1 ("<matwân_cî>" Iph)) ;
+
+SUBSTITUTE ("mâka" Ipc) ("<mâka_awa>" "mâka_awa" Iph) TARGET ("mâka" Ipc) IF (1 ("awa" Ipc)) ;
+REMCOHORT ("awa") (-1 ("<mâka_awa>" Iph)) ;
+
+SUBSTITUTE ("<mâka>" "mâka" Ipc) ("<mâka_mîna>" "mâka_mîna" Iph) TARGET ("<mâka>" Ipc) IF (1 ("<mîna>" Ipc)) ;
+REMCOHORT ("<mîna>") (-1 ("<mâka_mîna>" Iph)) ;
+
+SUBSTITUTE ("mâka" Ipc) ("<mâka_ôma>" "mâka_ôma" Iph) TARGET ("mâka" Ipc) IF (1 ("ôma" Ipc)) ;
+REMCOHORT ("ôma") (-1 ("<mâka_ôma>" Iph)) ;
+
+SUBSTITUTE ("mâka" Ipc) ("<mâka_ôma>" "mâka_ôma" Iph) TARGET ("mâka" Ipc) IF (1 ("<ôma>" Ipc)) ;
+REMCOHORT ("<ôma>") (-1 ("<mâka_ôma>" Iph)) ;
+
+SUBSTITUTE ("<mâni>" "mâni" Ipc) ("<mâni_mâka>" "mâni_mâka" Iph) TARGET ("<mâni>" Ipc) IF (1 ("<mâka>" Ipc)) ;
+REMCOHORT ("<mâka>") (-1 ("<mâni_mâka>" Iph)) ;
+
+SUBSTITUTE ("mâwaci" Ipc) ("<mâwaci_iyikohk>" "mâwaci_iyikohk" Iph) TARGET ("mâwaci" Ipc) IF (1 ("iyikohk" Ipc)) ;
+REMCOHORT ("iyikohk") (-1 ("<mâwaci_iyikohk>" Iph)) ;
+
+SUBSTITUTE ("misiwê" Ipc) ("<misiwê_ita>" "misiwê_ita" Iph Ipl) TARGET ("misiwê" Ipc) IF (1 ("ita" Ipc)) ;
+REMCOHORT ("ita") (-1 ("<misiwê_ita>" Iph)) ;
+
+SUBSTITUTE ("misiwê" Ipc) ("<misiwê_itê>" "misiwê_itê" Iph Ipl) TARGET ("misiwê" Ipc) IF (1 ("itê" Ipc)) ;
+REMCOHORT ("itê") (-1 ("<misiwê_itê>" Iph)) ;
+
+SUBSTITUTE ("mîna" Ipc) ("<mîna_apisîs>" "mîna_apisîs" Iph) TARGET ("mîna" Ipc) IF (1 ("apisîs" Ipc)) ;
+REMCOHORT ("apisîs") (-1 ("<mîna_apisîs>" Iph)) ;
+
+SUBSTITUTE ("mîna" Ipc) ("<mîna_âpihtâw>" "mîna_âpihtâw" Iph) TARGET ("mîna" Ipc) IF (1 ("âpihtâw" Ipc)) ;
+REMCOHORT ("âpihtâw") (-1 ("<mîna_âpihtâw>" Iph)) ;
+
+SUBSTITUTE ("<môy>" "môy" Ipc) ("<môy_cêskwa>" "môy_cêskwa" Iph) TARGET ("<môy>" Ipc) IF (1 ("<cêskwa>" Ipc)) ;
+REMCOHORT ("<cêskwa>") (-1 ("<môy_cêskwa>" Iph)) ;
+
+SUBSTITUTE ("<môy>" "môy" Ipc) ("<môy_kakêtihk>" "môy_kakêtihk" Iph) TARGET ("<môy>" Ipc) IF (1 ("<kakêtihk>" Ipc)) ;
+REMCOHORT ("<kakêtihk>") (-1 ("<môy_kakêtihk>" Iph)) ;
+
+SUBSTITUTE ("<môy>" "môy" Ipc) ("<môy_konita>" "môy_konita" Iph) TARGET ("<môy>" Ipc) IF (1 ("<konita>" Ipc)) ;
+REMCOHORT ("<konita>") (-1 ("<môy_konita>" Iph)) ;
+
+SUBSTITUTE ("<môy>" "môy" Ipc) ("<môy_nânitaw>" "môy_nânitaw" Iph Neg) TARGET ("<môy>" Ipc) IF (1 ("<nânitaw>" Ipc)) ;
+REMCOHORT ("<nânitaw>") (-1 ("<môy_nânitaw>" Iph)) ;
+
+SUBSTITUTE ("<môy>" "môy" Ipc) ("<môy_wîhkâc>" "môy_wîhkâc" Iph Neg) TARGET ("<môy>" Ipc) IF (1 ("<wîhkâc>" Ipc)) ;
+REMCOHORT ("<wîhkâc>") (-1 ("<môy_wîhkâc>" Iph)) ;
+
+SUBSTITUTE ("<môy>" "môy" Ipc) ("<môy_wîhkât>" "môy_wîhkât" Iph Neg) TARGET ("<môy>" Ipc) IF (1 ("<wîhkât>" Ipc)) ;
+REMCOHORT ("<wîhkât>") (-1 ("<môy_wîhkât>" Iph)) ;
+
+SUBSTITUTE ("môya" Ipc) ("<môya_ahpô>" "môya_ahpô" Iph Neg) TARGET ("môya" Ipc) IF (1 ("ahpô" Ipc)) ;
+REMCOHORT ("ahpô") (-1 ("<môya_ahpô>" Iph)) ;
+
+SUBSTITUTE ("<môya>" "môya" Ipc) ("<môya_cî>" "môya_cî" Iph Neg Qst) TARGET ("<môya>" Ipc) IF (1 ("<cî>" Ipc)) ;
+REMCOHORT ("<cî>") (-1 ("<môya_cî>" Iph)) ;
+
+SUBSTITUTE ("<môya>" "môya" Ipc) ("<môya_nânitaw>" "môya_nânitaw" Iph Neg) TARGET ("<môya>" Ipc) IF (1 ("<nânitaw>" Ipc)) ;
+REMCOHORT ("<nânitaw>") (-1 ("<môya_nânitaw>" Iph)) ;
+
+SUBSTITUTE ("<mwâc>" "mwâc" Ipc) ("<mwâc_ahpô>" "mwâc_ahpô" Iph Neg) TARGET ("<mwâc>" Ipc) IF (1 ("<ahpô>" Ipc)) ;
+REMCOHORT ("<ahpô>") (-1 ("<mwâc_ahpô>" Iph)) ;
+
+SUBSTITUTE ("<nama>" "nama" Ipc) ("<nama_cî>" "nama_cî" Iph) TARGET ("<nama>" Ipc) IF (1 ("<cî>" Ipc)) ;
+REMCOHORT ("<cî>") (-1 ("<nama_cî>" Iph)) ;
+
+SUBSTITUTE ("<nama>" "nama" Ipc) ("<nama_kîkway>" "nama_kîkway" Ipn) TARGET ("<nama>" Ipc) IF (1 ("<kîkway>" N)) ;
+REMCOHORT ("<kîkway>") (-1 ("<nama_kîkway>" Ipn)) ;
+
+SUBSTITUTE ("<nama>" "nama" Ipc) ("<nama_kêkway>" "nama_kêkway" Ipn) TARGET ("<nama>" Ipc) IF (1 ("<kêkway>" N)) ;
+REMCOHORT ("<kêkway>") (-1 ("<nama_kêkway>" Ipn)) ;
+
+SUBSTITUTE ("<nama>" "nama" Ipc) ("<nama_mayaw>" "nama_mayaw" Iph) TARGET ("<nama>" Ipc) IF (1 ("<mayaw>" Ipc)) ;
+REMCOHORT ("<mayaw>") (-1 ("<nama_mayaw>" Iph)) ;
+
+SUBSTITUTE ("<nama>" "nama" Ipc) ("<nama_nânitaw>" "nama_nânitaw" Iph Neg) TARGET ("<nama>" Ipc) IF (1 ("<nânitaw>" Ipc)) ;
+REMCOHORT ("<nânitaw>") (-1 ("<nama_nânitaw>" Iph)) ;
+
+SUBSTITUTE ("<nama>" "nama" Ipc) ("<nama_wîhkâc>" "nama_wîhkâc" Iph Neg) TARGET ("<nama>" Ipc) IF (1 ("<wîhkâc>" Ipc)) ;
+REMCOHORT ("<wîhkâc>") (-1 ("<nama_wîhkâc>" Iph)) ;
+
+SUBSTITUTE ("<namôy>" "namôy" Ipc) ("<namôy_wîhkâc>" "namôy_wîhkâc" Iph Neg) TARGET ("<namôy>" Ipc) IF (1 ("<wîhkâc>" Ipc)) ;
+REMCOHORT ("<wîhkâc>") (-1 ("<namôy_wîhkâc>" Iph)) ;
+
+SUBSTITUTE ("<nama>" "nama" Ipc) ("<nama_wîhkât>" "nama_wîhkât" Iph Neg) TARGET ("<nama>" Ipc) IF (1 ("<wîhkât>" Ipc)) ;
+REMCOHORT ("<wîhkât>") (-1 ("<nama_wîhkât>" Iph)) ;
+
+SUBSTITUTE ("<namôy>" "namôy" Ipc) ("<namôy_wîhkât>" "namôy_wîhkât" Iph Neg) TARGET ("<namôy>" Ipc) IF (1 ("<wîhkât>" Ipc)) ;
+REMCOHORT ("<wîhkât>") (-1 ("<namôy_wîhkât>" Iph)) ;
+
+SUBSTITUTE ("namôya" Ipc) ("<namôya_ahpô>" "namôya_ahpô" Iph Neg) TARGET ("namôya" Ipc) IF (1 ("ahpô" Ipc)) ;
+REMCOHORT ("ahpô") (-1 ("<namôya_ahpô>" Iph)) ;
+
+SUBSTITUTE ("namôya" Ipc) ("<namôya_apisîs>" "namôya_apisîs" Iph Quant) TARGET ("namôya" Ipc) IF (1 ("apisîs" Ipc)) ;
+REMCOHORT ("apisîs") (-1 ("<namôya_apisîs>" Iph)) ;
+
+SUBSTITUTE ("<namôya>" "namôya" Ipc) ("<namôya_cêskwa>" "namôya_cêskwa" Iph) TARGET ("<namôya>" Ipc) IF (1 ("<cêskwa>" Ipc)) ;
+REMCOHORT ("<cêskwa>") (-1 ("<namôya_cêskwa>" Iph)) ;
+
+SUBSTITUTE ("<namôya>" "namôya" Ipc) ("<namôya_cî>" "namôya_cî" Iph Neg Qst) TARGET ("<namôya>" Ipc) IF (1 ("<cî>" Ipc)) ;
+REMCOHORT ("<cî>") (-1 ("<namôya_cî>" Iph)) ;
+
+SUBSTITUTE ("namôya" Ipc) ("<namôya_êkwayikohk>" "namôya_êkwayikohk" Iph) TARGET ("namôya" Ipc) IF (1 ("êkwayikohk" Ipc)) ;
+REMCOHORT ("êkwayikohk") (-1 ("<namôya_êkwayikohk>" Iph)) ;
+
+SUBSTITUTE ("<namôya>" "namôya" Ipc) ("<namôya_kakêtihk>" "namôya_kakêtihk" Iph Quant) TARGET ("<namôya>" Ipc) IF (1 ("<kakêtihk>" Ipc)) ;
+REMCOHORT ("<kakêtihk>") (-1 ("<namôya_kakêtihk>" Iph Quant)) ;
+
+SUBSTITUTE ("<namôya>" "namôya" Ipc) ("<namôya_nânitaw>" "namôya_nânitaw" Iph Neg) TARGET ("<namôya>" Ipc) IF (1 ("<nânitaw>" Ipc)) ;
+REMCOHORT ("<nânitaw>") (-1 ("<namôya_nânitaw>" Iph)) ;
+
+SUBSTITUTE ("<namôya>" "namôya" Ipc) ("<namôya_nânitawitê>" "namôya_nânitawitê" Iph Neg) TARGET ("<namôya>" Ipc) IF (1 ("<nânitawitê>" Ipc)) ;
+REMCOHORT ("<nânitawitê>") (-1 ("<namôya_nânitawitê>" Iph)) ;
+
+SUBSTITUTE ("<namôya>" "namôya" Ipc) ("<namôya_wiya>" "namôya_wiya" Iph) TARGET ("<namôya>" Ipc) IF (1 ("<wiya>" Ipc)) ;
+REMCOHORT ("<wiya>") (-1 ("<namôya_wiya>" Iph)) ;
+
+SUBSTITUTE ("<namôya>" "namôya" Ipc) ("<namôya_wîhkâc>" "namôya_wîhkâc" Iph Neg) TARGET ("<namôya>" Ipc) IF (1 ("<wîhkâc>" Ipc)) ;
+REMCOHORT ("<wîhkâc>") (-1 ("<namôya_wîhkâc>" Iph)) ;
+
+SUBSTITUTE ("<namôya>" "namôya" Ipc) ("<namôya_wîhkât>" "namôya_wîhkât" Iph Neg) TARGET ("<namôya>" Ipc) IF (1 ("<wîhkât>" Ipc)) ;
+REMCOHORT ("<wîhkât>") (-1 ("<namôya_wîhkât>" Iph)) ;
+
+SUBSTITUTE ("<namwâc>" "namwâc" Ipc) ("<namwâc_êkwayikohk>" "namwâc_êkwayikohk" Iph) TARGET ("<namwâc>" Ipc) IF (1 ("<êkwayikohk>" Ipc)) ;
+REMCOHORT ("<êkwayikohk>") (-1 ("<namwâc_êkwayikohk>" Iph)) ;
+
+SUBSTITUTE ("<nanâtohk>" "nanâtohk" Ipc) ("<nanâtohk_isi>" "nanâtohk_isi" Iph) TARGET ("<nanâtohk>" Ipc) IF (1 ("<isi>" Ipc)) ;
+REMCOHORT ("<isi>") (-1 ("<nanâtohk_isi>" Iph)) ;
+
+SUBSTITUTE ("<nanâtohk>" "nanâtohk" Ipc) ("<nanâtohk_kîkway>" "nanâtohk_kîkway" Iph) TARGET ("<nanâtohk>" Ipc) IF (1 ("<kîkway>" N)) ;
+REMCOHORT ("<kîkway>") (-1 ("<nanâtohk_kîkway>" Iph)) ;
+
+SUBSTITUTE ("<nanâtohk>" "nanâtohk" Ipc) ("<nanâtohk_kêkway>" "nanâtohk_kêkway" Iph) TARGET ("<nanâtohk>" Ipc) IF (1 ("<kêkway>" N)) ;
+REMCOHORT ("<kêkway>") (-1 ("<nanâtohk_kêkway>" Iph)) ;
+
+SUBSTITUTE ("<natimihk>" "natimihk" Ipc) ("<natimihk_isi>" "natimihk_isi" Iph) TARGET ("<natimihk>" Ipc) IF (1 ("<isi>" Ipc)) ;
+REMCOHORT ("<isi>") (-1 ("<natimihk_isi>" Iph)) ;
+
+SUBSTITUTE ("<nawac>" "nawac" Ipc) ("<nawac_apisîs>" "nawac_apisîs" Iph) TARGET ("<nawac>" Ipc) IF (1 ("<apisîs>" Ipc)) ;
+REMCOHORT ("<apisîs>") (-1 ("<nawac_apisîs>" Iph)) ;
+
+SUBSTITUTE ("<nawac>" "nawac" Ipc) ("<nawac_êkosi>" "nawac_êkosi" Iph) TARGET ("<nawac>" Ipc) IF (1 ("<êkosi>" Ipc)) ;
+REMCOHORT ("<êkosi>") (-1 ("<nawac_êkosi>" Iph)) ;
+
+SUBSTITUTE ("<nawac>" "nawac" Ipc) ("<nawac_êkosi>" "nawac_êkosi" Iph) TARGET ("<nawac>" Ipc) IF (1 ("<êkosi>" Ipc)) ;
+REMCOHORT ("<êkosi>") (-1 ("<nawac_êkosi>" Iph)) ;
+
+SUBSTITUTE ("<nawac>" "nawac" Ipc) ("<nawac_kwayask>" "nawac_kwayask" Iph) TARGET ("<nawac>" Ipc) IF (1 ("<kwayask>" Ipc)) ;
+REMCOHORT ("<kwayask>") (-1 ("<nawac_kwayask>" Iph)) ;
+
+SUBSTITUTE ("<nawac>" "nawac" Ipc) ("<nawac_mistahi>" "nawac_mistahi" Iph) TARGET ("<nawac>" Ipc) IF (1 ("<mistahi>" Ipc)) ;
+REMCOHORT ("<mistahi>") (-1 ("<nawac_mistahi>" Iph)) ;
+
+SUBSTITUTE ("<nawac>" "nawac" Ipc) ("<nawac_piko>" "nawac_piko" Iph) TARGET ("<nawac>" Ipc) IF (1 ("<piko>" Ipc)) ;
+REMCOHORT ("<piko>") (-1 ("<nawac_piko>" Iph)) ;
+
+SUBSTITUTE ("<nânitaw>" "nânitaw" Ipc) ("<nânitaw_isi>" "nânitaw_isi" Iph) TARGET ("<nânitaw>" Ipc) IF (1 ("<isi>" Ipc)) ;
+REMCOHORT ("<isi>") (-1 ("<nânitaw_isi>" Iph)) ;
+
+SUBSTITUTE ("<nânitaw>" "nânitaw" Ipc) ("<nânitaw_ita>" "nânitaw_ita" Iph) TARGET ("<nânitaw>" Ipc) IF (1 ("<ita>" Ipc)) ;
+REMCOHORT ("<ita>") (-1 ("<nânitaw_ita>" Iph)) ;
+
+SUBSTITUTE ("<nânitaw>" "nânitaw" Ipc) ("<nânitaw_itê>" "nânitaw_itê" Iph) TARGET ("<nânitaw>" Ipc) IF (1 ("<itê>" Ipc)) ;
+REMCOHORT ("<itê>") (-1 ("<nânitaw_itê>" Iph)) ;
+
+SUBSTITUTE ("nêtê" Ipc) ("<nêtê_ohci>" "nêtê_ohci" Iph) TARGET ("nêtê" Ipc) IF (1 ("ohci" Ipc)) ;
+REMCOHORT ("ohci") (-1 ("<nêtê_ohci>" Iph)) ;
+
+SUBSTITUTE ("<nistam>" "nistam" Ipc) ("<nistam_mâwacêyas>" "nistam_mâwacêyas" Iph) TARGET ("<nistam>" Ipc) IF (1 ("<mâwacêyas>" Ipc)) ;
+REMCOHORT ("<mâwacêyas>") (-1 ("<nistam_mâwacêyas>" Iph)) ;
+
+SUBSTITUTE ("<nisto>" "nisto" Ipc) ("<nisto_kîsikâw>" "nisto_kîsikâw" Iph) TARGET ("<nisto>" Ipc) IF (1 ("<kîsikâw>" Ipc)) ;
+REMCOHORT ("<kîsikâw>") (-1 ("<nisto_kîsikâw>" Iph)) ;
+
+SUBSTITUTE ("<nisto>" "nisto" Ipc) ("<nisto_tipahikan>" "nisto_tipahikan" Iph) TARGET ("<nisto>" Ipc) IF (1 ("<tipahikan>" Ipc)) ;
+REMCOHORT ("<tipahikan>") (-1 ("<nisto_tipahikan>" Iph)) ;
+
+SUBSTITUTE ("<nisto>" "nisto" Ipc) ("<nisto_tipiskâw>" "nisto_tipiskâw" Iph) TARGET ("<nisto>" Ipc) IF (1 ("<tipiskâw>" Ipc)) ;
+REMCOHORT ("<tipiskâw>") (-1 ("<nisto_tipiskâw>" Iph)) ;
+
+SUBSTITUTE ("<nistomitanaw>" "nistomitanaw" Ipc) ("<nistomitanaw_tahtwâpisk>" "nistomitanaw_tahtwâpisk" Iph) TARGET ("<nistomitanaw>" Ipc) IF (1 ("<tahtwâpisk>" Ipc)) ;
+REMCOHORT ("<tahtwâpisk>") (-1 ("<nistomitanaw_tahtwâpisk>" Iph)) ;
+
+SUBSTITUTE ("<nîsitanaw>" "nîsitanaw" Ipc) ("<nîsitanaw_tahtwâpisk>" "nîsitanaw_tahtwâpisk" Iph) TARGET ("<nîsitanaw>" Ipc) IF (1 ("<tahtwâpisk>" Ipc)) ;
+REMCOHORT ("<tahtwâpisk>") (-1 ("<nîsitanaw_tahtwâpisk>" Iph)) ;
+
+SUBSTITUTE ("omisi" Ipc) ("<omisi_isi>" "omisi_isi" Iph) TARGET ("omisi" Ipc) IF (1 ("isi" Ipc)) ;
+REMCOHORT ("isi") (-1 ("<omisi_isi>" Iph)) ;
+
+SUBSTITUTE ("<osâm>" "osâm" Ipc) ("<osâm_apisîs>" "osâm_apisîs" Iph) TARGET ("<osâm>" Ipc) IF (1 ("<apisîs>" Ipc)) ;
+REMCOHORT ("<apisîs>") (-1 ("<osâm_apisîs>" Iph)) ;
+
+SUBSTITUTE ("<osâm>" "osâm" Ipc) ("<osâm_mistahi>" "osâm_mistahi" Iph) TARGET ("<osâm>" Ipc) IF (1 ("<mistahi>" Ipc)) ;
+REMCOHORT ("<mistahi>") (-1 ("<osâm_mistahi>" Iph)) ;
+
+SUBSTITUTE ("<osâm>" "osâm" Ipc) ("<osâm_piko>" "osâm_piko" Iph) TARGET ("<osâm>" Ipc) IF (1 ("<piko>" Ipc)) ;
+REMCOHORT ("<piko>") (-1 ("<osâm_piko>" Iph)) ;
+
+SUBSTITUTE ("<otâhk>" "otâhk" Ipc) ("<otâhk_ispayiw>" "otâhk_ispayiw" Iph) TARGET ("<otâhk>" Ipc) IF (1 ("<ispayiw>" Ipc)) ;
+REMCOHORT ("<ispayiw>") (-1 ("<otâhk_ispayiw>" Iph)) ;
+
+SUBSTITUTE ("ôtê" Ipc) ("<ôtê_isi>" "ôtê_isi" Iph) TARGET ("ôtê" Ipc) IF (1 ("isi" Ipc)) ;
+REMCOHORT ("isi") (-1 ("<ôtê_isi>" Iph)) ;
+
+SUBSTITUTE ("pâtimâ" Ipc) ("<pâtimâ_ici>" "pâtimâ_ici" Iph) TARGET ("pâtimâ" Ipc) IF (1 ("ici" Ipc)) ;
+REMCOHORT ("ici") (-1 ("<pâtimâ_ici>" Iph)) ;
+
+SUBSTITUTE ("pâtimâ" Ipc) ("<pâtimâ_itâp>" "pâtimâ_itâp" Iph) TARGET ("pâtimâ" Ipc) IF (1 ("itâp" Ipc)) ;
+REMCOHORT ("itâp") (-1 ("<pâtimâ_itâp>" Iph)) ;
+
+SUBSTITUTE ("<pêyakwâw>" "pêyakwâw" Ipc) ("<pêyakwâw_êsa>" "pêyakwâw_êsa" Iph Ipt) TARGET ("<pêyakwâw>" Ipc) IF (1 ("<êsa>" Ipc)) ;
+REMCOHORT ("<êsa>") (-1 ("<pêyakwâw_êsa>" Iph)) ;
+
+SUBSTITUTE ("piko" Ipc) ("<piko_ani>" "piko_ani" Iph) TARGET ("piko" Ipc) IF (1 ("ani" Ipc)) ;
+REMCOHORT ("ani") (-1 ("<piko_ani>" Iph)) ;
+
+SUBSTITUTE ("piko" Ipc) ("<piko_ispî>" "piko_ispî" Iph) TARGET ("piko" Ipc) IF (1 ("ispî" Ipc)) ;
+REMCOHORT ("ispî") (-1 ("<piko_ispî>" Iph)) ;
+
+SUBSTITUTE ("piko" Ipc) ("<piko_ita>" "piko_ita" Iph) TARGET ("piko" Ipc) IF (1 ("ita" Ipc)) ;
+REMCOHORT ("ita") (-1 ("<piko_ita>" Iph)) ;
+
+SUBSTITUTE ("piko" Ipc) ("<piko_itê>" "piko_itê" Iph) TARGET ("piko" Ipc) IF (1 ("itê" Ipc)) ;
+REMCOHORT ("itê") (-1 ("<piko_itê>" Iph)) ;
+
+SUBSTITUTE ("piko" Ipc) ("<piko_itowahk>" "piko_itowahk" Iph) TARGET ("piko" Ipc) IF (1 ("itowahk" Ipc)) ;
+REMCOHORT ("itowahk") (-1 ("<piko_itowahk>" Iph)) ;
+
+SUBSTITUTE ("piko" Ipc) ("<piko_itowihk>" "piko_itowihk" Iph) TARGET ("piko" Ipc) IF (1 ("itowihk" Ipc)) ;
+REMCOHORT ("itowihk") (-1 ("<piko_itowihk>" Iph)) ;
+
+SUBSTITUTE ("piko" Ipc) ("<piko_iyikohk>" "piko_iyikohk" Iph) TARGET ("piko" Ipc) IF (1 ("iyikohk" Ipc)) ;
+REMCOHORT ("iyikohk") (-1 ("<piko_iyikohk>" Iph)) ;
+
+SUBSTITUTE ("piko" Ipc) ("<piko_iyiwas>" "piko_iyiwas" Iph) TARGET ("piko" Ipc) IF (1 ("iyiwas" Ipc)) ;
+REMCOHORT ("iyiwas") (-1 ("<piko_iyiwas>" Iph)) ;
+
+SUBSTITUTE ("<pîtos>" "pîtos" Ipc) ("<pîtos_mîna>" "pîtos_mîna" Iph) TARGET ("<pîtos>" Ipc) IF (1 ("<mîna>" Ipc)) ;
+REMCOHORT ("<mîna>") (-1 ("<pîtos_mîna>" Iph)) ;
+
+SUBSTITUTE ("<sâkâstênohk>" "sâkâstênohk" Ipc) ("<sâkâstênohk_isi>" "sâkâstênohk_isi" Iph) TARGET ("<sâkâstênohk>" Ipc) IF (1 ("<isi>" Ipc)) ;
+REMCOHORT ("<isi>") (-1 ("<sâkâstênohk_isi>" Iph)) ;
+
+SUBSTITUTE ("<sâwanohk>" "sâwanohk" Ipc) ("<sâwanohk_isi>" "sâwanohk_isi" Iph) TARGET ("<sâwanohk>" Ipc) IF (1 ("<isi>" Ipc)) ;
+REMCOHORT ("<isi>") (-1 ("<sâwanohk_isi>" Iph)) ;
+
+SUBSTITUTE ("tahki" Ipc) ("<tahki_ayiwâk>" "tahki_ayiwâk" Iph) TARGET ("tahki" Ipc) IF (1 ("ayiwâk" Ipc)) ;
+REMCOHORT ("ayiwâk") (-1 ("<tahki_ayiwâk>" Iph)) ;
+
+SUBSTITUTE ("<tân>" "tân" Ipc) ("<tân_ôt>" "tân_ôt" Iph) TARGET ("<tân>" Ipc) IF (1 ("<ôt>" Ipc)) ;
+REMCOHORT ("<ôt>") (-1 ("<tân_ôt>" Iph)) ;
+
+SUBSTITUTE ("tânêhki" Ipc) ("<tânêhki_ana>" "tânêhki_ana" Iph) TARGET ("tânêhki" Ipc) IF (1 ("ana" Ipc)) ;
+REMCOHORT ("ana") (-1 ("<tânêhki_ana>" Iph)) ;
+
+SUBSTITUTE ("tânêhki" Ipc) ("<tânêhki_êtikwê>" "tânêhki_êtikwê" Iph) TARGET ("tânêhki" Ipc) IF (1 ("êtikwê" Ipc)) ;
+REMCOHORT ("êtikwê") (-1 ("<tânêhki_êtikwê>" Iph)) ;
+
+SUBSTITUTE ("tânima" Ipc) ("<tânima_êwako>" "tânima_êwako" Iph) TARGET ("tânima" Ipc) IF (1 ("êwako" Ipc)) ;
+REMCOHORT ("êwako") (-1 ("<tânima_êwako>" Iph)) ;
+
+SUBSTITUTE (""tânisi" Ipc) ("<tânisi_êkwa>" "tânisi_êkwa" Iph) TARGET ("tânisi" Ipc) IF (1 ("êkwa" Ipc)) ;
+REMCOHORT ("êkwa") (-1 ("<tânisi_êkwa>" Iph)) ;
+
+SUBSTITUTE ("tânisi" Ipc) ("<tânisi_êtikwê>" "tânisi_êtikwê" Iph) TARGET ("tânisi" Ipc) IF (1 ("êtikwê" Ipc)) ;
+REMCOHORT ("êtikwê") (-1 ("<tânisi_êtikwê>" Iph)) ;
+
+SUBSTITUTE ("tânispî" Ipc) ("<tânispî_ohci>" "tânispî_ohci" Iph Ipt) TARGET ("tânispî" Ipc) IF (1 ("ohci" Ipc)) ;
+REMCOHORT ("ohci") (-1 ("<tânispî_ohci>" Iph)) ;
+
+SUBSTITUTE ("tânita" Ipc) ("<tânita_ohci>" "tânita_ohci" Iph) TARGET ("tânita" Ipc) IF (1 ("ohci" Ipc)) ;
+REMCOHORT ("ohci") (-1 ("<tânita_ohci>" Iph)) ;
+
+SUBSTITUTE ("tânitahto" Ipc) ("<tânitahto_askiy>" "tânitahto_askiy" Iph) TARGET ("tânitahto" Ipc) IF (1 ("askiy" Ipc)) ;
+REMCOHORT ("askiy") (-1 ("<tânitahto_askiy>" Iph)) ;
+
+SUBSTITUTE ("<tânitahto>" "tânitahto" Ipc) ("<tânitahto_kîsikâw>" "tânitahto_kîsikâw" Iph) TARGET ("<tânitahto>" Ipc) IF (1 ("<kîsikâw>" Ipc)) ;
+REMCOHORT ("<kîsikâw>") (-1 ("<tânitahto_kîsikâw>" Iph)) ;
+
+SUBSTITUTE ("<tânitahto>" "tânitahto" Ipc) ("<tânitahto_pîsim>" "tânitahto_pîsim" Iph) TARGET ("<tânitahto>" Ipc) IF (1 ("<pîsim>" Ipc)) ;
+REMCOHORT ("<pîsim>") (-1 ("<tânitahto_pîsim>" Iph)) ;
+
+SUBSTITUTE ("<tânitahto>" "tânitahto" Ipc) ("<tânitahto_tipahikan>" "tânitahto_tipahikan" Iph) TARGET ("<tânitahto>" Ipc) IF (1 ("<tipahikan>" Ipc)) ;
+REMCOHORT ("<tipahikan>") (-1 ("<tânitahto_tipahikan>" Iph)) ;
+
+SUBSTITUTE ("<tânitahto>" "tânitahto" Ipc) ("<tânitahto_tipiskâw>" "tânitahto_tipiskâw" Iph) TARGET ("<tânitahto>" Ipc) IF (1 ("<tipiskâw>" Ipc)) ;
+REMCOHORT ("<tipiskâw>") (-1 ("<tânitahto_tipiskâw>" Iph)) ;
+
+SUBSTITUTE ("tânitê" Ipc) ("<tânitê_êtikwê>" "tânitê_êtikwê" Iph) TARGET ("tânitê" Ipc) IF (1 ("êtikwê" Ipc)) ;
+REMCOHORT ("êtikwê") (-1 ("<tânitê_êtikwê>" Iph)) ;
+
+SUBSTITUTE ("tâniwâ" "tâniwâ" Ipc) ("<tâniwâ_êtikwê>" "tâniwâ_êtikwê" Iph) TARGET ("tâniwâ" Ipc) IF (1 ("êtikwê" Ipc)) ;
+REMCOHORT ("êtikwê") (-1 ("<tâniwâ_êtikwê>" Iph)) ;
+
+SUBSTITUTE ("<tâpwê>" "tâpwê" Ipc) ("<tâpwê_piko>" "tâpwê_piko" Iph) TARGET ("<tâpwê>" Ipc) IF (1 ("<piko>" Ipc)) ;
+REMCOHORT ("<piko>") (-1 ("<tâpwê_piko>" Iph)) ;
+
+SUBSTITUTE ("<tâpwê>" "tâpwê" Ipc) ("<tâpwê_wiya>" "tâpwê_wiya" Iph) TARGET ("<tâpwê>" Ipc) IF (1 ("<wiya>" Ipc)) ;
+REMCOHORT ("<wiya>") (-1 ("<tâpwê_wiya>" Iph)) ;
+
+SUBSTITUTE ("wiya" Ipc) ("<wiya_âta_wiya>" "wiya_âta_wiya" Iph) TARGET ("wiya" Ipc) IF (1 ("âta" Ipc))(2 ("wiya" Ipc)) ;
+REMCOHORT ("wiya") (-1 ("âta"))(-2 ("<wiya_âta_wiya>" Iph)) ;
+REMCOHORT ("âta") (-1 ("<wiya_âta_wiya>" Iph)) ;
+
+SUBSTITUTE ("wiya" Ipc) ("<wiyâ_wîpac_cî_wiya>" "wiyâ_wîpac_cî_wiya" Iph) TARGET ("wiya" Ipc) IF (1 ("wîpac" Ipc))(2 ("cî" Ipc))(3 ("wiya" Ipc)) ;
+REMCOHORT ("wiya") (-1 ("cî"))(-2 ("wîpac"))(-3 ("<wiyâ_wîpac_cî_wiya>" Iph)) ;
+REMCOHORT ("cî") (-1 ("wîpac"))(-2 ("<wiyâ_wîpac_cî_wiya>" Iph)) ;
+REMCOHORT ("wîpac") (-1 ("<wiyâ_wîpac_cî_wiya>" Iph)) ;
+
+#second set of same constraints plus vowel length due to error/ambiguity in M-GS
+SUBSTITUTE ("wiyâ" Ipc) ("<wiyâ_wîpac_cî_wiya>" "wiyâ_wîpac_cî_wiya" Iph) TARGET ("wiyâ" Ipc) IF (1 ("wîpac" Ipc))(2 ("cî" Ipc))(3 ("wiya" Ipc)) ;
+REMCOHORT ("wiya") (-1 ("cî"))(-2 ("wîpac"))(-3 ("<wiyâ_wîpac_cî_wiya>" Iph)) ;
+REMCOHORT ("cî") (-1 ("wîpac"))(-2 ("<wiyâ_wîpac_cî_wiya>" Iph)) ;
+REMCOHORT ("wîpac") (-1 ("<wiyâ_wîpac_cî_wiya>" Iph)) ;
+
+#indeclinable locative nouns (places)
+
+SUBSTITUTE ("<Sandy>" "Sandy" N Prop) ("<Sandy_Lake>" "Sandy_Lake" N I Prop InLoc) TARGET ("<Sandy>" N Prop) IF (1 ("<Lake>" N )) ;
+REMCOHORT ("<Lake>") (-1 ("<Sandy_Lake>" InLoc)) ;
+
+SUBSTITUTE ("<Whitefish>" "Whitefish" N Prop) ("<Whitefish_Lake>" "Whitefish_Lake" N I Prop InLoc) TARGET ("<Whitefish>" N Prop) IF (1 ("<Lake>" N )) ;
+REMCOHORT ("<Lake>") (-1 ("<Whitefish_Lake>" InLoc)) ;
+
+SUBSTITUTE ("<Elizabeth>" "Elizabeth" N Prop) ("<Elizabeth_Settlement>" "Elizabeth_Settlement" N I Prop InLoc) TARGET ("<Elizabeth>" N Prop) IF (1 ("<Settlement>" N )) ;
+REMCOHORT ("<Settlement>") (-1 ("<Elizabeth_Settlement>" InLoc)) ;
+
+SUBSTITUTE ("<Meadow>" "Meadow" N Prop) ("<Meadow_Lake>" "Meadow_Lake" N I Prop InLoc) TARGET ("<Meadow>" N Prop) IF (1 ("<Lake>" N )) ;
+REMCOHORT ("<Lake>") (-1 ("<Meadow_Lake>" InLoc)) ;
+
+SUBSTITUTE ("<Big>" "Big" N Prop) ("<Big_River>" "Big_River" N I Prop InLoc) TARGET ("<Big>" N Prop) IF (1 ("<River>" N )) ;
+REMCOHORT ("<River>") (-1 ("<Big_River>" InLoc)) ;
+
+SUBSTITUTE ("<Sturgeon>" "Sturgeon" N Prop) ("<Sturgeon_Lake>" "Sturgeon_Lake" N I Prop InLoc) TARGET ("<Sturgeon>" N Prop) IF (1 ("<Lake>" N )) ;
+REMCOHORT ("<Lake>") (-1 ("<Sturgeon_Lake>" InLoc)) ;
+
+SUBSTITUTE ("<Prince>" "Prince" N Prop) ("<Prince_Albert>" "Prince_Albert" N I Prop InLoc) TARGET ("<Prince>" N Prop) IF (1 ("<Albert>" N )) ;
+REMCOHORT ("<Albert>") (-1 ("<Prince_Albert>" InLoc)) ;
+
+SUBSTITUTE ("<Saskatoon>" "Saskatoon" N Prop) ("<Saskatoon_University>" "Saskatoon_University" N I Prop InLoc) TARGET ("<Saskatoon>" N Prop) IF (1 ("<University>" N )) ;
+REMCOHORT ("<University>") (-1 ("<Saskatoon_University>" InLoc)) ;
+
+SUBSTITUTE ("<St.>" "St." N Prop) ("<St._Michael's>" "St._Michael's" N I Prop InLoc) TARGET ("<St.>" N Prop) IF (1 ("<Michael's>" N )) ;
+REMCOHORT ("<Michael's>") (-1 ("<St._Michael's>" InLoc)) ;
+
+SUBSTITUTE ("<Blaine>" "Blaine" N Prop) ("<Blaine_Lake>" "Blaine_Lake" N I Prop InLoc) TARGET ("<Blaine>" N Prop) IF (1 ("<Lake>" N )) ;
+REMCOHORT ("<Lake>") (-1 ("<Blaine_Lake>" InLoc)) ;
+
+SUBSTITUTE ("<Redberry>" "Redberry" N Prop) ("<Redberry_Lake>" "Redberry_Lake" N I Prop InLoc) TARGET ("<Redberry>" N Prop) IF (1 ("<Lake>" N )) ;
+REMCOHORT ("<Lake>") (-1 ("<Redberry_Lake>" InLoc)) ;
+
+SUBSTITUTE ("<Iroquois>" "Iroquois" N Prop) ("<Iroquois_Lake>" "Iroquois_Lake" N I Prop InLoc) TARGET ("<Iroquois>" N Prop) IF (1 ("<Lake>" N )) ;
+REMCOHORT ("<Lake>") (-1 ("<Iroquois_Lake>" InLoc)) ;
+
+SUBSTITUTE ("<Green>" "Green" N Prop) ("<Green_Lake>" "Green_Lake" N I Prop InLoc) TARGET ("<Green>" N Prop) IF (1 ("<Lake>" N )) ;
+REMCOHORT ("<Lake>") (-1 ("<Green_Lake>" InLoc)) ;
+
+SUBSTITUTE ("<Duck>" "Duck" N Prop) ("<Duck_Lake>" "Duck_Lake" N I Prop InLoc) TARGET ("<Duck>" N Prop) IF (1 ("<Lake>" N )) ;
+REMCOHORT ("<Lake>") (-1 ("<Duck_Lake>" InLoc)) ;
+
+SUBSTITUTE ("<Mudie>" "Mudie" N Prop) ("<Mudie_Lake>" "Mudie_Lake" N I Prop InLoc) TARGET ("<Mudie>" N Prop) IF (1 ("<Lake>" N )) ;
+REMCOHORT ("<Lake>") (-1 ("<Mudie_Lake>" InLoc)) ;
+
+SUBSTITUTE ("<Snake>" "Snake" N Prop) ("<Snake_Plain>" "Snake_Plain" N I Prop InLoc) TARGET ("<Snake>" N Prop) IF (1 ("<Plain>" N )) ;
+REMCOHORT ("<Plain>") (-1 ("<Snake_Plain>" InLoc)) ;
+
+SUBSTITUTE ("<Saddle>" "Saddle" N Prop) ("<Saddle_Lake>" "Saddle_Lake" N I Prop InLoc) TARGET ("<Saddle>" N Prop) IF (1 ("<Lake>" N )) ;
+REMCOHORT ("<Lake>") (-1 ("<Saddle_Lake>" InLoc)) ;
+
+SUBSTITUTE ("<La>" "La" N Prop) ("<La_Ronge>" "La_Ronge" N I Prop InLoc) TARGET ("<La>" N Prop) IF (1 ("<Ronge>" N )) ;
+REMCOHORT ("<Ronge>") (-1 ("<La_Ronge>" InLoc)) ;
+
+SUBSTITUTE ("<Nelson>" "Nelson" N Prop) ("<Nelson_House>" "Nelson_House" N I Prop InLoc) TARGET ("<Nelson>" N Prop) IF (1 ("<House>" N )) ;
+REMCOHORT ("<House>") (-1 ("<Nelson_House>" InLoc)) ;
+
+SUBSTITUTE ("<Victoria>" "Victoria" N Prop) ("<Victoria_Hospital>" "Victoria_Hospital" N I Prop InLoc) TARGET ("<Victoria>" N Prop) IF (1 ("<Hospital>" N )) ;
+REMCOHORT ("<Hospital>") (-1 ("<Victoria_Hospital>" InLoc)) ;
+
+SUBSTITUTE ("<Indian>" "Indian" N Prop) ("<Indian_Hospital>" "Indian_Hospital" N I Prop InLoc) TARGET ("<Indian>" N Prop) IF (1 ("<Hospital>" N )) ;
+REMCOHORT ("<Hospital>") (-1 ("<Indian_Hospital>" InLoc)) ;
+
+SUBSTITUTE ("<Rocky>" "Rocky" N Prop) ("<Rocky_Mountain_House>" "Rocky_Mountain_House" N I Prop InLoc) TARGET ("<Rocky>" N Prop) IF (1 ("<Mountain>" N ))(2 ("<House>" N)) ;
+REMCOHORT ("<House>") (-2 ("<Rocky_Mountain_House>" InLoc))(-1 ("<Mountain>" N)) ;
+REMCOHORT ("<Mountain>") (-1 ("<Rocky_Mountain_House>" InLoc)) ;
+
+SUBSTITUTE ("<White>" "White" N Prop) ("<White_Elk_Hills>" "White_Elk_Hills" N I Prop InLoc) TARGET ("<White>" N Prop) IF (1 ("<Elk>" N ))(2 ("<Hills>" N)) ;
+REMCOHORT ("<Hills>") (-2 ("<White_Elk_Hills>" InLoc))(-1 ("<Elk>" N)) ;
+REMCOHORT ("<Elk>") (-1 ("<White_Elk_Hills>" InLoc)) ;
+
+SUBSTITUTE ("<Hudson's>" "Hudson's" N Prop) ("<Hudson's_Bay_store>" "Hudson's_Bay_store" N I Prop InLoc) TARGET ("<Hudson's>" N Prop) IF (1 ("<Bay>" N ))(2 ("<store>" N)) ;
+REMCOHORT ("<store>") (-2 ("<Hudson's_Bay_store>" InLoc))(-1 ("<Bay>" N)) ;
+REMCOHORT ("<Bay>") (-1 ("<Hudson's_Bay_store>" InLoc)) ;
+
+SUBSTITUTE ("<Hudson's>" "Hudson's" N Prop) ("<Hudson's_Bay>" "Hudson's_Bay" N I Prop InLoc) TARGET ("<Hudson's>" N Prop) IF (1 ("<Bay>" N )) ;
+REMCOHORT ("<Bay>") (-1 ("<Hudson's_Bay>" InLoc)) ;
+
+SUBSTITUTE ("<->" "-" PUNCT) ("<-->" "--" CLB) TARGET ("<->" PUNCT) IF (1 ("<->" PUNCT )) ;
+REMCOHORT ("<->") (-1 ("<-->" CLB)) ;
+
+LIST INLOC = "Shellbrook" "Winnipeg" "Manitoba" "Battleford" "States" "Alberta" "yêkawiskâwikamâhk" "kânata" "Canada" "Thompson" "sîsîpi-sâkahikanihk" "talmwâs" "kihci-môhkomâninâhk" "kihci-môhkomânaskîhk" "Debden" "Red-Pheasant" "Ponoka" "Ermineskin" "Ordale" "Wetaskiwin" "Regina" "Saskatoon" "Whitefish" "Hobbema" "Waterhen" "Spiritwood" "sakâhk";
+
+ADD:Inloc InLoc TARGET INLOC ;
+ADD:Inloc I TARGET InLoc IF (NOT 0 I)(NOT 0 A) ;
+
+SELECT:Inloc InLoc IF (0 Eng) ;
+
+ADD:locparticle Ipl TARGET PREPOSITION OR POSTPOSITION IF (0 Ipc) ;
+
+ADD:Inloc InLoc TARGET ("Elizabeth" N Prop) IF (*-2 Ipl) ; 
+ADD:Inloc InLoc TARGET ("Elizabeth" N Prop) IF (*2 Ipl) ; 
+ADD:Inloc I TARGET ("Elizabeth" N) IF (0 InLoc)(NOT 0 I)(NOT 0 A) ; 
+
+ADD:Ipt Ipt TARGET TEMP IF (0 Ipc) ;
+ADD:Ipt Ipt TARGET ("katisk" Ipc) IF (NOT *0 Neg BARRIER CLB) ;
+
+#adding negative tags; not required if they are already added i.e. by KS in FST/HPdev (keeps things neat for now)
+ADD:Neg Neg TARGET NEG + Ipc IF (NOT 0 Neg) ;
+ADD:Quant Quant TARGET QUANT + Ipc ;
+ADD:Quant Quant TARGET Num ;
+
+SECTION
+
+# Different taste, different analysis
+
+REMOVE:rdpl REDUPL ;
+
+#SELECT PV/kah IF (0 RdplS) ;
+##REMOVE PV/kah IF (0 RdplS) ;
+#SELECT PV/ka IF (0 RdplW) ;
+#SELECT Fut + Def IF (0 RdplW + Ind) ;
+##REMOVE PV/ka IF (0 RdplW) ;
+#SELECT PV/tah IF (0 RdplS) ;
+#SELECT PV/ta IF (0 RdplW) ;
+#SELECT PV/wah IF (0 RdplS) ;
+
+#aya is complicated
+SELECT:ayaNA A + Sg IF (0 ("<aya>"r))(-1 Pron + A + Sg) ;
+SELECT:ayaNA A + Sg IF (0 ("<aya>"r))(1 Pron + A + Sg) ;
+SELECT:ayaNA A + Obv IF (0 ("<aya>"r))(-1 Pron + A + Obv) ;
+SELECT:ayaNA A + Obv IF (0 ("<aya>"r))(1 Pron + A + Obv) ;
+SELECT:ayaNA I + Pl IF (0 ("<aya>"r))(-1 Pron + I + Pl) ;
+SELECT:ayaNA I + Pl IF (0 ("<aya>"r))(1 Pron + I + Pl) ;
+
+SELECT:ayaNA A + Sg IF (0 ("<aya>"r))(*0 AI + 3Sg BARRIER V OR CLB)(NOT *0 N + A + Sg BARRIER CLB) ;
+
+SELECT:esaipc Ipc IF (0 ("êsa")) ;
+SELECT:pikoipc Ipc if (0 ("<piko>")) ;
+REMOVE:pikoipc Ipc if (0 ("<pihko>")) ;
+
+#some problems created w/descriptive FST
+SELECT:awaDESC ("awa") + Dem IF (0 ("<awa>")) ; 
+SELECT:cikiDESC ("cîki") + Ipc IF (0 ("<cîki>")) ;
+
+#SELECT:LocnotV N + Loc IF (0 V) ;
+
+#if a noun can also be a verb with a preverb, choose the noun
+SELECT:NnotVPV N IF (0 V + PREVERB) ;
+#SELECT:PosNnotV N IF (0 V)(0 POSS)(*0 V BARRIER CLB) ;
+
+##kîsikâw as noun vs verb (include other IIZ?):before temporals
+
+SELECT:NnotV N + I IF (0 IIZ)(-1 Num) ;
+SELECT:NnotV N + I IF (0 IIZ)(-1 TI) ;
+SELECT:NnotV N + I IF (0 IIZ)(-1 ("tânitahto"r)) ;
+
+# We remove the particle if the word can be something more interesting - keep the particle, more common/likely
+SELECT:ChooseIpc Ipc IF (0 V) ;
+REMOVE:ChooseN Ipc IF (0 N + $$NUMBERGENDER)(-1 Dem + $$NUMBERGENDER) ;
+# Iph sub/rem introduces some issues, fix with following constraint
+SELECT:ChooseIph Iph IF (0 N OR V OR Pron) ;
+SELECT:Qst Qst IF (0 Ipc) ;
+
+##VII (II - IIZ)
+
+SELECT:VnotN II + 3Sg IF (0 VII)(NOT 0 AI OR TI OR TA)(NOT *0 II BARRIER V OR CLB)(*0 N + I + Sg BARRIER V OR CLB) ;
+SELECT:VnotN II + 3Sg IF (0 IIZ)(NOT *0 V BARRIER CLB) ;
+
+##temporals with verbs
+SELECT:VnotN V + IIZ IF (0 N + I + Sg)(*-1 Ipt BARRIER CLB) ;
+
+##kotak before VII also N
+SELECT:NnotV N + I + Sg IF (-1 ("kotak"r))(0 II + 3Sg) ;
+
+#pick dependent noun over non e.g. atim nitêm
+SELECT:depN D IF (0 N + POSS) ;
+
+#NIs that are always VIIs in our corpora: but keep an eye on this for later
+SELECT:ayimanV V + 3Sg IF (0 ("<âyiman>"r) + N + I + Sg) ;
+SELECT:miywasinV V + 3Sg IF (0 ("<miywâsin>"r) + N + I + Sg) ;
+
+#VAIs that are always NIs in our corpora: possessed, but watch out for later
+SELECT:PxnotV N + Px4Sg/Pl IF (0 AI + 4Sg/Pl) ;
+SELECT:PxnotV N + Px2Sg IF (0 AI + 2Sg)(*0 V BARRIER CLB);
+SELECT:PxnotV N + Px1Sg IF (0 AI + 1Sg)(*0 V BARRIER CLB);
+
+# Sentence-final niyâ is a particle
+SELECT:1SgIfV1Sg 1Sg IF (0 ("niya"))(*0C V + 1Sg);
+	
+# We go for derivation, more to look at when we are searching a lemma in Korp:
+	##adjusted to choose lexicalised dim for time being - KS
+#SELECT:DerYes Der/Dim (0C N) ;
+REMOVE:DerNo   Der/Dim (0C N) ;
+
+#select dependent noun with lemma starting m (this is currently arbitrary)
+SELECT:DepNyes ("m.*"r) IF (0 N + D) ;
+SELECT:DepNyes ("w.*"r) IF (0 N + D) ;
+
+# We say post/prenominal words are determiners, not particles, if they agree
+SELECT:IpcnotDem Ipc (-1 IIZ) ;
+REMOVE:DemNotIpc Ipc (-1 N + $$NUMBERGENDER)(0 Pron + Dem + $$NUMBERGENDER) ;
+REMOVE:DemNotIpc Ipc ( 1 N + $$NUMBERGENDER)(0 Pron + Dem + $$NUMBERGENDER) ;
+SELECT:DemPred Dem (-1 Ipl)(-2 BOS OR CLB) ; 
+	## Mîcisowinâhtik ôma.
+	
+#some Dems can be in pl or an obv, these need to be selected appropriately
+REMOVE:DemInotAObv A + Obv (-1 N + I + Pl)(0 Pron + I + Pl) ;
+REMOVE:DemInotAObv A + Obv (1 N + I + Pl) (0 Pron + I + Pl) ; 
+
+REMOVE:DemAObvnotI I + Pl  (-1 N + A + Obv)(0 Pron + A + Obv) ;
+REMOVE:DemAObvnotI I + Pl  (1 N + A + Obv) (0 Pron + A + Obv) ;
+
+SELECT:DemAObvnotI A + Obv (*0 V + 4Sg/Pl OR V + 4Sg/PlO OR VII + 3Sg BARRIER V OR CLB)(0 Dem + I + Pl) ;
+
+SELECT:DemInotAObv I + Pl (*0 TI BARRIER V)(0 Dem + I + Pl) ;
+
+#same as dems above, but for ekoni followed by dem (generalizing above constraints not feasible) 
+REMOVE:PronInotAObv A + Obv (1 Dem + I + Pl) (0 Pron + I + Pl) ; 
+REMOVE:PronAObvnotI I + Pl  (1 Dem + A + Obv)(0 Pron + A + Obv) ;
+
+#dem after ekoni, ewako
+REMOVE:resPr Ipc (-1 (".?êkoni"r))(0 Dem) ;
+REMOVE:resPr Ipc (-1 (".?êkonik"r))(0 Dem) ;
+REMOVE:resPr Ipc (-1 ("êwako"))(0 Dem) ;
+
+#êwako, pick base form
+REMOVE:ewako ("êwako"r) + A + Pl IF (0 ("êwakonik"r)) ;
+
+#VTA inanimate actor pick -êw lemma
+SELECT:VTAew (".*êw"r) + TA IF (0 (".*ow"r)) ;
+
+##askîhk is so many things: narrow down at least a little (but issues with moss bag --- see how often this word is locative, heuristic?
+##one instance of askîhk as moss in Bloomfield appears to be misglossed, translated as earth
+
+SELECT:askihkasNLoc	Ipl IF (0 ("<askîhk>"r)) ;
+
+##mistik: these are probably pretty specific to mistik but may also help with a few others so leaving general for now
+##including animate versions not good
+
+SELECT:NI N + I + Sg IF (0 N + A)(NOT 0 Loc)(-1 Pron + I + Sg) ;
+SELECT:NI N + I + Pl IF (0 N + A)(NOT 0 Loc)(-1 Pron + I + Pl) ;
+
+#if N but not Dem ambiguous
+REMOVE:ProxnotObv N + Obv (-1C Dem)(NOT -1C Obv) ;
+REMOVE:ProxnotObv N + Obv (1C Dem)(NOT -1C Obv) ;
+
+SELECT:ObvnotProx N + Obv (-1C Dem + Obv) ;
+SELECT:ObvnotProx N + Obv (1C Dem + Obv) ;
+
+#Dems can be NPs on their own and act as arguments
+REMOVE:DemNP Ipc (-1 Ipl)(0 Dem + I + Sg) ;
+REMOVE:DemNP Ipc (*0 V + TI BARRIER V OR CLB)(0 Dem + I + Sg) ;
+REMOVE:DemNP Ipc (*0 N + I + Sg BARRIER V OR CLB)(0 Dem + I + Sg) ;
+REMOVE:DemNP Ipc (*0 VII BARRIER V OR CLB)(0 Dem + I + Sg) ;
+REMOVE:DemNP Ipc (*0 N + I + Sg BARRIER V OR CLB)(0 Dem + I + Sg) ;
+SELECT:DemNP Ipc (*0 IIZ BARRIER V OR CLB)(0 Dem + I + Sg) ;
+SELECT:DemNP Ipc (NOT *0 N + I BARRIER V OR CLB)(0 Dem + I + Sg) ;
+
+
+# Demonstratives follow nouns.
+#SELECT:DemNotIpcDN Dem (0 Ipc)(1 N) ;
+#SELECT:DemNotIpcND Dem (-1 N)(0 Ipc) ;
+	#these should be covered by DemNotIpc constraints above
+	
+SELECT:OmaIpc Ipc (0 ("ôma"r))(NOT -1 N + I + Sg OR TI OR BOS)(NOT 1 N + I + Sg OR TI OR CLB)(NOT *0 VII BARRIER V OR CLB) ;
+REMOVE:OmaIpc Dem + I + Sg (0 Ipc)(*0 N + I + Pl BARRIER V OR CLB) ;
+
+#SELECT:DefSubj Def IF (1 4Sg/Pl);
+
+#This rule to come after the ones above.
+REMOVE:DemNotDef Def IF (0 Dem);
+
+# Interrogatives in questions
+REMOVE:InterrNotN N (0 Interr)(NOT *-1 Interr)(*1 ("?"));
+
+# NP-internal agreement
+REMOVE:SgAgr Sg (0 N OR Pron)(1C Dem + Pl) ;
+REMOVE:PlAgr Pl (0 N OR Pron)(1C Dem + Sg) ;
+
+# N Px number agreement
+REMOVE:PxSg Px3Pl (-1 N + Sg);
+REMOVE:PxPl Px3Sg (-1 N + Pl);
+
+# Singular object
+REMOVE:SgIfObjSg 3PlO (0 3SgO)(*0 Sg + Obv);
+REMOVE:PlIfObjSg 3SgO (0 3SgO)(*0 Pl + Obv);
+
+# Mood rules -- do not understand moods yet
+
+REMOVE:IndOnly Cnj (0 Ind)(NOT 0 CNJPV)(NOT *0 Ind);
+
+SELECT:CnjPvrb Cnj IF (0 CNJPV) ;
+
+REMOVE:CnjNeedPvrb Cnj IF (NOT 0 PREVERB) ;
+
+#REMOVE Fut (0 Ind);
+REMOVE:impifind Imp (0 Ind)(*0 N + Sg);
+
+#vii/ai conjunct w vs n > k vs hk in conjunct
+SELECT:WvsNcnj II IF (0 ("<.*hk>"r) + Cnj + 3Sg) ;
+SELECT:WvsNcnj (".*n"r) IF (0 ("<.*hk>"r) + II + Cnj + 3Sg) ;
+SELECT:WvsNcnj (".*w"r) IF (0 ("<.*[aoiâôîê]k>"r) + II + Cnj + 3Sg) ;
+
+# REMOVE:2SgWrong 2Sg IF (0 ("<.*ân>"r) + 1Sg) ;
+# REMOVE:1SgWrong 1Sg IF (0 ("<.*an>"r) + 2Sg) ;
+# REMOVE:12PlWrong 12Pl IF (0 ("<.*âhk>"r) + 1Pl) ;
+# REMOVE:1PlWrong 1Pl IF (0 ("<.*ahk>"r) + 12Pl) ;
+# 
+SELECT:12PlOWrong 1PlO IF (0 TA + LONGVERBEND + Cnj + 1PlO) ;
+SELECT:1PlOWrong 12PlO IF (0 TA + SHORTVERBEND + Cnj + 12PlO) ;
+
+SELECT:2SgWrong 1Sg IF (0 LONGVERBEND + Cnj + 1Sg) ;
+SELECT:1SgWrong 2Sg IF (0 SHORTVERBEND + Cnj + 2Sg) ;
+
+SELECT:12PlWrong 1Pl IF (0 LONGVERBEND + Cnj + 1Pl) ;
+SELECT:1PlWrong 12Pl IF (0 SHORTVERBEND + Cnj + 12Pl) ;
+
+REMOVE:AIwrong	AI + Cond + 1Pl IF (NOT 0 LONGVERBEND) ;
+REMOVE:AIwrong	AI + Cond + 12Pl IF (NOT 0 SHORTVERBEND) ;
+
+##imperatives
+
+REMOVE:kitaIMP Imp IF (0 PV/kita) ;
+REMOVE:kikaIMP Imp IF (0 PV/kika) ;
+
+SELECT:IMP Imp IF (NOT 0 Cond)(*1 Quot BARRIER V OR BOS OR EOS) ;
+
+REMOVE:Cond Cond IF (0 Ind) ;
+
+SELECT:IMP Imp + 2Pl IF (*0C 2Pl BARRIER V OR BOS OR EOS) ;
+
+REMOVE:IMP Imp + 3PlO IF (0 V + 3SgO)(*0 V + 3SgO BARRIER V OR BOS OR EOS) ;
+
+REMOVE:IMP Imp + 1SgO IF (*0 V + 3Sg OR 3SgO BARRIER V OR BOS OR EOS) ;
+REMOVE:IMP Imp + 3SgO IF (*0 V + 3Sg OR 3SgO BARRIER V OR BOS OR EOS) ;
+REMOVE:IMP Imp + 1SgO IF (*0 V + 3PlO OR 3Pl BARRIER V OR BOS OR EOS) ;
+REMOVE:IMP Imp + 3PlO IF (*0 V + 3PlO OR 3Pl BARRIER V OR BOS OR EOS) ;
+
+##ayâw forms 
+
+REMOVE:ayawTA TA IF (0 ("ayâw"r) + AI OR ("ayâw"r) + II)(*0 Ipl OR Loc BARRIER V OR CLB) ;
+
+SELECT:ayawAITI AI + 3Sg IF (0 ("ayâw"r))(*0 A + Sg OR AI + 3Sg OR TI + 3Sg OR TA + 3Sg OR TA + 3SgO BARRIER V OR CLB) ;
+SELECT:ayawAITI AI + 3Pl IF (0 ("ayâw"r))(*0 A + Pl OR AI + 3Pl OR TI + 3Pl OR TA + 3Pl OR TA + 3PlO BARRIER V OR CLB) ;
+SELECT:ayawII II + 3Sg IF (0 ("ayâw"r))(*0 VII + 3Sg BARRIER V OR CLB) ;
+SELECT:ayawII II + 3Pl IF (0 ("ayâw"r))(*0 VII + 3Pl BARRIER V OR CLB) ;
+REMOVE:ayawII II + 3Sg IF (0 ("ayâw"r))(*0 IIZ + 3Sg BARRIER V OR CLB) ;
+
+SELECT:ayawAITI AI + 3Sg IF (0 ("ayâw"r))(*0 A + Sg OR AI + 3Sg OR TI + 3Sg OR TA + 3Sg OR TA + 3SgO BARRIER V OR BOS OR EOS) ;
+SELECT:ayawAITI AI + 3Pl IF (0 ("ayâw"r))(*0 A + Pl OR AI + 3Pl OR TI + 3Pl OR TA + 3Pl OR TA + 3PlO BARRIER V OR BOS OR EOS) ;
+
+#SELECT:ayawII II + 3Sg IF (0 ("ayâw"r))(*0 I + Sg BARRIER V OR CLB) ; ###issues with natural things (e.g. water) vs traits/belongings (strength, food)
+#SELECT:ayawII II + 3Pl IF (0 ("ayâw"r))(*0 I + Pl BARRIER V OR CLB) ; ###need to create lists for these semantic domains
+
+SELECT:AInotII AI + 3Sg IF (0 II + 3Sg )(*0 AI + 3Sg OR TA + 3Sg OR 3SgO BARRIER CLB) ;
+
+SELECT:ProperNoun Prop IF (0 N + A) ;
+
+#for ambiguous nouns/pronouns e.g. wîsta
+SELECT:PronNotN Pron + Pers IF (0 N + I) ;
+
+#abiguity between prox and obv NAs
+SELECT:NAObv Obv IF (0 N + A + Sg)(NOT *0 TA + 3Sg BARRIER V OR CLB)(*0 TA + 4Sg/PlO OR TA + 4Sg/Pl BARRIER V OR CLB) ;
+REMOVE:NAObv Obv IF (0 N + A + Sg)(*0 TA + 3Sg BARRIER V OR CLB) ; 
+REMOVE:NAObv Obv IF (0 N + A + Sg)(*0 TA + 3SgO BARRIER V OR CLB) ; 
+
+
+#ambiguity between 3 and obv in inverse verbs (currently only looking immediately before and after, may expand range later
+SELECT:3PlactorL TA + 3Pl IF (-1 A + Pl)(0 TA + 4Sg/Pl) ;
+SELECT:3PlactorL TA + 3Pl IF (-2 A + Pl)(NOT -1 CLB)(0 TA + 4Sg/Pl) ;
+SELECT:3PlactorR TA + 3Pl IF (1 A + Pl)(0 TA + 4Sg/Pl) ;
+SELECT:3PlactorR TA + 3Pl IF (2 A + Pl)(NOT 1 CLB)(0 TA + 4Sg/Pl) ;
+SELECT:3PlactorR TA + 3Pl IF (3 A + Pl)(NOT 1 CLB)(NOT 2 CLB)(0 TA + 4Sg/Pl) ;
+
+SELECT:3SgactorL TA + 3Sg IF (-1 A + Sg)(0 TA + 4Sg/Pl) ;
+SELECT:3SgactorL TA + 3Sg IF (-2 A + Sg)(NOT -1 CLB)(0 TA + 4Sg/Pl) ;
+SELECT:3SgactorL TA + 3Sg IF (-3 A + Sg)(NOT -1 CLB)(NOT -2 CLB)(0 TA + 4Sg/Pl) ;
+SELECT:3SgactorR TA + 3Sg IF (1 A + Sg)(0 TA + 4Sg/Pl) ;
+SELECT:3SgactorR TA + 3Sg IF (2 A + Sg)(NOT 1 CLB)(0 TA + 4Sg/Pl) ;
+SELECT:3SgactorR TA + 3Sg IF (3 A + Sg)(NOT 1 CLB)(NOT 2 CLB)(0 TA + 4Sg/Pl) ;
+
+SELECT:ObvactorL TA + 4Sg/Pl IF (-1 A + Obv)(0 TA + 3Sg OR TA + 3Pl) ;
+SELECT:ObvactorL TA + 4Sg/Pl IF (-2 A + Obv)(NOT -1 CLB)(0 TA + 3Sg OR TA + 3Pl) ;
+SELECT:ObvactorL TA + 4Sg/Pl IF (-3 A + Obv)(NOT -2 CLB)(0 TA + 3Sg OR TA + 3Pl) ;
+SELECT:ObvactorR TA + 4Sg/Pl IF (1 A + Obv)(0 TA + 3Sg OR TA + 3Pl) ;
+SELECT:ObvactorR TA + 4Sg/Pl IF (2 A + Obv)(NOT 1 CLB)(0 TA + 3Sg OR TA + 3Pl) ;
+SELECT:ObvactorR TA + 4Sg/Pl IF (3 A + Obv)(NOT 1 CLB)(NOT 2 CLB)(0 TA + 3Sg OR TA + 3Pl) ;
+
+##beyond clause
+
+SELECT:3Plactorclause TA + 3Pl IF (*0 V + 3Pl BARRIER V OR BOS OR EOS) ;
+SELECT:3Sgactorclause TA + 3Sg IF (*0 V + 3Sg BARRIER V OR BOS OR EOS) ;
+SELECT:Obvactorclause TA + 4Sg/Pl IF (*0 V + 4Sg/PlO BARRIER V OR BOS OR EOS) ;
+
+
+#kikway disambiguation
+REMOVE:kikway Pron IF (0 KIKWAY) ;
+SELECT:Ikikway I IF (0 KIKWAY LINK *0 TI OR TA) ;
+SELECT:Ikikway I IF (0 KIKWAY LINK 1 N + I) ;
+SELECT:Ikikway I IF (0 KIKWAY LINK -1 ("kahkiyaw") OR ("nanâtohk")) ;
+SELECT:Akikway A IF (0 KIKWAY LINK 1 N + A) ;
+REMOVE:kekway Pron IF (0 ("kêkway")) ;
+SELECT:Ikekway I IF (0 ("kêkway") LINK *0 TI) ;
+
+#some idiosyncratic forms
+SELECT:IPCayis Ipc IF (0 ("ayis")) ;
+SELECT:IPCayi Ipc IF (0C ("<ayi>")) ;
+
+#ayiwinisa is a mess
+SELECT:PLayiwinisa Pl IF (0 ("ayiwinisa") ) ;
+
+#wiya IPC vs Pron Pers
+SELECT:wiyaPron Pron IF (0 (".?wiya"r))(*0 AI + 3Sg OR TI + 3Sg OR TA + 3Sg OR TA + 3SgO BARRIER CLB) ;
+SELECT:wiyaIpc Ipc IF (0 (".?wiya"r))(NOT *0 V + 3Sg OR V + 3SgO BARRIER CLB) ;
+
+
+#if possession has an -im variant, choose -im variant
+#need to add a poss theme tag?
+
+
+
+#ka-ki disambiguation
+SELECT:kakiPrs Prs IF (0 Prt + ("<ka-kî-.*>"r)) ;
+REMOVE:kaki PV/ka_ki IF (0 Prt + ("<kâ-.*>"r)) ;
+REMOVE:kaa PV/kaa IF (0 ("<ka-kî-.*"r)) ;
+REMOVE:kaaki PV/kaa_ki ;
+REMOVE:ka PV/ka IF (0 ("<kâ-.*>"r)) ;
+REMOVE:kaa PV/kaa IF (0 ("<ka-.*>"r)) ;
+REMOVE:kaafut Fut + Def IF (0 PV/kaa)(0 ("<kâ-.*>"r)) ;
+
+#when k- occurs, can be ka- or kâ-, for the sake of simplicity choosing kâ- here (doesn't affect actor and goal assignment, seems to be more frequent)
+SELECT:kaafork PV/kaa IF (0 ("<k-.*>"r)) ;
+
+#similarly, prefer II if TI X is also possible
+SELECT:IInotX V + II IF (0 TI + X) ;
+
+###idiosyncratic/due to relaxed FST or minimal pairs --- less helpful for e.g. grammar checking
+
+#2>3/3>4 disambiguation
+SELECT:disambig23Sg 3Sg IF (0 TA + ("<.*ât>"r)) ;
+SELECT:disambig23Pl 3Pl IF (0 TA + ("<.*âcik>"r)) ;
+
+#Remove RdplW if Kâ (see set of similar constraints above)
+#REMOVE:rdplwkaa (RdplW) IF (0 (PV/kaa)) ; 
+
+
+REMOVE:AITIcnjending TA IF (0 LONGVERBEND + Cnj + 1Pl) ;
+REMOVE:AITIcnjending TA IF (0 SHORTVERBEND + Cnj + 12Pl) ;
+REMOVE:AITIfutcondending TA IF (0 LONGVERBEND + Cond + 1Pl) ;
+REMOVE:AITIfutcondending TA IF (0 SHORTVERBEND + Cond + 12Pl) ;
+REMOVE:AITIcnjending TA IF (0 CNJ3Sg + Cnj + 3Sg) ;
+REMOVE:AITIcnjending TA IF (0 CNJ3Pl + Cnj + 3Pl) ;
+
+
+
+#Remove PVs
+#REMOVE:fewerPV2  PREVERB IF (0 ("PV.*"r)) ;
+#REMOVE:fewerPV PREVERB IF (0 (".*-.*"r)) ;
+#REMOVE:fewerPV1  ("PV.*"r) ;
+
+REMOVE:PV PREVERB (0 Ind OR Imp) ;
+
+SELECT:PV5 ("[^<]+[-].+[-].+[-].+[-].+[-][^>]+"r) IF (0 V) ;
+SELECT:PV4 ("[^<]+[-].+[-].+[-].+[-][^>]+"r) IF (0 V) ;
+SELECT:PV3 ("[^<]+[-].+[-].+[-][^>]+"r) IF (0 V) ;
+SELECT:PV2 ("[^<]+[-].+[-][^>]+"r) IF (0 V) ;
+SELECT:PV1 ("[^<]+[-][^>]+"r) IF (0 V) ;
+
+SELECT:PN3 ("[^<]+[-].+[-].+[-][^>]+"r) IF (0C N + $$NUMBERGENDER) ;
+SELECT:PN2 ("[^<]+[-].+[-][^>]+"r) IF (0C N + $$NUMBERGENDER) ;
+SELECT:PN1 ("[^<]+[-][^>]+"r) IF (0C N + $$NUMBERGENDER) ;
+
+
+#Remove Err/Orth
+REMOVE:NoErr Err/Orth ;
+
+AFTER-SECTIONS 
+
+

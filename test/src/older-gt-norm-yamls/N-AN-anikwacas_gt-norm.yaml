@@ -1,0 +1,54 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/aANlyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/aANlyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Noun - anikwacâs - ok : # -m animate noun, squirrel
+     anikwacâs+N+AN+Sg: anikwacâs
+     anikwacâs+N+AN+Pl: anikwacâsak
+     anikwacâs+N+AN+Sg+Obv: anikwacâsa
+     anikwacâs+N+AN+Der/Dim+N+AN+Sg: [anikwacâsis, anikwacâsisis]
+     anikwacâs+N+AN+Der/Dim+N+AN+Pl: [anikwacâsisak, anikwacâsisisak]
+
+     anikwacâs+N+AN+Sg+Px1Sg: nitanikwacâsim
+     anikwacâs+N+AN+Sg+Px2Sg: kitanikwacâsim
+     anikwacâs+N+AN+Sg+Px3Sg+Obv: otanikwacâsima
+     anikwacâs+N+AN+Sg+Px4Sg+Obv: otanikwacâsimiyiwa
+     anikwacâs+N+AN+Sg+Px1Pl: nitanikwacâsiminân
+     anikwacâs+N+AN+Sg+Px12Pl: kitanikwacâsiminaw
+     anikwacâs+N+AN+Sg+Px2Pl: kitanikwacâsimiwâw
+     anikwacâs+N+AN+Sg+Px3Pl+Obv: otanikwacâsimiwâwa
+     anikwacâs+N+AN+Sg+Px4Pl+Obv: otanikwacâsimiyiwa
+     
+     anikwacâs+N+AN+Pl+Px1Sg: nitanikwacâsimak
+     anikwacâs+N+AN+Pl+Px2Sg: kitanikwacâsimak
+     anikwacâs+N+AN+Pl+Px3Sg+Obv: otanikwacâsima
+     anikwacâs+N+AN+Pl+Px4Sg+Obv: otanikwacâsimiyiwa
+     anikwacâs+N+AN+Pl+Px1Pl: nitanikwacâsiminânak
+     anikwacâs+N+AN+Pl+Px12Pl: kitanikwacâsiminawak
+     anikwacâs+N+AN+Pl+Px2Pl: kitanikwacâsimiwâwak
+     anikwacâs+N+AN+Pl+Px3Pl+Obv: otanikwacâsimiwâwa
+     anikwacâs+N+AN+Pl+Px4Pl+Obv: otanikwacâsimiyiwa
+
+     anikwacâs+N+AN+Der/Dim+N+AN+Sg+Px1Sg: nicanikwacâsimis
+     anikwacâs+N+AN+Der/Dim+N+AN+Sg+Px2Sg: kicanikwacâsimis
+     anikwacâs+N+AN+Der/Dim+N+AN+Sg+Px3Sg+Obv: ocanikwacâsimisa
+     anikwacâs+N+AN+Der/Dim+N+AN+Sg+Px4Sg+Obv: ocanikwacâsimisiyiwa
+     anikwacâs+N+AN+Der/Dim+N+AN+Sg+Px1Pl: nicanikwacâsimisinân
+     anikwacâs+N+AN+Der/Dim+N+AN+Sg+Px12Pl: kicanikwacâsimisinaw
+     anikwacâs+N+AN+Der/Dim+N+AN+Sg+Px2Pl: kicanikwacâsimisiwâw
+     anikwacâs+N+AN+Der/Dim+N+AN+Sg+Px3Pl+Obv: ocanikwacâsimisiwâwa
+     anikwacâs+N+AN+Der/Dim+N+AN+Sg+Px4Pl+Obv: ocanikwacâsimisiyiwa
+
+     anikwacâs+N+AN+Der/Dim+N+AN+Pl+Px1Sg: nicanikwacâsimisak
+     anikwacâs+N+AN+Der/Dim+N+AN+Pl+Px2Sg:  kicanikwacâsimisak
+     anikwacâs+N+AN+Der/Dim+N+AN+Pl+Px3Sg+Obv: ocanikwacâsimisa
+     anikwacâs+N+AN+Der/Dim+N+AN+Pl+Px4Sg+Obv: ocanikwacâsimisiyiwa
+     anikwacâs+N+AN+Der/Dim+N+AN+Pl+Px1Pl: nicanikwacâsimisinânak
+     anikwacâs+N+AN+Der/Dim+N+AN+Pl+Px12Pl: kicanikwacâsimisinawak

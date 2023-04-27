@@ -1,0 +1,133 @@
+Config:
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Verb - nêhiyawêw - help : # Ordinary VAI verb - full  Wolvengrey p. 395; Fut+Def from Okimāsis p. 36
+
+     nêhiyawêw+V+AI+Ind+1Sg: ninêhiyawân
+     nêhiyawêw+V+AI+Ind+2Sg: kinêhiyawân
+     nêhiyawêw+V+AI+Ind+3Sg: nêhiyawêw
+     nêhiyawêw+V+AI+Ind+4Sg/Pl: nêhiyawêyiwa
+     nêhiyawêw+V+AI+Ind+1Pl: ninêhiyawânân
+     nêhiyawêw+V+AI+Ind+12Pl: [kinêhiyawânaw, kinêhiyawânânaw]
+     nêhiyawêw+V+AI+Ind+2Pl: kinêhiyawânâwâw
+     nêhiyawêw+V+AI+Ind+3Pl: nêhiyawêwak
+
+     PV/ki+nêhiyawêw+V+AI+Ind+1Sg: [nikî-nêhiyawân]
+     PV/ki+nêhiyawêw+V+AI+Ind+2Sg: [kikî-nêhiyawân]
+     PV/ki+nêhiyawêw+V+AI+Ind+3Sg: [kî-nêhiyawêw]
+     PV/ki+nêhiyawêw+V+AI+Ind+4Sg/Pl: [kî-nêhiyawêyiwa]
+     PV/ki+nêhiyawêw+V+AI+Ind+1Pl: [nikî-nêhiyawânân]
+     PV/ki+nêhiyawêw+V+AI+Ind+12Pl: [kikî-nêhiyawânaw, kikî-nêhiyawânânaw]
+     PV/ki+nêhiyawêw+V+AI+Ind+2Pl: [kikî-nêhiyawânâwâw]
+     PV/ki+nêhiyawêw+V+AI+Ind+3Pl: [kî-nêhiyawêwak]
+     
+     PV/ka+nêhiyawêw+V+AI+Ind+1Sg: [nika-nêhiyawân]
+     PV/ka+nêhiyawêw+V+AI+Ind+2Sg: [kika-nêhiyawân]
+     PV/ka+nêhiyawêw+V+AI+Ind+3Sg: [ka-nêhiyawêw]
+     PV/ka+nêhiyawêw+V+AI+Ind+4Sg/Pl: [ka-nêhiyawêyiwa]
+     PV/ka+nêhiyawêw+V+AI+Ind+1Pl: [nika-nêhiyawânân]
+     PV/ka+nêhiyawêw+V+AI+Ind+12Pl: [kika-nêhiyawânaw, kika-nêhiyawânânaw]
+     PV/ka+nêhiyawêw+V+AI+Ind+2Pl: [kika-nêhiyawânâwâw]
+     PV/ka+nêhiyawêw+V+AI+Ind+3Pl: [ka-nêhiyawêwak]
+     
+     PV/wi+nêhiyawêw+V+AI+Ind+1Sg: [niwî-nêhiyawân]
+     PV/wi+nêhiyawêw+V+AI+Ind+2Sg: [kiwî-nêhiyawân]
+     PV/wi+nêhiyawêw+V+AI+Ind+3Sg: [wî-nêhiyawêw]
+     PV/wi+nêhiyawêw+V+AI+Ind+4Sg/Pl: [wî-nêhiyawêyiwa]
+     PV/wi+nêhiyawêw+V+AI+Ind+1Pl: [niwî-nêhiyawânân]
+     PV/wi+nêhiyawêw+V+AI+Ind+12Pl: [kiwî-nêhiyawânaw, kiwî-nêhiyawânânaw]
+     PV/wi+nêhiyawêw+V+AI+Ind+2Pl: [kiwî-nêhiyawânâwâw]
+     PV/wi+nêhiyawêw+V+AI+Ind+3Pl: [wî-nêhiyawêwak]
+     
+     PV/e+nêhiyawêw+V+AI+Cnj+1Sg: [ê-nêhiyawêyân]
+     PV/e+nêhiyawêw+V+AI+Cnj+2Sg: [ê-nêhiyawêyan]
+     PV/e+nêhiyawêw+V+AI+Cnj+3Sg: [ê-nêhiyawêt]
+     PV/e+nêhiyawêw+V+AI+Cnj+4Sg/Pl: [ê-nêhiyawêyit]
+     PV/e+nêhiyawêw+V+AI+Cnj+1Pl: [ê-nêhiyawêyâhk]
+     PV/e+nêhiyawêw+V+AI+Cnj+12Pl: [ê-nêhiyawêyahk]
+     PV/e+nêhiyawêw+V+AI+Cnj+2Pl: [ê-nêhiyawêyêk]
+     PV/e+nêhiyawêw+V+AI+Cnj+3Pl: [ê-nêhiyawêcik]
+     
+     PV/e+nêhiyawêw+V+AI+Cnj+1Sg: [ê-nêhiyawêyân]
+     PV/e+nêhiyawêw+V+AI+Cnj+2Sg: [ê-nêhiyawêyan]
+     PV/e+nêhiyawêw+V+AI+Cnj+3Sg: [ê-nêhiyawêt]
+     PV/e+nêhiyawêw+V+AI+Cnj+4Sg/Pl: [ê-nêhiyawêyit]
+     PV/e+nêhiyawêw+V+AI+Cnj+1Pl: [ê-nêhiyawêyâhk]
+     PV/e+nêhiyawêw+V+AI+Cnj+12Pl: [ê-nêhiyawêyahk]
+     PV/e+nêhiyawêw+V+AI+Cnj+2Pl: [ê-nêhiyawêyêk]
+     PV/e+nêhiyawêw+V+AI+Cnj+3Pl: [ê-nêhiyawêcik]
+         
+     PV/e+PV/ki+nêhiyawêw+V+AI+Cnj+1Sg: [ê-kî-nêhiyawêyân]
+     PV/e+PV/ki+nêhiyawêw+V+AI+Cnj+2Sg: [ê-kî-nêhiyawêyan]
+     PV/e+PV/ki+nêhiyawêw+V+AI+Cnj+3Sg: [ê-kî-nêhiyawêt]
+     PV/e+PV/ki+nêhiyawêw+V+AI+Cnj+4Sg/Pl: [ê-kî-nêhiyawêyit]
+     PV/e+PV/ki+nêhiyawêw+V+AI+Cnj+1Pl: [ê-kî-nêhiyawêyâhk]
+     PV/e+PV/ki+nêhiyawêw+V+AI+Cnj+12Pl: [ê-kî-nêhiyawêyahk]
+     PV/e+PV/ki+nêhiyawêw+V+AI+Cnj+2Pl: [ê-kî-nêhiyawêyêk]
+     PV/e+PV/ki+nêhiyawêw+V+AI+Cnj+3Pl: [ê-kî-nêhiyawêcik]
+     
+     PV/e+PV/wi+nêhiyawêw+V+AI+Cnj+1Sg: [ê-wî-nêhiyawêyân]
+     PV/e+PV/wi+nêhiyawêw+V+AI+Cnj+2Sg: [ê-wî-nêhiyawêyan]
+     PV/e+PV/wi+nêhiyawêw+V+AI+Cnj+3Sg: [ê-wî-nêhiyawêt]
+     PV/e+PV/wi+nêhiyawêw+V+AI+Cnj+4Sg/Pl: [ê-wî-nêhiyawêyit]
+     PV/e+PV/wi+nêhiyawêw+V+AI+Cnj+1Pl: [ê-wî-nêhiyawêyâhk]
+     PV/e+PV/wi+nêhiyawêw+V+AI+Cnj+12Pl: [ê-wî-nêhiyawêyahk]
+     PV/e+PV/wi+nêhiyawêw+V+AI+Cnj+2Pl: [ê-wî-nêhiyawêyêk]
+     PV/e+PV/wi+nêhiyawêw+V+AI+Cnj+3Pl: [ê-wî-nêhiyawêcik]
+    
+    
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+1Sg+3SgO: [niwî-wîci-nêhiyawêmâw] # COMM SET I
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+2Sg+3SgO: [kiwî-wîci-nêhiyawêmâw]
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+1Pl+3SgO: [niwî-wîci-nêhiyawêmânân]
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+12Pl+3SgO: [kiwî-wîci-nêhiyawêmânaw]
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+2Pl+3SgO: [kiwî-wîci-nêhiyawêmâwâw]
+     
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+1Sg+3PlO: [niwî-wîci-nêhiyawêmâwak] # COMM SET I-Pl
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+2Sg+3PlO: [kiwî-wîci-nêhiyawêmâwak]
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+1Pl+3PlO: [niwî-wîci-nêhiyawêmânânak]
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+12Pl+3PlO: [kiwî-wîci-nêhiyawêmânawak]
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+2Pl+3PlO: [kiwî-wîci-nêhiyawêmâwâwak]
+
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+2Sg+1SgO: [kiwî-wîci-nêhiyawêmin] # COMM SET II
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+2Sg+1PlO: [kiwî-wîci-nêhiyawêminân]
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+2Pl+1SgO: [kiwî-wîci-nêhiyawêminâwâw]
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+2Pl+1PlO: [kiwî-wîci-nêhiyawêminân]
+
+
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+3Sg+4Sg/PlO: [wî-wîci-nêhiyawêmêw] # COMM SET III
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+3Pl+4Sg/PlO: [wî-wîci-nêhiyawêmêwak]
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+4Sg/Pl+5Sg/PlO: [wî-wîci-nêhiyawêmêyiwa]
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+3Sg+5Sg/PlO: [wî-wîci-nêhiyawêmimêw] # From Wolvengrey P.C. 27/6/15 (See /doc/)
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+3Pl+5Sg/PlO: [wî-wîci-nêhiyawêmimêwak] # From Wolvengrey P.C. 27/6/15 (See /doc/)
+
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+1Sg+4Sg/PlO: [niwî-wîci-nêhiyawêmimâwa] # COMM SET IV
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+2Sg+4Sg/PlO: [kiwî-wîci-nêhiyawêmimâwa]
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+1Pl+4Sg/PlO: [niwî-wîci-nêhiyawêmimânâna]
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+12Pl+4Sg/PlO: [kiwî-wîci-nêhiyawêmimânawa]
+     PV/wi+nêhiyawêw+V+AI+Der/Com+V+TA+Ind+2Pl+4Sg/PlO: [kiwî-wîci-nêhiyawêmimâwâwa]
+    
+     
+     nêhiyawêw+V+AI+Fut+Cond+1Sg: nêhiyawêyâni
+     nêhiyawêw+V+AI+Fut+Cond+2Sg: nêhiyawêyani
+     nêhiyawêw+V+AI+Fut+Cond+3Sg: nêhiyawêci
+     nêhiyawêw+V+AI+Fut+Cond+4Sg/Pl: nêhiyawêyici
+     nêhiyawêw+V+AI+Fut+Cond+1Pl: nêhiyawêyâhki
+     nêhiyawêw+V+AI+Fut+Cond+12Pl: [nêhiyawêyahko, nêhiyawêyahki]
+     nêhiyawêw+V+AI+Fut+Cond+2Pl: nêhiyawêyêko
+     nêhiyawêw+V+AI+Fut+Cond+3Pl: nêhiyawêtwâwi
+     
+     
+
+
+     nêhiyawêw+V+AI+Imp+Imm+2Sg: nêhiyawê
+     nêhiyawêw+V+AI+Imp+Imm+12Pl: nêhiyawêtân
+     nêhiyawêw+V+AI+Imp+Imm+2Pl: nêhiyawêk
+     
+     nêhiyawêw+V+AI+Imp+Del+2Sg: nêhiyawêhkan
+     nêhiyawêw+V+AI+Imp+Del+12Pl: nêhiyawêhkahk
+     nêhiyawêw+V+AI+Imp+Del+2Pl: nêhiyawêhkêk
+

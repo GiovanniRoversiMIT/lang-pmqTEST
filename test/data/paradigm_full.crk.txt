@@ -1,0 +1,45 @@
+# Paradigm grammar
+#
+# Used in paradigm generator.
+# List the tag groups in the order they are given to generator.
+# The names of the tag groups are listed in korpustags.ipk.txt
+# "?" marks the optionality of the tag.
+# It is not possible to mark alternation of the different tags.
+
+
+
+# Copy of the standard paradigm. This works.	
+N+Gender+Number+PossessiveSuffix?+Obviative?
+N+Gender+Loc
+N+Gender+Diminutive+N+Gender+Number
+V+AI+Mood+Tense+PersonNumber
+V+AI+Ind+Fut+Aspect+PersonNumber
+V+AI+Imp+ImpTense+ImpPersonNumber
+V+AI+Fut+Cond+PersonNumber
+V+II+Mood+Tense+PersonNumber
+V+TA+Mood+Tense+PersonNumber+PersonNumberObj
+V+TI+Imp+ImpTense+ImpPersonNumber
+V+TI+Mood+Tense+PersonNumber
+V+TA+Imp+ImpTense+PersonNumber+PersonNumberObj
+
+
+# Our full paradigm. It does not work.
+# Copy from here line by line to make the full paradigm	
+#N+Gender+Number+PossessiveSuffix?+Obviative?
+#N+Gender+PossessiveSuffix?+Loc
+#N+Gender+Diminutive+N+Gender+Number+PossessiveSuffix?+Obviative?
+#N+Gender+Diminutive+N+Gender+PossessiveSuffix?+Loc
+#V+ClassIA+Mood+Tense?+Aspect?+PersonNumber
+#V+ClassII+Mood+Tense?+Aspect?+PersonNumber
+#V+ClassTrans+Mood+Tense?+Aspect?+PersonNumber+PersonNumberObj
+#V+ClassIA+Impmood+ImpTense+ImpPersonNumber
+#V+ClassTrans+Impmood+ImpTense+ImpPersonNumber+PersonNumberObj
+
+
+# Documentation:
+
+#V+AI+Mood?+Tense?+Aspect?+PersonNumber?
+#V+II+Mood?+Tense?+Aspect?+PersonNumber?
+#V+TA+Mood?+Tense?+Aspect?+PersonNumber?+PersonNumberObj?
+#V+TI+Mood?+Tense?+Aspect?+PersonNumber?+PersonNumberObj?
+

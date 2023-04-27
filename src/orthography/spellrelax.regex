@@ -1,0 +1,120 @@
+# Copyright © 2015–2019 Alberta Language Technology Lab (ALTLab)
+# http://altlab.artsrn.ualberta.ca/
+#
+# This program is free software; you can redistribute and/or modify
+# this file under the terms of the GNU Affero General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU Affero General Public License for more details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+# Plains Cree long vowel variation.
+
+# short-i elision
+i (->) [ %' | ‘ | ’ ],
+
+â (->) {ā}, # a + combining macron U+0304
+ê (->) {ē}, # e + combining macron U+0304
+î (->) {ī}, # i + combining macron U+0304
+ô (->) {ō}, # o + combining macron U+0304
+
+â (->) ā, # a macron
+ê (->) ē, # e macron
+î (->) ī, # i macron
+ô (->) ō, # o macron
+
+â (->) {â}, # a + combining circumflex accent U+0302
+ê (->) {ê}, # e + combining circumflex accent U+0302
+î (->) {î}, # i + combining circumflex accent U+0302
+ô (->) {ô}, # o + combining circumflex accent U+0302
+
+# Long vowel markings are frequently dropped:
+
+â (->) a,
+ê (->) e,
+î (->) i,
+ô (->) o,
+
+# NS 152 materials consistantly write some vowels as long where Arok's write
+# them as short.
+# E.G. NS 152 give 'askîy' and Arok gives 'askiy.'
+a (->) â,
+i (->) î,
+o (->) ô,,
+
+# Prefix-final vowel (preceded by consonant) dropped before following morpheme
+[ a | â | ê | i | î | o | ô ]  (->) 0 || [ c | k | m | n | p | s | t | w | y ] _ %- ,,
+
+# Dealing with spaces instead of hyphens as separators in multipart words
+
+[ %- ] (->) [ %- ]+,  # Multiple hyphens into a single hyphen
+! [ "@U.joiner.NULL@" %- ] (->) 0, # Missing hyphens between prefixes/preverbs
+%- (->) [ %  | %  | %  ]+, # Multiple non-breaking or standard spaces SPACE + NBSP + NNBSP (in syllabics) to single hyphen
+
+# Dealing with English-influenced divergences from SRO, and misspellings based on modern pronunciation
+
+# Vowels
+[ i | î ] (->) {ee},
+[ a | â ] (->) u,
+ê (->) [ {ay} | {eh} ],
+
+# Consonants
+k (->) g,   # intervocalic voiced pronunciation to stops, maybe context should be added (including <c> overgenerates)
+p (->) b,   # intervocalic voiced pronunciation to stops, maybe context should be added
+t (->) d,   # intervocalic voiced pronunciation to stops, maybe context should be added
+c (->) j,   # English influence on spelling <c>
+
+# Glides
+# e.g., "tanisi ê-isiyihkâsoyan -> "tan'si ê-sikâsowan"
+# TODO: figure out what conditions this (probably /o/ or /i/)
+# These rules without context are EXCESSIVELY productive!
+# y (->) w,
+# w (->) y,
+
+# Proto-Algonquian dialectal /y/
+y (->) ý,
+
+{iw} (->) {ow},     # Misspelling based on assimilated pronunciation of underlying /i/ as /o/ before /w/
+{ow} (->) {iw},
+{iyi} (->) [ î | i ],       # Mishearing of vowel-glide-vowel cluster
+{nwa} (->) {no},    # <nwa> is likely to be heard as <no>
+
+c (->) {ch},        # English influence on spelling <c>
+c (->) {tch},       # English influence on spelling <c>
+c (->) {ts} ,,      # Another English influence on spelling <c>
+
+[..] (->) h || _ .#. ,, # Excessive word-final pre-aspiration
+   h (->) 0 || [ a | i | o | â | ê | î | ô ] _ [ c | k | p | t | g | b | d ],,    # Missing preaspiration before stops
+[..] (->) h || [ a | i | o | â | ê | î | ô ] _ [ c | k | p | t | g | b | d ],,  # Excessive preaspiration before stops
+
+# Standardizing double-vowel notation for long vowels
+â (->) {aa},
+î (->) {ii},
+ô (->) {oo},
+
+# Standardizing rarer SRO marking of long vowels with accent-aigu
+[ a | â ] (->) á,
+ê (->) é,
+[ i | î ] (->) í,
+[ o | ô ] (->) ó,
+
+# Woods Cree to Plains Cree
+[ ý | y ] (->) {th} ,,
+ê (->) [ î | i ] ,,
+
+# Adding missing or reduced short i's in interconsonantal contexts
+i (->) [..] || [ c | h | k | m | n | p | s | t | w | y | b | g | d ] _ [ c | h | k | m | n | p | s | t | w | y | b | g | d ]
+
+;
+
+
+# Explanation:
+# lexical side (->) input
+# Or, in other words:
+# correct (->) in use out there

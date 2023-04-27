@@ -1,0 +1,44 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/aANlyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/aANlyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Noun - askihkw - ok : # -m animate noun, Canada goose
+     askihk+N+AN+Sg: askihk
+     askihk+N+AN+Sg+Px1Sg: nitaskihkom
+     askihk+N+AN+Sg+Px2Sg: kitaskihkom
+     askihk+N+AN+Sg+Px3Sg+Obv: otaskihkoma
+     askihk+N+AN+Sg+Px4Sg+Obv: otaskihkomiyiwa
+     askihk+N+AN+Sg+Px1Pl: nitaskihkominân
+     askihk+N+AN+Sg+Px12Pl: kitaskihkominaw
+     askihk+N+AN+Sg+Px2Pl: kitaskihkomiwâw
+     askihk+N+AN+Sg+Px3Pl+Obv: otaskihkomiwâwa
+     askihk+N+AN+Sg+Px4Pl+Obv: otaskihkomiyiwa
+
+     askihk+N+AN+Pl: askihkwak
+     askihk+N+AN+Pl+Px1Sg: nitaskihkomak
+     askihk+N+AN+Pl+Px2Sg: kitaskihkomak
+     askihk+N+AN+Pl+Px3Sg+Obv: otaskihkoma
+     askihk+N+AN+Pl+Px4Sg+Obv: otaskihkomiyiwa
+     askihk+N+AN+Pl+Px1Pl: nitaskihkominânak
+     askihk+N+AN+Pl+Px12Pl: kitaskihkominawak
+     askihk+N+AN+Pl+Px2Pl: kitaskihkomiwâwak
+     askihk+N+AN+Pl+Px3Pl+Obv: otaskihkomiwâwa
+     askihk+N+AN+Pl+Px4Pl+Obv: otaskihkomiyiwa
+
+     askihk+N+AN+Sg+Obv: askihkwa
+     askihk+N+AN+Loc: askihkohk
+
+     askihk+N+AN+Der/Dim+N+AN+Sg: [askihkos, askihkosis]
+     askihk+N+AN+Der/Dim+N+AN+Pl: [askihkosak, askihkosisak]
+     askihk+N+AN+Der/Dim+N+AN+Loc: [askihkosihk, askihkosisihk]
+     askihk+N+AN+Der/Dim+N+AN+Sg+Px1Sg: nicaskihkomis
+     askihk+N+AN+Der/Dim+N+AN+Sg+Px2Sg: kicaskihkomis
+     askihk+N+AN+Der/Dim+N+AN+Sg+Px3Sg+Obv: ocaskihkomisa
+     askihk+N+AN+Der/Dim+N+AN+Sg+Px4Sg+Obv: ocaskihkomisiyiwa

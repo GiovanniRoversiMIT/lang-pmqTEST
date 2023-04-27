@@ -1,0 +1,370 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Verb - miskawêw - find him/her : # VTA-Vw verb - full paradigm; Wolvengrey p. 404; Fut+Cond from Okimāsis pp. 84, 107
+  
+     miskawêw+V+TA+Ind+Prs+1Sg+3SgO: nimiskawâw # SET I
+     miskawêw+V+TA+Ind+Prs+2Sg+3SgO: kimiskawâw
+     miskawêw+V+TA+Ind+Prs+1Pl+3SgO: nimiskawânân
+     miskawêw+V+TA+Ind+Prs+12Pl+3SgO: kimiskawânaw
+     miskawêw+V+TA+Ind+Prs+2Pl+3SgO: kimiskawâwâw
+     
+     miskawêw+V+TA+Ind+Prs+1Sg+3PlO: nimiskawâwak # SET I-Pl
+     miskawêw+V+TA+Ind+Prs+2Sg+3PlO: kimiskawâwak
+     miskawêw+V+TA+Ind+Prs+1Pl+3PlO: nimiskawânânak
+     miskawêw+V+TA+Ind+Prs+12Pl+3PlO: kimiskawânawak
+     miskawêw+V+TA+Ind+Prs+2Pl+3PlO: kimiskawâwâwak
+     
+     miskawêw+V+TA+Ind+Prs+2Sg+1SgO: kimiskawin # SET II
+     miskawêw+V+TA+Ind+Prs+2Sg/Pl+1PlO: kimiskawinân
+     miskawêw+V+TA+Ind+Prs+2Pl+1SgO: kimiskawinâwâw
+     
+     miskawêw+V+TA+Ind+Prs+3Sg+4Sg/PlO: miskawêw # SET III
+     miskawêw+V+TA+Ind+Prs+3Pl+4Sg/PlO: miskawêwak
+     miskawêw+V+TA+Ind+Prs+4Sg/Pl+5Sg/PlO: miskawêyiwa
+     miskawêw+V+TA+Ind+Prs+3Sg+5Sg/PlO: miskâmêw # From Wolvengrey P.C. 27/6/15 (See /doc/)
+     miskawêw+V+TA+Ind+Prs+3Pl+5Sg/PlO: miskâmêwak # From Wolvengrey P.C. 27/6/15 (See /doc/)
+
+     miskawêw+V+TA+Ind+Prs+1Sg+4Sg/PlO: nimiskâmâwa # SET IV
+     miskawêw+V+TA+Ind+Prs+2Sg+4Sg/PlO: kimiskâmâwa
+     miskawêw+V+TA+Ind+Prs+1Pl+4Sg/PlO: nimiskâmânâna
+     miskawêw+V+TA+Ind+Prs+12Pl+4Sg/PlO: kimiskâmânawa
+     miskawêw+V+TA+Ind+Prs+2Pl+4Sg/PlO: kimiskâmâwâwa
+     
+     
+     
+     
+     
+     miskawêw+V+TA+Ind+Prt+1Sg+3SgO: [nikî-miskawâw, nikîmiskawâw] # SET I (past)
+     miskawêw+V+TA+Ind+Prt+2Sg+3SgO: [kikî-miskawâw, kikîmiskawâw]
+     miskawêw+V+TA+Ind+Prt+1Pl+3SgO: [nikî-miskawânân, nikîmiskawânân]
+     miskawêw+V+TA+Ind+Prt+12Pl+3SgO: [kikî-miskawânaw, kikîmiskawânaw]
+     miskawêw+V+TA+Ind+Prt+2Pl+3SgO: [kikî-miskawâwâw, kikîmiskawâwâw]
+     
+     miskawêw+V+TA+Ind+Prt+1Sg+3PlO: [nikî-miskawâwak, nikîmiskawâwak] # SET I-Pl (past)
+     miskawêw+V+TA+Ind+Prt+2Sg+3PlO: [kikî-miskawâwak, kikîmiskawâwak]
+     miskawêw+V+TA+Ind+Prt+1Pl+3PlO: [nikî-miskawânânak, nikîmiskawânânak]
+     miskawêw+V+TA+Ind+Prt+12Pl+3PlO: [kikî-miskawânawak, kikîmiskawânawak]
+     miskawêw+V+TA+Ind+Prt+2Pl+3PlO: [kikî-miskawâwâwak, kikîmiskawâwâwak]
+     
+     miskawêw+V+TA+Ind+Prt+2Sg+1SgO: [kikî-miskawin, kikîmiskawin] # SET II (past)
+     miskawêw+V+TA+Ind+Prt+2Sg/Pl+1PlO: [kikî-miskawinân, kikîmiskawinân]
+     miskawêw+V+TA+Ind+Prt+2Pl+1SgO: [kikî-miskawinâwâw, kikîmiskawinâwâw]
+     
+     miskawêw+V+TA+Ind+Prt+3Sg+4Sg/PlO: [kî-miskawêw, kîmiskawêw] # SET III (past)
+     miskawêw+V+TA+Ind+Prt+3Pl+4Sg/PlO: [kî-miskawêwak, kîmiskawêwak]
+     miskawêw+V+TA+Ind+Prt+4Sg/Pl+5Sg/PlO: [kî-miskawêyiwa, kîmiskawêyiwa]
+     miskawêw+V+TA+Ind+Prt+3Sg+5Sg/PlO: [kî-miskâmêw, kîmiskâmêw] # From Wolvengrey P.C. 27/6/15 (See /doc/)
+     miskawêw+V+TA+Ind+Prt+3Pl+5Sg/PlO: [kî-miskâmêwak, kîmiskâmêwak] # From Wolvengrey P.C. 27/6/15 (See /doc/)
+
+     miskawêw+V+TA+Ind+Prt+1Sg+4Sg/PlO: [nikî-miskâmâwa, nikîmiskâmâwa] # SET IV (past)
+     miskawêw+V+TA+Ind+Prt+2Sg+4Sg/PlO: [kikî-miskâmâwa, kikîmiskâmâwa]
+     miskawêw+V+TA+Ind+Prt+1Pl+4Sg/PlO: [nikî-miskâmânâna, nikîmiskâmânâna]
+     miskawêw+V+TA+Ind+Prt+12Pl+4Sg/PlO: [kikî-miskâmânawa, kikîmiskâmânawa]
+     miskawêw+V+TA+Ind+Prt+2Pl+4Sg/PlO: [kikî-miskâmâwâwa, kikîmiskâmâwâwa]
+     
+     
+     
+     
+     
+     miskawêw+V+TA+Ind+Fut+Int+1Sg+3SgO: [niwî-miskawâw, niwîmiskawâw] # SET I (past)
+     miskawêw+V+TA+Ind+Fut+Int+2Sg+3SgO: [kiwî-miskawâw, kiwîmiskawâw]
+     miskawêw+V+TA+Ind+Fut+Int+1Pl+3SgO: [niwî-miskawânân, niwîmiskawânân]
+     miskawêw+V+TA+Ind+Fut+Int+12Pl+3SgO: [kiwî-miskawânaw, kiwîmiskawânaw]
+     miskawêw+V+TA+Ind+Fut+Int+2Pl+3SgO: [kiwî-miskawâwâw, kiwîmiskawâwâw]
+     
+     miskawêw+V+TA+Ind+Fut+Int+1Sg+3PlO: [niwî-miskawâwak, niwîmiskawâwak] # SET I-Pl (past)
+     miskawêw+V+TA+Ind+Fut+Int+2Sg+3PlO: [kiwî-miskawâwak, kiwîmiskawâwak]
+     miskawêw+V+TA+Ind+Fut+Int+1Pl+3PlO: [niwî-miskawânânak, niwîmiskawânânak]
+     miskawêw+V+TA+Ind+Fut+Int+12Pl+3PlO: [kiwî-miskawânawak, kiwîmiskawânawak]
+     miskawêw+V+TA+Ind+Fut+Int+2Pl+3PlO: [kiwî-miskawâwâwak, kiwîmiskawâwâwak]
+     
+     miskawêw+V+TA+Ind+Fut+Int+2Sg+1SgO: [kiwî-miskawin, kiwîmiskawin] # SET II (past)
+     miskawêw+V+TA+Ind+Fut+Int+2Sg/Pl+1PlO: [kiwî-miskawinân, kiwîmiskawinân]
+     miskawêw+V+TA+Ind+Fut+Int+2Pl+1SgO: [kiwî-miskawinâwâw, kiwîmiskawinâwâw]
+     
+     miskawêw+V+TA+Ind+Fut+Int+3Sg+4Sg/PlO: [wî-miskawêw, wîmiskawêw] # SET III (past)
+     miskawêw+V+TA+Ind+Fut+Int+3Pl+4Sg/PlO: [wî-miskawêwak, wîmiskawêwak]
+     miskawêw+V+TA+Ind+Fut+Int+4Sg/Pl+5Sg/PlO: [wî-miskawêyiwa, wîmiskawêyiwa]
+     miskawêw+V+TA+Ind+Fut+Int+3Sg+5Sg/PlO: [wî-miskâmêw, wîmiskâmêw] # From Wolvengrey P.C. 27/6/15 (See /doc/)
+     miskawêw+V+TA+Ind+Fut+Int+3Pl+5Sg/PlO: [wî-miskâmêwak, wîmiskâmêwak] # From Wolvengrey P.C. 27/6/15 (See /doc/)
+
+     miskawêw+V+TA+Ind+Fut+Int+1Sg+4Sg/PlO: [niwî-miskâmâwa, niwîmiskâmâwa] # SET IV (past)
+     miskawêw+V+TA+Ind+Fut+Int+2Sg+4Sg/PlO: [kiwî-miskâmâwa, kiwîmiskâmâwa]
+     miskawêw+V+TA+Ind+Fut+Int+1Pl+4Sg/PlO: [niwî-miskâmânâna, niwîmiskâmânâna]
+     miskawêw+V+TA+Ind+Fut+Int+12Pl+4Sg/PlO: [kiwî-miskâmânawa, kiwîmiskâmânawa]
+     miskawêw+V+TA+Ind+Fut+Int+2Pl+4Sg/PlO: [kiwî-miskâmâwâwa, kiwîmiskâmâwâwa]
+
+     
+     
+     
+     
+     miskawêw+V+TA+Ind+Fut+Def+1Sg+3SgO: [nika-miskawâw, nikamiskawâw] # SET I (Fut+Def)
+     miskawêw+V+TA+Ind+Fut+Def+2Sg+3SgO: [kika-miskawâw, kikamiskawâw]
+     miskawêw+V+TA+Ind+Fut+Def+1Pl+3SgO: [nika-miskawânân, nikamiskawânân]
+     miskawêw+V+TA+Ind+Fut+Def+12Pl+3SgO: [kika-miskawânaw, kikamiskawânaw]
+     miskawêw+V+TA+Ind+Fut+Def+2Pl+3SgO: [kika-miskawâwâw, kikamiskawâwâw]
+     
+     miskawêw+V+TA+Ind+Fut+Def+1Sg+3PlO: [nika-miskawâwak, nikamiskawâwak] # SET I-Pl (Fut+Def)
+     miskawêw+V+TA+Ind+Fut+Def+2Sg+3PlO: [kika-miskawâwak, kikamiskawâwak]
+     miskawêw+V+TA+Ind+Fut+Def+1Pl+3PlO: [nika-miskawânânak, nikamiskawânânak]
+     miskawêw+V+TA+Ind+Fut+Def+12Pl+3PlO: [kika-miskawânawak, kikamiskawânawak]
+     miskawêw+V+TA+Ind+Fut+Def+2Pl+3PlO: [kika-miskawâwâwak, kikamiskawâwâwak]
+     
+     miskawêw+V+TA+Ind+Fut+Def+2Sg+1SgO: [kika-miskawin, kikamiskawin] # SET II (Fut+Def)
+     miskawêw+V+TA+Ind+Fut+Def+2Sg/Pl+1PlO: [kika-miskawinân, kikamiskawinân]
+     miskawêw+V+TA+Ind+Fut+Def+2Pl+1SgO: [kika-miskawinâwâw, kikamiskawinâwâw]
+     
+     miskawêw+V+TA+Ind+Fut+Def+3Sg+4Sg/PlO: [ka-miskawêw, kamiskawêw] # SET III (Fut+Def)
+     miskawêw+V+TA+Ind+Fut+Def+3Pl+4Sg/PlO: [ka-miskawêwak, kamiskawêwak]
+     miskawêw+V+TA+Ind+Fut+Def+4Sg/Pl+5Sg/PlO: [ka-miskawêyiwa, kamiskawêyiwa]
+     miskawêw+V+TA+Ind+Fut+Def+3Sg+5Sg/PlO: [ka-miskâmêw, kamiskâmêw] # From Wolvengrey P.C. 27/6/15 (See /doc/)
+     miskawêw+V+TA+Ind+Fut+Def+3Pl+5Sg/PlO: [ka-miskâmêwak, kamiskâmêwak] # From Wolvengrey P.C. 27/6/15 (See /doc/)
+
+     miskawêw+V+TA+Ind+Fut+Def+1Sg+4Sg/PlO: [nika-miskâmâwa, nikamiskâmâwa] # SET IV (Fut+Def)
+     miskawêw+V+TA+Ind+Fut+Def+2Sg+4Sg/PlO: [kika-miskâmâwa, kikamiskâmâwa]
+     miskawêw+V+TA+Ind+Fut+Def+1Pl+4Sg/PlO: [nika-miskâmânâna, nikamiskâmânâna]
+     miskawêw+V+TA+Ind+Fut+Def+12Pl+4Sg/PlO: [kika-miskâmânawa, kikamiskâmânawa]
+     miskawêw+V+TA+Ind+Fut+Def+2Pl+4Sg/PlO: [kika-miskâmâwâwa, kikamiskâmâwâwa]
+     
+     
+     
+
+
+     miskawêw+V+TA+Ind+Prs+3Sg+1SgO: nimiskâk  # SET I inv
+     miskawêw+V+TA+Ind+Prs+3Sg+2SgO: kimiskâk
+     miskawêw+V+TA+Ind+Prs+3Sg+1PlO: nimiskâkonân
+     miskawêw+V+TA+Ind+Prs+3Sg+12PlO: kimiskâkonaw
+     miskawêw+V+TA+Ind+Prs+3Sg+2PlO: kimiskâkowâw
+     
+     miskawêw+V+TA+Ind+Prs+3Pl+1SgO: nimiskâkwak # SET I-Pl inv
+     miskawêw+V+TA+Ind+Prs+3Pl+2SgO: kimiskâkwak
+     miskawêw+V+TA+Ind+Prs+3Pl+1PlO: nimiskâkonânak
+     miskawêw+V+TA+Ind+Prs+3Pl+12PlO: kimiskâkonawak
+     miskawêw+V+TA+Ind+Prs+3Pl+2PlO: kimiskâkowâwak
+     
+     miskawêw+V+TA+Ind+Prs+1Sg+2SgO: kimiskâtin # SET II inv
+     miskawêw+V+TA+Ind+Prs+1Pl+2Sg/PlO: kimiskâtinân
+     miskawêw+V+TA+Ind+Prs+1Sg+2PlO: kimiskâtinâwâw
+     
+     miskawêw+V+TA+Ind+Prs+4Sg/Pl+3SgO: miskâk # SET III inv (no 5-3 according to Wolvengrey)
+     miskawêw+V+TA+Ind+Prs+4Sg/Pl+3PlO: miskâkwak
+     miskawêw+V+TA+Ind+Prs+5Sg/Pl+4Sg/PlO: miskâkoyiwa
+          
+     miskawêw+V+TA+Ind+Prs+4Sg/Pl+1SgO: nimiskâkoyiwa # SET IV inv
+     miskawêw+V+TA+Ind+Prs+4Sg/Pl+2SgO: kimiskâkoyiwa
+     miskawêw+V+TA+Ind+Prs+4Sg/Pl+1PlO: nimiskâkonâna
+     miskawêw+V+TA+Ind+Prs+4Sg/Pl+12PlO: kimiskâkonawa
+     miskawêw+V+TA+Ind+Prs+4Sg/Pl+2PlO: kimiskâkowâwa
+     
+
+
+
+
+     miskawêw+V+TA+Cnj+Prs+1Sg+3SgO: miskawak # SET I
+     miskawêw+V+TA+Cnj+Prs+2Sg+3SgO: miskawat
+     miskawêw+V+TA+Cnj+Prs+1Pl+3SgO: miskawâyâhk
+     miskawêw+V+TA+Cnj+Prs+12Pl+3SgO: miskawâyahk
+     miskawêw+V+TA+Cnj+Prs+2Pl+3SgO: miskawâyêk
+
+     miskawêw+V+TA+Cnj+Prs+1Sg+3PlO: miskawakik # SET I-Pl
+     miskawêw+V+TA+Cnj+Prs+2Sg+3PlO: miskawacik
+     miskawêw+V+TA+Cnj+Prs+1Pl+3PlO: miskawâyâhkik
+     miskawêw+V+TA+Cnj+Prs+12Pl+3PlO: miskawâyahkok
+     miskawêw+V+TA+Cnj+Prs+2Pl+3PlO: miskawâyêkok 
+     
+     miskawêw+V+TA+Cnj+Prs+2Sg+1SgO: miskawiyan # SET II
+     miskawêw+V+TA+Cnj+Prs+2Sg/Pl+1PlO: miskawiyâhk
+     miskawêw+V+TA+Cnj+Prs+2Pl+1SgO: miskawiyêk    
+     
+     miskawêw+V+TA+Cnj+Prs+3Sg+4Sg/PlO: miskawât # SET III
+     miskawêw+V+TA+Cnj+Prs+3Pl+4Sg/PlO: miskawâcik
+     miskawêw+V+TA+Cnj+Prs+3Sg+5Sg/PlO: miskâmât
+     miskawêw+V+TA+Cnj+Prs+3Pl+5Sg/PlO: miskâmâcik
+     miskawêw+V+TA+Cnj+Prs+4Sg/Pl+5Sg/PlO: miskawâyit
+
+     miskawêw+V+TA+Cnj+Prs+1Sg+4Sg/PlO: miskâmak # SET IV
+     miskawêw+V+TA+Cnj+Prs+2Sg+4Sg/PlO: miskâmat
+     miskawêw+V+TA+Cnj+Prs+1Pl+4Sg/PlO: miskâmâyâhk
+     miskawêw+V+TA+Cnj+Prs+12Pl+4Sg/PlO: miskâmâyahk
+     miskawêw+V+TA+Cnj+Prs+2Pl+4Sg/PlO: miskâmâyêk
+     
+     
+     
+     
+     
+     miskawêw+V+TA+Cnj+Prs+3Sg+1SgO: miskawit # SET I inv
+     miskawêw+V+TA+Cnj+Prs+3Sg+2SgO: miskâsk
+     miskawêw+V+TA+Cnj+Prs+3Sg+1PlO: miskâkoyâhk
+     miskawêw+V+TA+Cnj+Prs+3Sg+12PlO: miskâkoyahk
+     miskawêw+V+TA+Cnj+Prs+3Sg+2PlO: miskâkoyêk
+
+     miskawêw+V+TA+Cnj+Prs+3Pl+1SgO: miskawcik # SET I-Pl inv
+     miskawêw+V+TA+Cnj+Prs+3Pl+2SgO: miskâskik
+     miskawêw+V+TA+Cnj+Prs+3Pl+1PlO: miskâkoyâhkik
+     miskawêw+V+TA+Cnj+Prs+3Pl+12PlO: miskâkoyahkok
+     miskawêw+V+TA+Cnj+Prs+3Pl+2PlO: miskâkoyêkok
+
+     miskawêw+V+TA+Cnj+Prs+1Sg+2SgO: miskâtân # SET II inv
+     miskawêw+V+TA+Cnj+Prs+1Pl+2Sg/PlO: miskâtâhk, miskâtâhk]
+     miskawêw+V+TA+Cnj+Prs+1Sg+2PlO: miskâtakok
+
+     miskawêw+V+TA+Cnj+Prs+4Sg/Pl+3SgO: miskâkot # SET III inv
+     miskawêw+V+TA+Cnj+Prs+4Sg/Pl+3PlO: miskâkocik
+     miskawêw+V+TA+Cnj+Prs+5Sg/Pl+4Sg/PlO: miskâkoyit
+     
+     miskawêw+V+TA+Cnj+Prs+4Sg/Pl+1SgO: miskâmit # SET IV inv
+     miskawêw+V+TA+Cnj+Prs+4Sg/Pl+2SgO: miskâmisk
+     miskawêw+V+TA+Cnj+Prs+4Sg/Pl+1PlO: [miskâkoyâhk, miskâkowâyâhk]
+     miskawêw+V+TA+Cnj+Prs+4Sg/Pl+2PlO: [miskâkoyêk, miskâkowâyêk]
+     miskawêw+V+TA+Cnj+Prs+4Sg/Pl+12PlO: [miskâkoyahk, miskâkowâyahk]
+     
+
+
+
+
+     PV/e+miskawêw+V+TA+Cnj+Prs+1Sg+3SgO: [ê-miskawak, êmiskawak] # SET I
+     PV/e+miskawêw+V+TA+Cnj+Prs+2Sg+3SgO: [ê-miskawat, êmiskawat]
+     PV/e+miskawêw+V+TA+Cnj+Prs+1Pl+3SgO: [ê-miskawâyâhk, êmiskawâyâhk]
+     PV/e+miskawêw+V+TA+Cnj+Prs+12Pl+3SgO: [ê-miskawâyahk, êmiskawâyahk]
+     PV/e+miskawêw+V+TA+Cnj+Prs+2Pl+3SgO: [ê-miskawâyêk, êmiskawâyêk]
+
+     PV/e+miskawêw+V+TA+Cnj+Prs+1Sg+3PlO: [ê-miskawakik, êmiskawakik] # SET I-Pl
+     PV/e+miskawêw+V+TA+Cnj+Prs+2Sg+3PlO: [ê-miskawacik, êmiskawacik]
+     PV/e+miskawêw+V+TA+Cnj+Prs+1Pl+3PlO: [ê-miskawâyâhkik, êmiskawâyâhkik]
+     PV/e+miskawêw+V+TA+Cnj+Prs+12Pl+3PlO: [ê-miskawâyahkok, êmiskawâyahkok]
+     PV/e+miskawêw+V+TA+Cnj+Prs+2Pl+3PlO: [ê-miskawâyêkok, êmiskawâyêkok] 
+     
+     PV/e+miskawêw+V+TA+Cnj+Prs+2Sg+1SgO: [ê-miskawiyan, êmiskawiyan] # SET II
+     PV/e+miskawêw+V+TA+Cnj+Prs+2Sg/Pl+1PlO: [ê-miskawiyâhk, êmiskawiyâhk]
+     PV/e+miskawêw+V+TA+Cnj+Prs+2Pl+1SgO: [ê-miskawiyêk, êmiskawiyêk]    
+     
+     PV/e+miskawêw+V+TA+Cnj+Prs+3Sg+4Sg/PlO: [ê-miskawât, êmiskawât] # SET III
+     PV/e+miskawêw+V+TA+Cnj+Prs+3Pl+4Sg/PlO: [ê-miskawâcik, êmiskawâcik]
+     PV/e+miskawêw+V+TA+Cnj+Prs+3Sg+5Sg/PlO: [ê-miskâmât, êmiskâmât]
+     PV/e+miskawêw+V+TA+Cnj+Prs+3Pl+5Sg/PlO: [ê-miskâmâcik, êmiskâmâcik]
+     PV/e+miskawêw+V+TA+Cnj+Prs+4Sg/Pl+5Sg/PlO: [ê-miskawâyit, êmiskawâyit]
+
+     PV/e+miskawêw+V+TA+Cnj+Prs+1Sg+4Sg/PlO: [ê-miskâmak, êmiskâmak] # SET IV
+     PV/e+miskawêw+V+TA+Cnj+Prs+2Sg+4Sg/PlO: [ê-miskâmat, êmiskâmat]
+     PV/e+miskawêw+V+TA+Cnj+Prs+1Pl+4Sg/PlO: [ê-miskâmâyâhk, êmiskâmâyâhk]
+     PV/e+miskawêw+V+TA+Cnj+Prs+12Pl+4Sg/PlO: [ê-miskâmâyahk, êmiskâmâyahk]
+     PV/e+miskawêw+V+TA+Cnj+Prs+2Pl+4Sg/PlO: [ê-miskâmâyêk, êmiskâmâyêk]
+     
+     
+     
+     
+     
+     PV/e+miskawêw+V+TA+Cnj+Prs+3Sg+1SgO: [ê-miskawit, êmiskawit] # SET I inv
+     PV/e+miskawêw+V+TA+Cnj+Prs+3Sg+2SgO: [ê-miskâsk, êmiskâsk]
+     PV/e+miskawêw+V+TA+Cnj+Prs+3Sg+1PlO: [ê-miskâkoyâhk, êmiskâkoyâhk]
+     PV/e+miskawêw+V+TA+Cnj+Prs+3Sg+12PlO: [ê-miskâkoyahk, êmiskâkoyahk]
+     PV/e+miskawêw+V+TA+Cnj+Prs+3Sg+2PlO: [ê-miskâkoyek, êmiskâkoyek]
+
+     PV/e+miskawêw+V+TA+Cnj+Prs+3Pl+1SgO: [ê-miskawicik, êmiskâcik] # SET I-Pl inv
+     PV/e+miskawêw+V+TA+Cnj+Prs+3Pl+2SgO: [ê-miskâskik, êmiskâskik]
+     PV/e+miskawêw+V+TA+Cnj+Prs+3Pl+1PlO: [ê-miskâkoyâhkik, êmiskâkoyâhkik]
+     PV/e+miskawêw+V+TA+Cnj+Prs+3Pl+12PlO: [ê-miskâkoyahkok, êmiskâkoyahkok]
+     PV/e+miskawêw+V+TA+Cnj+Prs+3Pl+2PlO: [ê-miskâkoyêkok, êmiskâkoyêkok]
+
+     PV/e+miskawêw+V+TA+Cnj+Prs+1Sg+2SgO: [ê-miskâtân, êmiskâtân] # SET II inv
+     PV/e+miskawêw+V+TA+Cnj+Prs+1Pl+2Sg/PlO: [ê-miskâtâhk, êmiskâtâhk]
+     PV/e+miskawêw+V+TA+Cnj+Prs+1Sg+2PlO: [ê-miskâtakok, êmiskâtakok]
+
+     PV/e+miskawêw+V+TA+Cnj+Prs+4Sg/Pl+3SgO: [ê-miskâkot, êmiskâkot] # SET III inv
+     PV/e+miskawêw+V+TA+Cnj+Prs+4Sg/Pl+3PlO: [ê-miskâkocik, êmiskâkocik]
+     PV/e+miskawêw+V+TA+Cnj+Prs+5Sg/Pl+4Sg/PlO: [ê-miskâkoyit, êmiskâkoyit]
+     
+     PV/e+miskawêw+V+TA+Cnj+Prs+4Sg/Pl+1SgO: [ê-miskâmit, êmiskâmit] # SET IV inv
+     PV/e+miskawêw+V+TA+Cnj+Prs+4Sg/Pl+2SgO: [ê-miskâmisk, êmiskâmisk]
+     PV/e+miskawêw+V+TA+Cnj+Prs+4Sg/Pl+1PlO: [ê-miskâkoyâhk, êmiskâkoyâhk, ê-miskâkowâyâhk, êmiskâkowâyâhk]
+     PV/e+miskawêw+V+TA+Cnj+Prs+4Sg/Pl+2PlO: [ê-miskâkoyêk, êmiskâkoyêk, ê-miskâkowâyêk, êmiskâkowâyêk]
+     PV/e+miskawêw+V+TA+Cnj+Prs+4Sg/Pl+12PlO: [ê-miskâkoyahk, êmiskâkoyahk, ê-miskâkowâyahk, êmiskâkowâyahk]
+
+
+
+
+
+     miskawêw+V+TA+Imp+Imm+2Sg+3SgO: miskaw
+     miskawêw+V+TA+Imp+Imm+12Pl+3SgO: miskawâtân
+     miskawêw+V+TA+Imp+Imm+2Pl+3SgO: miskwihk
+     miskawêw+V+TA+Imp+Imm+2Sg+3PlO: miskawik
+     miskawêw+V+TA+Imp+Imm+12Pl+3PlO: miskawâtânik
+     miskawêw+V+TA+Imp+Imm+2Pl+3PlO: miskawihkik
+
+     miskawêw+V+TA+Imp+Del+2Sg+3SgO: miskawâhkan
+     miskawêw+V+TA+Imp+Del+12Pl+3SgO: miskawâhkahk
+     miskawêw+V+TA+Imp+Del+2Pl+3SgO: miskawâhkêk
+     miskawêw+V+TA+Imp+Del+2Sg+3PlO: miskawâhkanik
+     miskawêw+V+TA+Imp+Del+12Pl+3PlO: miskawâhkahkok
+     miskawêw+V+TA+Imp+Del+2Pl+3PlO: miskawâhkêkok
+
+     miskawêw+V+TA+Imp+Imm+2Sg+1SgO: miskawin
+     miskawêw+V+TA+Imp+Imm+2Sg/Pl+1PlO: miskawinân
+     miskawêw+V+TA+Imp+Imm+2Pl+1SgO: miskawik
+     miskawêw+V+TA+Imp+Del+2Sg+1SgO: miskawîhkan
+     miskawêw+V+TA+Imp+Del+2Sg/Pl+1PlO: miskawîhkâhk
+     miskawêw+V+TA+Imp+Del+2Pl+1SgO: miskawîhkêk
+     
+     
+     
+
+     miskawêw+V+TA+Fut+Cond+1Sg+3SgO: miskawaki # 1 and 2-3Sg
+     miskawêw+V+TA+Fut+Cond+2Sg+3SgO: miskawaci
+     miskawêw+V+TA+Fut+Cond+1Pl+3SgO: miskawâyâhki
+     miskawêw+V+TA+Fut+Cond+12Pl+3SgO: [miskawâyahko, miskawâyahki]
+     miskawêw+V+TA+Fut+Cond+2Pl+3SgO: miskawâyêko
+
+     miskawêw+V+TA+Fut+Cond+3Sg+4Sg/PlO: miskawâci # 3-4, 4-5
+     miskawêw+V+TA+Fut+Cond+3Pl+4Sg/PlO: miskawâtwâwi
+     miskawêw+V+TA+Fut+Cond+4Sg/Pl+5Sg/PlO: miskawâyici
+     
+     miskawêw+V+TA+Fut+Cond+1Sg+3PlO: miskawakwâwi # 1 and 2-3Pl
+     miskawêw+V+TA+Fut+Cond+2Sg+3PlO: miskawatwâwi
+     miskawêw+V+TA+Fut+Cond+1Pl+3PlO: miskawâyâhkwâwi
+     miskawêw+V+TA+Fut+Cond+12Pl+3PlO: miskawâyahkwâwi
+     miskawêw+V+TA+Fut+Cond+2Pl+3PlO: miskawâyêkwâwi
+
+     miskawêw+V+TA+Fut+Cond+3Sg+1SgO: miskawici # 1 and 2-3Sg INVERSE (3Sg-1 and 2)
+     miskawêw+V+TA+Fut+Cond+3Sg+2SgO: miskâski
+     miskawêw+V+TA+Fut+Cond+3Sg+1PlO: miskâkoyâhki
+     miskawêw+V+TA+Fut+Cond+3Sg+12PlO: [miskâkoyahko, miskâkoyahki]
+     miskawêw+V+TA+Fut+Cond+3Sg+2PlO: miskâkoyêko
+     
+     miskawêw+V+TA+Fut+Cond+4Sg/Pl+3SgO: miskâkoci # 3-4, 4-5 INVERSE (4-3, 5-4)
+     miskawêw+V+TA+Fut+Cond+4Sg/Pl+3PlO: miskâkotwâwi 
+     miskawêw+V+TA+Fut+Cond+5Sg/Pl+4Sg/PlO: miskâkoyici
+     
+     miskawêw+V+TA+Fut+Cond+3Pl+1SgO: miskawitwâwi # 1 and 2-3Pl INVERSE (3Pl-1 and 2)
+     miskawêw+V+TA+Fut+Cond+3Pl+2SgO: miskâskwâwi
+     miskawêw+V+TA+Fut+Cond+3Pl+1PlO: miskâkoyâhkwâwi
+     miskawêw+V+TA+Fut+Cond+3Pl+12PlO: miskâkoyahkwâwi
+     miskawêw+V+TA+Fut+Cond+3Pl+2PlO: miskâkoyêkwâwi
+     
+     miskawêw+V+TA+Fut+Cond+2Sg+1SgO: miskawiyani # Local sets (2-1) Okimāsis 116
+     miskawêw+V+TA+Fut+Cond+2Pl+1SgO: miskawiyêko
+     miskawêw+V+TA+Fut+Cond+2Sg/Pl+1PlO: miskawiyâhki
+     
+     miskawêw+V+TA+Fut+Cond+1Sg+2SgO: miskâtâni # Local sets INV (1-2) Okimāsis 115
+     miskawêw+V+TA+Fut+Cond+1Sg+2PlO: miskâtako
+     miskawêw+V+TA+Fut+Cond+1Pl+2Sg/PlO: miskâtâhki
+     
+     miskawêw+V+TA+Fut+Cond+1Sg+4Sg/PlO: miskâmaki # SET IV
+     miskawêw+V+TA+Fut+Cond+2Sg+4Sg/PlO: miskâmaci
+     miskawêw+V+TA+Fut+Cond+1Pl+4Sg/PlO: miskâmâyâhki
+     miskawêw+V+TA+Fut+Cond+12Pl+4Sg/PlO: [miskâmâyahko, miskâmâyahki]
+     miskawêw+V+TA+Fut+Cond+2Pl+4Sg/PlO: miskâmâyêko
+
+     miskawêw+V+TA+Fut+Cond+4Sg/Pl+1SgO: miskâmici # SET IV inv
+     miskawêw+V+TA+Fut+Cond+4Sg/Pl+2SgO: miskâmiski
+     miskawêw+V+TA+Fut+Cond+4Sg/Pl+1PlO: [miskâkoyâhki, miskâkowâyâhki]
+     miskawêw+V+TA+Fut+Cond+4Sg/Pl+2PlO: [miskâkoyêko, miskâkowâyêko]
+     miskawêw+V+TA+Fut+Cond+4Sg/Pl+12PlO: [miskâkoyahko, miskâkoyahki, miskâkowâyahko, miskâkowâyahki]

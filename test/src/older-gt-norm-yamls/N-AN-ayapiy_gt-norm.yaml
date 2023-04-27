@@ -1,0 +1,41 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests: 
+  Noun - ayapiy - ok : # -m animate noun, net, Wolvengrey
+     ayapiy+N+AN+Sg: ayapiy
+     ayapiy+N+AN+Sg+Px1Sg: nitayapîm
+     ayapiy+N+AN+Sg+Px2Sg: kitayapîm
+     ayapiy+N+AN+Sg+Px3Sg+Obv: otayapîma
+     ayapiy+N+AN+Sg+Px4Sg+Obv: otayapîmiyiwa
+     ayapiy+N+AN+Sg+Px1Pl: nitayapîminân
+     ayapiy+N+AN+Sg+Px12Pl: kitayapîminaw
+     ayapiy+N+AN+Sg+Px2Pl: kitayapîmiwâw
+     ayapiy+N+AN+Sg+Px3Pl+Obv: otayapîmiwâwa
+     ayapiy+N+AN+Sg+Px4Pl+Obv: otayapîmiyiwa
+     
+     ayapiy+N+AN+Pl: ayapiyak
+     ayapiy+N+AN+Pl+Px1Sg: nitayapîmak
+     ayapiy+N+AN+Pl+Px2Sg: kitayapîmak
+     ayapiy+N+AN+Pl+Px3Sg+Obv: otayapîma
+     ayapiy+N+AN+Pl+Px4Sg+Obv: otayapîmiyiwa
+     ayapiy+N+AN+Pl+Px1Pl: nitayapîminânak
+     ayapiy+N+AN+Pl+Px12Pl: kitayapîminawak
+     ayapiy+N+AN+Pl+Px2Pl: kitayapîmiwâwak
+     ayapiy+N+AN+Pl+Px3Pl+Obv: otayapîmiwâwa
+     ayapiy+N+AN+Pl+Px4Pl+Obv: otayapîmiyiwa
+     
+     ayapiy+N+AN+Sg+Obv: ayapiya
+     ayapiy+N+AN+Loc: ayapîhk
+     
+     ayapiy+N+AN+Der/Dim+N+AN+Sg: [ayapîs, ayapîsis]
+     ayapiy+N+AN+Der/Dim+N+AN+Pl: [ayapîsak, ayapîsisak]
+     
+     ayapiy+N+AN+Der/Dim+N+AN+Sg+Px1Sg: [nicayapîmis, nicayapîmisis]
+     ayapiy+N+AN+Der/Dim+N+AN+Sg+Px2Sg: [kicayapîmis, kicayapîmisis]

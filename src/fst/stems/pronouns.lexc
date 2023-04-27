@@ -1,0 +1,125 @@
+! Copyright © 2015–2023 Alberta Language Technology Lab (ALTLab)
+! http://altlab.ualberta.ca/
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU Affero General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version.
+!
+! This program is distributed in the hope that it will be useful,
+! but WITHOUT ANY WARRANTY; without even the implied warranty of
+! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+! GNU Affero General Public License for more details.
+!
+! You should have received a copy of the GNU Affero General Public License
+! along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+!! ## Plains Cree pronouns
+
+!! There are more pronoums to be added here.
+
+LEXICON Pronoun !!= @CODE@
+
+ Personal ;
+ Interrogative ;
+ Indefinite ;
+ Demonstrative ;
+
+LEXICON Personal !!= @CODE@ \\
+niýa+Pron+Pers+1Sg:niýa # ; !!= @CODE@
+kiýa+Pron+Pers+2Sg:kiýa # ; !!= @CODE@
+wiýa+Pron+Pers+3Sg:wiýa # ;
+niýanân+Pron+Pers+1Pl:niýanân # ;
+kiýânaw+Pron+Pers+12Pl:kiýânaw # ;
+kiýawâw+Pron+Pers+2Pl:kiýawâw # ;
+wiýawâw+Pron+Pers+3Pl:wiýawâw # ;
+
+nîsta+Pron+Pers+1Sg+Incl:nîsta # ;
+kîsta+Pron+Pers+2Sg+Incl:kîsta # ;
+wîsta+Pron+Pers+3Sg+Incl:wîsta # ;
+nîstanân+Pron+Pers+1Pl+Incl:nîstanân # ;
+kîstanaw+Pron+Pers+12Pl+Incl:kîstanaw # ;
+kîstawâw+Pron+Pers+2Pl+Incl:kîstawâw # ;
+wîstawâw+Pron+Pers+3Pl+Incl:wîstawâw # ;
+
+
+LEXICON Interrogative  !!= @CODE@ \\
+awîna+Pron+Interr+A+Sg:awîna # "who,whose" ; !!= @CODE@
+awîniki+Pron+Interr+A+Pl:awîniki # "who" ; !!= @CODE@
+awînihi+Pron+Interr+A+Obv:awînihi # "who" ; !!= @CODE@
+awîniwâ+Pron+Interr+A+Obv:awîniwâ # "who" ; !!= @CODE@
+
+kîkwây+Pron+Interr+A+Sg:kîkwây # "what" ; ! Wolvengrey
+kîkwây+Pron+Interr+A+Pl:kîkwâyak # "what" ;
+kîkwây+Pron+Interr+A+Obv:kîkwâya # "what" ;
+kîkwây+Pron+Interr+I+Sg:kîkwây # "what" ;
+kîkwây+Pron+Interr+I+Pl:kîkwâya # "what" ;
+
+! Interrogative demonstratives
+tâna+Pron+Interr+Dem+A+Sg:tâna # "which one" ;
+tâniki+Pron+Interr+Dem+A+Pl:tâniki # "which ones" ;
+tânihi+Pron+Interr+Dem+A+Obv:tânihi # "which one(s)" ;
+tānima+Pron+Interr+Dem+I+Sg:tānima # "which one" ;
+tânihi+Pron+Interr+Dem+I+Pl:tânihi # "which ones" ;
+
+! Locative interrogative demonstratives
+tâniwâ+Pron+Interr+Dem+Loc+A+Sg:tâniwâ # "where" ; ! Wolvengrey
+tâniwêhkâk+Pron+Interr+Dem+Loc+A+Pl:tâniwêhkâk # "where" ;
+tâniwêhâ+Pron+Interr+Dem+Loc+A+Obv:tâniwêhâ # "where" ;
+tâniwê+Pron+Interr+Dem+Loc+I+Sg:tâniwê # "where" ;
+tâniwêhâ+Pron+Interr+Dem+Loc+I+Pl:tâniwêhâ # "where" ;
+
+! Additional Oblique Interrogative Proforms ! <- Wolvengrey
+! Listed currently already under particles
+! tânispî+Ipc+Interr:tânispî # "when" ;
+! tânispîhk+Ipc+Interr:tânispîhk # "when" ;
+! tânita+Ipc+Interr:tânita # "how" ;
+! tânêhki+Ipc+Interr:tânêhki # "why" ;
+! tâniyikohk+Ipc+Interr:tâniyikohk # "how much" ;
+! tânimayikohk+Ipc+Interr:tânimayikohk # "how much" ;
+! tânitahto+Ipc+Interr:tânitahto # "how many" ;
+! tânimatahto+Ipc+Interr:tânimatahto # "how many"
+! tânitahtwâw+Ipc+Interr:tânitahtwâw # "how many times" ;
+! tânimatahtwâw+Ipc+Interr:tânimatahtwâw # "how many times" ;
+! tânitowahk+Ipc+Interr:tânitowahk # "what kind" ;
+! tânitowihk+Ipc+Interr:tânitowihk # "(in) what kind of place" ;
+! tânitahtwayak+Ipc+Interr:tânitahtwayak # "how many ways/directions" ;
+
+LEXICON Indefinite !!= @CODE@ \\
+awiyak+Pron+Indef+A+Sg:awiyak # "someone" ; !!= @CODE@
+awiyak+Pron+Indef+A+Pl:awiyakak # "some people" ;!!= @CODE@
+
+LEXICON Demonstrative !!= @CODE@   \\
+!! ANIMATE \\
+awa+Pron+Dem+Prox+A+Sg:awa # "this" ; !!= @CODE@
+ôki+Pron+Dem+Prox+A+Pl:ôki # "these" ; !!= @CODE@
+ôhi+Pron+Dem+Prox+A+Obv:ôhi # "this/these" ; !!= @CODE@
+
+ana+Pron+Dem+Med+A+Sg:ana # "that" ;
+aniki+Pron+Dem+Med+A+Pl:aniki # "those" ;
+anihi+Pron+Dem+Med+A+Obv:anihi # "that/those" ;
+
+nâha+Pron+Dem+Dist+A+Sg:nâha # "that yonder" ;
+nêki+Pron+Dem+Dist+A+Pl:nêki # "those yonder" ;
+nêhi+Pron+Dem+Dist+A+Obv:nêhi # "this/those yonder" ;
+
+!! INANIMATE \\
+
+ôma+Pron+Dem+Prox+I+Sg:ôma # "this" ; !!= @CODE@
+ôhi+Pron+Dem+Prox+I+Pl:ôhi # "these" ; !!= @CODE@
+
+anima+Pron+Dem+Med+I+Sg:anima # "that" ;
+anihi+Pron+Dem+Med+I+Pl:anihi # "those" ;
+
+nêma+Pron+Dem+Dist+I+Sg:nêma # "that yonder" ;
+nêhi+Pron+Dem+Dist+I+Pl:nêhi # "those yonder" ;
+
+! Let us say a pronoun ôma without a noun is a definite, not a demonstrative
+ôma+Pron+Def+Prox+I+Sg:ôma # "this one" ; !!= @CODE@
+ôhi+Pron+Def+Prox+I+Pl:ôhi # "these ones" ; !!= @CODE@
+
+anima+Pron+Def+Med+I+Sg:anima # "that one" ;
+anihi+Pron+Def+Med+I+Pl:anihi # "those ones" ;
+
+nêma+Pron+Def+Dist+I+Sg:nêma # "that yonder one" ;
+nêhi+Pron+Def+Dist+I+Pl:nêhi # "those yonder ones" ;

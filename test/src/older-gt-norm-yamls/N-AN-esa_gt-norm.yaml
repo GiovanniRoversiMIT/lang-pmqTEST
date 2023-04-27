@@ -1,0 +1,43 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/aANlyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/aANlyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Noun - êsa - ok : # -m animate noun, shell
+     êsa+N+AN+Sg: êsa
+     êsa+N+AN+Sg+Px1Sg: nitêsim
+     êsa+N+AN+Sg+Px2Sg: kitêsim
+     êsa+N+AN+Sg+Px3Sg+Obv: otêsima
+     êsa+N+AN+Sg+Px4Sg+Obv: otêsimiyiwa
+     êsa+N+AN+Sg+Px1Pl: nitêsiminân
+     êsa+N+AN+Sg+Px12Pl: kitêsiminaw
+     êsa+N+AN+Sg+Px2Pl: kitêsimiwâw
+     êsa+N+AN+Sg+Px3Pl+Obv: otêsimiwâwa
+     êsa+N+AN+Sg+Px4Pl+Obv: otêsimiyiwa
+
+     êsa+N+AN+Pl: êsak
+     êsa+N+AN+Pl+Px1Sg: nitêsimak
+     êsa+N+AN+Pl+Px2Sg: kitêsimak
+     êsa+N+AN+Pl+Px3Sg+Obv: otêsima
+     êsa+N+AN+Pl+Px4Sg+Obv: otêsimiyiwa
+     êsa+N+AN+Pl+Px1Pl: nitêsiminânak
+     êsa+N+AN+Pl+Px12Pl: kitêsiminawak
+     êsa+N+AN+Pl+Px2Pl: kitêsimiwâwak
+     êsa+N+AN+Pl+Px3Pl+Obv: otêsimiwâwa
+     êsa+N+AN+Pl+Px4Pl+Obv: otêsimiyiwa
+
+     êsa+N+AN+Sg+Obv: êsa
+     êsa+N+AN+Loc: êsihk
+
+     êsa+N+AN+Der/Dim+N+AN+Sg: [êsis, êsisis]
+     êsa+N+AN+Der/Dim+N+AN+Pl: [êsisak, êsisisak]
+     êsa+N+AN+Der/Dim+N+AN+Loc: [êsisihk, êsisisihk]
+
+     êsa+N+AN+Der/Dim+N+AN+Sg+Px2Pl: kicêsimisiwâw
+     êsa+N+AN+Der/Dim+N+AN+Sg+Px3Pl+Obv: ocêsimisiwâwa

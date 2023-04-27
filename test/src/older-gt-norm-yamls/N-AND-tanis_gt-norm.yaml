@@ -1,0 +1,53 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Noun - tânis - ok : # -m dep. animate noun, daughter, poss.paradigm Okimasis p 140
+
+     -tânis+N+AN+Sg+Px1Sg: nitânis
+     -tânis+N+AN+Sg+Px2Sg: kitânis
+     -tânis+N+AN+Sg+Px3Sg+Obv: otânisa
+     -tânis+N+AN+Sg+Px4Sg+Obv: otânisiyiwa
+     -tânis+N+AN+Sg+Px1Pl: nitânisinân
+     -tânis+N+AN+Sg+Px12Pl: kitânisinaw
+     -tânis+N+AN+Sg+Px2Pl: kitânisiwâw
+     -tânis+N+AN+Sg+Px3Pl+Obv: otânisiwâwa 
+     -tânis+N+AN+Sg+Px4Pl+Obv: otânisiyiwa
+
+     -tânis+N+AN+Pl+Px1Sg: nitânisak
+     -tânis+N+AN+Pl+Px2Sg: kitânisak
+     -tânis+N+AN+Pl+Px3Sg+Obv: otânisa
+     -tânis+N+AN+Pl+Px4Sg+Obv: otânisiyiwa
+     -tânis+N+AN+Pl+Px1Pl: nitânisinânak
+     -tânis+N+AN+Pl+Px12Pl: kitânisinawak
+     -tânis+N+AN+Pl+Px2Pl: kitânisiwâwak
+     -tânis+N+AN+Pl+Px3Pl+Obv: otânisiwâwa
+     -tânis+N+AN+Pl+Px4Pl+Obv: otânisiyiwa
+
+     -tânis+N+AN+Der/Dim+N+AN+Sg+Px1Sg: nicânisisis
+     -tânis+N+AN+Der/Dim+N+AN+Sg+Px2Sg: kicânisisis
+     -tânis+N+AN+Der/Dim+N+AN+Sg+Px3Sg+Obv: ocânisisisa
+     -tânis+N+AN+Der/Dim+N+AN+Sg+Px4Sg+Obv: ocânisisisiyiwa
+     -tânis+N+AN+Der/Dim+N+AN+Sg+Px1Pl: nicânisisisinân
+     -tânis+N+AN+Der/Dim+N+AN+Sg+Px12Pl: kicânisisisinaw
+     -tânis+N+AN+Der/Dim+N+AN+Sg+Px2Pl: kicânisisisiwâw
+     -tânis+N+AN+Der/Dim+N+AN+Sg+Px3Pl+Obv: ocânisisisiwâwa
+     -tânis+N+AN+Der/Dim+N+AN+Sg+Px4Pl+Obv: ocânisisisiyiwa
+
+     -tânis+N+AN+Der/Dim+N+AN+Pl+Px1Sg: nicânisisisak
+     -tânis+N+AN+Der/Dim+N+AN+Pl+Px2Sg: kicânisisisak
+     -tânis+N+AN+Der/Dim+N+AN+Pl+Px3Sg+Obv: ocânisisisa
+     -tânis+N+AN+Der/Dim+N+AN+Pl+Px4Sg+Obv: ocânisisisiyiwa
+     -tânis+N+AN+Der/Dim+N+AN+Pl+Px1Pl: nicânisisisinânak
+     -tânis+N+AN+Der/Dim+N+AN+Pl+Px12Pl: kicânisisisinawak
+     -tânis+N+AN+Der/Dim+N+AN+Pl+Px2Pl: kicânisisisiwâwak
+     -tânis+N+AN+Der/Dim+N+AN+Pl+Px3Pl+Obv: ocânisisisiwâwa
+     -tânis+N+AN+Der/Dim+N+AN+Pl+Px4Pl+Obv: ocânisisisiyiwa
+

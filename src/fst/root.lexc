@@ -1,0 +1,830 @@
+! Divvun & Giellatekno - open source grammars for Plains Cree language
+! Copyright © 2015 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! Copyright © 2015–2023 Alberta Language Technology Lab (ALTLab)
+! http://altlab.ualberta.ca/
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU Affero General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. 
+!
+! This program is distributed in the hope that it will be useful,
+! but WITHOUT ANY WARRANTY; without even the implied warranty of
+! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+! GNU Affero General Public License for more details.
+!
+! You should have received a copy of the GNU Affero General Public License
+! along with this program. If not, see <https://www.gnu.org/licenses/>.
+!
+! Other licensing options are available upon request, please contact:
+! altlab@ualberta.ca
+
+! ========================================================================== !
+!! # Plains Cree morphological analyser
+! ========================================================================== !
+!! INTRODUCTION TO MORPHOLOGICAL ANALYSER OF Plains Cree LANGUAGE.
+ 
+
+Multichar_Symbols  !!≈ # Definitions for @CODE@
+
+!! ## Analysis symbols
+
+!! The morphological analyses of wordforms of Plains Cree are presented
+!! in this system in terms of the following symbols.
+!! (It is highly suggested to follow existing standards when adding new tags).
+
+!! POS
+
++N	        !!= * @CODE@ = Noun
++V	        !!= * @CODE@ = Verb
++Ipc		!!= * @CODE@ = Indeclinable Particle
++Prop       !!= * @CODE@
++Adv        !!= * @CODE@
++CC         !!= * @CODE@
++CS         !!= * @CODE@
++Interj     !!= * @CODE@
++Phr        !!= * @CODE@
++Pron       !!= * @CODE@
++Num        !!= * @CODE@
++Arab       !!= * @CODE@
++Rom        !!= * @CODE@
++PUNCT      !!= * @CODE@ = punctuation symbols
++LEFT       !!= * @CODE@ = the left part of a paired punctuation symbol
++RIGHT      !!= * @CODE@ = the right part of a paired punctuation symbol
++CLB        !!= * @CODE@ = clause boundary symbols
++Symbol     !!≈ * @CODE@ = independent symbols in the text stream, like £, €, ©
++ABBR       !!≈ * @CODE@ 
+
+!! Nominal morphology
+
++Loc        !!= * @CODE@ Locative
++Obv        !!= * @CODE@ Obviative
++Voc        !!= * @CODE@ Vocative
+
++Dim        !!= * @CODE@ Diminutive
+
+!! Particles
+
+
++Def	    !!= * @CODE@ This is the intransitive demonstrative, i.e. the definite.
++Indef      !!= * @CODE@ Indefinite
+
++Dem        !!= * @CODE@ Demonstrative
++Prox	    !!= * @CODE@ Demonstrative Proximate
++Med	    !!= * @CODE@ Demonstrative Medial
++Dist	    !!= * @CODE@ Demonstrative Distal
++Pers !!≈ * @CODE@ = personal pronouns? At least it seems so based on the code
++Interr     !!= * @CODE@ Interrogative (who/whose/what/what kind)
++Incl
++Foc	    !!= * @CODE@ Focus particle
+
++Ord !!≈ ordinals
+
+!! Verbal MSP
++Prs  !!= * @CODE@
++Fut  !!= * @CODE@
++Prt  !!= * @CODE@
++Cnj  !!= * @CODE@
++Int  !!= * @CODE@ Future Intentional
++Def  !!= * @CODE@ Future Definite (TODO: okay to overlap with particle tag of the same name?)
+
++Ind  !!= * @CODE@ Indicative, aka Independent
++Imp  !!= * @CODE@ Imperative, consider deleting +Imp tag
++Del  !!= * @CODE@ Delayed imperative
++Imm  !!= * @CODE@ Immediate imperative, consider deleting +Imp tag
++Cond !!= * @CODE@ TODO: Should Future Conditional be tagget Fut only? Conor: we will split the Future tags
+
++1Sg    !!= * @CODE@ first singular
++2Sg    !!= * @CODE@ etc
+! +2Sg/Pl   !!= * @CODE@ Used in the syncretic 2sg/pl -> 1pl in the VTA paradigms (N.B. obsolete)
++3Sg    !!= * @CODE@
+
++1Pl    !!= * @CODE@ 1Pl is exclusive plural (I, them, not you)
++2Pl    !!= * @CODE@
++3Pl    !!= * @CODE@
++12Pl   !!= * @CODE@ 12Pl is inclusive plural (I, you, ...)
++4Sg    !!= * @CODE@ Fourth Person inanimate singlar (used only in the VII paradigms)
++4Pl    !!= * @CODE@ Fourth Person inanimate plural (used only in the VII paradigms)
++4Sg/Pl    !!= * @CODE@
++5Sg/Pl    !!= * @CODE@
+
++1SgO   !!= * @CODE@ objective conjugation
++2SgO   !!= * @CODE@
++2Sg/PlO   !!= * @CODE@ Used in the syncretic 2sg/pl -> 1pl in the VTA paradigms
++3SgO   !!= * @CODE@
++SgO    !!= * @CODE@
++1PlO   !!= * @CODE@
++2PlO   !!= * @CODE@
++12PlO	!!= * @CODE@
++3PlO   !!= * @CODE@
++PlO    !!= * @CODE@
++4Sg/PlO !!= * @CODE@ ambiguous 4th person (both Singular and Plural)
++5Sg/PlO !!= * @CODE@ ambiguous 5th person (both Singular and Plural)
++X !!= * @CODE@ Unspecified actor forms Okimāsis p. 118
+
+!! Person prefix fragment features
++1
++2
++3
+1+
+2+
+3+
+
+
+!! Nominal morphosyntactic features
+! Number
++Sg		 !!= * @CODE@ singular
++Pl		 !!= * @CODE@ plural
+
+! Possession
++Px1Sg	 !!= * @CODE@ person prefixes for nouns
++Px2Sg	 !!= * @CODE@
++Px3Sg	 !!= * @CODE@
++Px4Sg	 !!= * @CODE@
++Px1Pl	 !!= * @CODE@ obviative
++Px12Pl	 !!= * @CODE@ inclusive
++Px2Pl	 !!= * @CODE@
++Px3Pl	 !!= * @CODE@
++Px4Pl	 !!= * @CODE@
++Der/Dim !!= * @CODE@ diminutive derivation
+
+! Reduplication
+RdplW+ !!= * @CODE@ Reduplication Type 1 (Weak)
+RdplS+ !!= * @CODE@ Reduplication Type 2 (Strong)
+
++Der/Com !!= * @CODE@ Comitative circumfix (wîci-...-m)
++Der/X !!= * @CODE@ VTI x-actor to VII-1
+
+!! Verb conjugation (transitivity + animacy classes)
++AI      !!= * @CODE@ intransitive with animate subject,
++II      !!= * @CODE@ intransitive with inanimate subject,
++TA      !!= * @CODE@ transitive with animate object, and
++TI      !!= * @CODE@ transitive with inanimate object.
+
+!! Noun animacy and dependency classes
++A		 !!= * @CODE@ animate noun
++I		 !!= * @CODE@ inanimate noun
++D		 !!= * @CODE@ dependent noun
+
+! +Incl    !!= * @CODE@ me too, etc. (N.B. Not used yet)
++Qst     !!= * @CODE@ yes-no question particle; cî
++Neg     !!= * @CODE@ negation; [na]môy[a].
+
+!! Preverbs
+
+! Initial change in changed conjunct forms (sometimes treated as preverb-like)
+IC+
+
+! Tense preverbs
+
+PV/ki+ ! Past tense
+PV/wi+ ! Future intentional tense
+PV/ka+ ! Future definite tense
+
+! Conjunct preverbs
+
+PV/e+
+PV/kaa+
+
+! Comitative preverb
+
+PV/wici+
+
+! General preverbs
+
+PV/acici+
+PV/ahcahkowi+
+PV/akawaci+
+PV/ako+
+PV/akoci+
+PV/apihci+
+PV/apisci+
+PV/apisi+
+PV/apisisi+
+PV/ase+
+PV/aseya+
+PV/ati+
+PV/atimi+
+PV/ayamihawi+
+PV/ayamihewi+
+PV/ayaso+
+PV/ayi+
+PV/ahci+
+PV/ahkami+
+PV/ako+
+PV/akwa+
+PV/ami+
+PV/aniski+
+PV/apihci+
+PV/apihtawi+
+PV/apihta+
+PV/apihta-kisikawi+
+PV/asawi+
+PV/ase+
+PV/asowi+
+PV/aste+
+PV/ata+
+PV/ayici+
+PV/cipehtako+
+PV/isi+
+PV/isko+
+PV/ispi+
+PV/ispihci+
+PV/itahto+
+PV/ikate+
+PV/ka-ki+
+PV/kah-kape+
+PV/kakepaci+
+PV/kakwahyaki+
+PV/kakwayaki+
+PV/kakwe+
+PV/kakweci+
+PV/kanaci+
+PV/kape+
+PV/kaski+
+PV/kaskitewi+
+PV/kayasi+
+PV/kah+
+PV/kah-kape+
+! PV/kah-kape+ ! Check
+PV/kamwaci+
+PV/kaspi+
+PV/kawi+
+PV/ke+
+PV/kekaci+
+PV/ket+
+PV/ketiski+
+PV/kici+
+PV/kihci+
+PV/kika+
+PV/kipi+
+PV/kisci+
+PV/kise+
+PV/kisipi+
+PV/kisiska+
+PV/kisiwi+
+PV/kisiwi+
+PV/kita+
+PV/kita-ki+
+PV/kitimaki+
+PV/kiye+
+PV/kiyi+
+PV/kimoci+
+PV/kipi+
+PV/kisi+
+PV/kiski+
+PV/kisopwe+
+PV/kiwaci+
+PV/kiwe+
+PV/koci+
+PV/kota+
+PV/kotate+
+PV/kwataki+
+PV/kwayako+
+PV/kwayaski+
+PV/kwayasko+
+PV/kwayaci+
+PV/kwahci+
+PV/kwaskwe+
+PV/kwataki+
+PV/kweski+
+PV/kwetawi+
+PV/kwitawi+
+PV/maci+
+PV/maci-manitowi+
+PV/mahti+
+PV/mana+
+PV/mani+
+PV/masta+
+PV/matwe+
+PV/maaci+
+PV/mahi+
+PV/mamawi+
+PV/maninakisko+
+PV/maski+
+PV/mayaci+
+PV/mayi+
+PV/mecimwaci+
+PV/mêkwa+
+PV/mesci+
+PV/mesti+
+PV/mihko+
+PV/mihyawe+
+PV/misakame+
+PV/misi+
+PV/mistiko+
+PV/miyo+
+PV/mosci+
+PV/mohco+
+PV/mwayi+
+PV/nahi+
+PV/nahta+
+PV/naki+
+PV/napaki+
+PV/naspaci+
+PV/natawi+
+PV/nawaci+
+PV/naci+
+PV/nanitaw+
+PV/natakasi+
+PV/nawayawi+
+PV/nehiyawi+
+PV/nihta+
+PV/nipahi+
+PV/nisihkaci+
+PV/nitawi+
+PV/nihci+
+PV/nihtaciwe+
+PV/nikani+
+PV/nimi+
+PV/nipa+
+PV/niso+
+PV/nohte+
+PV/ocihci+
+PV/ohci+
+PV/ohtiskawi+
+PV/osami+
+PV/osawaski+
+PV/osawi+
+PV/oski+
+PV/otami+
+PV/o+
+PV/oh+
+PV/paci+
+PV/pahki+
+PV/pakwano+
+PV/papa+
+PV/papami+
+PV/papasi+
+PV/pasiko+
+PV/paspi+
+PV/pahkaci+
+PV/pahko+
+PV/pasci+
+PV/pasici+
+PV/pe+
+PV/peyako+
+PV/pimi+
+PV/pimici+
+PV/pimipahci+
+PV/pisci+
+PV/pihci+
+PV/pihtawe+
+PV/pihtoke+
+PV/pikiskaci+
+PV/pimi+
+PV/pitosi+
+PV/piwi+
+PV/poni+
+PV/posko+
+PV/pwana+
+PV/pwatawi+
+PV/saskaci+
+PV/sakewe+
+PV/sapo+
+PV/saposci+
+PV/sasakici+
+PV/sehke+
+PV/sesawi+
+PV/sikaci+
+PV/simaci+
+PV/sipwe+
+PV/sisikoci+
+PV/sisiwe+
+PV/sikawi+
+PV/sohkahat+
+PV/sohki+
+PV/soniyawi+
+PV/ta+
+PV/ta-ki+
+PV/tahci+
+PV/tahki+
+PV/tahkohci+
+PV/tahto+
+PV/takahki+
+PV/tako+
+PV/tasi+
+PV/tah+
+PV/tahci+
+PV/tapi+
+PV/tapisi+
+PV/tehci+
+PV/tepi+
+PV/tewi+
+PV/teyi+
+PV/tipi+
+PV/tita+
+PV/tomi+
+PV/wahke+
+PV/wani+
+PV/wayawi+
+PV/wayesi+
+PV/wa+
+PV/wah+
+PV/waki+
+PV/wapani+
+PV/wapohki+
+PV/wasa+
+PV/wase+
+PV/wawiye+
+PV/wehci+
+PV/wiyipi+
+PV/wihpi+
+PV/wini+
+PV/wipi+
+PV/wipo+
+PV/wisaki+
+PV/wito+
+PV/yahki+
+PV/yikate+
+PV/yipe+
+PV/yoski+
+
+!! ## Auxiliary symbols
+
+!! These symbols either shape or govern the
+!! morphophonological structure
+
+%>      !!= * @CODE@ suffix border
+%< 	 !!= * @CODE@ prefix border
+
+
+        !! ## Symbols that need to be escaped on the lower side (towards twolc):
+ »7     !!≈ * **@CODE@**:  Literal »
+ «7     !!≈ * **@CODE@**:  Literal «
+        !! ```
+ %[%>%] !!= @CODE@ - Literal >
+ %[%<%] !!= @CODE@ - Literal <
+        !! ```
+
+!! Special characters for morphophonology
+m2      !!= * @CODE@ for possessive suffix -(o)m
+o2      !!= * @CODE@ deleting schwa
+u2      !!= * @CODE@ u that keeps following schwa from deleting (-C(u) ~ -Cuwok, rather than -C(u) ~ -Cuk)
+w2      !!= * @CODE@ non-collapsing glide, e.g. mowêw:mow2
+t2 	 !!= * @CODE@ Epenthetic -t- between person prefixes and vowel-initial stems
+t3      !!= * @CODE@ t to s in VTA-4
+t4      !!= * @CODE@ t:c in VTI-1 with unspecified actor
+y2      !!= * @CODE@ non-collapsing glide
+ý2	 !!= * @CODE@ non-collapsing glide
+y3      !!= * @CODE@ epenthetic joiner in reduplication of vowel-initial stems
+i2      !!= * @CODE@ VTA-5i epenthesis.
+
+h2 	 !!= * @CODE@  Prefix in possessives
+
+! Reduplication
+d1  !!=* @CODE@  Reduplication consonant marker
+d2  !!=* @CODE@  Reduplication consonant marker
+
+!! Triggers for various morphophonological phenomena
+!! Mostly, these are not realized themselves as any grapheme/phoneme
+
+%^DIM	 !!=* @CODE@  Diminutive suffix
+%^COM    !!=* Comitative suffix marker (for stem-suffix juncture vowel lengthening)
+%^IC     !!=* @CODE@ Trigger Initial Change in changed conjunct forms
+%^EGLOT  !!= * @CODE@  glottal stop after e, for eh- in conjunctive order
+%^EPSCHWA !!= * @CODE@ epenthetic schwa in front of certain suffixes (poss -m, loc -k)
+
+
+!! ## Usage tags
+
+!! These tags distinguish different special-purpose analysers
+!! and generators from each other. Thus, for examples, we have
+!! normative and descriptive analysers, and generators for different purposes.
+
++Err/Orth !!= * @CODE@ tag for substandard forms
++Err/Frag !!= * @CODE@ tag for word-form fragments
++Dial !!= * @CODE@ tag for dialectical forms that can't be called errors
++Use/NG  !!= * @CODE@ not-generate, for ped generation isme-ped.fst
++Eng !!≈ * @CODE@ indicates that this is an English form
+
+!! Flagdiacritics
+
+!! These are documented in Chapter 8 of Beesley/Karttunen, p. 456 zB.
+
+!! For indicative, there are prefixes, so here we need one
+!! flag for each person-number combination. Note that
+!! for the inverse objective conjugation, the flag refers to
+!! the **prefix**, not to the subject. So *indsg1* refers to either
+!! subject = 1Sg or object = 1Sg. The 3-3 forms are prefixless.
+
+! Associative/comitative prefix wîci- (part of circumfix wîci-...-m)
+
+@U.wici.NULL@
+@U.wici.wici@
+
+! Reflexive
+@U.rflx.NULL@
+@U.rflx.rflx@
+
+! Hyphen consistently used as joiner or not
+
+@U.joiner.NULL@
+@U.joiner.hyphen@
+
+@P.joiner.NULL@
+@P.joiner.hyphen@
+
+@R.joiner.hyphen@
+@R.joiner.NULL@
+@D.joiner.NULL@
+
+! Prefixal fragments
+
+@U.frag.FRAG@
+@P.frag.FRAG@
+@R.frag.FRAG@
+@D.frag.FRAG@
+
+!! The conjunct form always has
+!! the ê- prefix, and future conditional never has a prefix.
+
+@U.verb.FutCon@ !!= * @CODE@ Future Conditional
+
+!! Prefixes with a certain phonological content:
+
+@U.person.NULL@ !!= * @CODE@
+@U.person.NI@ !!= * @CODE@
+@U.person.KI@ !!= * @CODE@
+@D.person@
+@R.person@
+
+!! Order
+
+@U.order.indep@ !!= * @CODE@ Independent
+@U.order.cnj@   !!= * @CODE@ Conjunct
+@U.order.imp@   !!= * @CODE@ Imperative
+@U.order.FutCon@
+
+@P.order.cnj@
+@P.order.indep@
+
+@R.order.indep@
+@R.order.cnj@
+
+@D.order.indep@
+@D.order.cnj@
+
+@D.order@
+@D.tense@
+
+
+!! Tense
+
+@U.tense.Prs@
+@U.tense.Prt@
+@U.tense.FutDef@
+@U.tense.FutInt@
+@U.tense.FutCon@
+
+@U.Imm.Imp@
+@U.Imm.Del@
+
+
+! Changed conjunct trigger flags
+@P.cnj.CC@
+@C.cnj@
+@R.cnj.CC@
+@D.cnj.CC@
+
+
+!! New multichar symbols for nouns
++Sg
++Pl
++Obv
++Loc
++Distr
+
+! Derived diminunitive forms
++Der/Dim
+
+! Derived stems (with the derivational FST)
++Der/N
++Der/V
+
+! Person suffixes (possession or actor/goal)
++Px1Sg
++Px2Sg
++Px3Sg
++Px1Pl
++Px21Pl
++Px2Pl
++Px3Pl
++Px4Sg/Pl
++PxX
+
+! Marking the continuation of Dependent noun status for Derived Diminutive nouns
+@P.dep.DEP@
+@R.dep.DEP@
+@D.dep.DEP@
+
+! Type or lack of a person prefix for both Independent Verbs and Possessed Nouns
+@U.person.NI@
+@P.person.NI@
+@R.person.NI@
+@U.person.KI@
+@P.person.KI@
+@R.person.KI@
+@U.person.O@
+@P.person.O@
+@R.person.O@
+@D.person.O@
+@U.person.MI@
+@P.person.MI@
+@R.person.MI@
+@D.person.MI@
+@U.person.NULL@
+@P.person.NULL@
+@R.person.NULL@
+@D.person.NULL@
+
+! Necessity of singular suffix -a/-i for single-syllable noun stems
+@U.sg.I@
+@U.sg.A@
+@P.sg.I@
+@P.sg.A@
+@R.sg.I@
+@R.sg.A@
+@D.sg.I@
+@D.sg.I@
+@D.sg@
+@C.sg@
+
+! Marking singular-only or plural-only nouns
+@P.number.SG@
+@D.number.SG@
+@P.number.PL@
+@D.number.PL@
+
+! Marking whether the -im suffix is required in possessed forms, or a plural possessor
+@U.im.IM@
+@P.im.IM@
+@R.im.IM@
+@D.im.IM@
+@U.im.NULL@
+@P.im.NULL@
+@R.im.NULL@
+@D.poss.NULL@
+@U.poss.PL@
+@R.poss.PL@
+@D.poss.PL@
+@D.poss@
+
+! Marking diminutive suffix type, when only one is possible
+! Otherwise, both diminutives are generated/accepted
+@U.is.IS@
+@P.is.IS@
+@R.is.IS@
+@D.is.IS@
+@U.isis.ISIS@
+@P.isis.ISIS@
+@R.isis.ISIS@
+@D.isis.ISIS@
+
+! Marking lexicalized diminutive stems so that they cannot be rediminutivized
+@P.dim.DIM@
+@R.dim.DIM@
+@D.dim@
+
+! Marking animate nouns that cannot take the locative suffix
+@P.loc.NULL@
+@D.loc.NULL@
+
+! Declination/Conjugation inflectional classes for derivational FST
+@P.infl.NA-1@
+@R.infl.NA-1@
+@P.infl.NA-2@
+@R.infl.NA-2@
+@P.infl.NA-3@
+@R.infl.NA-3@
+@P.infl.NA-4@
+@R.infl.NA-4@
+@P.infl.NA-4w@
+@R.infl.NA-4w@
+@P.infl.NA-x@
+@R.infl.NA-x@
+@P.infl.NDA-1@
+@R.infl.NDA-1@
+@P.infl.NDA-2@
+@R.infl.NDA-2@
+@P.infl.NDA-3@
+@R.infl.NDA-3@
+@P.infl.NDA-4@
+@R.infl.NDA-4@
+@P.infl.NDA-4w@
+@R.infl.NDA-4w@
+@P.infl.NDA-x@
+@R.infl.NDA-x@
+@P.infl.NDI-1@
+@R.infl.NDI-1@
+@P.infl.NDI-2@
+@R.infl.NDI-2@
+@P.infl.NDI-3@
+@R.infl.NDI-3@
+@P.infl.NDI-4@
+@R.infl.NDI-4@
+@P.infl.NDI-5@
+@R.infl.NDI-5@
+@P.infl.NI-1@
+@R.infl.NI-1@
+@P.infl.NI-2@
+@R.infl.NI-2@
+@P.infl.NI-3@
+@R.infl.NI-3@
+@P.infl.NI-4@
+@R.infl.NI-4@
+@P.infl.NI-4w@
+@R.infl.NI-4w@
+@P.infl.NI-5@
+@R.infl.NI-5@
+@P.infl.NI-?@
+@R.infl.NI-?@
+
+@P.infl.VAI-1@
+@R.infl.VAI-1@
+@P.infl.VAI-2@
+@R.infl.VAI-2@
+@P.infl.VAI-3@
+@R.infl.VAI-3@
+@P.infl.VAIae@
+@R.infl.VAIae@
+@P.infl.VAIio@
+@R.infl.VAIio@
+@P.infl.VII-1n@
+@R.infl.VII-1n@
+@P.infl.VII-1v@
+@R.infl.VII-1v@
+@P.infl.VII-2n@
+@R.infl.VII-2n@
+@P.infl.VII-2v@
+@R.infl.VII-2v@
+@P.infl.VTA-1@
+@R.infl.VTA-1@
+@P.infl.VTA-2@
+@R.infl.VTA-2@
+@P.infl.VTA-3@
+@R.infl.VTA-3@
+@P.infl.VTA-4@
+@R.infl.VTA-4@
+@P.infl.VTA-5@
+@R.infl.VTA-5@
+@P.infl.VTI-1@
+@R.infl.VTI-1@
+@P.infl.VTI-2@
+@R.infl.VTI-2@
+@P.infl.VTI-3@
+@R.infl.VTI-3@
+
+@P.infl.NONTERM@
+@R.infl.NONTERM@
+
+! Special characters for matching new LEXC code for Nouns with TWOLC morphonological rules 
+i2
+i4
+o2
+u2
+m2
+t2
+t3
+w2
+w3
+y4
+ý2
+%<
+%>
+
+! Special characters for matching new LEXC code for Verbs with TWOLC morphonological rules 
+m2
+n2
+n3
+o2
+u2
+i3
+ii2
+
+! Special character/name placeholder for Derivational FST
+DRV-FST
+
+!! End of new and all Multichar_Symbols
+
+! Key lexicon
+
+LEXICON Root         !!=  @CODE@ is where it all starts
+NOUN_PREFIXES   ;    !!= * @CODE@
+NOUN_IRREGULARS ;    !!= * @CODE@
+NOUN_VOCATIVES  ;    !!= * @CODE@
+VerbPrefixes    ;    !!= * @CODE@
+Pronoun         ;    !!= * @CODE@
+Propernouns     ;    !!= * @CODE@
+Particles       ;    !!= * @CODE@
+Numerals        ;    !!= * @CODE@
+Abbreviation    ;    !!= * @CODE@
+Punctuation     ;    !!= * @CODE@
+Symbols         ;    !!= * @CODE@
+NON_STANDARD     ;    !!= * @CODE@
+
+LEXICON Propernouns
+ProperNoun-crk  ;
+ProperNoun-eng  ;

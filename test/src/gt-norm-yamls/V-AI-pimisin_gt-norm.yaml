@@ -1,0 +1,143 @@
+Config:
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Verb - pimisin - ok : # Ordinary VAIn
+
+  
+     pimisin+V+AI+Ind+1Sg:    nipimisinin # INDEPENDENT
+     pimisin+V+AI+Ind+2Sg:    kipimisinin
+     pimisin+V+AI+Ind+3Sg:    pimisin
+     pimisin+V+AI+Ind+3Sg+Dial:    pimisiniw
+     pimisin+V+AI+Ind+4Sg/Pl: pimisiniyiwa
+     pimisin+V+AI+Ind+1Pl:    nipimisininân
+     pimisin+V+AI+Ind+12Pl:   [kipimisininaw, kipimisininânaw]
+     pimisin+V+AI+Ind+2Pl:    kipimisininâwâw
+     pimisin+V+AI+Ind+3Pl:    pimisinwak
+     pimisin+V+AI+Ind+3Pl+Dial:    pimisiniwak
+     pimisin+V+AI+Ind+X:      [pimisininâniwan, pimisininâniwiw]
+
+     PV/e+pimisin+V+AI+Cnj+1Sg:    ê-pimisiniyân # CONJUNCT
+     PV/e+pimisin+V+AI+Cnj+2Sg:    ê-pimisiniyan
+     PV/e+pimisin+V+AI+Cnj+3Sg:    ê-pimisihk
+     PV/e+pimisin+V+AI+Cnj+3Sg+Dial:    ê-pimisinit
+     PV/e+pimisin+V+AI+Cnj+4Sg/Pl: ê-pimisiniyit
+     PV/e+pimisin+V+AI+Cnj+1Pl:    ê-pimisiniyâhk
+     PV/e+pimisin+V+AI+Cnj+12Pl:   ê-pimisiniyahk
+     PV/e+pimisin+V+AI+Cnj+2Pl:    ê-pimisiniyêk
+     PV/e+pimisin+V+AI+Cnj+3Pl:    ê-pimisihkik
+     PV/e+pimisin+V+AI+Cnj+3Pl+Dial:    ê-pimisinicik
+     PV/e+pimisin+V+AI+Cnj+X:      [ê-pimisinihk, ê-pimisininâniwahk, ê-pimisininâniwik]
+
+     PV/ki+pimisin+V+AI+Ind+1Sg:    nikî-pimisinin # PRT INDEPENDENT
+     PV/ki+pimisin+V+AI+Ind+2Sg:    kikî-pimisinin
+     PV/ki+pimisin+V+AI+Ind+3Sg:    kî-pimisin
+     PV/ki+pimisin+V+AI+Ind+3Sg+Dial:    kî-pimisiniw
+     PV/ki+pimisin+V+AI+Ind+4Sg/Pl: kî-pimisiniyiwa
+     PV/ki+pimisin+V+AI+Ind+1Pl:    nikî-pimisininân
+     PV/ki+pimisin+V+AI+Ind+12Pl:   [kikî-pimisininaw, kikî-pimisininânaw]
+     PV/ki+pimisin+V+AI+Ind+2Pl:    kikî-pimisininâwâw
+     PV/ki+pimisin+V+AI+Ind+3Pl:    kî-pimisinwak
+     PV/ki+pimisin+V+AI+Ind+3Pl+Dial:    kî-pimisiniwak
+     PV/ki+pimisin+V+AI+Ind+X:      [kî-pimisininâniwan, kî-pimisininâniwiw]
+
+     PV/e+PV/ki+pimisin+V+AI+Cnj+1Sg:    ê-kî-pimisiniyân # PRT CONJUNCT
+     PV/e+PV/ki+pimisin+V+AI+Cnj+2Sg:    ê-kî-pimisiniyan
+     PV/e+PV/ki+pimisin+V+AI+Cnj+3Sg:    ê-kî-pimisihk
+     PV/e+PV/ki+pimisin+V+AI+Cnj+3Sg+Dial:    ê-kî-pimisinit
+     PV/e+PV/ki+pimisin+V+AI+Cnj+4Sg/Pl: ê-kî-pimisiniyit
+     PV/e+PV/ki+pimisin+V+AI+Cnj+1Pl:    ê-kî-pimisiniyâhk
+     PV/e+PV/ki+pimisin+V+AI+Cnj+12Pl:   ê-kî-pimisiniyahk
+     PV/e+PV/ki+pimisin+V+AI+Cnj+2Pl:    ê-kî-pimisiniyêk
+     PV/e+PV/ki+pimisin+V+AI+Cnj+3Pl:    ê-kî-pimisihkik
+     PV/e+PV/ki+pimisin+V+AI+Cnj+3Pl+Dial:    ê-kî-pimisinicik
+     PV/e+PV/ki+pimisin+V+AI+Cnj+X:      [ê-kî-pimisinihk, ê-kî-pimisininâniwahk, ê-kî-pimisininâniwik]
+
+
+     PV/wi+pimisin+V+AI+Ind+1Sg:    niwî-pimisinin # FUT INT INDEPENDENT
+     PV/wi+pimisin+V+AI+Ind+2Sg:    kiwî-pimisinin
+     PV/wi+pimisin+V+AI+Ind+3Sg:    wî-pimisin
+     PV/wi+pimisin+V+AI+Ind+3Sg+Dial:    wî-pimisiniw
+     PV/wi+pimisin+V+AI+Ind+4Sg/Pl: wî-pimisiniyiwa
+     PV/wi+pimisin+V+AI+Ind+1Pl:    niwî-pimisininân
+     PV/wi+pimisin+V+AI+Ind+12Pl:   [kiwî-pimisininaw, kiwî-pimisininânaw]
+     PV/wi+pimisin+V+AI+Ind+2Pl:    kiwî-pimisininâwâw
+     PV/wi+pimisin+V+AI+Ind+3Pl:    wî-pimisinwak
+     PV/wi+pimisin+V+AI+Ind+3Pl+Dial:    wî-pimisiniwak
+     PV/wi+pimisin+V+AI+Ind+X:      [wî-pimisininâniwan, wî-pimisininâniwiw]
+
+     PV/e+PV/wi+pimisin+V+AI+Cnj+1Sg:    ê-wî-pimisiniyân # FUT INT CONJUNCT
+     PV/e+PV/wi+pimisin+V+AI+Cnj+2Sg:    ê-wî-pimisiniyan
+     PV/e+PV/wi+pimisin+V+AI+Cnj+3Sg:    ê-wî-pimisihk
+     PV/e+PV/wi+pimisin+V+AI+Cnj+3Sg+Dial:    ê-wî-pimisinit
+     PV/e+PV/wi+pimisin+V+AI+Cnj+4Sg/Pl: ê-wî-pimisiniyit
+     PV/e+PV/wi+pimisin+V+AI+Cnj+1Pl:    ê-wî-pimisiniyâhk
+     PV/e+PV/wi+pimisin+V+AI+Cnj+12Pl:   ê-wî-pimisiniyahk
+     PV/e+PV/wi+pimisin+V+AI+Cnj+2Pl:    ê-wî-pimisiniyêk
+     PV/e+PV/wi+pimisin+V+AI+Cnj+3Pl:    ê-wî-pimisihkik
+     PV/e+PV/wi+pimisin+V+AI+Cnj+3Pl+Dial:    ê-wî-pimisinicik
+     PV/e+PV/wi+pimisin+V+AI+Cnj+X:      [ê-wî-pimisinihk, ê-wî-pimisininâniwahk, ê-wî-pimisininâniwik]
+
+     PV/ka+pimisin+V+AI+Ind+1Sg:    nika-pimisinin # FUT DEF INDEPENDENT
+     PV/ka+pimisin+V+AI+Ind+2Sg:    kika-pimisinin
+     PV/ka+pimisin+V+AI+Ind+3Sg:    ka-pimisin
+     PV/ka+pimisin+V+AI+Ind+3Sg+Dial:    ka-pimisiniw
+     PV/ka+pimisin+V+AI+Ind+4Sg/Pl: ka-pimisiniyiwa
+     PV/ka+pimisin+V+AI+Ind+1Pl:    nika-pimisininân
+     PV/ka+pimisin+V+AI+Ind+12Pl:   [kika-pimisininaw, kika-pimisininânaw]
+     PV/ka+pimisin+V+AI+Ind+2Pl:    kika-pimisininâwâw
+     PV/ka+pimisin+V+AI+Ind+3Pl:    ka-pimisinwak
+     PV/ka+pimisin+V+AI+Ind+3Pl+Dial:    ka-pimisiniwak
+     PV/ka+pimisin+V+AI+Ind+X:      [ka-pimisininâniwan, ka-pimisininâniwiw]
+     
+     pimisin+V+AI+Fut+Cond+1Sg:    pimisiniyâni # FUNT COND
+     pimisin+V+AI+Fut+Cond+2Sg:    pimisiniyani
+     pimisin+V+AI+Fut+Cond+3Sg:    [pimisinici, pimisihki]
+     pimisin+V+AI+Fut+Cond+4Sg/Pl: pimisiniyici
+     pimisin+V+AI+Fut+Cond+1Pl:    pimisiniyâhki
+     pimisin+V+AI+Fut+Cond+12Pl:   [pimisiniyahki, pimisiniyahko]
+     pimisin+V+AI+Fut+Cond+2Pl:    pimisiniyêko
+     pimisin+V+AI+Fut+Cond+3Pl:    [pimisinitwâwi, pimisihkwâwi]
+
+     pimisin+V+AI+Imp+Imm+2Sg:  pimisini # IMPERATIVE
+     pimisin+V+AI+Imp+Imm+12Pl: pimisinitân
+     pimisin+V+AI+Imp+Imm+2Pl:  pimisinik
+
+
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+1Sg+3SgO: [niwî-wîci-pimisinimâw] # com SET I
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+2Sg+3SgO: [kiwî-wîci-pimisinimâw]
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+1Pl+3SgO: [niwî-wîci-pimisinimânân]
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+12Pl+3SgO: [kiwî-wîci-pimisinimânaw]
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+2Pl+3SgO: [kiwî-wîci-pimisinimâwâw]
+     
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+1Sg+3PlO: [niwî-wîci-pimisinimâwak] # com SET I-Pl
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+2Sg+3PlO: [kiwî-wîci-pimisinimâwak]
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+1Pl+3PlO: [niwî-wîci-pimisinimânânak]
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+12Pl+3PlO: [kiwî-wîci-pimisinimânawak]
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+2Pl+3PlO: [kiwî-wîci-pimisinimâwâwak]
+
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+2Sg+1SgO: [kiwî-wîci-pimisinimin] # com SET II
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+2Sg+1PlO: [kiwî-wîci-pimisiniminân]
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+2Pl+1SgO: [kiwî-wîci-pimisiniminâwâw]
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+2Pl+1PlO: [kiwî-wîci-pimisiniminân]
+
+
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+3Sg+4Sg/PlO: [wî-wîci-pimisinimêw] # com SET III
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+3Pl+4Sg/PlO: [wî-wîci-pimisinimêwak]
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+4Sg/Pl+5Sg/PlO: [wî-wîci-pimisinimêyiwa]
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+3Sg+5Sg/PlO: [wî-wîci-pimisinimimêw] # From Wolvengrey P.C. 27/6/15 (See /doc/)
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+3Pl+5Sg/PlO: [wî-wîci-pimisinimimêwak] # From Wolvengrey P.C. 27/6/15 (See /doc/)
+
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+1Sg+4Sg/PlO: [niwî-wîci-pimisinimimâwa] # com SET IV
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+2Sg+4Sg/PlO: [kiwî-wîci-pimisinimimâwa]
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+1Pl+4Sg/PlO: [niwî-wîci-pimisinimimânâna]
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+12Pl+4Sg/PlO: [kiwî-wîci-pimisinimimânawa]
+     PV/wi+pimisin+V+AI+Der/Com+V+TA+Ind+2Pl+4Sg/PlO: [kiwî-wîci-pimisinimimâwâwa]
+    
+     
+
+     
+

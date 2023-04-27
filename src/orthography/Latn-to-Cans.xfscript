@@ -1,0 +1,405 @@
+
+! Script for latin to syll for Plains Cree, 
+! or more general, for Western Cree
+
+define Decapitalisation [ A -> a , 
+                          B -> b ,
+                          C -> c ,
+                          D -> d ,
+                          E -> e ,
+                          F -> f ,
+                          G -> g ,
+                          H -> h ,
+                          I -> i ,
+                          J -> j ,
+                          K -> k ,
+                          L -> l ,
+                          M -> m ,
+                          N -> n ,
+                          O -> o ,
+                          P -> p ,
+                          Q -> q ,
+                          R -> r ,
+                          S -> s ,
+                          T -> t ,
+                          U -> u ,
+                          V -> v ,
+                          W -> w ,
+                          X -> x ,
+                          Y -> y ,
+                          Z -> z ]
+                          ;
+
+define LengthSymbol [ ā -> â ,  
+                      ē -> ê ,  
+                      ī -> î ,  
+                      ō -> ô ,
+                      Ā -> â ,
+                      Ē -> ê ,
+                      Ī -> î ,
+                      Ō -> ô ,
+                      e -> ê ]
+                      ;
+
+! th rules 
+
+define thiRule [ t h i ] -> ᖨ ;
+define theRule [ t h e ] -> ᖧ ;
+define thoRule [ t h o ] -> ᖪ ;
+define thaRule [ t h a ] -> ᖬ ; 
+
+! with w
+
+! 3-letter symbols
+
+define cwaRule [ c w a ] -> ᒝ  ;  
+define cwiRule [ c w i ] -> ᒕ  ;  
+define cwoRule [ c w o ] -> ᒙ  ;  
+define cwâRule [ c w â ] -> ᒟ  ;  
+define cwêRule [ c w ê ] -> ᒓ  ;  
+define cwîRule [ c w î ] -> ᒗ  ;  
+define cwôRule [ c w ô ] -> ᒛ  ;  
+
+define kwaRule [ k w a ] -> ᑿ  ;  
+define kwiRule [ k w i ] -> ᑷ  ;  
+define kwoRule [ k w o ] -> ᑻ  ;  
+define kwâRule [ k w â ] -> ᒁ  ;  
+define kwêRule [ k w ê ] -> ᑵ  ;  
+define kwîRule [ k w î ] -> ᑹ  ;  
+define kwôRule [ k w ô ] -> ᑽ  ;  
+
+define mwaRule [ m w a ] -> ᒷ  ;  
+define mwiRule [ m w i ] -> ᒯ  ;  
+define mwoRule [ m w o ] -> ᒳ  ;  
+define mwâRule [ m w â ] -> ᒹ  ;  
+define mwêRule [ m w ê ] -> ᒭ  ;  
+define mwîRule [ m w î ] -> ᒱ  ;  
+define mwôRule [ m w ô ] -> ᒵ  ;  
+
+define nwaRule [ n w a ] -> ᓌ  ;  
+define nwiRule [ n w i ] -> ᣇ  ;  
+define nwoRule [ n w o ] -> ᣋ  ;  
+define nwâRule [ n w â ] -> ᓎ  ;  
+define nwêRule [ n w ê ] -> ᓊ  ;  
+define nwîRule [ n w î ] -> ᣉ  ;  
+define nwôRule [ n w ô ] -> ᣍ  ;  
+
+define pwaRule [ p w a ] -> ᑅ  ;  
+define pwiRule [ p w i ] -> ᐽ  ;  
+define pwoRule [ p w o ] -> ᑁ  ;  
+define pwâRule [ p w â ] -> ᑇ  ;  
+define pwêRule [ p w ê ] -> ᐻ  ;  
+define pwîRule [ p w î ] -> ᐿ  ;  
+define pwôRule [ p w ô ] -> ᑃ  ;  
+
+define swaRule [ s w a ] -> ᔁ  ;  
+define swiRule [ s w i ] -> ᓹ  ;  
+define swoRule [ s w o ] -> ᓽ  ;  
+define swâRule [ s w â ] -> ᔃ  ;  
+define swêRule [ s w ê ] -> ᓷ  ;  
+define swîRule [ s w î ] -> ᓻ  ;  
+define swôRule [ s w ô ] -> ᓿ  ;  
+
+define twaRule [ t w a ] -> ᑢ  ;  
+define twiRule [ t w i ] -> ᑚ  ;  
+define twoRule [ t w o ] -> ᑞ  ;  
+define twâRule [ t w â ] -> ᑤ  ;  
+define twêRule [ t w ê ] -> ᑘ  ;  
+define twîRule [ t w î ] -> ᑜ  ;  
+define twôRule [ t w ô ] -> ᑠ  ;  
+
+define ywaRule [ y w a ] -> ᔺ  ;  
+define ywiRule [ y w i ] -> ᔲ  ;  
+define ywoRule [ y w o ] -> ᔶ  ;  
+define ywâRule [ y w â ] -> ᔼ  ;  
+define ywêRule [ y w ê ] -> ᔰ  ;  
+define ywîRule [ y w î ] -> ᔴ  ;  
+define ywôRule [ y w ô ] -> ᔸ  ;  
+
+
+! Without w
+! two-letter symbols
+
+define caRule [ c a ] -> ᒐ  ;  
+define ciRule [ c i ] -> ᒋ  ;  
+define coRule [ c o ] -> ᒍ  ;  
+define câRule [ c â ] -> ᒑ  ;  
+define cêRule [ c ê ] -> ᒉ  ;  
+define cîRule [ c î ] -> ᒌ  ;  
+define côRule [ c ô ] -> ᒎ  ;  
+
+define kaRule [ k a ] -> ᑲ  ;  
+define kiRule [ k i ] -> ᑭ  ;  
+define koRule [ k o ] -> ᑯ  ;  
+define kâRule [ k â ] -> ᑳ  ;  
+define kêRule [ k ê ] -> ᑫ  ;  
+define kîRule [ k î ] -> ᑮ  ;  
+define kôRule [ k ô ] -> ᑰ  ;  
+
+define maRule [ m a ] -> ᒪ  ;  
+define miRule [ m i ] -> ᒥ  ;  
+define moRule [ m o ] -> ᒧ  ;  
+define mâRule [ m â ] -> ᒫ  ;  
+define mêRule [ m ê ] -> ᒣ  ;  
+define mîRule [ m î ] -> ᒦ  ;  
+define môRule [ m ô ] -> ᒨ  ;  
+
+define naRule [ n a ] -> ᓇ  ;  
+define niRule [ n i ] -> ᓂ  ;  
+define noRule [ n o ] -> ᓄ  ;  
+define nâRule [ n â ] -> ᓈ  ;  
+define nêRule [ n ê ] -> ᓀ  ;  
+define nîRule [ n î ] -> ᓃ  ;  
+define nôRule [ n ô ] -> ᓅ  ;  
+
+define paRule [ p a ] -> ᐸ  ;  
+define piRule [ p i ] -> ᐱ  ;  
+define poRule [ p o ] -> ᐳ  ;  
+define pâRule [ p â ] -> ᐹ  ;  
+define pêRule [ p ê ] -> ᐯ  ;  
+define pîRule [ p î ] -> ᐲ  ;  
+define pôRule [ p ô ] -> ᐴ  ;  
+
+define saRule [ s a ] -> ᓴ  ;  
+define siRule [ s i ] -> ᓯ  ;  
+define soRule [ s o ] -> ᓱ  ;  
+define sâRule [ s â ] -> ᓵ  ;  
+define sêRule [ s ê ] -> ᓭ  ;  
+define sîRule [ s î ] -> ᓰ  ;  
+define sôRule [ s ô ] -> ᓲ  ;  
+
+define taRule [ t a ] -> ᑕ  ;  
+define tiRule [ t i ] -> ᑎ  ;  
+define toRule [ t o ] -> ᑐ  ;  
+define tâRule [ t â ] -> ᑖ  ;  
+define têRule [ t ê ] -> ᑌ  ;  
+define tîRule [ t î ] -> ᑏ  ;  
+define tôRule [ t ô ] -> ᑑ  ;  
+
+define waRule [ w a ] -> ᐘ  ;	
+define wiRule [ w i ] -> ᐏ  ;	
+define woRule [ w o ] -> ᐓ  ;	
+define wâRule [ w â ] -> ᐚ  ;
+define wêRule [ w ê ] -> ᐍ  ;	
+define wîRule [ w î ] -> ᐑ  ;	
+define wôRule [ w ô ] -> ᐕ  ;	
+
+define yaRule [ y a ] -> ᔭ  ;  
+define yiRule [ y i ] -> ᔨ  ;  
+define yoRule [ y o ] -> ᔪ  ;  
+define yâRule [ y â ] -> ᔮ  ;  
+define yêRule [ y ê ] -> ᔦ  ;  
+define yîRule [ y î ] -> ᔩ  ;  
+define yôRule [ y ô ] -> ᔫ  ;  
+
+define hkRule [ h k ] -> ᕽ  ;  
+define thRule [ t h ] -> ᔭ ;
+
+! one-letter symbols
+
+define aRule [ a ] -> ᐊ  ;  
+define iRule [ i ] -> ᐃ  ;  
+define oRule [ o ] -> ᐅ  ;  
+define âRule [ â ] -> ᐋ  ;  
+define êRule [ ê ] -> ᐁ  ;  
+define îRule [ î ] -> ᐄ  ;  
+define ôRule [ ô ] -> ᐆ  ;    
+ 
+define cRule [ c ] -> ᐨ  ; 
+define hRule [ h ] -> ᐦ  ; 
+define kRule [ k ] -> ᐠ  ; 
+define mRule [ m ] -> ᒼ  ; 
+define nRule [ n ] -> ᐣ  ; 
+define pRule [ p ] -> ᑊ  ; 
+define sRule [ s ] -> ᐢ  ; 
+define tRule [ t ] -> ᐟ  ; 
+define wRule [ w ] -> ᐤ  ; 
+define yRule [ y ] -> ᕀ  ; 
+
+
+define lRule [ l ] -> ᓬ ; 
+define rRule [ r ] -> ᕒ ;  
+
+define spaceRule [ % ] -> [ %  %  %  ];
+# define hyphenRule [ %- ] ->   ; # Hyphen to NBSP on request from A. Ogg. 
+define hyphenRule [ %- ] -> [ %  ]; # standard space for hyphen alternative as more convenient input.
+
+define FullStopRule [ %. ] -> ᙮ ;
+
+
+
+ 
+read regex [ Decapitalisation
+.o. LengthSymbol
+
+.o. thiRule 
+.o. theRule 
+.o. thoRule 
+.o. thaRule  
+
+.o. cwaRule
+.o. cwiRule
+.o. cwoRule
+.o. cwâRule
+.o. cwêRule
+.o. cwîRule
+.o. cwôRule
+
+.o. kwaRule
+.o. kwiRule
+.o. kwoRule
+.o. kwâRule
+.o. kwêRule
+.o. kwîRule
+.o. kwôRule
+
+.o. mwaRule
+.o. mwiRule
+.o. mwoRule
+.o. mwâRule
+.o. mwêRule
+.o. mwîRule
+.o. mwôRule
+
+.o. nwaRule
+.o. nwiRule
+.o. nwoRule
+.o. nwâRule
+.o. nwêRule
+.o. nwîRule
+.o. nwôRule
+
+.o. pwaRule
+.o. pwiRule
+.o. pwoRule
+.o. pwâRule
+.o. pwêRule
+.o. pwîRule
+.o. pwôRule
+
+.o. swaRule
+.o. swiRule
+.o. swoRule
+.o. swâRule
+.o. swêRule
+.o. swîRule
+.o. swôRule
+
+.o. twaRule
+.o. twiRule
+.o. twoRule
+.o. twâRule
+.o. twêRule
+.o. twîRule
+.o. twôRule
+
+.o. ywaRule
+.o. ywiRule
+.o. ywoRule
+.o. ywâRule
+.o. ywêRule
+.o. ywîRule
+.o. ywôRule
+
+
+.o. caRule
+.o. ciRule
+.o. coRule
+.o. câRule
+.o. cêRule
+.o. cîRule
+.o. côRule
+
+.o. kaRule
+.o. kiRule
+.o. koRule
+.o. kâRule
+.o. kêRule
+.o. kîRule
+.o. kôRule
+
+.o. maRule
+.o. miRule
+.o. moRule
+.o. mâRule
+.o. mêRule
+.o. mîRule
+.o. môRule
+
+.o. naRule
+.o. niRule
+.o. noRule
+.o. nâRule
+.o. nêRule
+.o. nîRule
+.o. nôRule
+
+.o. paRule
+.o. piRule
+.o. poRule
+.o. pâRule
+.o. pêRule
+.o. pîRule
+.o. pôRule
+
+.o. saRule
+.o. siRule
+.o. soRule
+.o. sâRule
+.o. sêRule
+.o. sîRule
+.o. sôRule
+
+.o. taRule
+.o. tiRule
+.o. toRule
+.o. tâRule
+.o. têRule
+.o. tîRule
+.o. tôRule
+
+.o. waRule
+.o. wiRule
+.o. woRule
+.o. wâRule
+.o. wêRule
+.o. wîRule
+.o. wôRule
+
+.o. yaRule
+.o. yiRule
+.o. yoRule
+.o. yâRule
+.o. yêRule
+.o. yîRule
+.o. yôRule
+
+.o. hkRule
+.o. thRule
+
+.o. aRule 
+.o. iRule 
+.o. oRule 
+.o. âRule 
+.o. êRule 
+.o. îRule 
+.o. ôRule 
+
+.o. cRule 
+.o. hRule 
+.o. kRule 
+.o. mRule 
+.o. nRule 
+.o. pRule 
+.o. sRule 
+.o. tRule 
+.o. wRule 
+.o. yRule
+
+.o. lRule 
+.o. rRule 
+
+.o. spaceRule
+.o. hyphenRule 
+
+.o. FullStopRule ] ; 

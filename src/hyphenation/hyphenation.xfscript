@@ -1,0 +1,42 @@
+! ========================== !
+! Hyphenator for Plains Cree !
+! ========================== !
+
+echo << defining Cns and Vow... >>
+
+define Vow	[ a | á | e | i | o | u | æ | ø | å | ä | ö |
+              A | Á | E | I | O | U | Æ | Ø | Å | Ä | Ö | 
+    é | ó | ú | í | à | è | ò | ù | ì | ë | ü | ï | â | ê | ô | û | î | ã | 
+    É | Ó | Ú | Í | À | È | Ò | Ù | Ì | Ë | Ü | Ï | Â | Ê | Ô | Û | Î | Ã | 
+ā | ē | ī | ō ] ;
+
+
+
+define KalVow [ a | e | i | o | u | A | E | I | O | U 
+                ā | ē | ī | ō |
+                â | ê | î | ô | û   ] ;
+
+define ForVow [ Vow - KalVow ] ;
+
+define Cns [ b | c | č | d | đ | ð | f | g | h | j | k | l | m | n | ŋ | 
+             B | C | Č | D | Đ | Ð | F | G | H | J | K | L | M | N | Ŋ | 
+             ñ | p | q | r | s | š | t | ŧ | v | w | x | z | y | ž |   
+             Ñ | P | Q | R | S | Š | T | Ŧ | V | W | X | Y | Z | Ž ] ; 
+
+
+define Dummy [ %^K ] ;
+
+echo << Rules>>
+
+define beforeKWV   [..] -> %-  || Vow     (Cns)      _ k w Vow ;  !a-te-qu-seq
+define beforeCV    [..] -> %-  || Vow     (Cns)      _ Cns Vow ;  !a-te-qu-seq
+
+echo << Cleanup...>>
+define clean  Dummy -> 0 ;
+
+
+read regex [
+    beforeKWV
+.o. beforeCV
+.o. clean
+] ;

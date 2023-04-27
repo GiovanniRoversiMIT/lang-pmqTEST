@@ -1,0 +1,49 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/aANlyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/aANlyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Noun - askêkinw - ok : # -m inanimate noun, rawhide
+     askêkin+N+IN+Sg: askêkin
+     askêkin+N+IN+Sg+Px1Sg: nitaskêkin
+     askêkin+N+IN+Sg+Px2Sg: kitaskêkin
+     askêkin+N+IN+Sg+Px1Pl: nitaskêkinonân
+     askêkin+N+IN+Sg+Px12Pl: kitaskêkinonaw
+     askêkin+N+IN+Sg+Px2Pl: kitaskêkinowâw
+     askêkin+N+IN+Sg+Px3Sg: otaskêkin
+     askêkin+N+IN+Sg+Px3Pl: otaskêkinowâw
+     askêkin+N+IN+Sg+Px4Pl: otaskêkinoyiw
+     
+     askêkin+N+IN+Pl: askêkinwa
+     askêkin+N+IN+Pl+Px1Sg: nitaskêkinwa
+     askêkin+N+IN+Pl+Px2Sg: kitaskêkinwa
+     askêkin+N+IN+Pl+Px1Pl: nitaskêkinonâna
+     askêkin+N+IN+Pl+Px12Pl: kitaskêkinonawa
+     askêkin+N+IN+Pl+Px2Pl: kitaskêkinowâwa
+     askêkin+N+IN+Pl+Px3Sg: otaskêkinwa
+     askêkin+N+IN+Pl+Px3Pl: otaskêkinowâwa
+     askêkin+N+IN+Pl+Px4Pl: otaskêkinoyiwa
+     
+     askêkin+N+IN+Loc: askêkinohk
+     askêkin+N+IN+Px1Sg+Loc: nitaskêkinohk
+     askêkin+N+IN+Px2Sg+Loc: kitaskêkinohk
+     askêkin+N+IN+Px1Pl+Loc: nitaskêkinonâhk
+     askêkin+N+IN+Px12Pl+Loc: kitaskêkinonâhk
+     askêkin+N+IN+Px2Pl+Loc: kitaskêkinowâhk
+     askêkin+N+IN+Px3Sg+Loc: otaskêkinohk
+     askêkin+N+IN+Px3Pl+Loc: otaskêkinowâhk
+     askêkin+N+IN+Px4Pl+Loc: otaskêkinoyihk
+     
+     askêkin+N+IN+Der/Dim+N+IN+Sg: [askêkinos, askêkinosis]
+     askêkin+N+IN+Der/Dim+N+IN+Pl: [askêkinosa, askêkinosisa]
+     askêkin+N+IN+Der/Dim+N+IN+Loc: [askêkinosihk, askêkinosisihk]
+     askêkin+N+IN+Der/Dim+N+IN+Sg+Px1Sg: [nicaskêkinos, nicaskêkinosis]
+     askêkin+N+IN+Der/Dim+N+IN+Sg+Px2Sg: [kicaskêkinos, kicaskêkinosis]
+     askêkin+N+IN+Der/Dim+N+IN+Sg+Px3Sg: [ocaskêkinos, ocaskêkinosis]
+     askêkin+N+IN+Der/Dim+N+IN+Sg+Px4Sg: [ocaskêkinosiyiw, ocaskêkinosisiyiw]

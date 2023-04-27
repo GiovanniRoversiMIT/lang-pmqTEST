@@ -1,0 +1,136 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Verb - mîciso - ok : # Ordinary VAI verb "eat" -  Wolvengrey p. 396; Fut+Def from Okimāsis p. 36
+
+     mîcisow+V+AI+Ind+Prs+1Sg: nimîcison
+     mîcisow+V+AI+Ind+Prs+2Sg: kimîcison
+     mîcisow+V+AI+Ind+Prs+3Sg: mîcisow
+     mîcisow+V+AI+Ind+Prs+4Sg/Pl: mîcisoyiwa
+     mîcisow+V+AI+Ind+Prs+1Pl: nimîcisonân
+     mîcisow+V+AI+Ind+Prs+12Pl: [kimîcisonaw, kimîcisonânaw]
+     mîcisow+V+AI+Ind+Prs+2Pl: kimîcisonâwâw
+     mîcisow+V+AI+Ind+Prs+3Pl: mîcisowak
+
+     mîcisow+V+AI+Ind+Prt+1Sg: [nikî-mîcison, nikîmîcison]
+     mîcisow+V+AI+Ind+Prt+2Sg: [kikî-mîcison, kikîmîcison]
+     mîcisow+V+AI+Ind+Prt+3Sg: [kî-mîcisow, kîmîcisow]
+     mîcisow+V+AI+Ind+Prt+4Sg/Pl: [kî-mîcisoyiwa, kîmîcisoyiwa]
+     mîcisow+V+AI+Ind+Prt+1Pl: [nikî-mîcisonân, nikîmîcisonân]
+     mîcisow+V+AI+Ind+Prt+12Pl: [kikî-mîcisonaw, kikîmîcisonaw, kikî-mîcisonânaw, kikîmîcisonânaw]
+     mîcisow+V+AI+Ind+Prt+2Pl: [kikî-mîcisonâwâw, kikîmîcisonâwâw]
+     mîcisow+V+AI+Ind+Prt+3Pl: [kî-mîcisowak, kîmîcisowak]
+     
+     mîcisow+V+AI+Ind+Fut+Def+1Sg: [nika-mîcison, nikamîcison]
+     mîcisow+V+AI+Ind+Fut+Def+2Sg: [kika-mîcison, kikamîcison]
+     mîcisow+V+AI+Ind+Fut+Def+3Sg: [ka-mîcisow, kamîcisow]
+     mîcisow+V+AI+Ind+Fut+Def+4Sg/Pl: [ka-mîcisoyiwa, kamîcisoyiwa]
+     mîcisow+V+AI+Ind+Fut+Def+1Pl: [nika-mîcisonân, nikamîcisonân]
+     mîcisow+V+AI+Ind+Fut+Def+12Pl: [kika-mîcisonaw, kikamîcisonaw, kikamîcisonânaw, kika-mîcisonânaw]
+     mîcisow+V+AI+Ind+Fut+Def+2Pl: [kika-mîcisonâwâw, kikamîcisonâwâw]
+     mîcisow+V+AI+Ind+Fut+Def+3Pl: [ka-mîcisowak, kamîcisowak]
+     
+     mîcisow+V+AI+Ind+Fut+Int+1Sg: [niwî-mîcison, niwîmîcison]
+     mîcisow+V+AI+Ind+Fut+Int+2Sg: [kiwî-mîcison, kiwîmîcison]
+     mîcisow+V+AI+Ind+Fut+Int+3Sg: [wî-mîcisow, wîmîcisow]
+     mîcisow+V+AI+Ind+Fut+Int+4Sg/Pl: [wî-mîcisoyiwa, wîmîcisoyiwa]
+     mîcisow+V+AI+Ind+Fut+Int+1Pl: [niwî-mîcisonân, niwîmîcisonân]
+     mîcisow+V+AI+Ind+Fut+Int+12Pl: [kiwî-mîcisonaw, kiwîmîcisonaw, kiwî-mîcisonânaw, kiwîmîcisonânaw]
+     mîcisow+V+AI+Ind+Fut+Int+2Pl: [kiwî-mîcisonâwâw, kiwîmîcisonâwâw]
+     mîcisow+V+AI+Ind+Fut+Int+3Pl: [wî-mîcisowak, wîmîcisowak]
+     
+     PV/e+mîcisow+V+AI+Cnj+Prs+1Sg: [ê-mîcisoyân, êmîcisoyân]
+     PV/e+mîcisow+V+AI+Cnj+Prs+2Sg: [ê-mîcisoyan, êmîcisoyan]
+     PV/e+mîcisow+V+AI+Cnj+Prs+3Sg: [ê-mîcisot, êmîcisot]
+     PV/e+mîcisow+V+AI+Cnj+Prs+4Sg/Pl: [ê-mîcisoyit, êmîcisoyit]
+     PV/e+mîcisow+V+AI+Cnj+Prs+1Pl: [ê-mîcisoyâhk, êmîcisoyâhk]
+     PV/e+mîcisow+V+AI+Cnj+Prs+12Pl: [ê-mîcisoyahk, êmîcisoyahk]
+     PV/e+mîcisow+V+AI+Cnj+Prs+2Pl: [ê-mîcisoyêk, êmîcisoyêk]
+     PV/e+mîcisow+V+AI+Cnj+Prs+3Pl: [ê-mîcisocik, êmîcisocik]
+     
+     PV/e+mîcisow+V+AI+Cnj+Prs+1Sg: [ê-mîcisoyân, êmîcisoyân]
+     PV/e+mîcisow+V+AI+Cnj+Prs+2Sg: [ê-mîcisoyan, êmîcisoyan]
+     PV/e+mîcisow+V+AI+Cnj+Prs+3Sg: [ê-mîcisot, êmîcisot]
+     PV/e+mîcisow+V+AI+Cnj+Prs+4Sg/Pl: [ê-mîcisoyit, êmîcisoyit]
+     PV/e+mîcisow+V+AI+Cnj+Prs+1Pl: [ê-mîcisoyâhk, êmîcisoyâhk]
+     PV/e+mîcisow+V+AI+Cnj+Prs+12Pl: [ê-mîcisoyahk, êmîcisoyahk]
+     PV/e+mîcisow+V+AI+Cnj+Prs+2Pl: [ê-mîcisoyêk, êmîcisoyêk]
+     PV/e+mîcisow+V+AI+Cnj+Prs+3Pl: [ê-mîcisocik, êmîcisocik]
+         
+     PV/e+mîcisow+V+AI+Cnj+Prt+1Sg: [ê-kî-mîcisoyân, êkîmîcisoyân]
+     PV/e+mîcisow+V+AI+Cnj+Prt+2Sg: [ê-kî-mîcisoyan, êkîmîcisoyan]
+     PV/e+mîcisow+V+AI+Cnj+Prt+3Sg: [ê-kî-mîcisot, êkîmîcisot]
+     PV/e+mîcisow+V+AI+Cnj+Prt+4Sg/Pl: [ê-kî-mîcisoyit, êkîmîcisoyit]
+     PV/e+mîcisow+V+AI+Cnj+Prt+1Pl: [ê-kî-mîcisoyâhk, êkîmîcisoyâhk]
+     PV/e+mîcisow+V+AI+Cnj+Prt+12Pl: [ê-kî-mîcisoyahk, êkîmîcisoyahk]
+     PV/e+mîcisow+V+AI+Cnj+Prt+2Pl: [ê-kî-mîcisoyêk, êkîmîcisoyêk]
+     PV/e+mîcisow+V+AI+Cnj+Prt+3Pl: [ê-kî-mîcisocik, êkîmîcisocik]
+     
+     PV/e+mîcisow+V+AI+Cnj+Fut+Int+1Sg: [ê-wî-mîcisoyân, êwîmîcisoyân]
+     PV/e+mîcisow+V+AI+Cnj+Fut+Int+2Sg: [ê-wî-mîcisoyan, êwîmîcisoyan]
+     PV/e+mîcisow+V+AI+Cnj+Fut+Int+3Sg: [ê-wî-mîcisot, êwîmîcisot]
+     PV/e+mîcisow+V+AI+Cnj+Fut+Int+4Sg/Pl: [ê-wî-mîcisoyit, êwîmîcisoyit]
+     PV/e+mîcisow+V+AI+Cnj+Fut+Int+1Pl: [ê-wî-mîcisoyâhk, êwîmîcisoyâhk]
+     PV/e+mîcisow+V+AI+Cnj+Fut+Int+12Pl: [ê-wî-mîcisoyahk, êwîmîcisoyahk]
+     PV/e+mîcisow+V+AI+Cnj+Fut+Int+2Pl: [ê-wî-mîcisoyêk, êwîmîcisoyêk]
+     PV/e+mîcisow+V+AI+Cnj+Fut+Int+3Pl: [ê-wî-mîcisocik, êwîmîcisocik]
+    
+    
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+1Sg+3SgO: [niwîwîcimîcisomâw, niwî-wîci-mîcisomâw] # COMM SET I
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+2Sg+3SgO: [kiwîwîcimîcisomâw, kiwî-wîci-mîcisomâw]
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+1Pl+3SgO: [niwîwîcimîcisomânân, niwî-wîci-mîcisomânân]
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+12Pl+3SgO: [kiwîwîcimîcisomânaw, kiwî-wîci-mîcisomânaw]
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+2Pl+3SgO: [kiwîwîcimîcisomâwâw, kiwî-wîci-mîcisomâwâw]
+     
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+1Sg+3PlO: [niwîwîcimîcisomâwak, niwî-wîci-mîcisomâwak] # COMM SET I-Pl
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+2Sg+3PlO: [kiwîwîcimîcisomâwak, kiwî-wîci-mîcisomâwak]
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+1Pl+3PlO: [niwîwîcimîcisomânânak, niwî-wîci-mîcisomânânak]
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+12Pl+3PlO: [kiwîwîcimîcisomânawak, kiwî-wîci-mîcisomânawak]
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+2Pl+3PlO: [kiwîwîcimîcisomâwâwak, kiwî-wîci-mîcisomâwâwak]
+
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+2Sg+1SgO: [kiwîwîcimîcisomin, kiwî-wîci-mîcisomin] # COMM SET II
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+2Sg+1PlO: [kiwîwîcimîcisominân, kiwî-wîci-mîcisominân]
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+2Pl+1SgO: [kiwîwîcimîcisominâwâw, kiwî-wîci-mîcisominâwâw]
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+2Pl+1PlO: [kiwîwîcimîcisominân, kiwî-wîci-mîcisominân]
+
+
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+3Sg+4Sg/PlO: [wîwîcimîcisomêw, wî-wîci-mîcisomêw] # COMM SET III
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+3Pl+4Sg/PlO: [wîwîcimîcisomêwak, wî-wîci-mîcisomêwak]
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+4Sg/Pl+5Sg/PlO: [wîwîcimîcisomêyiwa, wî-wîci-mîcisomêyiwa]
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+3Sg+5Sg/PlO: [wîwîcimîcisomimêw, wî-wîci-mîcisomimêw] # From Wolvengrey P.C. 27/6/15 (See /doc/)
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+3Pl+5Sg/PlO: [wîwîcimîcisomimêwak, wî-wîci-mîcisomimêwak] # From Wolvengrey P.C. 27/6/15 (See /doc/)
+
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+1Sg+4Sg/PlO: [niwîwîcimîcisomimâwa, niwî-wîci-mîcisomimâwa] # COMM SET IV
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+2Sg+4Sg/PlO: [kiwîwîcimîcisomimâwa, kiwî-wîci-mîcisomimâwa]
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+1Pl+4Sg/PlO: [niwîwîcimîcisomimânâna, niwî-wîci-mîcisomimânâna]
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+12Pl+4Sg/PlO: [kiwîwîcimîcisomimânawa, kiwî-wîci-mîcisomimânawa]
+     mîcisow+V+AI+Der/Comm+V+TA+Ind+Fut+Int+2Pl+4Sg/PlO: [kiwîwîcimîcisomimâwâwa, kiwî-wîci-mîcisomimâwâwa]
+    
+     
+     mîcisow+V+AI+Fut+Cond+1Sg: mîcisoyâni
+     mîcisow+V+AI+Fut+Cond+2Sg: mîcisoyani
+     mîcisow+V+AI+Fut+Cond+3Sg: mîcisoci
+     mîcisow+V+AI+Fut+Cond+4Sg/Pl: mîcisoyici
+     mîcisow+V+AI+Fut+Cond+1Pl: mîcisoyâhki
+     mîcisow+V+AI+Fut+Cond+12Pl: [mîcisoyahko, mîcisoyahki]
+     mîcisow+V+AI+Fut+Cond+2Pl: mîcisoyêko
+     mîcisow+V+AI+Fut+Cond+3Pl: mîcisotwâwi
+     
+     
+
+
+     mîcisow+V+AI+Imp+Imm+2Sg: mîciso
+     mîcisow+V+AI+Imp+Imm+12Pl: mîcisotân
+     mîcisow+V+AI+Imp+Imm+2Pl: mîcisok
+     
+     mîcisow+V+AI+Imp+Del+2Sg: mîcisohkan
+     mîcisow+V+AI+Imp+Del+12Pl: mîcisohkahk
+     mîcisow+V+AI+Imp+Del+2Pl: mîcisohkêk

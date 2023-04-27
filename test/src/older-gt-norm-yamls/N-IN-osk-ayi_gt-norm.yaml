@@ -1,0 +1,49 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/aANlyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/aANlyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Noun - osk-ây - ok : # -m inanimate noun, new thing, Wolvengrey
+     osk-âyi+N+IN+Sg: osk-âyi
+     osk-âyi+N+IN+Sg+Px1Sg: nitôsk-âyim
+     osk-âyi+N+IN+Sg+Px2Sg: kitôsk-âyim
+     osk-âyi+N+IN+Sg+Px1Pl: nitôsk-âyiminân
+     osk-âyi+N+IN+Sg+Px12Pl: kitôsk-âyiminaw
+     osk-âyi+N+IN+Sg+Px2Pl: kitôsk-âyimiwâw
+     osk-âyi+N+IN+Sg+Px3Sg: otôsk-âyim
+     osk-âyi+N+IN+Sg+Px3Pl: otôsk-âyimiwâw
+     osk-âyi+N+IN+Sg+Px4Pl: otôsk-âyimiyiw
+     
+     osk-âyi+N+IN+Pl: osk-âya
+     osk-âyi+N+IN+Pl+Px1Sg: nitôsk-âyima
+     osk-âyi+N+IN+Pl+Px2Sg: kitôsk-âyima
+     osk-âyi+N+IN+Pl+Px1Pl: nitôsk-âyiminâna
+     osk-âyi+N+IN+Pl+Px12Pl: kitôsk-âyiminawa
+     osk-âyi+N+IN+Pl+Px2Pl: kitôsk-âyimiwâwa
+     osk-âyi+N+IN+Pl+Px3Sg: otôsk-âyima
+     osk-âyi+N+IN+Pl+Px3Pl: otôsk-âyimiwâwa
+     osk-âyi+N+IN+Pl+Px4Pl: otôsk-âyimiyiwa
+     
+     osk-âyi+N+IN+Loc: osk-âyihk
+     osk-âyi+N+IN+Px1Sg+Loc: nitôsk-âyimihk
+     osk-âyi+N+IN+Px2Sg+Loc: kitôsk-âyimihk
+     osk-âyi+N+IN+Px1Pl+Loc: nitôsk-âyiminâhk
+     osk-âyi+N+IN+Px12Pl+Loc: kitôsk-âyiminâhk
+     osk-âyi+N+IN+Px2Pl+Loc: kitôsk-âyimiwâhk
+     osk-âyi+N+IN+Px3Sg+Loc: otôsk-âyimihk
+     osk-âyi+N+IN+Px3Pl+Loc: otôsk-âyimiwâhk
+     osk-âyi+N+IN+Px4Pl+Loc: otôsk-âyimiyihk
+     
+     osk-âyi+N+IN+Der/Dim+N+IN+Sg: osk-âyis
+     osk-âyi+N+IN+Der/Dim+N+IN+Pl: osk-âyisa
+     osk-âyi+N+IN+Der/Dim+N+IN+Loc: osk-âyisihk
+     osk-âyi+N+IN+Der/Dim+N+IN+Sg+Px1Sg: nicôsk-âyimis
+     osk-âyi+N+IN+Der/Dim+N+IN+Sg+Px2Sg: kicôsk-âyimis
+     osk-âyi+N+IN+Der/Dim+N+IN+Sg+Px3Sg: ocôsk-âyimis
+     osk-âyi+N+IN+Der/Dim+N+IN+Sg+Px4Sg: ocôsk-âyimisiyiw

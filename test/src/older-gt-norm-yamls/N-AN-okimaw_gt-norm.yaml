@@ -1,0 +1,60 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Noun - okimâw - ok : # -m animate noun, chief, poss.paradigm Okimasis p 135
+
+     okimâw+N+AN+Sg: okimâw
+     okimâw+N+AN+Pl: okimâwak
+     okimâw+N+AN+Loc: okimânâhk 
+     okimâw+N+AN+Sg+Obv: okimâwa
+     okimâw+N+AN+Der/Dim+N+AN+Sg: [okimâsis, okimâs]
+     okimâw+N+AN+Der/Dim+N+AN+Pl: [okimâsisak, okimâsak]
+     
+     okimâw+N+AN+Sg+Px1Sg: nitôkimâm
+     okimâw+N+AN+Sg+Px2Sg: kitôkimâm
+     okimâw+N+AN+Sg+Px3Sg+Obv: otôkimâma
+     okimâw+N+AN+Sg+Px4Sg+Obv: otôkimâmiyiwa
+     okimâw+N+AN+Sg+Px1Pl: nitôkimâminân
+     okimâw+N+AN+Sg+Px12Pl: kitôkimâminaw
+     okimâw+N+AN+Sg+Px2Pl: kitôkimâmiwâw
+     okimâw+N+AN+Sg+Px3Pl+Obv: otôkimâmiwâwa
+     okimâw+N+AN+Sg+Px4Pl+Obv: otôkimâmiyiwa
+     
+     okimâw+N+AN+Pl+Px1Sg: nitôkimâmak
+     okimâw+N+AN+Pl+Px2Sg: kitôkimâmak
+     okimâw+N+AN+Pl+Px3Sg+Obv: otôkimâma
+     okimâw+N+AN+Pl+Px4Sg+Obv: otôkimâmiyiwa
+     okimâw+N+AN+Pl+Px1Pl: nitôkimâminânak
+     okimâw+N+AN+Pl+Px12Pl: kitôkimâminawak
+     okimâw+N+AN+Pl+Px2Pl: kitôkimâmiwâwak
+     okimâw+N+AN+Pl+Px3Pl+Obv: otôkimâmiwâwa
+     okimâw+N+AN+Pl+Px4Pl+Obv: otôkimâmiyiwa
+     
+     okimâw+N+AN+Der/Dim+N+AN+Sg+Px1Sg: nicôkimâmis
+     okimâw+N+AN+Der/Dim+N+AN+Sg+Px2Sg: kicôkimâmis
+     okimâw+N+AN+Der/Dim+N+AN+Sg+Px3Sg+Obv: ocôkimâmisa
+     okimâw+N+AN+Der/Dim+N+AN+Sg+Px4Sg+Obv: ocôkimâmisiyiwa
+     okimâw+N+AN+Der/Dim+N+AN+Sg+Px1Pl: nicôkimâmisinân
+     okimâw+N+AN+Der/Dim+N+AN+Sg+Px12Pl: kicôkimâmisinaw
+     okimâw+N+AN+Der/Dim+N+AN+Sg+Px2Pl: kicôkimâmisiwâw
+     okimâw+N+AN+Der/Dim+N+AN+Sg+Px3Pl+Obv: ocôkimâmisiwâwa
+     okimâw+N+AN+Der/Dim+N+AN+Sg+Px4Pl+Obv: ocôkimâmisiyiwa
+     
+     okimâw+N+AN+Der/Dim+N+AN+Pl+Px1Sg: nicôkimâmisak
+     okimâw+N+AN+Der/Dim+N+AN+Pl+Px2Sg: kicôkimâmisak
+     okimâw+N+AN+Der/Dim+N+AN+Pl+Px3Sg+Obv: ocôkimâmisa
+     okimâw+N+AN+Der/Dim+N+AN+Pl+Px4Sg+Obv: ocôkimâmisiyiwa
+     okimâw+N+AN+Der/Dim+N+AN+Pl+Px1Pl: nicôkimâmisinânak
+     okimâw+N+AN+Der/Dim+N+AN+Pl+Px12Pl: kicôkimâmisinawak
+     okimâw+N+AN+Der/Dim+N+AN+Pl+Px2Pl: kicôkimâmisiwâwak
+     okimâw+N+AN+Der/Dim+N+AN+Pl+Px3Pl+Obv: ocôkimâmisiwâwa
+     okimâw+N+AN+Der/Dim+N+AN+Pl+Px4Pl+Obv: ocôkimâmisiyiwa
+     

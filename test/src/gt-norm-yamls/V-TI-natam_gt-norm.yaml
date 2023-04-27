@@ -1,0 +1,117 @@
+Config:
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Verb - nâtam - ok : # Ordinary TI verb - Wolvengrey p. 395; Fut+Def from Okimāsis p. 36 
+
+  
+     nâtam+V+TI+Ind+1Sg:    ninâtên # INDEPENDENT
+     nâtam+V+TI+Ind+2Sg:    kinâtên
+     nâtam+V+TI+Ind+3Sg:    nâtam
+     nâtam+V+TI+Ind+4Sg/Pl: nâtamiyiwa
+     nâtam+V+TI+Ind+1Pl:    ninâtênân
+     nâtam+V+TI+Ind+12Pl:   [kinâtênaw, kinâtênânaw]
+     nâtam+V+TI+Ind+2Pl:    kinâtênâwâw
+     nâtam+V+TI+Ind+3Pl:    nâtamwak
+
+     PV/e+nâtam+V+TI+Cnj+1Sg:    ê-nâtamân # CONJUNCT
+     PV/e+nâtam+V+TI+Cnj+2Sg:    ê-nâtaman
+     PV/e+nâtam+V+TI+Cnj+3Sg:    ê-nâtahk
+     PV/e+nâtam+V+TI+Cnj+4Sg/Pl: ê-nâtamiyit
+     PV/e+nâtam+V+TI+Cnj+1Pl:    ê-nâtamâhk
+     PV/e+nâtam+V+TI+Cnj+12Pl:   ê-nâtamahk
+     PV/e+nâtam+V+TI+Cnj+2Pl:    ê-nâtamêk
+     PV/e+nâtam+V+TI+Cnj+3Pl:    ê-nâtahkik
+
+     PV/ki+nâtam+V+TI+Ind+1Sg:    nikî-nâtên # PRT-INDEPENDENT
+     PV/ki+nâtam+V+TI+Ind+2Sg:    kikî-nâtên
+     PV/ki+nâtam+V+TI+Ind+3Sg:    kî-nâtam
+     PV/ki+nâtam+V+TI+Ind+4Sg/Pl: kî-nâtamiyiwa
+     PV/ki+nâtam+V+TI+Ind+1Pl:    nikî-nâtênân
+     PV/ki+nâtam+V+TI+Ind+12Pl:   [kikî-nâtênaw, kikî-nâtênânaw]
+     PV/ki+nâtam+V+TI+Ind+2Pl:    kikî-nâtênâwâw
+     PV/ki+nâtam+V+TI+Ind+3Pl:    kî-nâtamwak
+
+     PV/e+PV/ki+nâtam+V+TI+Cnj+1Sg:    ê-kî-nâtamân # PRT-CONJUNCT
+     PV/e+PV/ki+nâtam+V+TI+Cnj+2Sg:    ê-kî-nâtaman
+     PV/e+PV/ki+nâtam+V+TI+Cnj+3Sg:    ê-kî-nâtahk
+     PV/e+PV/ki+nâtam+V+TI+Cnj+4Sg/Pl: ê-kî-nâtamiyit
+     PV/e+PV/ki+nâtam+V+TI+Cnj+1Pl:    ê-kî-nâtamâhk
+     PV/e+PV/ki+nâtam+V+TI+Cnj+12Pl:   ê-kî-nâtamahk
+     PV/e+PV/ki+nâtam+V+TI+Cnj+2Pl:    ê-kî-nâtamêk
+     PV/e+PV/ki+nâtam+V+TI+Cnj+3Pl:    ê-kî-nâtahkik
+
+
+     PV/wi+nâtam+V+TI+Ind+1Sg:    niwî-nâtên # FUT+INT-INDEPENDENT
+     PV/wi+nâtam+V+TI+Ind+2Sg:    kiwî-nâtên
+     PV/wi+nâtam+V+TI+Ind+3Sg:    wî-nâtam
+     PV/wi+nâtam+V+TI+Ind+4Sg/Pl: wî-nâtamiyiwa
+     PV/wi+nâtam+V+TI+Ind+1Pl:    niwî-nâtênân
+     PV/wi+nâtam+V+TI+Ind+12Pl:   [kiwî-nâtênaw, kiwî-nâtênânaw]
+     PV/wi+nâtam+V+TI+Ind+2Pl:    kiwî-nâtênâwâw
+     PV/wi+nâtam+V+TI+Ind+3Pl:    wî-nâtamwak
+
+     PV/e+PV/wi+nâtam+V+TI+Cnj+1Sg:    ê-wî-nâtamân # FUT+INT-CONJUNCT
+     PV/e+PV/wi+nâtam+V+TI+Cnj+2Sg:    ê-wî-nâtaman
+     PV/e+PV/wi+nâtam+V+TI+Cnj+3Sg:    ê-wî-nâtahk
+     PV/e+PV/wi+nâtam+V+TI+Cnj+4Sg/Pl: ê-wî-nâtamiyit
+     PV/e+PV/wi+nâtam+V+TI+Cnj+1Pl:    ê-wî-nâtamâhk
+     PV/e+PV/wi+nâtam+V+TI+Cnj+12Pl:   ê-wî-nâtamahk
+     PV/e+PV/wi+nâtam+V+TI+Cnj+2Pl:    ê-wî-nâtamêk
+     PV/e+PV/wi+nâtam+V+TI+Cnj+3Pl:    ê-wî-nâtahkik
+
+     PV/ka+nâtam+V+TI+Ind+1Sg:    nika-nâtên # FUT+DEF-INDEPENDENT
+     PV/ka+nâtam+V+TI+Ind+2Sg:    kika-nâtên
+     PV/ka+nâtam+V+TI+Ind+3Sg:    ka-nâtam
+     PV/ka+nâtam+V+TI+Ind+4Sg/Pl: ka-nâtamiyiwa
+     PV/ka+nâtam+V+TI+Ind+1Pl:    nika-nâtênân
+     PV/ka+nâtam+V+TI+Ind+12Pl:   [kika-nâtênaw, kika-nâtênânaw]
+     PV/ka+nâtam+V+TI+Ind+2Pl:    kika-nâtênâwâw
+     PV/ka+nâtam+V+TI+Ind+3Pl:    ka-nâtamwak
+     
+     nâtam+V+TI+Fut+Cond+1Sg:    nâtamâni
+     nâtam+V+TI+Fut+Cond+2Sg:    nâtamani
+     nâtam+V+TI+Fut+Cond+3Sg:    nâtahki
+     nâtam+V+TI+Fut+Cond+4Sg/Pl: nâtamiyici
+     nâtam+V+TI+Fut+Cond+1Pl:    nâtamâhki
+     nâtam+V+TI+Fut+Cond+12Pl:   [nâtamahki, nâtamahko]
+     nâtam+V+TI+Fut+Cond+2Pl:    nâtamêko
+     nâtam+V+TI+Fut+Cond+3Pl:    nâtahkwâwi
+
+     nâtam+V+TI+Imp+Imm+2Sg:  nâta
+     nâtam+V+TI+Imp+Imm+12Pl: nâtêtân
+     nâtam+V+TI+Imp+Imm+2Pl:  nâtamok
+
+
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+1Sg+3SgO: [niwî-wîci-nâtamômâw] # com SET I
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+2Sg+3SgO: [kiwî-wîci-nâtamômâw]
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+1Pl+3SgO: [niwî-wîci-nâtamômânân]
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+12Pl+3SgO: [kiwî-wîci-nâtamômânaw]
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+2Pl+3SgO: [kiwî-wîci-nâtamômâwâw]
+     
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+1Sg+3PlO: [niwî-wîci-nâtamômâwak] # com SET I-Pl
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+2Sg+3PlO: [kiwî-wîci-nâtamômâwak]
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+1Pl+3PlO: [niwî-wîci-nâtamômânânak]
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+12Pl+3PlO: [kiwî-wîci-nâtamômânawak]
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+2Pl+3PlO: [kiwî-wîci-nâtamômâwâwak]
+
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+2Sg+1SgO: [kiwî-wîci-nâtamômin] # com SET II
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+2Sg+1PlO: [kiwî-wîci-nâtamôminân]
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+2Pl+1SgO: [kiwî-wîci-nâtamôminâwâw]
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+2Pl+1PlO: [kiwî-wîci-nâtamôminân]
+
+
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+3Sg+4Sg/PlO: [wî-wîci-nâtamômêw] # com SET III
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+3Pl+4Sg/PlO: [wî-wîci-nâtamômêwak]
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+4Sg/Pl+5Sg/PlO: [wî-wîci-nâtamômêyiwa]
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+3Sg+5Sg/PlO: [wî-wîci-nâtamômimêw] # From Wolvengrey P.C. 27/6/15 (See /doc/)
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+3Pl+5Sg/PlO: [wî-wîci-nâtamômimêwak] # From Wolvengrey P.C. 27/6/15 (See /doc/)
+
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+1Sg+4Sg/PlO: [niwî-wîci-nâtamômimâwa] # com SET IV
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+2Sg+4Sg/PlO: [kiwî-wîci-nâtamômimâwa]
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+1Pl+4Sg/PlO: [niwî-wîci-nâtamômimânâna]
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+12Pl+4Sg/PlO: [kiwî-wîci-nâtamômimânawa]
+     PV/wi+nâtam+V+TI+Der/Com+V+TA+Ind+2Pl+4Sg/PlO: [kiwî-wîci-nâtamômimâwâwa]

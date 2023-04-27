@@ -1,0 +1,49 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Noun - pahkêkinw - ok : # -m inanimate noun, leather
+     pahkêkin+N+IN+Sg: pahkêkin
+     pahkêkin+N+IN+Sg+Px1Sg: nipahkêkin
+     pahkêkin+N+IN+Sg+Px2Sg: kipahkêkin
+     pahkêkin+N+IN+Sg+Px1Pl: nipahkêkinonân
+     pahkêkin+N+IN+Sg+Px12Pl: kipahkêkinonaw
+     pahkêkin+N+IN+Sg+Px2Pl: kipahkêkinowâw
+     pahkêkin+N+IN+Sg+Px3Sg: opahkêkin
+     pahkêkin+N+IN+Sg+Px3Pl: opahkêkinowâw
+     pahkêkin+N+IN+Sg+Px4Pl: opahkêkinoyiw
+     
+     pahkêkin+N+IN+Pl: pahkêkinwa
+     pahkêkin+N+IN+Pl+Px1Sg: nipahkêkinwa
+     pahkêkin+N+IN+Pl+Px2Sg: kipahkêkinwa
+     pahkêkin+N+IN+Pl+Px1Pl: nipahkêkinonâna
+     pahkêkin+N+IN+Pl+Px12Pl: kipahkêkinonawa
+     pahkêkin+N+IN+Pl+Px2Pl: kipahkêkinowâwa
+     pahkêkin+N+IN+Pl+Px3Sg: opahkêkinwa
+     pahkêkin+N+IN+Pl+Px3Pl: opahkêkinowâwa
+     pahkêkin+N+IN+Pl+Px4Pl: opahkêkinoyiwa
+     
+     pahkêkin+N+IN+Loc: pahkêkinohk
+     pahkêkin+N+IN+Px1Sg+Loc: nipahkêkinohk
+     pahkêkin+N+IN+Px2Sg+Loc: kipahkêkinohk
+     pahkêkin+N+IN+Px1Pl+Loc: nipahkêkinonâhk
+     pahkêkin+N+IN+Px12Pl+Loc: kipahkêkinonâhk
+     pahkêkin+N+IN+Px2Pl+Loc: kipahkêkinowâhk
+     pahkêkin+N+IN+Px3Sg+Loc: opahkêkinohk
+     pahkêkin+N+IN+Px3Pl+Loc: opahkêkinowâhk
+     pahkêkin+N+IN+Px4Pl+Loc: opahkêkinoyihk
+     
+     pahkêkin+N+IN+Der/Dim+N+IN+Sg: [pahkêkinos, pahkêkinosis]
+     pahkêkin+N+IN+Der/Dim+N+IN+Pl: [pahkêkinosa, pahkêkinosisa]
+     pahkêkin+N+IN+Der/Dim+N+IN+Loc: [pahkêkinosihk, pahkêkinosisihk]
+     pahkêkin+N+IN+Der/Dim+N+IN+Sg+Px1Sg: [nipahkêkinos, nipahkêkinosis]
+     pahkêkin+N+IN+Der/Dim+N+IN+Sg+Px2Sg: [kipahkêkinos, kipahkêkinosis]
+     pahkêkin+N+IN+Der/Dim+N+IN+Sg+Px3Sg: [opahkêkinos, opahkêkinosis]
+     pahkêkin+N+IN+Der/Dim+N+IN+Sg+Px4Sg: [opahkêkinosiyiw, opahkêkinosisiyiw]

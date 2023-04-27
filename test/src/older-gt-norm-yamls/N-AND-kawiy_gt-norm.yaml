@@ -1,0 +1,53 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Noun - kâwiy - ok : # -m dep. animate noun, mother, poss.paradigm Okimasis p 140
+
+     -kâwiy+N+AN+Sg+Px1Sg: nikâwiy
+     -kâwiy+N+AN+Sg+Px2Sg: kikâwiy
+     -kâwiy+N+AN+Sg+Px3Sg+Obv: okâwiya
+     -kâwiy+N+AN+Sg+Px4Sg+Obv: okâwiyiwa
+     -kâwiy+N+AN+Sg+Px1Pl: nikâwinân
+     -kâwiy+N+AN+Sg+Px12Pl: kikâwinaw
+     -kâwiy+N+AN+Sg+Px2Pl: kikâwiwâw
+     -kâwiy+N+AN+Sg+Px3Pl+Obv: okâwiwâwa
+     -kâwiy+N+AN+Sg+Px4Pl+Obv: okâwiyiwa
+
+     -kâwiy+N+AN+Pl+Px1Sg: nikâwiyak
+     -kâwiy+N+AN+Pl+Px2Sg: kikâwiyak
+     -kâwiy+N+AN+Pl+Px3Sg+Obv: okâwiya
+     -kâwiy+N+AN+Pl+Px4Sg+Obv: okâwiyiwa
+     -kâwiy+N+AN+Pl+Px1Pl: nikâwinânak
+     -kâwiy+N+AN+Pl+Px12Pl: kikâwinawak
+     -kâwiy+N+AN+Pl+Px2Pl: kikâwiwâwak
+     -kâwiy+N+AN+Pl+Px3Pl+Obv: okâwiwâwa
+     -kâwiy+N+AN+Pl+Px4Pl+Obv: okâwiyiwa
+
+     -kâwiy+N+AN+Der/Dim+N+AN+Sg+Px1Sg: nikâwisis
+     -kâwiy+N+AN+Der/Dim+N+AN+Sg+Px2Sg: kikâwisis
+     -kâwiy+N+AN+Der/Dim+N+AN+Sg+Px3Sg+Obv: okâwisisa
+     -kâwiy+N+AN+Der/Dim+N+AN+Sg+Px4Sg+Obv: okâwisisiyiwa
+     -kâwiy+N+AN+Der/Dim+N+AN+Sg+Px1Pl: nikâwisisinân
+     -kâwiy+N+AN+Der/Dim+N+AN+Sg+Px12Pl: kikâwisisinaw
+     -kâwiy+N+AN+Der/Dim+N+AN+Sg+Px2Pl: kikâwisisiwâw
+     -kâwiy+N+AN+Der/Dim+N+AN+Sg+Px3Pl+Obv: okâwisisiwâwa
+     -kâwiy+N+AN+Der/Dim+N+AN+Sg+Px4Pl+Obv: okâwisisiyiwa
+
+     -kâwiy+N+AN+Der/Dim+N+AN+Pl+Px1Sg: nikâwisisak
+     -kâwiy+N+AN+Der/Dim+N+AN+Pl+Px2Sg: kikâwisisak
+     -kâwiy+N+AN+Der/Dim+N+AN+Pl+Px3Sg+Obv: okâwisisa
+     -kâwiy+N+AN+Der/Dim+N+AN+Pl+Px4Sg+Obv: okâwisisiyiwa
+     -kâwiy+N+AN+Der/Dim+N+AN+Pl+Px1Pl: nikâwisisinânak
+     -kâwiy+N+AN+Der/Dim+N+AN+Pl+Px12Pl: kikâwisisinawak
+     -kâwiy+N+AN+Der/Dim+N+AN+Pl+Px2Pl: kikâwisisiwâwak
+     -kâwiy+N+AN+Der/Dim+N+AN+Pl+Px3Pl+Obv: okâwisisiwâwa
+     -kâwiy+N+AN+Der/Dim+N+AN+Pl+Px4Pl+Obv: okâwisisiyiwa
+

@@ -1,0 +1,58 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/aANlyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/aANlyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Noun - sikâk - ok : # -k final animate noun 'goose'
+     sikâk+N+AN+Sg: sikâk
+     sikâk+N+AN+Pl: sikâkwak
+     sikâk+N+AN+Loc: sikâkonâhk
+     sikâk+N+AN+Der/Dim+N+AN+Sg: [sikâkos, sikâkosis]
+     sikâk+N+AN+Der/Dim+N+AN+Pl: [sikâkosak, sikâkosisak]
+
+     sikâk+N+AN+Sg+Px1Sg: nisikâkom
+     sikâk+N+AN+Sg+Px2Sg: kisikâkom
+     sikâk+N+AN+Sg+Px3Sg+Obv: osikâkoma
+     sikâk+N+AN+Sg+Px4Sg+Obv: osikâkomiyiwa
+     sikâk+N+AN+Sg+Px1Pl: nisikâkominân
+     sikâk+N+AN+Sg+Px12Pl: kisikâkominaw
+     sikâk+N+AN+Sg+Px2Pl: kisikâkomiwâw
+     sikâk+N+AN+Sg+Px3Pl+Obv: osikâkomiwâwa
+     sikâk+N+AN+Sg+Px4Pl+Obv: osikâkomiyiwa
+
+     sikâk+N+AN+Pl+Px1Sg: nisikâkomak
+     sikâk+N+AN+Pl+Px2Sg: kisikâkomak
+     sikâk+N+AN+Pl+Px3Sg+Obv: osikâkoma
+     sikâk+N+AN+Pl+Px4Sg+Obv: osikâkomiyiwa
+     sikâk+N+AN+Pl+Px1Pl: nisikâkominânak
+     sikâk+N+AN+Pl+Px12Pl: kisikâkominawak
+     sikâk+N+AN+Pl+Px2Pl: kisikâkomiwâwak
+     sikâk+N+AN+Pl+Px3Pl+Obv: osikâkomiwâwa
+     sikâk+N+AN+Pl+Px4Pl+Obv: osikâkomiyiwa
+
+     sikâk+N+AN+Der/Dim+N+AN+Sg+Px1Sg: nisikâkomis
+     sikâk+N+AN+Der/Dim+N+AN+Sg+Px2Sg: kisikâkomis
+     sikâk+N+AN+Der/Dim+N+AN+Sg+Px3Sg+Obv: osikâkomisa
+     sikâk+N+AN+Der/Dim+N+AN+Sg+Px4Sg+Obv: osikâkomisiyiwa
+     sikâk+N+AN+Der/Dim+N+AN+Sg+Px1Pl: nisikâkomisinân
+     sikâk+N+AN+Der/Dim+N+AN+Sg+Px12Pl: kisikâkomisinaw
+     sikâk+N+AN+Der/Dim+N+AN+Sg+Px2Pl: kisikâkomisiwâw
+     sikâk+N+AN+Der/Dim+N+AN+Sg+Px3Pl+Obv: osikâkomisiwâwa
+     sikâk+N+AN+Der/Dim+N+AN+Sg+Px4Pl+Obv: osikâkomisiyiwa
+ 
+     sikâk+N+AN+Der/Dim+N+AN+Pl+Px1Sg: nisikâkomisak
+     sikâk+N+AN+Der/Dim+N+AN+Pl+Px2Sg: kisikâkomisak
+     sikâk+N+AN+Der/Dim+N+AN+Pl+Px3Sg+Obv: osikâkomisa
+     sikâk+N+AN+Der/Dim+N+AN+Pl+Px4Sg+Obv: osikâkomisiyiwa
+     sikâk+N+AN+Der/Dim+N+AN+Pl+Px1Pl: nisikâkomisinânak
+     sikâk+N+AN+Der/Dim+N+AN+Pl+Px12Pl: kisikâkomisinawak
+     sikâk+N+AN+Der/Dim+N+AN+Pl+Px2Pl: kisikâkomisiwâwak
+     sikâk+N+AN+Der/Dim+N+AN+Pl+Px3Pl+Obv: osikâkomisiwâwa
+     sikâk+N+AN+Der/Dim+N+AN+Pl+Px4Pl+Obv: osikâkomisiyiwa
+     

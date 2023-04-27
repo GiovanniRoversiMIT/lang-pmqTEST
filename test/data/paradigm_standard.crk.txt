@@ -1,0 +1,28 @@
+# Paradigm grammar
+#
+# Used in paradigm generator.
+# List the tag groups in the order they are given to generator.
+# The names of the tag groups are listed in korpustags.crk.txt
+# "?" marks the optionality of the tag.
+# It is not possible to mark alternation of the different tags.
+
+	
+N+Gender+Number+PossessiveSuffix?+Obviative?
+N+Gender+Loc
+N+Gender+Diminutive+N+Gender+Number
+V+AI+Mood+Tense+PersonNumber
+V+AI+Ind+Fut+Aspect+PersonNumber
+V+AI+Imp+ImpTense+ImpPersonNumber
+V+AI+Fut+Cond+PersonNumber
+V+II+Mood+Tense+PersonNumber
+V+TA+Mood+Tense+PersonNumber+PersonNumberObj
+V+TI+Imp+ImpTense+ImpPersonNumber
+V+TI+Mood+Tense+PersonNumber
+V+TA+Imp+ImpTense+PersonNumber+PersonNumberObj
+
+
+#V+AI+Mood?+Tense?+Aspect?+PersonNumber?
+#V+II+Mood?+Tense?+Aspect?+PersonNumber?
+#V+TA+Mood?+Tense?+Aspect?+PersonNumber?+PersonNumberObj?
+#V+TI+Mood?+Tense?+Aspect?+PersonNumber?+PersonNumberObj?
+

@@ -1,0 +1,39 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/aANlyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/aANlyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Noun - wâhkw - ok : # -m animate noun, roe
+     wâhkwa+N+AN+Sg: wâhkwa
+     wâhkwa+N+AN+Sg+Px1Sg: niwâhkom
+     wâhkwa+N+AN+Sg+Px2Sg: kiwâhkom
+     wâhkwa+N+AN+Sg+Px3Sg+Obv: owâhkoma
+     wâhkwa+N+AN+Sg+Px4Sg+Obv: owâhkomiyiwa
+     wâhkwa+N+AN+Sg+Px1Pl: niwâhkominân
+     wâhkwa+N+AN+Sg+Px12Pl: kiwâhkominaw
+     wâhkwa+N+AN+Sg+Px2Pl: kiwâhkomiwâw
+     wâhkwa+N+AN+Sg+Px3Pl+Obv: owâhkomiwâwa
+     wâhkwa+N+AN+Sg+Px4Pl+Obv: owâhkomiyiwa
+
+     wâhkwa+N+AN+Pl: wâhkwak
+     wâhkwa+N+AN+Pl+Px1Sg: niwâhkomak
+     wâhkwa+N+AN+Pl+Px2Sg: kiwâhkomak
+     wâhkwa+N+AN+Pl+Px3Sg+Obv: owâhkoma
+     wâhkwa+N+AN+Pl+Px4Sg+Obv: owâhkomiyiwa
+     wâhkwa+N+AN+Pl+Px1Pl: niwâhkominânak
+     wâhkwa+N+AN+Pl+Px12Pl: kiwâhkominawak
+     wâhkwa+N+AN+Pl+Px2Pl: kiwâhkomiwâwak
+     wâhkwa+N+AN+Pl+Px3Pl+Obv: owâhkomiwâwa
+     wâhkwa+N+AN+Pl+Px4Pl+Obv: owâhkomiyiwa
+
+     wâhkwa+N+AN+Sg+Obv: wâhkwa
+     wâhkwa+N+AN+Loc: wâhkohk
+
+     wâhkwa+N+AN+Der/Dim+N+AN+Sg: wâhkosis
+     wâhkwa+N+AN+Der/Dim+N+AN+Pl: wâhkosisak

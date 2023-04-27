@@ -1,0 +1,39 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Noun - masinahikanâhtik - ok : # -m animate noun, pencil, Wolvengrey
+     masinahikanâhtik+N+AN+Sg: masinahikanâhtik
+     masinahikanâhtik+N+AN+Sg+Px1Sg: nimasinahikanâhtik
+     masinahikanâhtik+N+AN+Sg+Px2Sg: kimasinahikanâhtik
+     masinahikanâhtik+N+AN+Sg+Px3Sg+Obv: omasinahikanâhtikwa
+     masinahikanâhtik+N+AN+Sg+Px4Sg+Obv: omasinahikanâhtikoyiwa
+     masinahikanâhtik+N+AN+Sg+Px1Pl: nimasinahikanâhtikonân
+     masinahikanâhtik+N+AN+Sg+Px12Pl: kimasinahikanâhtikonaw
+     masinahikanâhtik+N+AN+Sg+Px2Pl: kimasinahikanâhtikowâw
+     masinahikanâhtik+N+AN+Sg+Px3Pl+Obv: omasinahikanâhtikowâwa
+     masinahikanâhtik+N+AN+Sg+Px4Pl+Obv: omasinahikanâhtikoyiwa
+     
+     masinahikanâhtik+N+AN+Pl: masinahikanâhtikwak
+     masinahikanâhtik+N+AN+Pl+Px1Sg: nimasinahikanâhtikwak
+     masinahikanâhtik+N+AN+Pl+Px2Sg: kimasinahikanâhtikwak
+     masinahikanâhtik+N+AN+Pl+Px3Sg+Obv: omasinahikanâhtikwa
+     masinahikanâhtik+N+AN+Pl+Px4Sg+Obv: omasinahikanâhtikoyiwa
+     masinahikanâhtik+N+AN+Pl+Px1Pl: nimasinahikanâhtikonânak
+     masinahikanâhtik+N+AN+Pl+Px12Pl: kimasinahikanâhtikonawak
+     masinahikanâhtik+N+AN+Pl+Px2Pl: kimasinahikanâhtikowâwak
+     masinahikanâhtik+N+AN+Pl+Px3Pl+Obv: omasinahikanâhtikowâwa
+     masinahikanâhtik+N+AN+Pl+Px4Pl+Obv: omasinahikanâhtikoyiwa
+     
+     masinahikanâhtik+N+AN+Sg+Obv: masinahikanâhtikwa
+     masinahikanâhtik+N+AN+Loc: masinahikanâhtikohk
+     
+     masinahikanâhtik+N+AN+Der/Dim+N+AN+Sg: [masinahikanâhcikos, masinahikanâhcikosis]
+     masinahikanâhtik+N+AN+Der/Dim+N+AN+Pl: [masinahikanâhcikosak, masinahikanâhcikosisak]

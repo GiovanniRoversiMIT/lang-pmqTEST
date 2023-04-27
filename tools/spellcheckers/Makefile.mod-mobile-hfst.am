@@ -1,0 +1,155 @@
+## Process this file with automake to produce Makefile.in
+
+## Copyright (C) 2011 Samediggi
+
+## This program is free software: you can redistribute it and/or modify
+## it under the terms of the GNU General Public License as published by
+## the Free Software Foundation, either version 3 of the License, or
+## (at your option) any later version.
+
+## This program is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+## GNU General Public License for more details.
+
+## You should have received a copy of the GNU General Public License
+## along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+# This is the default weight for all editing operations in the error model:
+MOB_DEFAULT_WEIGHT=10
+
+# Whether to use swaps - ..ab.. -> ..ba.. in one single operation.
+# NB! Beware that this increases the size of the errormodel by ~ 3 * S^2, where
+# S is the size of the alphabet. Ie by A LOT.
+# If you want to enable swaps, consider using an edit distance of only 1, or
+# better yet, dot NOT include UPPERCASE LETTERS in the error model alphabet.
+#
+# Possible values are 'yes' or 'no'
+MOB_USE_SWAPS=no
+
+# Default edit distanse for the generated, alphabet-based error model:
+MOB_EDIT_DISTANCE=2
+
+# Define whether we allow changes to the initial letter(s) in the error model,
+# possible values are:
+# * no    - no longer string edits = only the default, letter-based error model
+# * txt   - use only the txt file as source
+# * regex - use only the regex file as source
+# * both  - use both the txt and regex files as sources
+# NB!!! Setting this to anything but 'no' will greatly increase the size and
+# search space of the error model, and thus make it much, much slower. Make sure
+# you TEST the resulting error model properly and thoroughly, both for speed
+# and suggestion quality.
+MOB_INITIAL_EDITS=no
+
+# Variable to define whether to enable edits of longer strings (as opposed to
+# single letters). Possible values are:
+# * no    - no longer string edits = only the default, letter-based error model
+# * txt   - use only the txt file as source
+# * regex - use only the regex file as source
+# * both  - use both the txt and regex files as sources
+MOB_STRING_EDITS=txt
+# Variable to specify the edit distance for the regex
+# version of the strings file. The total edit distance for those operations is
+# this value multiplied with the value of the EDIT_DISTANCE variable.
+MOB_STRING_REGEX_EDIT_DISTANCE=2
+
+# Variable to define whether to enable edits of word-final strings (as opposed
+# to single letters). Possible values are:
+# * no    - no longer string edits = only the default, letter-based error model
+# * txt   - use only the txt file as source
+# * regex - use only the regex file as source
+# * both  - use both the txt and regex files as sources
+MOB_FINAL_STRING_EDITS=txt
+
+# Variable to define whether to enable whole-word replacements. Possible values:
+# - yes
+# - no
+MOB_WORD_REPLACEMENTS=yes
+
+# Specify where to find the project.yaml file and the corresponding layout defs:
+KEYBOARD_LAYOUT_DIR=$(GIELLA_CORE)/../keyboards/$GLANG
+# Specify the ID of the layout as found at the top of each layout file
+KEYBOARD_LAYOUT_ID=crk
+
+# build one extra zhfst specific for our crk tests
+CRK_EXPERIMENT_MORPH_ZHFST=$(GTLANG2)-x-predict_morphs-mobile.zhfst
+mobilexperiment_DATA=$(CRK_EXPERIMENT_MORPH_ZHFST)
+mobilexperimentdir=$(datadir)/giella/mobilespellers/
+
+# Commented out copying of file, since it is already stored in this directory:
+# prefix_weighting.lexc: $(top_srcdir)/src/derivation/prefix_weighting.lexc
+# 	$(AM_V_CP)cp -f $< $@
+
+# PrefixWeighting.hfst: $(srcdir)/prefix_weighting.lexc
+# 	hfst-lexc -o $@ $<
+
+spellrelax-weighted.hfst: $(top_srcdir)/src/orthography/spellrelax-weighted.regex
+	hfst-regexp2fst -S $< -o $@
+
+ErrorModel.hfst: errmodel.default.predict.hfscript \
+		spellrelax-weighted.hfst
+	hfst-xfst -F $<
+
+# Error model building - list of words known to be misspelled, mobile version:
+words.predict.mobile.hfst: easteregg.predict.mobile.suggtxt
+	$(AM_V_STR2FST)grep -h -v '^#' $^ | grep -v '^$$'   \
+		| $(HFST_STRINGS2FST) $(HFST_FLAGS) -j \
+		   --format=openfst-tropical \
+		-o $@
+
+errmodel.default.predict_morphs.hfst: ErrorModel.hfst words.predict.mobile.hfst
+	$(AM_V_RGX2FST)printf "\
+		[ @\"words.predict.mobile.hfst\"    \
+		|  @\"ErrorModel.hfst\"  \
+		];" \
+		| $(HFST_REGEXP2FST) -S -E $(HFST_FLAGS) \
+		| $(HFST_PUSH_WEIGHTS) --push=initial    \
+		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw \
+		-o $@
+
+PrefixWeighting.hfst: $(srcdir)/prefix_weighting.lexc
+	hfst-lexc -o $@ $<
+
+Acceptor.hfst: $(srcdir)/acceptor.default.predict.hfscript \
+		PrefixWeighting.hfst \
+		../../src/crk-strict-generator-with-morpheme-boundaries-giellaltbuild.hfst
+#		${srcdir}/prefix_weighting.lexc
+	hfst-xfst -F $<
+
+easteregg.predict.mobile.txt: ../../src/crk-strict-generator-with-morpheme-boundaries-giellaltbuild.hfst
+	$(AM_V_GEN)$(GTCORE)/scripts/make-hfstspeller-version-easter-egg.sh \
+		$(GTLANG2) \
+		$(top_srcdir) \
+		$(SPELLERVERSION) \
+		"mobile" \
+		"predict" \
+		> $@
+
+acceptor.default.predict_morphs.hfst: Acceptor.hfst easteregg.predict.mobile.hfst
+	$(HFST_DISJUNCT) $(MORE_VERBOSITY) $< easteregg.predict.mobile.hfst          \
+		| $(HFST_PUSH_WEIGHTS) $(MORE_VERBOSITY) --push=initial           \
+		| $(HFST_FST2FST) $(MORE_VERBOSITY) $(HFST_FLAGS) -f olw          \
+		-o $@
+
+index.predict_morphs.xml: index.predict.xml
+	$(AM_V_CP)cp -f $< $@
+
+# c/p from tools-spellcheckers-fstbased-mboile-hfst-dir:
+$(CRK_EXPERIMENT_MORPH_ZHFST): index.predict_morphs.xml \
+					 acceptor.default.predict_morphs.hfst \
+					 errmodel.default.predict_morphs.hfst
+	$(AM_V_at)rm -f $@
+	$(AM_V_at)$(MKDIR_P) build/$@
+	$(AM_V_at)rm -f build/$@/*
+	$(AM_V_at)cp index.predict_morphs.xml build/$@/index.xml
+	$(AM_V_at)cp acceptor.default.predict_morphs.hfst build/$@/acceptor.default.hfst
+	$(AM_V_at)cp errmodel.default.predict_morphs.hfst build/$@/errmodel.default.hfst
+	$(AM_V_ZIP)cd build/$@/ && $(ZHFST_COMPRESSION)
+	$(AM_V_at)$(MKDIR_P) 3
+	$(AM_V_at)cp -f $@ 3/
+
+
+
+# vim: set ft=automake:
+

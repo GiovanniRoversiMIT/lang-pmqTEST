@@ -1,0 +1,502 @@
+
+! Script for syll to latin for Plains Cree, 
+! or more general, for Western Cree
+
+! Keyboard legend
+! ᐊ  ᐸ  ᑕ  ᑲ  ᒐ  ᒪ  ᓇ  ᓴ  ᔭ
+! a  pa ta ka ca ma na sa ya 
+
+!  Rows: B = a, C = o, D = i, E = e
+! Thus, key B01 = a, D08 = si, etc.
+
+
+
+! with w
+
+! Complex writing of dotted symbols
+
+define cwaComposeRule [ ᒐ ᐧ ]  -> [ c w a ] ;
+define cwiComposeRule [ ᒋ ᐧ ]   -> [ c w i ] ;
+define cwoComposeRule [ ᒍ ᐧ ]   -> [ c w o ] ;
+define cwâComposeRule [ ᒑ ᐧ ]   -> [ c w â ] ;
+define cwêComposeRule [ ᒉ ᐧ ]   -> [ c w ê ] ;
+define cwîComposeRule [ ᒌ ᐧ ]   -> [ c w î ] ;
+define cwôComposeRule [ ᒎ ᐧ ]   -> [ c w ô ] ;
+	
+define kwaComposeRule [ ᑲ ᐧ ]   -> [ k w a ] ;
+define kwiComposeRule [ ᑭ ᐧ ]   -> [ k w i ] ;
+define kwoComposeRule [ ᑯ ᐧ ]   -> [ k w o ] ;
+define kwâComposeRule [ ᑳ ᐧ ]   -> [ k w â ] ;
+define kwêComposeRule [ ᑫ ᐧ ]   -> [ k w ê ] ;
+define kwîComposeRule [ ᑮ ᐧ ]   -> [ k w î ] ;
+define kwôComposeRule [ ᑰ ᐧ ]   -> [ k w ô ] ;
+	
+define mwaComposeRule [ ᒪ ᐧ ]   -> [ m w a ] ;
+define mwiComposeRule [ ᒥ ᐧ ]   -> [ m w i ] ;
+define mwoComposeRule [ ᒧ ᐧ ]   -> [ m w o ] ;
+define mwâComposeRule [ ᒫ ᐧ ]   -> [ m w â ] ;
+define mwêComposeRule [ ᒣ ᐧ ]   -> [ m w ê ] ;
+define mwîComposeRule [ ᒦ ᐧ ]   -> [ m w î ] ;
+define mwôComposeRule [ ᒨ ᐧ ]   -> [ m w ô ] ;
+	
+define nwaComposeRule [ ᓇ ᐧ ]   -> [ n w a ] ;
+define nwiComposeRule [ ᓂ ᐧ ]   -> [ n w i ] ;
+define nwoComposeRule [ ᓄ ᐧ ]   -> [ n w o ] ;
+define nwâComposeRule [ ᓈ ᐧ ]   -> [ n w â ] ;
+define nwêComposeRule [ ᓀ ᐧ ]   -> [ n w ê ] ;
+define nwîComposeRule [ ᓃ ᐧ ]   -> [ n w î ] ;
+define nwôComposeRule [ ᓅ ᐧ ]   -> [ n w ô ] ;
+	
+define pwaComposeRule [ ᐸ ᐧ ]   -> [ p w a ] ;
+define pwiComposeRule [ ᐱ ᐧ ]   -> [ p w i ] ;
+define pwoComposeRule [ ᐳ ᐧ ]   -> [ p w o ] ;
+define pwâComposeRule [ ᐹ ᐧ ]   -> [ p w â ] ;
+define pwêComposeRule [ ᐯ ᐧ ]   -> [ p w ê ] ;
+define pwîComposeRule [ ᐲ ᐧ ]   -> [ p w î ] ;
+define pwôComposeRule [ ᐴ ᐧ ]   -> [ p w ô ] ;
+	
+define swaComposeRule [ ᓴ ᐧ ]   -> [ s w a ] ;
+define swiComposeRule [ ᓯ ᐧ ]   -> [ s w i ] ;
+define swoComposeRule [ ᓱ ᐧ ]   -> [ s w o ] ;
+define swâComposeRule [ ᓵ ᐧ ]   -> [ s w â ] ;
+define swêComposeRule [ ᓭ ᐧ ]   -> [ s w ê ] ;
+define swîComposeRule [ ᓰ ᐧ ]   -> [ s w î ] ;
+define swôComposeRule [ ᓲ ᐧ ]   -> [ s w ô ] ;
+	
+define twaComposeRule [ ᑕ ᐧ ]   -> [ t w a ] ;
+define twiComposeRule [ ᑎ ᐧ ]   -> [ t w i ] ;
+define twoComposeRule [ ᑐ ᐧ ]   -> [ t w o ] ;
+define twâComposeRule [ ᑖ ᐧ ]   -> [ t w â ] ;
+define twêComposeRule [ ᑌ ᐧ ]   -> [ t w ê ] ;
+define twîComposeRule [ ᑏ ᐧ ]   -> [ t w î ] ;
+define twôComposeRule [ ᑑ ᐧ ]   -> [ t w ô ] ;
+	
+define ywaComposeRule [ ᔭ ᐧ ]   -> [ y w a ] ;
+define ywiComposeRule [ ᔨ ᐧ ]   -> [ y w i ] ;
+define ywoComposeRule [ ᔪ ᐧ ]   -> [ y w o ] ;
+define ywâComposeRule [ ᔮ ᐧ ]   -> [ y w â ] ;
+define ywêComposeRule [ ᔦ ᐧ ]   -> [ y w ê ] ;
+define ywîComposeRule [ ᔩ ᐧ ]   -> [ y w î ] ;
+define ywôComposeRule [ ᔫ ᐧ ]   -> [ y w ô ] ;
+	
+define waComposeRule [ ᐊ ᐧ ]   -> [ w a ] ;
+define wiComposeRule [ ᐃ ᐧ ]   -> [ w i ] ;
+define woComposeRule [ ᐅ ᐧ ]   -> [ w o ] ;
+define wâComposeRule [ ᐋ ᐧ ]   -> [ w â ] ;
+define wêComposeRule [ ᐁ ᐧ ]   -> [ w ê ] ;
+define wîComposeRule [ ᐄ ᐧ ]   -> [ w î ] ;
+define wôComposeRule [ ᐆ ᐧ ]   -> [ w ô ] ;
+		
+	
+	
+! with w	th w
+	
+! 3	letter symbols
+	
+define cwaRule [ ᒝ ]   -> [ c w a ] ;
+define cwiRule [ ᒕ ]   -> [ c w i ] ;
+define cwoRule [ ᒙ ]   -> [ c w o ] ;
+define cwâRule [ ᒟ ]   -> [ c w â ] ;
+define cwêRule [ ᒓ ]   -> [ c w ê ] ;
+define cwîRule [ ᒗ ]   -> [ c w î ] ;
+define cwôRule [ ᒛ ]   -> [ c w ô ] ;
+	
+define kwaRule [ ᑿ ]   -> [ k w a ] ;
+define kwiRule [ ᑷ ]   -> [ k w i ] ;
+define kwoRule [ ᑻ ]   -> [ k w o ] ;
+define kwâRule [ ᒁ ]   -> [ k w â ] ;
+define kwêRule [ ᑵ ]   -> [ k w ê ] ;
+define kwîRule [ ᑹ ]   -> [ k w î ] ;
+define kwôRule [ ᑽ ]   -> [ k w ô ] ;
+	
+define mwaRule [ ᒷ ]   -> [ m w a ] ;
+define mwiRule [ ᒯ ]   -> [ m w i ] ;
+define mwoRule [ ᒳ ]   -> [ m w o ] ;
+define mwâRule [ ᒹ ]   -> [ m w â ] ;
+define mwêRule [ ᒭ ]   -> [ m w ê ] ;
+define mwîRule [ ᒱ ]   -> [ m w î ] ;
+define mwôRule [ ᒵ ]   -> [ m w ô ] ;
+	
+define nwaRule [ ᓌ ]   -> [ n w a ] ;
+define nwiRule [ ᣇ ]   -> [ n w i ] ;
+define nwoRule [ ᣋ ]   -> [ n w o ] ;
+define nwâRule [ ᓎ ]   -> [ n w â ] ;
+define nwêRule [ ᓊ ]   -> [ n w ê ] ;
+define nwîRule [ ᣉ ]   -> [ n w î ] ;
+define nwôRule [ ᣍ ]   -> [ n w ô ] ;
+	
+define pwaRule [ ᑅ ]   -> [ p w a ] ;
+define pwiRule [ ᐽ ]   -> [ p w i ] ;
+define pwoRule [ ᑁ ]   -> [ p w o ] ;
+define pwâRule [ ᑇ ]   -> [ p w â ] ;
+define pwêRule [ ᐻ ]   -> [ p w ê ] ;
+define pwîRule [ ᐿ ]   -> [ p w î ] ;
+define pwôRule [ ᑃ ]   -> [ p w ô ] ;
+	
+define swaRule [ ᔁ ]   -> [ s w a ] ;
+define swiRule [ ᓹ ]   -> [ s w i ] ;
+define swoRule [ ᓽ ]   -> [ s w o ] ;
+define swâRule [ ᔃ ]   -> [ s w â ] ;
+define swêRule [ ᓷ ]   -> [ s w ê ] ;
+define swîRule [ ᓻ ]   -> [ s w î ] ;
+define swôRule [ ᓿ ]   -> [ s w ô ] ;
+	
+define twaRule [ ᑢ ]   -> [ t w a ] ;
+define twiRule [ ᑚ ]   -> [ t w i ] ;
+define twoRule [ ᑞ ]   -> [ t w o ] ;
+define twâRule [ ᑤ ]   -> [ t w â ] ;
+define twêRule [ ᑘ ]   -> [ t w ê ] ;
+define twîRule [ ᑜ ]   -> [ t w î ] ;
+define twôRule [ ᑠ ]   -> [ t w ô ] ;
+	
+define ywaRule [ ᔺ ]   -> [ y w a ] ;
+define ywiRule [ ᔲ ]   -> [ y w i ] ;
+define ywoRule [ ᔶ ]   -> [ y w o ] ;
+define ywâRule [ ᔼ ]   -> [ y w â ] ;
+define ywêRule [ ᔰ ]   -> [ y w ê ] ;
+define ywîRule [ ᔴ ]   -> [ y w î ] ;
+define ywôRule [ ᔸ ]   -> [ y w ô ] ;
+	
+	
+define waRule [ ᐘ ]	 -> [ w a ] ;
+define wiRule [ ᐏ ]	 -> [ w i ] ;
+define woRule [ ᐓ ]	 -> [ w o ] ;
+define wâRule [ ᐚ ] -> [ w â ] ;
+define wêRule [ ᐍ ]	 -> [ w ê ] ;
+define wîRule [ ᐑ ]	 -> [ w î ] ;
+define wôRule [ ᐕ ]	 -> [ w ô ] ;
+	
+	
+! Without w	thout w
+! two	o-letter symbols
+	
+define caRule [ ᒐ ]   -> [ c a ] ;
+define ciRule [ ᒋ ]   -> [ c i ] ;
+define coRule [ ᒍ ]   -> [ c o ] ;
+define câRule [ ᒑ ]   -> [ c â ] ;
+define cêRule [ ᒉ ]   -> [ c ê ] ;
+define cîRule [ ᒌ ]   -> [ c î ] ;
+define côRule [ ᒎ ]   -> [ c ô ] ;
+	
+define kaRule [ ᑲ ]   -> [ k a ] ;
+define kiRule [ ᑭ ]   -> [ k i ] ;
+define koRule [ ᑯ ]   -> [ k o ] ;
+define kâRule [ ᑳ ]   -> [ k â ] ;
+define kêRule [ ᑫ ]   -> [ k ê ] ;
+define kîRule [ ᑮ ]   -> [ k î ] ;
+define kôRule [ ᑰ ]   -> [ k ô ] ;
+	
+define maRule [ ᒪ ]   -> [ m a ] ;
+define miRule [ ᒥ ]   -> [ m i ] ;
+define moRule [ ᒧ ]   -> [ m o ] ;
+define mâRule [ ᒫ ]   -> [ m â ] ;
+define mêRule [ ᒣ ]   -> [ m ê ] ;
+define mîRule [ ᒦ ]   -> [ m î ] ;
+define môRule [ ᒨ ]   -> [ m ô ] ;
+	
+define naRule [ ᓇ ]   -> [ n a ] ;
+define niRule [ ᓂ ]   -> [ n i ] ;
+define noRule [ ᓄ ]   -> [ n o ] ;
+define nâRule [ ᓈ ]   -> [ n â ] ;
+define nêRule [ ᓀ ]   -> [ n ê ] ;
+define nîRule [ ᓃ ]   -> [ n î ] ;
+define nôRule [ ᓅ ]   -> [ n ô ] ;
+	
+define paRule [ ᐸ ]   -> [ p a ] ;
+define piRule [ ᐱ ]   -> [ p i ] ;
+define poRule [ ᐳ ]   -> [ p o ] ;
+define pâRule [ ᐹ ]   -> [ p â ] ;
+define pêRule [ ᐯ ]   -> [ p ê ] ;
+define pîRule [ ᐲ ]   -> [ p î ] ;
+define pôRule [ ᐴ ]   -> [ p ô ] ;
+	
+define saRule [ ᓴ ]   -> [ s a ] ;
+define siRule [ ᓯ ]   -> [ s i ] ;
+define soRule [ ᓱ ]   -> [ s o ] ;
+define sâRule [ ᓵ ]   -> [ s â ] ;
+define sêRule [ ᓭ ]   -> [ s ê ] ;
+define sîRule [ ᓰ ]   -> [ s î ] ;
+define sôRule [ ᓲ ]   -> [ s ô ] ;
+
+define taRule [ ᑕ ]   -> [ t a ] ;
+define tiRule [ ᑎ ]   -> [ t i ] ;
+define toRule [ ᑐ ]   -> [ t o ] ;
+define tâRule [ ᑖ ]   -> [ t â ] ;
+define têRule [ ᑌ ]   -> [ t ê ] ;
+define tîRule [ ᑏ ]   -> [ t î ] ;
+define tôRule [ ᑑ ]   -> [ t ô ] ;
+	
+define yaRule [ ᔭ ]   -> [ y a ] ;
+define yiRule [ ᔨ ]   -> [ y i ] ;
+define yoRule [ ᔪ ]   -> [ y o ] ;
+define yâRule [ ᔮ ]   -> [ y â ] ;
+define yêRule [ ᔦ ]   -> [ y ê ] ;
+define yîRule [ ᔩ ]   -> [ y î ] ;
+define yôRule [ ᔫ ]   -> [ y ô ] ;
+	
+define hkRule [ ᕽ ]   -> [ h k ] ;
+	
+	
+! one	e-letter symbols
+	
+define aRule [ ᐊ ]   -> [ a ] ;
+define iRule [ ᐃ ]   -> [ i ] ;
+define oRule [ ᐅ ]   -> [ o ] ;
+define âRule [ ᐋ ]   -> [ â ] ;
+define êRule [ ᐁ ]   -> [ ê ] ;
+define îRule [ ᐄ ]   -> [ î ] ;
+define ôRule [ ᐆ ]     -> [ ô ] ;
+ 	
+define cRule [ ᐨ ]  -> [ c ] ;
+define hRule [ ᐦ ]  -> [ h ] ;
+define kRule [ ᐠ ]  -> [ k ] ;
+define mRule [ ᒼ ]  -> [ m ] ;
+define nRule [ ᐣ ]  -> [ n ] ;
+define pRule [ ᑊ ]  -> [ p ] ;
+define sRule [ ᐢ ]  -> [ s ] ;
+define tRule [ ᐟ ]  -> [ t ] ;
+define wRule [ ᐤ ]  -> [ w ] ;
+define yRule [ ᕀ ]  -> [ y ] ;
+	
+	
+define lRule [ ᓬ ]  -> [ l ] ;
+define rRule [ ᕒ ]   -> [ r ] ;
+define FullStopRule [ ᙮ ] -> [ %. ] ;
+
+
+
+ 
+read regex [ cwaComposeRule 
+.o. cwiComposeRule 
+.o. cwoComposeRule 
+.o. cwâComposeRule 
+.o. cwêComposeRule 
+.o. cwîComposeRule 
+.o. cwôComposeRule 
+
+.o. kwaComposeRule 
+.o. kwiComposeRule 
+.o. kwoComposeRule 
+.o. kwâComposeRule 
+.o. kwêComposeRule 
+.o. kwîComposeRule 
+.o. kwôComposeRule 
+
+.o. mwaComposeRule 
+.o. mwiComposeRule 
+.o. mwoComposeRule 
+.o. mwâComposeRule 
+.o. mwêComposeRule 
+.o. mwîComposeRule 
+.o. mwôComposeRule 
+
+.o. nwaComposeRule 
+.o. nwiComposeRule 
+.o. nwoComposeRule 
+.o. nwâComposeRule 
+.o. nwêComposeRule 
+.o. nwîComposeRule 
+.o. nwôComposeRule 
+
+.o. pwaComposeRule 
+.o. pwiComposeRule 
+.o. pwoComposeRule 
+.o. pwâComposeRule 
+.o. pwêComposeRule 
+.o. pwîComposeRule 
+.o. pwôComposeRule 
+
+.o. swaComposeRule 
+.o. swiComposeRule 
+.o. swoComposeRule 
+.o. swâComposeRule 
+.o. swêComposeRule 
+.o. swîComposeRule 
+.o. swôComposeRule 
+
+.o. twaComposeRule 
+.o. twiComposeRule 
+.o. twoComposeRule 
+.o. twâComposeRule 
+.o. twêComposeRule 
+.o. twîComposeRule 
+.o. twôComposeRule 
+
+.o. ywaComposeRule 
+.o. ywiComposeRule 
+.o. ywoComposeRule 
+.o. ywâComposeRule 
+.o. ywêComposeRule 
+.o. ywîComposeRule 
+.o. ywôComposeRule 
+
+.o. waComposeRule
+.o. wiComposeRule
+.o. woComposeRule
+.o. wâComposeRule
+.o. wêComposeRule
+.o. wîComposeRule
+.o. wôComposeRule
+
+.o. cwaRule
+.o. cwiRule
+.o. cwoRule
+.o. cwâRule
+.o. cwêRule
+.o. cwîRule
+.o. cwôRule
+
+.o. kwaRule
+.o. kwiRule
+.o. kwoRule
+.o. kwâRule
+.o. kwêRule
+.o. kwîRule
+.o. kwôRule
+
+.o. mwaRule
+.o. mwiRule
+.o. mwoRule
+.o. mwâRule
+.o. mwêRule
+.o. mwîRule
+.o. mwôRule
+
+.o. nwaRule
+.o. nwiRule
+.o. nwoRule
+.o. nwâRule
+.o. nwêRule
+.o. nwîRule
+.o. nwôRule
+
+.o. pwaRule
+.o. pwiRule
+.o. pwoRule
+.o. pwâRule
+.o. pwêRule
+.o. pwîRule
+.o. pwôRule
+
+.o. swaRule
+.o. swiRule
+.o. swoRule
+.o. swâRule
+.o. swêRule
+.o. swîRule
+.o. swôRule
+
+.o. twaRule
+.o. twiRule
+.o. twoRule
+.o. twâRule
+.o. twêRule
+.o. twîRule
+.o. twôRule
+
+.o. ywaRule
+.o. ywiRule
+.o. ywoRule
+.o. ywâRule
+.o. ywêRule
+.o. ywîRule
+.o. ywôRule
+
+
+.o. caRule
+.o. ciRule
+.o. coRule
+.o. câRule
+.o. cêRule
+.o. cîRule
+.o. côRule
+
+.o. kaRule
+.o. kiRule
+.o. koRule
+.o. kâRule
+.o. kêRule
+.o. kîRule
+.o. kôRule
+
+.o. maRule
+.o. miRule
+.o. moRule
+.o. mâRule
+.o. mêRule
+.o. mîRule
+.o. môRule
+
+.o. naRule
+.o. niRule
+.o. noRule
+.o. nâRule
+.o. nêRule
+.o. nîRule
+.o. nôRule
+
+.o. paRule
+.o. piRule
+.o. poRule
+.o. pâRule
+.o. pêRule
+.o. pîRule
+.o. pôRule
+
+.o. saRule
+.o. siRule
+.o. soRule
+.o. sâRule
+.o. sêRule
+.o. sîRule
+.o. sôRule
+
+.o. taRule
+.o. tiRule
+.o. toRule
+.o. tâRule
+.o. têRule
+.o. tîRule
+.o. tôRule
+
+.o. waRule
+.o. wiRule
+.o. woRule
+.o. wâRule
+.o. wêRule
+.o. wîRule
+.o. wôRule
+
+.o. yaRule
+.o. yiRule
+.o. yoRule
+.o. yâRule
+.o. yêRule
+.o. yîRule
+.o. yôRule
+
+.o. hkRule
+
+.o. aRule 
+.o. iRule 
+.o. oRule 
+.o. âRule 
+.o. êRule 
+.o. îRule 
+.o. ôRule 
+
+.o. cRule 
+.o. hRule 
+.o. kRule 
+.o. mRule 
+.o. nRule 
+.o. pRule 
+.o. sRule 
+.o. tRule 
+.o. wRule 
+.o. yRule
+
+.o. lRule 
+.o. rRule 
+
+.o. FullStopRule ] ; 

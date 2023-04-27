@@ -1,0 +1,40 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Noun - kihci-okiniy - ok : # -m animate noun, tomato, Wolvengrey
+     kihci-okiniy+N+AN+Sg: kihci-okiniy
+     kihci-okiniy+N+AN+Sg+Px1Sg: nikihci-okinîm
+     kihci-okiniy+N+AN+Sg+Px2Sg: kikihci-okinîm
+     kihci-okiniy+N+AN+Sg+Px3Sg+Obv: okihci-okinîma
+     kihci-okiniy+N+AN+Sg+Px4Sg+Obv: okihci-okinîmiyiwa
+     kihci-okiniy+N+AN+Sg+Px1Pl: nikihci-okinîminân
+     kihci-okiniy+N+AN+Sg+Px12Pl: kikihci-okinîminaw
+     kihci-okiniy+N+AN+Sg+Px2Pl: kikihci-okinîmiwâw
+     kihci-okiniy+N+AN+Sg+Px3Pl+Obv: okihci-okinîmiwâwa
+     kihci-okiniy+N+AN+Sg+Px4Pl+Obv: okihci-okinîmiyiwa
+     
+     kihci-okiniy+N+AN+Pl: kihci-okiniyak
+     kihci-okiniy+N+AN+Pl+Px1Sg: nikihci-okinîmak
+     kihci-okiniy+N+AN+Pl+Px2Sg: kikihci-okinîmak
+     kihci-okiniy+N+AN+Pl+Px3Sg+Obv: okihci-okinîma
+     kihci-okiniy+N+AN+Pl+Px4Sg+Obv: okihci-okinîmiyiwa
+     kihci-okiniy+N+AN+Pl+Px1Pl: nikihci-okinîminânak
+     kihci-okiniy+N+AN+Pl+Px12Pl: kikihci-okinîminawak
+     kihci-okiniy+N+AN+Pl+Px2Pl: kikihci-okinîmiwâwak
+     kihci-okiniy+N+AN+Pl+Px3Pl+Obv: okihci-okinîmiwâwa
+     kihci-okiniy+N+AN+Pl+Px4Pl+Obv: okihci-okinîmiyiwa
+     
+     kihci-okiniy+N+AN+Sg+Obv: kihci-okiniya
+     
+     kihci-okiniy+N+AN+Loc: kihci-okinîhk
+     
+     kihci-okiniy+N+AN+Der/Dim+N+AN+Sg: [kihci-okinîs, kihci-okinîsis]
+     kihci-okiniy+N+AN+Der/Dim+N+AN+Pl: [kihci-okinîsak, kihci-okinîsisak]

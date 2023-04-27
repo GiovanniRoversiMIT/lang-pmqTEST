@@ -1,0 +1,60 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Noun - asikan - ok : # -m animate noun, sock paradigm from Okisis p. 133
+     asikan+N+AN+Sg: asikan
+     asikan+N+AN+Pl: asikanak
+     asikan+N+AN+Loc: asikanihk
+     asikan+N+AN+Sg+Obv: asikana
+     asikan+N+AN+Der/Dim+N+AN+Sg: [asikanisis, asikanis]
+     asikan+N+AN+Der/Dim+N+AN+Pl: [asikanisisak, asikanisak]
+     asikan+N+AN+Der/Dim+N+AN+Loc: [asikanisisihk, asikanisihk]
+          
+     asikan+N+AN+Sg+Px1Sg: nitasikan
+     asikan+N+AN+Sg+Px2Sg: kitasikan
+     asikan+N+AN+Sg+Px3Sg+Obv: otasikana
+     asikan+N+AN+Sg+Px4Sg+Obv: otasikaniyiwa
+     asikan+N+AN+Sg+Px1Pl: nitasikaninân
+     asikan+N+AN+Sg+Px12Pl: kitasikaninaw
+     asikan+N+AN+Sg+Px2Pl: kitasikaniwâw
+     asikan+N+AN+Sg+Px3Pl+Obv: otasikaniwâwa
+     asikan+N+AN+Sg+Px4Pl+Obv: otasikaniyiwa
+          
+     asikan+N+AN+Pl+Px1Sg: nitasikanak
+     asikan+N+AN+Pl+Px2Sg: kitasikanak
+     asikan+N+AN+Pl+Px3Sg+Obv: otasikana
+     asikan+N+AN+Pl+Px4Sg+Obv: otasikaniyiwa
+     asikan+N+AN+Pl+Px1Pl: nitasikaninânak
+     asikan+N+AN+Pl+Px12Pl: kitasikaninawak
+     asikan+N+AN+Pl+Px2Pl: kitasikaniwâwak
+     asikan+N+AN+Pl+Px3Pl+Obv: otasikaniwâwa
+     asikan+N+AN+Pl+Px4Pl+Obv: otasikaniyiwa
+     
+     asikan+N+AN+Der/Dim+N+AN+Sg+Px1Sg: [nicasikanisis, nicasikanis]
+     asikan+N+AN+Der/Dim+N+AN+Sg+Px2Sg: [kicasikanisis, kicasikanis]
+     asikan+N+AN+Der/Dim+N+AN+Sg+Px3Sg+Obv: [ocasikanisisa, ocasikanisa]
+     asikan+N+AN+Der/Dim+N+AN+Sg+Px4Sg+Obv: [ocasikanisisiyiwa, ocasikanisiyiwa]
+     asikan+N+AN+Der/Dim+N+AN+Sg+Px1Pl: [nicasikanisisinân, nicasikanisinân]
+     asikan+N+AN+Der/Dim+N+AN+Sg+Px12Pl: [kicasikanisisinaw, kicasikanisinaw]
+     asikan+N+AN+Der/Dim+N+AN+Sg+Px2Pl: [kicasikanisisiwâw, kicasikanisiwâw]
+     asikan+N+AN+Der/Dim+N+AN+Sg+Px3Pl+Obv: [ocasikanisisiwâwa, ocasikanisiwâwa]
+     asikan+N+AN+Der/Dim+N+AN+Sg+Px4Pl+Obv: [ocasikanisisiyiwa, ocasikanisiyiwa]
+
+     asikan+N+AN+Der/Dim+N+AN+Pl+Px1Sg: [nicasikanisisak, nicasikanisak]
+     asikan+N+AN+Der/Dim+N+AN+Pl+Px2Sg: [kicasikanisisak, kicasikanisak]
+     asikan+N+AN+Der/Dim+N+AN+Pl+Px3Sg+Obv: [ocasikanisisa, ocasikanisa]
+     asikan+N+AN+Der/Dim+N+AN+Pl+Px4Sg+Obv: [ocasikanisisiyiwa, ocasikanisiyiwa]
+     asikan+N+AN+Der/Dim+N+AN+Pl+Px1Pl: [nicasikanisisinânak, nicasikanisinânak]
+     asikan+N+AN+Der/Dim+N+AN+Pl+Px12Pl: [kicasikanisisinawak, kicasikanisinawak]
+     asikan+N+AN+Der/Dim+N+AN+Pl+Px2Pl: [kicasikanisisiwâwak, kicasikanisiwâwak]
+     asikan+N+AN+Der/Dim+N+AN+Pl+Px3Pl+Obv: [ocasikanisisiwâwa, ocasikanisiwâwa]
+     asikan+N+AN+Der/Dim+N+AN+Pl+Px4Pl+Obv: [ocasikanisisiyiwa, ocasikanisiyiwa]
+     

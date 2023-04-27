@@ -1,0 +1,57 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/aANlyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/aANlyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Noun - sihkihp - ok : # -m animate noun, blackbird
+     sihkihp+N+AN+Sg: sihkihp
+     sihkihp+N+AN+Pl: sihkihpak
+     sihkihp+N+AN+Loc: sihkihpinâhk
+     sihkihp+N+AN+Der/Dim+N+AN+Sg: [sihkihpis, sihkihpisis]
+     sihkihp+N+AN+Der/Dim+N+AN+Pl: [sihkihpisak, sihkihpisisak]
+
+     sihkihp+N+AN+Sg+Px1Sg: nisihkihpim
+     sihkihp+N+AN+Sg+Px2Sg: kisihkihpim
+     sihkihp+N+AN+Sg+Px3Sg+Obv: osihkihpima
+     sihkihp+N+AN+Sg+Px4Sg+Obv: osihkihpimiyiwa
+     sihkihp+N+AN+Sg+Px1Pl: nisihkihpiminân
+     sihkihp+N+AN+Sg+Px12Pl: kisihkihpiminaw
+     sihkihp+N+AN+Sg+Px2Pl: kisihkihpimiwâw
+     sihkihp+N+AN+Sg+Px3Pl+Obv: osihkihpimiwâwa
+     sihkihp+N+AN+Sg+Px4Pl+Obv: osihkihpimiyiwa
+
+     sihkihp+N+AN+Pl+Px1Sg: nisihkihpimak
+     sihkihp+N+AN+Pl+Px2Sg: kisihkihpimak
+     sihkihp+N+AN+Pl+Px3Sg+Obv: osihkihpima
+     sihkihp+N+AN+Pl+Px4Sg+Obv: osihkihpimiyiwa
+     sihkihp+N+AN+Pl+Px1Pl: nisihkihpiminânak
+     sihkihp+N+AN+Pl+Px12Pl: kisihkihpiminawak
+     sihkihp+N+AN+Pl+Px2Pl: kisihkihpimiwâwak
+     sihkihp+N+AN+Pl+Px3Pl+Obv: osihkihpimiwâwa
+     sihkihp+N+AN+Pl+Px4Pl+Obv: osihkihpimiyiwa
+
+     sihkihp+N+AN+Der/Dim+N+AN+Sg+Px1Sg: nisihkihpimis
+     sihkihp+N+AN+Der/Dim+N+AN+Sg+Px2Sg: kisihkihpimis
+     sihkihp+N+AN+Der/Dim+N+AN+Sg+Px3Sg+Obv: osihkihpimisa
+     sihkihp+N+AN+Der/Dim+N+AN+Sg+Px4Sg+Obv: osihkihpimisiyiwa
+     sihkihp+N+AN+Der/Dim+N+AN+Sg+Px1Pl: nisihkihpimisinân
+     sihkihp+N+AN+Der/Dim+N+AN+Sg+Px12Pl: kisihkihpimisinaw
+     sihkihp+N+AN+Der/Dim+N+AN+Sg+Px2Pl: kisihkihpimisiwâw
+     sihkihp+N+AN+Der/Dim+N+AN+Sg+Px3Pl+Obv: osihkihpimisiwâwa
+     sihkihp+N+AN+Der/Dim+N+AN+Sg+Px4Pl+Obv: osihkihpimisiyiwa
+
+     sihkihp+N+AN+Der/Dim+N+AN+Pl+Px1Sg: nisihkihpimisak
+     sihkihp+N+AN+Der/Dim+N+AN+Pl+Px2Sg: kisihkihpimisak
+     sihkihp+N+AN+Der/Dim+N+AN+Pl+Px3Sg+Obv: osihkihpimisa
+     sihkihp+N+AN+Der/Dim+N+AN+Pl+Px4Sg+Obv: osihkihpimisiyiwa
+     sihkihp+N+AN+Der/Dim+N+AN+Pl+Px1Pl: nisihkihpimisinânak
+     sihkihp+N+AN+Der/Dim+N+AN+Pl+Px12Pl: kisihkihpimisinawak
+     sihkihp+N+AN+Der/Dim+N+AN+Pl+Px2Pl: kisihkihpimisiwâwak
+     sihkihp+N+AN+Der/Dim+N+AN+Pl+Px3Pl+Obv: osihkihpimisiwâwa
+     sihkihp+N+AN+Der/Dim+N+AN+Pl+Px4Pl+Obv: osihkihpimisiyiwa

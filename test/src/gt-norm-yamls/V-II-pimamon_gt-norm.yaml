@@ -1,0 +1,44 @@
+Config:
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Verb - pimamon - adsf : #  VII2on acc. Wolvengrey p. 394
+  
+     pimamon+V+II+Ind+3Sg: pimamon
+     pimamon+V+II+Ind+3Pl: pimamonwa
+     pimamon+V+II+Ind+4Sg: pimamoniyiw
+     pimamon+V+II+Ind+4Pl: pimamoniyiwa
+
+     PV/ki+pimamon+V+II+Ind+3Sg: [kî-pimamon]
+     PV/ki+pimamon+V+II+Ind+3Pl: [kî-pimamonwa]
+     PV/ki+pimamon+V+II+Ind+4Sg: [kî-pimamoniyiw]
+     PV/ki+pimamon+V+II+Ind+4Pl: [kî-pimamoniyiwa]
+     
+     PV/ka+pimamon+V+II+Ind+3Sg: [ka-pimamon]
+     PV/ka+pimamon+V+II+Ind+3Pl: [ka-pimamonwa]
+     PV/ka+pimamon+V+II+Ind+4Sg: [ka-pimamoniyiw]
+     PV/ka+pimamon+V+II+Ind+4Pl: [ka-pimamoniyiwa]
+     
+     PV/wi+pimamon+V+II+Ind+3Sg: [wî-pimamon]
+     PV/wi+pimamon+V+II+Ind+3Pl: [wî-pimamonwa]
+     PV/wi+pimamon+V+II+Ind+4Sg: [wî-pimamoniyiw]
+     PV/wi+pimamon+V+II+Ind+4Pl: [wî-pimamoniyiwa]
+
+     PV/e+pimamon+V+II+Cnj+3Sg: [ê-pimamok]
+     PV/e+pimamon+V+II+Cnj+3Pl: [ê-pimamoki]
+     PV/e+pimamon+V+II+Cnj+4Sg: [ê-pimamoniyik]
+     PV/e+pimamon+V+II+Cnj+4Pl: [ê-pimamoniyiki]
+
+     PV/e+PV/ki+pimamon+V+II+Cnj+3Sg: [ê-kî-pimamok]
+     PV/e+PV/ki+pimamon+V+II+Cnj+3Pl: [ê-kî-pimamoki]
+     PV/e+PV/ki+pimamon+V+II+Cnj+4Sg: [ê-kî-pimamoniyik]
+     PV/e+PV/ki+pimamon+V+II+Cnj+4Pl: [ê-kî-pimamoniyiki]
+
+     pimamon+V+II+Fut+Cond+3Sg: pimamoki
+     pimamon+V+II+Fut+Cond+3Pl: pimamokwâwi
+     pimamon+V+II+Fut+Cond+4Sg: pimamoniyiki
+     pimamon+V+II+Fut+Cond+4Pl: pimamoniyikwâwi
+

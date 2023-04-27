@@ -1,0 +1,59 @@
+Config:
+  hfst:
+    Gen: ../../../src/generator-gt-norm.hfst
+    Morph: ../../../src/analyser-gt-norm.hfst
+  xerox:
+    Gen: ../../../src/generator-gt-norm.xfst
+    Morph: ../../../src/analyser-gt-norm.xfst
+    App: lookup
+
+Tests:
+  
+  Noun - iskwêw - ok : # -m animate noun
+     iskwêw+N+AN+Sg: iskwêw
+     iskwêw+N+AN+Pl: iskwêwak
+     iskwêw+N+AN+Loc: iskwênâhk
+     iskwêw+N+AN+Sg+Obv: iskwêwa
+     iskwêw+N+AN+Der/Dim+N+AN+Sg: [iskwês, iskwêsis]
+     iskwêw+N+AN+Der/Dim+N+AN+Pl: [iskwêsak, iskwêsisak]
+     
+     iskwêw+N+AN+Sg+Px1Sg: nitiskwêm
+     iskwêw+N+AN+Sg+Px2Sg: kitiskwêm
+     iskwêw+N+AN+Sg+Px3Sg+Obv: otiskwêma
+     iskwêw+N+AN+Sg+Px4Sg+Obv: otiskwêmiyiwa
+     iskwêw+N+AN+Sg+Px1Pl: nitiskwêminân
+     iskwêw+N+AN+Sg+Px12Pl: kitiskwêminaw
+     iskwêw+N+AN+Sg+Px2Pl: kitiskwêmiwâw
+     iskwêw+N+AN+Sg+Px3Pl+Obv: otiskwêmiwâwa
+     iskwêw+N+AN+Sg+Px4Pl+Obv: otiskwêmiyiwa
+     
+     iskwêw+N+AN+Pl+Px1Sg: nitiskwêmak
+     iskwêw+N+AN+Pl+Px2Sg: kitiskwêmak
+     iskwêw+N+AN+Pl+Px3Sg+Obv: otiskwêma
+     iskwêw+N+AN+Pl+Px4Sg+Obv: otiskwêmiyiwa
+     iskwêw+N+AN+Pl+Px1Pl: nitiskwêminânak
+     iskwêw+N+AN+Pl+Px12Pl: kitiskwêminawak
+     iskwêw+N+AN+Pl+Px2Pl: kitiskwêmiwâwak
+     iskwêw+N+AN+Pl+Px3Pl+Obv: otiskwêmiwâwa
+     iskwêw+N+AN+Pl+Px4Pl+Obv: otiskwêmiyiwa
+     
+     iskwêw+N+AN+Der/Dim+N+AN+Sg+Px1Sg: niciskwêmis
+     iskwêw+N+AN+Der/Dim+N+AN+Sg+Px2Sg: kiciskwêmis
+     iskwêw+N+AN+Der/Dim+N+AN+Sg+Px3Sg+Obv: ociskwêmisa
+     iskwêw+N+AN+Der/Dim+N+AN+Sg+Px4Sg+Obv: ociskwêmisiyiwa
+     iskwêw+N+AN+Der/Dim+N+AN+Sg+Px1Pl: niciskwêmisinân
+     iskwêw+N+AN+Der/Dim+N+AN+Sg+Px12Pl: kiciskwêmisinaw
+     iskwêw+N+AN+Der/Dim+N+AN+Sg+Px2Pl: kiciskwêmisiwâw
+     iskwêw+N+AN+Der/Dim+N+AN+Sg+Px3Pl+Obv: ociskwêmisiwâwa
+     iskwêw+N+AN+Der/Dim+N+AN+Sg+Px4Pl+Obv: ociskwêmisiyiwa
+     
+     iskwêw+N+AN+Der/Dim+N+AN+Pl+Px1Sg: niciskwêmisak
+     iskwêw+N+AN+Der/Dim+N+AN+Pl+Px2Sg: kiciskwêmisak
+     iskwêw+N+AN+Der/Dim+N+AN+Pl+Px3Sg+Obv: ociskwêmisa
+     iskwêw+N+AN+Der/Dim+N+AN+Pl+Px4Sg+Obv: ociskwêmisiyiwa
+     iskwêw+N+AN+Der/Dim+N+AN+Pl+Px1Pl: niciskwêmisinânak
+     iskwêw+N+AN+Der/Dim+N+AN+Pl+Px12Pl: kiciskwêmisinawak
+     iskwêw+N+AN+Der/Dim+N+AN+Pl+Px2Pl: kiciskwêmisiwâwak
+     iskwêw+N+AN+Der/Dim+N+AN+Pl+Px3Pl+Obv: ociskwêmisiwâwa
+     iskwêw+N+AN+Der/Dim+N+AN+Pl+Px4Pl+Obv: ociskwêmisiyiwa
+     
